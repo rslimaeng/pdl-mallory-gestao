@@ -20,7 +20,7 @@ LGPD, confidencialidade, alucinação como risco de gestão, shadow IT — e com
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| As 3 oportunidades priorizadas do M3 — pelo menos 1 toca dado que exige cuidado | Você constrói a régua delegar / copiloto / humano e escreve as diretrizes da sua área | Diretrizes rascunhadas + o mapa de onde a IA entra em cada processo seu — pré-requisito do M5, onde a IA ganha acesso a arquivos |
+| As 3 oportunidades priorizadas do M3 — pelo menos 1 toca dado que exige cuidado | Você aplica os 3 modos do M1 (Autopiloto · Colaboração · Manual) como régua de governança da sua área e escreve as diretrizes | Diretrizes rascunhadas + o mapa de qual processo entra em qual modo — pré-requisito do M5, onde a IA ganha acesso a arquivos |
 
 ---
 
@@ -52,9 +52,9 @@ A IA erra com a mesma fluência com que acerta — e a decisão assistida por IA
 
 Proibir empurra o uso para o celular pessoal, fora de qualquer visibilidade. A diretriz clara faz o contrário: diz onde a IA é bem-vinda, com quais dados, com qual revisão — e transforma usuários escondidos em usuários orientados. O antídoto do shadow IT não é firewall: é uma página de regras que a equipe entende e um gestor que pergunta "o que você está automatizando?" sem tom de auditoria.
 
-### 5. A régua de redesenho: delegar · copiloto · humano
+### 5. A régua de redesenho: Autopiloto · Colaboração · Manual
 
-Todo processo da sua área cabe em três faixas. **Delegar:** a IA faz o rascunho ou a compilação inteira, alguém revisa — relatório recorrente, primeira versão de documento. **Copiloto:** a IA apoia, o humano conduz — análise, cenário, preparação de decisão. **Humano:** a IA não entra — decisão sobre pessoa, assinatura de parecer, aprovação final. Redesenhar processo com IA é decidir a faixa de cada etapa — e escrever isso na diretriz.
+Todo processo da sua área cabe em uma das três faixas do M1 — agora usadas como instrumento de governança, não só de uso pessoal. **Autopiloto:** a IA executa o rascunho ou a compilação inteira, alguém revisa — relatório recorrente, primeira versão de documento, consolidação de dados desidentificados. **Colaboração:** a IA apoia, o humano conduz — análise, estruturação de cenário, preparação de decisão executiva. **Manual:** a IA não entra — decisão sobre pessoa, assinatura de parecer, aprovação final, posicionamento à diretoria. Redesenhar processo com IA é decidir a faixa de cada etapa — e escrever isso na diretriz, para que a equipe não decida sozinha em qual faixa cada tarefa mora.
 
 ---
 
@@ -120,7 +120,7 @@ Repare no desenho: dado fictício, proibição de inventar cláusula, fronteira 
 **Passo a passo:**
 1. Monte o prompt: papel = "consultor de governança de dados em indústria"; contexto = sua área, tamanho da equipe, os processos do seu mapa do M3 e as 5 categorias de dado proibido; tarefa = "redija diretrizes de uso de IA em 1 página: onde usar, com quais dados, qual revisão, o que é proibido"; Critério de Sucesso = "um analista novo entende as regras sem me perguntar"; Negativo = "sem tom de ameaça — o objetivo é orientar o uso, não assustar".
 2. Rode e edite: corte o que não se aplica, endureça o que a sua área exige. A IA rascunha a diretriz — quem assina a régua é você.
-3. Aplique a régua delegar/copiloto/humano aos 3 processos do seu mapa do M3: marque a faixa de cada um na própria diretriz.
+3. Aplique a régua dos 3 modos (Autopiloto / Colaboração / Manual) aos 3 processos do seu mapa do M3: marque a faixa de cada um na própria diretriz — e diga em 1 linha por que aquela e não outra.
 4. Valide com o colega do lado: ele entende as regras da sua área em 2 minutos de leitura?
 
 **Resultado esperado:** diretrizes da sua área em 1 página, com os 3 processos do M3 classificados na régua.
@@ -149,7 +149,7 @@ Repare no desenho: dado fictício, proibição de inventar cláusula, fronteira 
 |---|---|---|---|
 | Governança por e-mail | Diretriz enviada, nunca conversada — 3 semanas depois, ninguém lembra | Tratar adoção como comunicado, não como conversa | 15 minutos de reunião: contexto, regras, perguntas. E-mail é o registro, não o veículo |
 | Proibir para se proteger | "Melhor ninguém usar até a empresa definir" — e a equipe usa escondido | Confundir ausência de regra com ausência de uso | A regra da sua área pode existir antes da política corporativa — e ser absorvida por ela depois |
-| Régua sem manutenção | Processo mudou de faixa (delegar → copiloto) e ninguém atualizou | Tratar a diretriz como documento, não como instrumento vivo | Revisão trimestral de 10 minutos: a régua ainda bate com a prática? |
+| Régua sem manutenção | Processo mudou de faixa (Autopiloto → Colaboração porque a IA piorou naquele caso, ou o oposto porque a equipe ganhou maturidade) e ninguém atualizou | Tratar a diretriz como documento, não como instrumento vivo | Revisão trimestral de 10 minutos: a régua ainda bate com a prática? |
 
 ---
 

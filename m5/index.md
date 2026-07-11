@@ -40,7 +40,7 @@ O Claude Cowork é o instrumento que torna isso concreto: em vez de teoria sobre
 
 O que a ementa pede que você saiba conduzir — cada um vira exercício ou decisão hoje:
 
-- **Redesenhar processo** — decidir a faixa de cada etapa: delegar à IA, copiloto, ou humano-only
+- **Redesenhar processo** — decidir a faixa de cada etapa pela régua do M1/M4: Autopiloto (IA executa, você revisa), Colaboração (juntos), ou Manual (só você)
 - **Liderar adoção sem ansiedade** — conduzir a equipe sem entusiasmo cego nem resistência
 - **Patrocinar piloto** — identificar, apoiar e acompanhar uma iniciativa concreta da sua área
 - **Apresentar à diretoria** — argumentar com dados, ROI e escopo claro

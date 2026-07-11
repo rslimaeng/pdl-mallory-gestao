@@ -38,35 +38,82 @@ Os mesmos que você executou em sala — na íntegra.
 
 ### M1 · Mapeamento inicial da minha área
 
-**Área:** todas — o ponto de partida da hipótese
-**Para quando:** você quer saber, com critério, quais rotinas da sua área a IA alcança nos próximos 12 meses.
-**Você leva:** tabela com cada rotina classificada por modo de IA e as 2 recomendadas para começar.
+**Área:** todas — o ponto de partida da hipótese executiva
+**Para quando:** você quer saber, com critério, quais rotinas da sua área a IA alcança nos próximos 12 meses — e onde começar.
+**Você leva:** tabela com cada rotina classificada nos 3 modos de uso da IA + as 2 rotinas recomendadas para os próximos 90 dias, com justificativa executiva.
 
 ```text
 # PAPEL
-Você é um consultor de melhoria contínua com experiência em indústria de manufatura.
+Você é um consultor sênior de transformação com IA em indústria de manufatura,
+com 10+ anos ajudando gestores a decidir onde a IA rende de verdade —
+sem hype e sem propostas que dependem de projeto de TI.
 
 # CONTEXTO
-Sou gestor da área de [sua área] em uma fabricante de eletroportáteis com ERP,
-certificação ISO 9001 e processos documentados. Minhas rotinas que mais consomem
-tempo de gestão: [liste 3-5 — ex.: análise de desvios mensal, preparação de reunião
-de diretoria, triagem de contratos, consolidação de indicadores].
+Sou gestor da área de [sua área] em uma fabricante de eletroportáteis
+(linha branca — liquidificador, air fryer, ventilador, batedeira). Estrutura
+da empresa: certificação ISO 9001, ERP Datasul, processos documentados,
+equipe de [tamanho] pessoas reportando a mim. Ferramentas de IA aprovadas
+pelo TI: Claude e ChatGPT em versão paga (conta corporativa quando homologada,
+conta pessoal Pro por conta e risco enquanto isso).
+
+Minhas rotinas que mais consomem tempo de gestão:
+[liste 3-5 rotinas reais — exemplos comuns em gestão industrial:
+- Análise mensal de desvios orçamentários da área
+- Preparação de reunião mensal de diretoria (briefing + material)
+- Triagem inicial de contratos de fornecedores
+- Consolidação de indicadores da área para o comitê S&OP
+- Leitura e resposta de e-mails complexos com stakeholders internos
+- Redação de comunicados corporativos com múltiplas versões (diretoria, gestores, chão)
+- Análise de pesquisas de clima e feedbacks para plano de ação]
 
 # TAREFA
-Para cada rotina, classifique em qual modo de IA ela se encaixa (copiloto executivo,
-automação de processo, ou "ainda não — decisão humana") e aponte as 2 com melhor
-relação entre ganho de tempo e facilidade de começar nos próximos 12 meses.
+Classifique cada rotina em um dos 3 modos oficiais de uso da IA — use estas
+definições exatas, elas são o vocabulário do treinamento:
+
+- Autopiloto: rotina que segue sempre o mesmo padrão. Você define uma vez, a IA
+  executa, você revisa. Baixo risco, alto ganho de tempo. Ex.: transformar
+  reunião gravada em ata estruturada.
+
+- Colaboração: rotina que precisa do seu contexto e julgamento estratégico. A IA
+  rascunha e propõe cenários; você conduz e decide. Ganho em qualidade da decisão
+  + velocidade. Ex.: estruturar cenários de negociação com fornecedor.
+
+- Manual: decisão de alta responsabilidade autoral, com impacto em pessoa, contrato
+  ou posicionamento executivo. A IA no máximo inspira; você decide sem delegar.
+  Ex.: decisão de demissão, aprovação de investimento, parecer para a diretoria.
+
+Para cada rotina: classificação + ganho estimado de tempo (horas/mês) +
+facilidade de começar (1-5, sendo 5 = "posso testar amanhã com a conta atual").
+Encerre com as 2 recomendadas para os próximos 90 dias e o porquê executivo.
 
 # FORMATO
-Tabela: Rotina | Modo | Ganho estimado | Facilidade | e um parágrafo final com
-as 2 recomendadas e o porquê.
+Tabela: Rotina | Modo (Autopiloto/Colaboração/Manual) | Ganho estimado (h/mês) |
+Facilidade (1-5) | Justificativa (1 linha).
+
+Depois da tabela: parágrafo final de 3-4 linhas com as 2 rotinas top-priorizadas
+para 90 dias, e por que essas — não outras.
 
 # LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-Não proponha nada que dependa de comprar sistema ou contratar — só o que uso com as ferramentas atuais.
+Se faltar informação sobre alguma rotina, pergunte antes de classificar. Não invente.
+Não proponha nada que dependa de comprar sistema, contratar consultor ou aprovar
+orçamento — só o que rende com Claude/ChatGPT versão paga já disponível.
+Não classifique como Autopiloto rotina que envolve dado sensível (as 5 categorias
+do M4: gente, produto, contrato, diretoria, concorrência) sem processo de
+desidentificação prévia — nesses casos, marque como Colaboração com ressalva.
+
+# CRITÉRIO DE SUCESSO
+Ao final, eu consigo defender minha lista de 2 top-prioridades diante do meu
+diretor com 3 argumentos por rotina — ganho mensurável, risco controlado,
+factibilidade nos próximos 90 dias.
+
+# CRITÉRIO NEGATIVO
+Não use jargão de consultoria ("sinergia", "transformação digital",
+"pipeline de ideação"). Não sugira "criar comitê de IA" — a decisão é minha
+como gestor. Não classifique tudo como Colaboração pra ficar seguro —
+a força do mapa está em separar Autopiloto de Colaboração com clareza.
 ```
 
-**Como avaliar:** você conhece a área melhor que a IA — concorde ou discorde de cada linha com argumento. As 2 recomendadas alimentam sua hipótese do M1.
+**Como avaliar:** você defenderia essas 2 top-prioridades numa reunião com seu diretor semana que vem? Consegue nomear 1 risco de cada e como mitiga? Passou. Se ficou tudo Colaboração, a IA jogou seguro — refaça o CONTEXTO com rotinas mais operacionais no meio, pra forçar o Autopiloto aparecer.
 
 ### M2 · Briefing de desvios orçamentários
 
