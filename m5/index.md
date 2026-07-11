@@ -1,16 +1,16 @@
-# M5 · Claude Cowork: sua Workstation de IA
+# M5 · Liderança na Era da IA: Como Ser o Catalisador da Mudança
 
-**Trilha 2 · Módulo 5 de 6 · 1h45 · Cowork**
+**Trilha 2 · Módulo 5 de 6 · 1h30 · Liderança + Cowork**
 
-O passo além do chat: um agente no seu desktop, com memória do seu contexto, skills e connectors — configurado durante o módulo.
+> Cowork como a sua ferramenta de catalisador — o assistente que trabalha por você, na sua área.
 
 ---
 
 ## O contrato deste módulo
 
-**Você ganha:** uma workstation de IA rodando na conta compartilhada do seu grupo — com a memória de uma área carregada — o CLAUDE.md da sua área pronto para levar, e a régua L0→L3 para evoluir no seu ritmo depois de hoje.
+**Você ganha:** um modelo mental claro de como liderar sua equipe na adoção de IA, e uma primeira sessão prática de Claude Cowork usando dados fictícios da sua área.
 
-**Você se compromete a:** compor um grupo de ~4 gestores para operar uma conta Claude Pro compartilhada (o TI configurou as contas e os grupos antes de hoje) e trazer arquivos **não sensíveis** para as workstations que o grupo vai construir.
+**Você se compromete a:** agendar 1 sessão de 30 min do seu grupo na conta compartilhada até sexta-feira, com 1 tarefa real (desidentificada).
 
 **Tempo de leitura desta página:** 12 min
 
@@ -20,21 +20,38 @@ O passo além do chat: um agente no seu desktop, com memória do seu contexto, s
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| As diretrizes do M4 (elas decidem o que entra na pasta) e a oportunidade top-1 do M3 | Em grupo, alternando na conta Pro compartilhada: L0 setup → L1 primeira tarefa → L2 memória → L3 workstation com skill | 1 workstation Cowork L1 do grupo rodando + o SEU CLAUDE.md preenchido para a sua área — pronto para virar o piloto do Canvas no M6 |
+| As diretrizes do M4 (elas decidem o que entra na pasta) e a oportunidade top-1 do M3 | Em grupo, alternando na conta Pro compartilhada: L0 setup → L1 primeira tarefa → L2 memória → L3 workstation com skill | Um modelo mental de liderança da adoção + 1 workstation Cowork L1 do grupo rodando + o SEU CLAUDE.md preenchido — pronto para virar o piloto do Canvas no M6 |
 
 ---
 
-## Por que isso importa aqui dentro
+## Por que este módulo importa
 
-Todo mês, o fechamento da sua área repete os mesmos passos: juntar os arquivos, conferir os números, montar o relatório, formatar, distribuir. Você já usa o chat para acelerar pedaços disso — mas o chat tem um gargalo, e o gargalo é você: baixar arquivo, colar conteúdo, copiar resposta, salvar documento. Cada passo intermediário passa pelas suas mãos.
+A ementa oficial é direta: o gestor precisa **liderar a transição**, não só usar a ferramenta. Três decisões são suas:
 
-O Cowork elimina o gargalo. Em vez de perguntar e receber resposta, você descreve o resultado — "organize estes arquivos e gere o relatório no padrão da área" — e o agente planeja as etapas, executa uma a uma na sua pasta de trabalho e entrega o arquivo pronto. Há relatos de gestores zerando meses de retrabalho acumulado em horas de execução; o ganho real da sua área você mede no piloto.
+- **Onde delegar à IA e onde manter decisão humana** — a faixa de cada processo
+- **Como conduzir a equipe** sem gerar resistência nem entusiasmo cego
+- **Como patrocinar e defender** um piloto real diante da diretoria
 
-E há o motivo estratégico: é aqui que a régua L0→L3 do treinamento aponta. Prompt estruturado (L2) você já domina desde o M2. Delegar processo com memória e regras suas (L3) começa nesta sala — e a Mallory, com processo ISO e dado organizado, é terreno fértil para isso.
+O Claude Cowork é o instrumento que torna isso concreto: em vez de teoria sobre "adoção de IA", você sai com uma workstation rodando e um modelo do que delegar.
 
 ---
 
-## O conceito em 5 pontos
+## Os 4 movimentos do gestor catalisador
+
+O que a ementa pede que você saiba conduzir — cada um vira exercício ou decisão hoje:
+
+- **Redesenhar processo** — decidir a faixa de cada etapa: delegar à IA, copiloto, ou humano-only
+- **Liderar adoção sem ansiedade** — conduzir a equipe sem entusiasmo cego nem resistência
+- **Patrocinar piloto** — identificar, apoiar e acompanhar uma iniciativa concreta da sua área
+- **Apresentar à diretoria** — argumentar com dados, ROI e escopo claro
+
+Os movimentos 1 e 3 você pratica na workstation abaixo. Os movimentos 2 e 4 são a discussão de liderança que abre o módulo — e viram argumento no seu Canvas do M6.
+
+---
+
+## Cowork como o instrumento
+
+O passo além do chat: um agente no seu desktop, com memória do seu contexto, skills e connectors. É a ferramenta prática do gestor catalisador — o assistente que executa o processo por você.
 
 ### 1. Chat conversa, Cowork trabalha
 
@@ -52,9 +69,11 @@ O chat esquece você a cada conversa. A workstation lembra, porque o contexto vi
 
 **L0 · Setup:** Cowork aberto, pasta conectada, permissão dada. **L1 · Executor:** primeira tarefa real com arquivo entregue. **L2 · Memória:** CLAUDE.md com o contexto da área — as respostas param de ser genéricas. **L3 · Workstation:** projeto dedicado com skill própria — o processo roda sob demanda, no seu padrão. Você não precisa chegar em L3 hoje: L1 rodando já cumpre a promessa do dia, e a régua fica com você.
 
-**Nota da sala:** hoje o grupo constrói UMA workstation na conta compartilhada (alternando quem opera), mas cada gestor sai com o SEU CLAUDE.md preenchido — para instalar quando tiver conta Pro individual. A régua é do gestor, a conta é do grupo.
+### 5. O modelo de licenças — conta do grupo, régua do gestor
 
-### 5. Skills são o seu padrão empacotado — e o chat continua tendo vez
+O Cowork exige conta paga. A Mallory comprou **5-6 contas Claude Pro** e dividiu a turma em **grupos de ~4 gestores**, uma conta por grupo (o TI configurou antes de hoje). Hoje o grupo constrói **uma** workstation na conta compartilhada, alternando quem opera — mas **cada gestor sai com o SEU CLAUDE.md** preenchido, para instalar quando tiver conta Pro individual. A conta é do grupo; a régua e o CLAUDE.md são seus. A licença dura ~1 mês: cobre hoje e o mês seguinte de uso.
+
+### 6. Skills são o seu padrão empacotado — e o chat continua tendo vez
 
 Uma skill é um conjunto de instruções reutilizável: "gerar o fechamento no padrão da área" vira um comando, em vez de um prompt longo repetido a cada mês. É o seu processo, empacotado. E o chat não morre: pergunta rápida, primeira exploração de um problema e qualquer dado que não pode ficar em pasta local continuam sendo território do chat.
 
@@ -158,6 +177,18 @@ A progressão do módulo. A Camada 1 é a promessa do dia — todos saem com ela
 
 ---
 
+## Cases: gestores que lideraram a transição
+
+Exemplos ilustrativos do setor industrial — padrões típicos, não empresas específicas nem números auditados. Servem para calibrar o que é um piloto realista, não como benchmark.
+
+- **Fabricante de autopeças (porte médio) · centralizou a análise de paradas de linha** a partir dos relatórios de turno com um assistente de IA · o diagnóstico de causa de parada, que dependia de reunião semanal, passou a sair no mesmo dia.
+- **Indústria de bens de consumo · deu à controladoria um assistente para conciliação e análise de desvios de rubrica** · o fechamento mensal encolheu de vários dias úteis para poucos, liberando o time para análise em vez de digitação.
+- **Empresa de eletrodomésticos · RH usou IA para consolidar e ler pesquisas de clima** · a leitura de clima, antes trimestral, ganhou frequência sem aumentar a equipe.
+
+O padrão comum aos três: **um gestor patrocinou**, escolheu **um processo recorrente e de baixo risco**, e mediu o resultado. É exatamente o formato do seu Canvas no M6.
+
+---
+
 ## Os 3 erros mais comuns
 
 | Erro | Sintoma | Causa | Como corrigir |
@@ -181,6 +212,7 @@ A progressão do módulo. A Camada 1 é a promessa do dia — todos saem com ela
 > 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, agende com o seu grupo 1 sessão de 30 min na conta Pro compartilhada — para executar 1 tarefa real da workstation configurada em sala. Guarde o arquivo de saída gerado.
 > Como saber que aconteceu: a sessão aconteceu (convite no calendário + presença), o arquivo de saída existe na pasta com data desta semana, e foi usado (enviado, apresentado ou registrado). Bônus: o seu CLAUDE.md individual está preenchido, pronto para instalar quando você tiver conta Pro própria.
+> **Compromisso opcional (L3):** empacote 1 processo da sua área em skill própria — o degrau que transforma a workstation em rotina que roda sob demanda.
 
 ---
 
