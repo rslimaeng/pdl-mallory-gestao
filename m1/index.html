@@ -55,7 +55,6 @@
       <div class="contrato">
         <p><strong>Você ganha:</strong> o padrão global de adoção de IA no trabalho executivo (Anthropic Economic Index), os 3 modos oficiais aplicados à decisão gerencial (Autopiloto, Colaboração, Manual), a distinção entre Delegação e Estruturação do Pensamento — e onde a sua área entra na curva.</p>
         <p><strong>Você se compromete a:</strong> sair daqui com uma hipótese escrita: onde a IA gera vantagem na sua área em 12 meses, e qual indicador prova.</p>
-        <p class="tempo-leitura"><strong>Tempo de leitura desta página:</strong> 10 min</p>
       </div>
     </section>
 
@@ -88,34 +87,31 @@
 
     <section class="section">
       <h2>O que a IA generativa é — e por que isso muda a estratégia</h2>
-      <p><strong>IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.</strong> Prevê a próxima palavra baseada em probabilidade estatística — não pensa, não tem intuição, não conhece a Mallory.</p>
-      <div class="ia-aninhada">
-        <p class="ia-aninhada-hint">↑ Passe o mouse sobre cada anel</p>
-        <svg class="ia-aninhada-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IA generativa aninhada dentro de Deep Learning, dentro de Machine Learning">
-          <circle cx="170" cy="170" r="160" data-layer="ml"
-                  data-title="Machine Learning"
-                  data-desc="Uma máquina que aprende com exemplos. Previsão de demanda, detecção de fraude, recomendação — tudo isso é ML."></circle>
-          <text x="170" y="30">Machine Learning</text>
-          <circle cx="170" cy="180" r="110" data-layer="dl"
-                  data-title="Deep Learning"
-                  data-desc="ML com redes neurais profundas. Reconhece imagem, transcreve reunião, traduz relatório — o que ficou pesado na década passada."></circle>
-          <text x="170" y="80">Deep Learning</text>
-          <circle cx="170" cy="185" r="60" data-layer="gen" class="active"
-                  data-title="IA Generativa"
-                  data-desc="Deep Learning treinado para gerar texto, análise, código. Claude e ChatGPT vivem aqui — é a camada que você usa na gestão hoje."></circle>
-          <text x="170" y="195">IA Generativa</text>
-        </svg>
-        <div class="ia-aninhada-desc" aria-live="polite">
-          <strong>IA Generativa</strong>
-          <span class="desc-text">Deep Learning treinado para gerar texto, análise, código. Claude e ChatGPT vivem aqui — é a camada que você usa na gestão hoje.</span>
+      <div class="matriz-ia" role="group" aria-label="Matriz de conceitos: Inteligência Artificial contém Machine Learning, que contém Deep Learning, que contém IA Generativa">
+        <div class="matriz-ia__caixas" aria-hidden="true">
+          <div class="caixa caixa-1" data-nivel="ia">
+            <span class="caixa-label">Inteligência Artificial</span>
+            <div class="caixa caixa-2" data-nivel="ml">
+              <span class="caixa-label">Machine Learning</span>
+              <div class="caixa caixa-3" data-nivel="dl">
+                <span class="caixa-label">Deep Learning</span>
+                <div class="caixa caixa-4 caixa-ativa" data-nivel="genai">
+                  <span class="caixa-label">IA Generativa</span>
+                  <span class="caixa-voce">a camada que você usa na gestão</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <aside class="matriz-ia__legenda">
+          <p class="legenda-frase"><strong>IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.</strong> Prevê a próxima palavra por probabilidade estatística — não pensa, não tem intuição, não conhece a Mallory.</p>
+          <ol class="legenda-lista">
+            <li><strong>Fluência ≠ exatidão</strong> — ela escreve com confiança mesmo quando inventa. A validação vira norma da área: protocolo em todo documento assinado (aprofundado no M4).</li>
+            <li><strong>Contexto define o valor</strong> — sem o seu contexto ela responde para uma indústria genérica; com Datasul, ISO 9001 e seu histórico de decisões vira ferramenta de trabalho. O ativo estratégico é o seu conhecimento.</li>
+            <li><strong>O ganho não é no output — é no ciclo</strong> — não é "produzir mais documento", é reduzir o ciclo de decisão: de 4 dias para 1, de reunião de 2h para briefing de 15 min. Aí mora o retorno.</li>
+          </ol>
+        </aside>
       </div>
-      <p>Três implicações estratégicas para o gestor:</p>
-      <ol>
-        <li><strong>Fluência ≠ exatidão.</strong> Ela escreve com confiança mesmo quando inventa. A validação vira norma da área — protocolo em todo documento assinado (aprofundado no M4).</li>
-        <li><strong>Contexto define o valor.</strong> Sem contexto seu, ela responde para uma indústria genérica. Com o seu — Datasul, ISO 9001, seu histórico de decisões — vira ferramenta de trabalho. <strong>O ativo estratégico é o seu conhecimento.</strong></li>
-        <li><strong>O ganho não é no output — é no ciclo.</strong> Não é sobre "produzir mais documento". É sobre reduzir o ciclo de decisão: de 4 dias para 1, de reunião de 2h para briefing de 15 min. Aí mora o retorno.</li>
-      </ol>
     </section>
 
     <section class="section">
@@ -130,49 +126,112 @@
       <p>Saber onde sua área está na curva evita duas armadilhas: <strong>começar tarde demais ou prometer cedo demais</strong>.</p>
     </section>
 
-    <section class="section wysiati-explorer" aria-label="WYSIATI e as 3 zonas do que você sabe">
+    <section class="section" aria-label="WYSIATI e as 3 zonas do que você sabe">
       <h2>O que a IA faz por você — em 3 zonas do que você sabe</h2>
-      <p class="wysiati-intro">O psicólogo Daniel Kahneman batizou uma armadilha do pensamento humano de <strong>WYSIATI</strong> — "What You See Is All There Is": decidimos com base só no que enxergamos. Com IA, isso vira ferramenta prática. <strong>Clique em cada zona para ver como a IA opera nela na sua rotina Mallory.</strong></p>
-      <div class="zonas-grid">
-        <button class="zona-card" data-zona="verde" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🟢</span>
-          <span class="zona-nome">Sei que sei</span>
-          <span class="zona-frase">O que você domina</span>
-        </button>
-        <button class="zona-card" data-zona="amarela" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🟡</span>
-          <span class="zona-nome">Sei que não sei</span>
-          <span class="zona-frase">O buraco que você reconhece</span>
-        </button>
-        <button class="zona-card" data-zona="vermelha" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🔴</span>
-          <span class="zona-nome">Não sei que não sei</span>
-          <span class="zona-frase">O ponto cego</span>
-        </button>
+      <div class="wysiati" role="group" aria-label="3 zonas do conhecimento">
+        <div class="wysiati__caixas" aria-hidden="true">
+          <div class="zona zona-3">
+            <span class="zona-label">Não sei que não sei</span>
+            <div class="zona zona-2">
+              <span class="zona-label">Sei que não sei</span>
+              <div class="zona zona-1">
+                <span class="zona-label">Sei que sei</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="wysiati__legenda">
+          <h3 class="wysiati__titulo">WYSIATI</h3>
+          <p class="wysiati__origem"><em>What You See Is All There Is</em> — Daniel Kahneman</p>
+          <p class="wysiati__intro">Decidimos com base só no que está visível na cabeça. Em IA isso vira armadilha: <strong>a vantagem competitiva mora no que está invisível pra você</strong> — não porque é difícil, mas porque ninguém te mostrou que existia. O gestor que só usa "sei que sei" está subutilizando a ferramenta.</p>
+          <table class="wysiati__tabela">
+            <thead>
+              <tr><th>Zona</th><th>O que a IA faz por você</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sei que sei</strong></td>
+                <td><strong>Padroniza</strong> o que já é operacional — consolida 3 relatórios da área em briefing executivo v1</td>
+              </tr>
+              <tr>
+                <td><strong>Sei que não sei</strong></td>
+                <td><strong>Acelera</strong> o aprendizado — explica a Reforma Tributária (IBS/CBS) do ponto de vista de uma manufatureira</td>
+              </tr>
+              <tr>
+                <td><strong>Não sei que não sei</strong></td>
+                <td><strong>Expande</strong> seu campo de visão — sugere perguntas de risco sobre os desvios do mês antes da reunião de diretoria</td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
       </div>
-      <div class="zona-detalhe" id="zona-detalhe" aria-live="polite"></div>
-      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> o gestor que só usa a zona "sei que sei" está subutilizando. A vantagem competitiva mora nas outras duas. Verde é território de <strong>Autopiloto</strong>; amarela e vermelha são <strong>Colaboração</strong> — a IA como sócio analítico. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
+      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> a vantagem competitiva mora nas zonas que você menos explora. "Sei que sei" é território de <strong>Autopiloto</strong>; as outras duas são <strong>Colaboração</strong> — a IA como sócio analítico. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
     </section>
 
-    <section class="section">
+    <section class="section delegacao-vs-estruturacao">
       <h2>Delegação × Estruturação do Pensamento — o corte executivo</h2>
-      <p>Duas famílias de uso completamente diferentes. Iniciantes só usam a primeira. Gestor maduro navega as duas.</p>
-      <div class="selos-nao-entra">
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">🎯</div>
-          <div class="selo-label">Delegação Inteligente — transferir execução</div>
-          <div class="selo-sub">Tarefa cara em hora de gestor que segue padrão: resumo de reunião, briefing, 1ª versão de comunicado, triagem de e-mail. Ganho: 30-60 min por entregável. Prompt típico: "Resuma essa transcrição em 5 bullets, com decisões e responsáveis."</div>
+      <p class="secao-lead">Duas famílias de uso completamente diferentes. Iniciantes só usam a primeira. Gestor maduro navega as duas.</p>
+
+      <div class="accordion-familias" role="list">
+        <div class="familia-item" data-familia="delegacao" role="listitem">
+          <button class="familia-header" aria-expanded="true" aria-controls="familia-delegacao-body">
+            <span class="familia-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+              </svg>
+            </span>
+            <span class="familia-textos">
+              <span class="familia-titulo">Delegação Inteligente</span>
+              <span class="familia-subtitulo">Transferir execução de tarefas repetitivas para a IA</span>
+            </span>
+            <span class="familia-seta" aria-hidden="true">▾</span>
+          </button>
+          <div class="familia-body" id="familia-delegacao-body" hidden>
+            <dl>
+              <dt>O que é</dt>
+              <dd>Transferir a execução de uma tarefa repetitiva ou volumosa pra IA.</dd>
+              <dt>Quando usar</dt>
+              <dd>Resumir reunião transcrita, categorizar gastos, gerar 10 ideias de título, redigir comunicado padrão, triagem inicial de currículos.</dd>
+              <dt>Benefício</dt>
+              <dd>Ganho imediato de tempo. Você sai com 1 entregável que ia tomar 30-60 min por peça.</dd>
+              <dt>Prompt típico</dt>
+              <dd><code>"Resuma esta reunião em 5 bullets, destacando decisões e responsáveis."</code></dd>
+            </dl>
+          </div>
         </div>
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">🧠</div>
-          <div class="selo-label">Estruturação do Pensamento — pensar junto</div>
-          <div class="selo-sub">Decisão difícil, cenário de risco, defesa de argumento. A IA vira sócio analítico, não copista. Ganho: decisões mais seguras + você emerge mais preparado. Prompt típico: "Assuma o papel de um diretor cético. Aponte os 3 motivos mais prováveis desta hipótese falhar."</div>
+
+        <div class="familia-item" data-familia="estruturacao" role="listitem">
+          <button class="familia-header" aria-expanded="false" aria-controls="familia-estruturacao-body">
+            <span class="familia-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </span>
+            <span class="familia-textos">
+              <span class="familia-titulo">Estruturação do Pensamento</span>
+              <span class="familia-subtitulo">Usar IA como sócio analítico — pensar junto, não só executar</span>
+            </span>
+            <span class="familia-seta" aria-hidden="true">▾</span>
+          </button>
+          <div class="familia-body" id="familia-estruturacao-body" hidden>
+            <dl>
+              <dt>O que é</dt>
+              <dd>Usar a IA como sócio analítico numa decisão difícil, cenário de risco, defesa de argumento. Ela vira interlocutora — não copista.</dd>
+              <dt>Quando usar</dt>
+              <dd>Decidir prioridade entre 3 projetos concorrentes, preparar apresentação pra diretoria, estruturar diagnóstico de queda de produtividade, defender uma hipótese antes de comprar briga.</dd>
+              <dt>Benefício</dt>
+              <dd>Decisões mais seguras. Você emerge da conversa mais preparado do que entrou — não só com um entregável.</dd>
+              <dt>Prompt típico</dt>
+              <dd><code>"Assuma o papel de um diretor cético. Aponte os 3 motivos mais prováveis desta hipótese falhar."</code></dd>
+            </dl>
+          </div>
         </div>
       </div>
-      <div class="callout callout-marco">
-        <p class="callout-title">🎯 Diagnóstico rápido</p>
-        <p>Se você só faz Delegação hoje, está operando em <strong>~40% do potencial</strong> da ferramenta. A outra metade é onde o gestor vira estrategista assistido. A Camada 2 do exercício deste módulo pratica isso.</p>
-      </div>
+
+      <aside class="diagnostico-rapido">
+        <p class="diagnostico-label">Diagnóstico rápido</p>
+        <p>Se você só faz Delegação hoje, está operando em <strong>metade do potencial</strong> da ferramenta. A outra metade é onde o gestor vira estrategista assistido. A Camada 2 do exercício deste módulo pratica isso.</p>
+      </aside>
     </section>
 
     <section class="section">
@@ -254,8 +313,9 @@
           <h3>Sua rotina é qual modo?</h3>
           <p>Descreva uma rotina de gestão da sua área. Depois escolha o modo que você acha que ela é. Receba feedback com exemplo Mallory similar.</p>
         </div>
-        <label for="simulador-tarefa" class="simulador-label">Sua rotina em 1 linha</label>
-        <input type="text" id="simulador-tarefa" placeholder="Ex.: preparar a análise de desvios pra reunião mensal de diretoria" maxlength="200">
+        <label for="simulador-tarefa" class="simulador-label">Sua rotina em 1 linha (opcional — pode só clicar num modo)</label>
+        <input type="text" id="simulador-tarefa" placeholder="Organizar 200 relatórios de turno por data" maxlength="200">
+        <div class="simulador-sugestao" id="simulador-sugestao" aria-live="polite"></div>
         <div class="simulador-opcoes">
           <button class="simulador-opcao" data-modo="autopiloto" type="button">
             <span class="opcao-icon" aria-hidden="true">🚗</span>
@@ -353,51 +413,46 @@
 
     <section class="section">
       <h2>Prompt-âncora do módulo</h2>
-      <p>O mapeamento inicial da sua área — a ponte para tudo que vem hoje. Autocontido: funciona copiado num chat novo, com definições inline dos 3 modos oficiais.</p>
+      <p>Um template preenchível de sócio analítico — copie, preencha os campos entre colchetes e rode num chat novo. Ele já traz <strong>Critério de Sucesso</strong> e <strong>Critério Negativo</strong>: é o que separa um pedido amador de um briefing executivo.</p>
 
       <div class="card-prompt">
         <div class="prompt-box">
           <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
           <pre><code><span class="prompt-marker"># PAPEL</span>
-Você é um consultor sênior de transformação com IA em indústria de manufatura,
-com 10+ anos ajudando gestores a decidir onde a IA rende — sem hype
-e sem propostas que dependem de projeto de TI.
+Você é um sócio analítico que ajuda um gestor Mallory a estruturar decisão, escrever
+comunicação executiva ou analisar situação de negócio. Você pode fazer as duas coisas:
+executar tarefas repetitivas (delegação) ou pensar junto em decisão difícil
+(estruturação do pensamento) — depende do que o gestor pedir.
 
 <span class="prompt-marker"># CONTEXTO</span>
-Sou gestor da área de [sua área] em uma fabricante de eletroportáteis
-(linha branca: liquidificador, air fryer, ventilador, batedeira).
-Estrutura: certificação ISO 9001, ERP Datasul, processos documentados,
-equipe de [tamanho] reportando a mim.
-Minhas rotinas que mais consomem tempo de gestão:
-[liste 3-5 — ex.: análise de desvios mensal, preparação de reunião de diretoria,
-triagem de contratos, consolidação de indicadores]
+[Gestor preenche: sua área + tempo de casa + 1 linha sobre o desafio de hoje]
+Exemplo: "Gerente de PCP há 6 anos. Estamos ampliando linha 5 e tenho que decidir
+sequência dos 3 novos moldes ainda esta semana."
 
 <span class="prompt-marker"># TAREFA</span>
-Classifique cada rotina em um dos 3 modos oficiais:
-
-- Autopiloto: rotina padronizada. A IA executa, você revisa.
-  Ex.: transformar reunião gravada em ata estruturada.
-
-- Colaboração: rotina que precisa do seu contexto + iteração.
-  Ex.: estruturar cenários de negociação com fornecedor.
-
-- Manual: decisão de alta responsabilidade autoral.
-  Ex.: decisão de demissão, aprovação de investimento, parecer para diretoria.
-
-Para cada rotina: modo + ganho estimado (horas/mês) + facilidade de começar
-(1-5, sendo 5 = "posso testar amanhã com a conta atual"). Encerre com as 2
-recomendadas para 90 dias e o porquê executivo.
+[O que você quer]
+Exemplo: "Estruture os prós e contras de cada sequência possível (A→B→C, A→C→B,
+B→A→C) considerando lead time de fornecedor e capacidade de teste."
 
 <span class="prompt-marker"># FORMATO</span>
-Tabela: Rotina | Modo | Ganho (h/mês) | Facilidade (1-5) | Justificativa.
-Depois, parágrafo de 3-4 linhas com as 2 top-priorizadas e por que essas.
+[Como quer receber]
+Exemplo: "Tabela comparativa 3 colunas × 5 critérios + parágrafo final de recomendação
+com nível de confiança."
 
 <span class="prompt-marker"># LIMITAÇÕES</span>
-Se faltar informação, pergunte. Não invente.
-Não proponha nada que dependa de comprar sistema ou aprovar orçamento.
-Não classifique como Autopiloto rotina que envolve dado das 5 categorias
-sensíveis (gente, produto, contrato, diretoria, concorrência) sem processo
-de desidentificação prévia.</code></pre>
+- Nada de dado numérico específico da Mallory (custo, receita, margem)
+- Sem nome de fornecedor
+- Recomendação nunca é ordem — é subsídio pra minha decisão
+
+<span class="prompt-marker"># CRITÉRIO DE SUCESSO</span>
+Eu consigo levar a análise pra reunião de gerentes amanhã e defender uma escolha
+com argumento estruturado.
+
+<span class="prompt-marker"># CRITÉRIO NEGATIVO</span>
+Sinais de que a resposta falhou:
+- Escolhe pra mim sem eu pedir
+- Ignora que capacidade de teste é gargalo
+- Tabela sem coluna de risco</code></pre>
         </div>
         <label class="action-check" data-key="m1-prompt-ancora">
           <input type="checkbox">
@@ -526,48 +581,6 @@ de desidentificação prévia.</code></pre>
   </div>
 </footer>
 
-<script>
-  window.M1_ZONAS = {
-    verde: {
-      cabecalho: 'A IA padroniza o que você já faz bem',
-      corpo: 'Você sabe montar o briefing mensal; ela produz a versão v1 no seu padrão. Ganho: velocidade em coisa que já era operacional.',
-      exemplo: 'Consolide esses 3 relatórios da área em briefing executivo padrão v1.',
-      modo: 'Autopiloto'
-    },
-    amarela: {
-      cabecalho: 'A IA acelera aprendizado',
-      corpo: 'Você sabe que precisa entender melhor uma legislação nova; ela explica, dá exemplos, sugere leitura. Ganho: você chega mais preparado à mesa.',
-      exemplo: 'Explique a Reforma Tributária (IBS/CBS) do ponto de vista de uma manufatureira de eletroportáteis.',
-      modo: 'Colaboração'
-    },
-    vermelha: {
-      cabecalho: 'A IA expande o campo de visão',
-      corpo: 'Você pergunta "que perguntas eu deveria fazer sobre esse indicador?" — ela sugere ângulos que você não considerou. Ganho: menos surpresa executiva.',
-      exemplo: 'Analise os desvios do mês. Que perguntas de risco eu deveria estar fazendo pra reunião de diretoria?',
-      modo: 'Colaboração / Estruturação do Pensamento'
-    }
-  };
-  window.M1_SIMULADOR = {
-    autopiloto: {
-      titulo: '✓ Autopiloto — bom começo pra rotina padronizada',
-      modo: 'Rotina que segue sempre o mesmo padrão. A IA executa, você revisa. Baixo risco, alto ganho de tempo de gestão.',
-      exemplo: 'transformar reunião gravada em ata estruturada. Toda semana, mesmo formato.',
-      alerta: 'se ela envolve dado sensível (gente, produto, contrato, diretoria, concorrência) sem desidentificação, ou uma decisão de peso, provavelmente é Colaboração ou Manual. Reveja.'
-    },
-    colaboracao: {
-      titulo: '✓ Colaboração — a IA propõe, você decide',
-      modo: 'A IA rascunha e propõe cenários; você dá o contexto estratégico, itera e decide. Risco médio, ganho em qualidade da decisão.',
-      exemplo: 'estruturar cenários para negociação com fornecedor — a IA lista os trade-offs, você escolhe onde ceder.',
-      alerta: 'se você quer só produzir mais rápido sem pensar junto, era Autopiloto. Se a decisão é irreversível e autoral, é Manual.'
-    },
-    manual: {
-      titulo: '✓ Manual — a decisão é sua',
-      modo: 'Decisão de alta responsabilidade autoral. A IA no máximo dá referência; a decisão e a assinatura são só suas.',
-      exemplo: 'decisão de demissão, aprovação de investimento, parecer para a diretoria, posicionamento em crise pública.',
-      alerta: 'se sua tarefa é preparar um documento ou cenário, você está sub-utilizando. Manual é pra decisão que não se delega.'
-    }
-  };
-</script>
 <script src="../assets/script.js" defer></script>
 </body>
 </html>
