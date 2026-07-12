@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M2 · IA para Gestores · Mallory PDL 2026</title>
+  <title>M2 · IA para Gestores: Decisão, Análise e Comunicação · Mallory PDL 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+
+<div class="ambient-blob ambient-blob-blue" aria-hidden="true"></div>
+<div class="ambient-blob ambient-blob-purple" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="container">
@@ -27,8 +30,8 @@
     <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
       <ul>
         <li><a href="../">Início</a></li>
-        <li><a href="#">Banco de Prompts</a></li>
-        <li><a href="#">Artefatos</a></li>
+        <li><a href="../banco-de-prompts/">Banco de Prompts</a></li>
+        <li><a href="../artefatos/">Artefatos</a></li>
       </ul>
     </nav>
   </div>
@@ -38,27 +41,507 @@
   <div class="container">
 
     <section class="hero">
-      <span class="eyebrow">Trilha 2 · Módulo 2 de 6 · em construção</span>
       <h1>M2 · IA para Gestores: Prática em Decisão, Análise e Comunicação</h1>
       <div class="page-meta">
-        <span class="badge">1h30</span>
-        <span class="badge badge-em-breve">em construção</span>
+        <span class="badge">Trilha 2</span>
+        <span class="badge">Módulo 2 de 6</span>
       </div>
-      <p class="lead">Fazer o gestor usar IA generativa para tarefas típicas do seu nível de atuação.</p>
+      <p class="lead">Análise de cenários, extração de insight de relatórios e comunicação estratégica — executados por você, ao vivo.</p>
     </section>
 
     <section class="section">
-      <h2>O que este módulo vai cobrir</h2>
-      <p>Este material está em construção. O conteúdo detalhado será publicado até 15/07/2026. Enquanto isso, os pontos abaixo são exatamente o que a ementa oficial do PDL prevê:</p>
-      <ul>
-        <li>Primeiro acesso e configuração: ChatGPT, Claude e Microsoft Copilot</li>
-        <li>IA como copiloto na tomada de decisão: análise de cenários, estruturação de problemas complexos, avaliação de riscos</li>
-        <li>Análise de dados executiva: extrair insights de relatórios, planilhas e indicadores com apoio de IA</li>
-        <li>Comunicação estratégica: briefings, comunicados de liderança, narrativas de resultado e apresentações</li>
-        <li>Prática em 3 exercícios: análise de cenário de área, comunicado de liderança e síntese de relatório mensal</li>
-      </ul>
-      <p><strong>Resultado esperado:</strong> O gestor executa pelo menos 3 prompts de alto valor aplicados à sua realidade como líder.</p>
+      <h2>O contrato deste módulo</h2>
+      <div class="contrato">
+        <p><strong>Você ganha:</strong> o PCTFL avançado — com Critério de Sucesso e Critério Negativo — aplicado às 3 tarefas mais caras do seu cargo: analisar, decidir, comunicar.</p>
+        <p><strong>Você se compromete a:</strong> executar os 3 prompts ao vivo com material da sua área (desidentificado) e avaliar cada resposta contra o critério que você mesmo definiu.</p>
+      </div>
     </section>
+
+    <section class="section">
+      <h2>Você entra com → O que acontece → Você sai com</h2>
+      <div class="timeline-3-tempos">
+        <div class="tempo">
+          <span class="tempo-label">Você entra com</span>
+          <p>A hipótese do M1 e sua conta no Claude configurada</p>
+        </div>
+        <div class="tempo-arrow" aria-hidden="true">→</div>
+        <div class="tempo">
+          <span class="tempo-label">O que acontece</span>
+          <p>Você aprende as 2 camadas que faltam no seu prompt — Critério de Sucesso e Negativo — e roda 3 execuções reais</p>
+        </div>
+        <div class="tempo-arrow" aria-hidden="true">→</div>
+        <div class="tempo tempo-saida">
+          <span class="tempo-label">Você sai com</span>
+          <p>3 prompts de alto valor executados: síntese de relatório, comunicado de liderança e análise de cenário — o método alimenta o M3</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Por que isso importa aqui dentro</h2>
+      <p>A reunião de decisão está na sua semana. Você tem o relatório de 30 páginas da sua área, os números do mês e 40 minutos livres na agenda até lá. O que você faz nesses 40 minutos define a qualidade da sua fala — e hoje eles vão embora em compilar e formatar, não em pensar.</p>
+      <p>Você já usa IA — a diferença desta turma para a da manhã é essa. Mas há um degrau entre usar e extrair valor consistente: quando você mostra a resposta da IA para outra pessoa e ela diz "não era bem isso", o problema quase nunca é a IA. É a definição de "bom" que ficou na sua cabeça e não entrou no prompt.</p>
+      <p>É o mesmo princípio de delegar para a equipe. Dizer só <em>o que</em> fazer é briefing incompleto. Delegação de gestor entrega o pacote: faça isto, baseie-se nestes dados, evite estes erros, e vou avaliar por este critério. O PCTFL avançado é exatamente isso — por escrito, para a IA.</p>
+    </section>
+
+    <section class="section compare-section">
+      <h2>Antes do método: vago × situado</h2>
+      <p class="secao-lead">O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria. O outro recebe o que decide a reunião.</p>
+
+      <div class="compare-grid" role="group" aria-label="Comparação prompt vago vs prompt situado">
+        <div class="compare-par">
+          <div class="compare-col compare-vago" data-tipo="vago">
+            <span class="compare-label">Vago</span>
+            <pre class="compare-prompt">O que você acha desse cenário aqui?</pre>
+            <p class="compare-consequencia">Recebe: opinião morna dos dois lados, sem premissa explícita — e ninguém decide com isso.</p>
+          </div>
+          <div class="compare-col compare-situado" data-tipo="situado">
+            <span class="compare-label">Situado</span>
+            <pre class="compare-prompt">Monte 3 cenários (base/otimista/pessimista) pra decidir X, com premissas explícitas em cada. Aponte qual premissa, se falhar, derruba o cenário.</pre>
+            <p class="compare-consequencia">Recebe: o espaço da decisão organizado — você valida premissas e escolhe com argumento.</p>
+          </div>
+        </div>
+
+        <div class="compare-par">
+          <div class="compare-col compare-vago" data-tipo="vago">
+            <span class="compare-label">Vago</span>
+            <pre class="compare-prompt">Faz um resumo desse relatório.</pre>
+            <p class="compare-consequencia">Recebe: paráfrase sem hierarquia, sem decisão sugerida — trabalho difícil ainda com você.</p>
+          </div>
+          <div class="compare-col compare-situado" data-tipo="situado">
+            <span class="compare-label">Situado</span>
+            <pre class="compare-prompt">Sintetize este relatório em 1 página pra reunião de diretoria. Formato: parágrafo de abertura com a mensagem central · tabela (Rubrica · Desvio · Estrutural/Pontual · Ação sugerida) · fechamento com os 2 pontos que exigem decisão.</pre>
+            <p class="compare-consequencia">Recebe: briefing que a diretoria lê e decide sem abrir o relatório completo.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="compare-fecho">A diferença não é a IA. É o quanto você <strong>situa</strong> o pedido — e, no nível de gestor, o quanto você declara o que é uma resposta bem-sucedida. O método a seguir — PCTFL+ — é isso, virado em checklist.</p>
+    </section>
+
+    <section class="section">
+      <h2>PCTFL+ — as 7 camadas do prompt de gestor</h2>
+      <p class="secao-lead">As 5 do prompt profissional, mais as 2 que separam "achei ok" de "atende o critério".</p>
+      <div class="pctfl-grid">
+        <div class="pctfl-card">
+          <span class="pctfl-letra">P</span>
+          <span class="pctfl-nome">Papel</span>
+          <span class="pctfl-desc">Quem a IA deve ser — senioridade e perspectiva.</span>
+        </div>
+        <div class="pctfl-card">
+          <span class="pctfl-letra">C</span>
+          <span class="pctfl-nome">Contexto</span>
+          <span class="pctfl-desc">A situação real e os insumos — sem isso, indústria genérica.</span>
+        </div>
+        <div class="pctfl-card">
+          <span class="pctfl-letra">T</span>
+          <span class="pctfl-nome">Tarefa</span>
+          <span class="pctfl-desc">Verbo cirúrgico — monte cenários, compare, decomponha.</span>
+        </div>
+        <div class="pctfl-card">
+          <span class="pctfl-letra">F</span>
+          <span class="pctfl-nome">Formato</span>
+          <span class="pctfl-desc">Estrutura da resposta — tabela, 1 página, N colunas.</span>
+        </div>
+        <div class="pctfl-card">
+          <span class="pctfl-letra">L</span>
+          <span class="pctfl-nome">Limitações</span>
+          <span class="pctfl-desc">O que não fazer — e a regra "não invente".</span>
+        </div>
+        <div class="pctfl-card pctfl-card-plus">
+          <span class="pctfl-letra pctfl-letra-plus">CS</span>
+          <span class="pctfl-nome">Critério de Sucesso</span>
+          <span class="pctfl-desc">A resposta funciona se [destinatário] conseguir [ação] sem pedir esclarecimento.</span>
+        </div>
+        <div class="pctfl-card pctfl-card-plus">
+          <span class="pctfl-letra pctfl-letra-plus">CN</span>
+          <span class="pctfl-nome">Critério Negativo</span>
+          <span class="pctfl-desc">O que a resposta não pode ser — tom, formato, conteúdo proibido.</span>
+        </div>
+      </div>
+      <div class="callout callout-info">
+        <p class="callout-title">As 2 camadas que separam prompt funcional de prompt de gestor</p>
+        <p>Sem o <strong>Critério de Sucesso</strong>, você avalia por sensação. Sem o <strong>Critério Negativo</strong>, a IA entrega a média da internet. O CS é o ponto que mais sobe a qualidade média: transforma "achei ok" em "atende o critério".</p>
+      </div>
+      <div class="callout callout-info">
+        <p class="callout-title">Conexão com o M1: modo + método</p>
+        <p>No M1 você viu os 3 modos — <strong>Autopiloto</strong> (a IA executa, você revisa), <strong>Colaboração</strong> (vocês pensam juntos) e <strong>Manual</strong> (a decisão é sua). Eles dizem <em>quando</em> usar a IA; o PCTFL+ diz <em>como</em> pedir. Análise de cenário e síntese de relatório são o modo <strong>Colaboração</strong> com método: a IA estrutura, você valida a premissa e decide. Um briefing padrão que se repete todo mês vira <strong>Autopiloto</strong>. E a decisão que sobe para a diretoria continua <strong>Manual</strong> — o parecer tem um responsável, e é você.</p>
+      </div>
+    </section>
+
+    <section class="section verbos-section">
+      <h2>Troque "me ajude" por verbo cirúrgico</h2>
+      <p class="secao-lead">A IA obedece o verbo. Verbo vago = resposta vaga. No nível de gestor, o verbo já carrega a estrutura da decisão.</p>
+      <div class="table-wrap">
+        <table class="verbos-tabela">
+          <thead>
+            <tr><th>Área</th><th>Verbo vago</th><th>Verbo cirúrgico</th><th>Exemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Análise</td><td>analise, veja</td><td>monte cenários, aponte premissa, decomponha</td><td>"Monte 3 cenários com premissas explícitas…"</td></tr>
+            <tr><td>Decisão</td><td>recomende, escolha</td><td>compare por critério, aponte trade-off, ranqueie</td><td>"Compare por [custo, prazo, risco]…"</td></tr>
+            <tr><td>Comunicação</td><td>escreva, faça</td><td>reescreva pra diretoria em 1 página, adapte pra 5 linhas de coordenador</td><td>"Adapte esta síntese pra 5 linhas de prioridade…"</td></tr>
+            <tr><td>Diagnóstico</td><td>avalie, diga o que acha</td><td>liste hipóteses, aponte a mais provável, dê próximo passo pra validar</td><td>"Liste 5 hipóteses e a que testaria primeiro…"</td></tr>
+            <tr><td>Preparação</td><td>prepare, ajude</td><td>ensaie objeções, aponte perguntas hostis, treine pitch</td><td>"Ensaie 5 objeções de diretor cético…"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section gerador-section">
+      <h2>Monte seu prompt agora — ferramenta viva</h2>
+      <p class="secao-lead">Preencha os 7 campos à esquerda. O prompt monta sozinho à direita. Copie e cole no Claude — é o modo Colaboração com método.</p>
+
+      <div class="gerador-pctfl" data-modo="t2">
+        <form class="gerador-form" onsubmit="return false;">
+          <div class="gerador-campo">
+            <label for="pctfl-papel">
+              <span class="campo-letra">P</span> Papel
+              <span class="campo-hint">quem a IA deve ser</span>
+            </label>
+            <textarea id="pctfl-papel" data-campo="papel" rows="2" placeholder="Você é um controller sênior com experiência em indústria de manufatura no Brasil."></textarea>
+          </div>
+          <div class="gerador-campo">
+            <label for="pctfl-contexto">
+              <span class="campo-letra">C</span> Contexto
+              <span class="campo-hint">a situação real + insumos, sem inventar</span>
+            </label>
+            <textarea id="pctfl-contexto" data-campo="contexto" rows="4" placeholder="Fechamento de junho de uma fabricante de eletroportáteis. Dados FICTÍCIOS: orçado R$ 8,2 mi / realizado R$ 8,9 mi. Frete 3º mês acima. Manutenção estourou por parada não programada da injetora 7."></textarea>
+          </div>
+          <div class="gerador-campo">
+            <label for="pctfl-tarefa">
+              <span class="campo-letra">T</span> Tarefa
+              <span class="campo-hint">verbo cirúrgico (ver tabela acima)</span>
+            </label>
+            <textarea id="pctfl-tarefa" data-campo="tarefa" rows="2" placeholder="Redija o briefing de desvios: separe estrutural de pontual, explique o direcionador de cada um e sugira 1 ação por desvio relevante."></textarea>
+          </div>
+          <div class="gerador-campo">
+            <label for="pctfl-formato">
+              <span class="campo-letra">F</span> Formato
+              <span class="campo-hint">como quer receber</span>
+            </label>
+            <textarea id="pctfl-formato" data-campo="formato" rows="2" placeholder="1 página: parágrafo de abertura + tabela (Rubrica | Desvio | Estrutural/Pontual | Direcionador | Ação) + fechamento com os 2 pontos que exigem decisão."></textarea>
+          </div>
+          <div class="gerador-campo">
+            <label for="pctfl-limites">
+              <span class="campo-letra">L</span> Limitações
+              <span class="campo-hint">o que não fazer + regra de ouro</span>
+            </label>
+            <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. Use apenas os números do contexto — não crie projeção que os dados não sustentam."></textarea>
+          </div>
+          <div class="gerador-campo gerador-campo-avancado">
+            <label for="pctfl-sucesso">
+              <span class="campo-letra campo-letra-plus">CS</span> Critério de Sucesso
+              <span class="campo-hint">como você saberá que funcionou</span>
+            </label>
+            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo."></textarea>
+          </div>
+          <div class="gerador-campo gerador-campo-avancado">
+            <label for="pctfl-negativo">
+              <span class="campo-letra campo-letra-plus">CN</span> Critério Negativo
+              <span class="campo-hint">o que a resposta NÃO pode ser</span>
+            </label>
+            <textarea id="pctfl-negativo" data-campo="negativo" rows="2" placeholder="Não use jargão contábil sem tradução. Não suavize desvio estrutural como pontual."></textarea>
+          </div>
+
+          <div class="gerador-acoes">
+            <button type="button" class="gerador-btn gerador-carregar" data-acao="carregar">Carregar exemplo briefing</button>
+            <button type="button" class="gerador-btn gerador-limpar" data-acao="limpar">Limpar tudo</button>
+          </div>
+        </form>
+
+        <aside class="gerador-preview">
+          <div class="preview-topo">
+            <span class="preview-label">Seu prompt · pronto pra copiar</span>
+            <button type="button" class="gerador-btn gerador-copiar" data-acao="copiar">Copiar</button>
+          </div>
+          <pre class="preview-conteudo" id="pctfl-preview" aria-live="polite"># PAPEL
+[preencha ao lado]
+
+# CONTEXTO
+[preencha ao lado]
+
+# TAREFA
+[preencha ao lado]
+
+# FORMATO
+[preencha ao lado]
+
+# LIMITAÇÕES
+[preencha ao lado]
+
+# CRITÉRIO DE SUCESSO
+[preencha ao lado]
+
+# CRITÉRIO NEGATIVO
+[preencha ao lado]</pre>
+          <p class="preview-nota">O que aparece aqui é o prompt final. Nada é enviado — cole no Claude quando quiser.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Dois padrões que valem o módulo</h2>
+      <p class="secao-lead">Onde o gestor extrai mais valor: estruturar a decisão e subir o relatório do dado à ação.</p>
+      <h3>Análise de cenário: premissas explícitas, nunca "o que você acha?"</h3>
+      <p>Pergunta de opinião gera resposta de opinião — rasa e sem dono. O padrão de gestor: "monte 3 cenários (base, otimista, pessimista) para [decisão], com premissas explícitas em cada um, e aponte qual premissa, se falhar, derruba o cenário". A IA organiza o espaço da decisão; as premissas você valida — e a escolha é sua. Estruturar assim é Colaboração; bater o martelo continua Manual.</p>
+      <h3>Narrativa executiva: dado → significado → ação</h3>
+      <p>Todo relatório pode parar em 3 alturas. <strong>Observação:</strong> "a rubrica X estourou 12%". <strong>Insight:</strong> "o estouro é estrutural — 3º mês seguido, mesmo direcionador". <strong>Ação:</strong> "renegociar o contrato Y antes do próximo ciclo". Entregar só a observação é largar o trabalho difícil com o leitor. Instrua a IA a subir os 3 degraus — e revise se o insight é seu de verdade.</p>
+    </section>
+
+    <section class="section">
+      <h2>Dois hábitos que pagam o módulo</h2>
+      <div class="callout callout-info">
+        <p class="callout-title">Uma fonte, N narrativas</p>
+        <p>O mesmo resultado do mês vira: 1 página analítica para a diretoria, 5 linhas de prioridades para seus coordenadores, 1 comunicado claro para o time. Ninguém tem tempo de escrever 3 documentos — e a IA transforma o primeiro nos outros dois em minutos, se o prompt disser quem lê cada um e o que cada leitor deve fazer depois de ler.</p>
+      </div>
+      <div class="callout callout-info">
+        <p class="callout-title">5 minutos no prompt, 45 a menos no retrabalho</p>
+        <p>Prompt de gestor se escreve uma vez e se reusa o ano inteiro — o do fechamento de janeiro serve para os outros 11. O custo real não é o tempo de escrever o prompt completo; é o ciclo de "não era isso" que o prompt incompleto gera. Salve os seus 3 melhores. Eles são ativo da área.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quando aplicar / Quando NÃO aplicar</h2>
+      <div class="table-wrap">
+        <table class="table-aplicar">
+          <thead>
+            <tr>
+              <th>Quando aplicar</th>
+              <th>Quando NÃO aplicar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sintetizar relatório longo em briefing com decisão sugerida</td>
+              <td>Delegar a decisão à IA — ela estrutura cenários, você escolhe</td>
+            </tr>
+            <tr>
+              <td>Montar cenários com premissas explícitas antes de decidir</td>
+              <td>Colar relatório com dado confidencial sem desidentificar (M4)</td>
+            </tr>
+            <tr>
+              <td>Adaptar a mesma mensagem para diretoria, gestores e time</td>
+              <td>Assinar número que você não recalculou na fonte</td>
+            </tr>
+            <tr>
+              <td>Ensaiar conversa difícil ou antecipar objeções da diretoria</td>
+              <td>Usar a resposta como parecer técnico — parecer tem responsável, e é você</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercício</h2>
+      <div class="tabs-exercicio" data-tabs-key="m2-exercicio">
+        <div class="tabs-list" role="tablist" aria-label="Camadas do exercício">
+          <button class="tab-button active" role="tab" aria-selected="true" data-tab="0">Camada 1 — Básico</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="1">Camada 2 — Desafio</button>
+        </div>
+
+        <div class="tab-panel active" role="tabpanel">
+          <div class="exercise-block">
+            <h3>Camada 1 — Básico <span class="badge badge-hands-on">todos · 10-15 min</span></h3>
+            <p><strong>Objetivo:</strong> executar 2 dos 3 prompts do módulo — síntese e comunicado — com material seu.</p>
+            <p><strong>Passo a passo:</strong></p>
+            <ol>
+              <li>Rode o prompt-âncora do briefing (botão <strong>"Carregar exemplo briefing"</strong> no gerador acima) como está e compare a resposta com o Critério de Sucesso dele. Passou? (Ainda sem conta? <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> → "Continuar com Google" — 2 minutos, e o colega do lado ajuda. A maioria da sala já chega logada.)</li>
+              <li>Adapte: troque o CONTEXTO por um resumo real da sua área (números desidentificados — troque valores reais por aproximados) e rode de novo.</li>
+              <li>Terceira execução — o comunicado de liderança: na mesma conversa, peça: "Transforme este briefing em um comunicado de 10 linhas para meus coordenadores: o que muda para eles e o que espero de cada um até o fim do mês. Critério de sucesso: cada coordenador sabe sua prioridade sem me perguntar. Negativo: sem tom de cobrança genérica."</li>
+              <li>Avalie cada resposta contra o critério que você escreveu — não contra "achei bom".</li>
+            </ol>
+            <p><strong>Resultado esperado:</strong> 1 briefing da sua área + 1 comunicado derivado dele, ambos avaliados por critério explícito.</p>
+            <p><strong>Como avaliar:</strong> pergunta-teste: se você enviasse agora, o destinatário executaria sem te procurar? Se a resposta é "ia me ligar para perguntar X", o X faltou no prompt — ajuste e rode de novo.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel">
+          <div class="exercise-block">
+            <h3>Camada 2 — Desafio <span class="badge badge-hands-on">para quem terminou · +10-15 min</span></h3>
+            <p><strong>Objetivo:</strong> o terceiro prompt — análise de cenário com premissas explícitas, no padrão profissional de 3 tempos.</p>
+            <p>Não é um prompt só — é uma sequência. O pré-preparo garante que a IA entendeu você; o âncora faz o pedido; o refino ataca a própria resposta. Escolha 1 decisão real pendente na sua área (renovar contrato, redistribuir equipe, antecipar compra) e rode os 3 na mesma conversa.</p>
+
+            <div class="trio-prompts">
+              <details class="trio-item">
+                <summary class="trio-summary">
+                  <span class="trio-numero">0</span>
+                  <span class="trio-textos">
+                    <span class="trio-titulo">Prompt de pré-preparo</span>
+                    <span class="trio-subtitulo">antes do prompt principal, garante que a IA "entra" na sua cabeça</span>
+                  </span>
+                  <span class="trio-seta" aria-hidden="true">▾</span>
+                </summary>
+                <div class="trio-corpo">
+                  <pre class="trio-prompt">Antes de eu te pedir a análise, quero garantir que você entendeu meu contexto.
+
+# CONTEXTO
+[cole aqui um resumo do seu cargo e o problema que quer atacar]
+
+# TAREFA
+Reformule com suas palavras o problema que você entendeu, aponte 3 informações que faltam pra você dar uma boa resposta, e pergunte antes de responder.
+
+# LIMITAÇÕES
+Se algum ponto não está claro, pergunte. Não invente.</pre>
+                  <p class="trio-nota">Roda uma vez, responde as perguntas dele, aí sim vai pro âncora.</p>
+                </div>
+              </details>
+
+              <details class="trio-item" open>
+                <summary class="trio-summary">
+                  <span class="trio-numero">1</span>
+                  <span class="trio-textos">
+                    <span class="trio-titulo">Prompt-âncora</span>
+                    <span class="trio-subtitulo">o pedido central com PCTFL+ completo</span>
+                  </span>
+                  <span class="trio-seta" aria-hidden="true">▾</span>
+                </summary>
+                <div class="trio-corpo">
+                  <pre class="trio-prompt"># PAPEL
+Você é um sócio analítico que ajuda gestor Mallory a estruturar decisões difíceis.
+
+# CONTEXTO
+[preencha com sua decisão real pendente — renovar contrato / redistribuir equipe / antecipar compra]
+
+# TAREFA
+Monte 3 cenários com premissas explícitas e aponte a premissa que, se falhar, derruba cada cenário.
+
+# FORMATO
+Tabela 3 colunas × 5 critérios + parágrafo final de recomendação com nível de confiança.
+
+# LIMITAÇÕES
+Nada de dado numérico específico da Mallory. Recomendação nunca é ordem — é subsídio.
+
+# CRITÉRIO DE SUCESSO
+Eu consigo defender a escolha em reunião citando premissas, não achismos.
+
+# CRITÉRIO NEGATIVO
+Não recomende um cenário — a escolha é minha. Não ignore que capacidade de teste é gargalo.</pre>
+                  <p class="trio-nota">Este é o que você monta com o gerador acima. Cola no Claude, revisa a resposta contra o Critério de Sucesso.</p>
+                </div>
+              </details>
+
+              <details class="trio-item">
+                <summary class="trio-summary">
+                  <span class="trio-numero">2</span>
+                  <span class="trio-textos">
+                    <span class="trio-titulo">Prompt de refino "advogado do diabo"</span>
+                    <span class="trio-subtitulo">na mesma conversa, força a IA a atacar a própria resposta</span>
+                  </span>
+                  <span class="trio-seta" aria-hidden="true">▾</span>
+                </summary>
+                <div class="trio-corpo">
+                  <pre class="trio-prompt">Assuma agora o papel de um diretor cético experiente. Ataque a análise que você acabou de me entregar. Aponte:
+
+1. As 3 fraquezas mais prováveis do cenário base
+2. A premissa que parece robusta mas não é
+3. O risco escondido que o formato de tabela não mostrou
+
+Não seja educado. Seja preciso.</pre>
+                  <p class="trio-nota">Este é o segundo prompt na mesma conversa. Você emerge com decisão mais segura do que qualquer análise fofa daria.</p>
+                </div>
+              </details>
+            </div>
+
+            <p><strong>Resultado esperado:</strong> 3 cenários com premissas marcadas por você como fato ou chute — e um refinamento do advogado do diabo que mudou a análise.</p>
+            <p><strong>Como avaliar:</strong> se você consegue apontar qual premissa vigia daqui pra frente, a análise virou instrumento de decisão. Se os 3 cenários parecem intercambiáveis, as premissas ficaram genéricas — aperte o CONTEXTO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Os 3 erros mais comuns</h2>
+      <div class="table-wrap">
+        <table class="table-default table-erros">
+          <thead>
+            <tr>
+              <th>Erro</th>
+              <th>Sintoma</th>
+              <th>Causa</th>
+              <th>Como corrigir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Avaliar por sensação</td>
+              <td>"Achei boa" — e o destinatário devolve com 4 perguntas</td>
+              <td>Critério de Sucesso ficou na cabeça, não no prompt</td>
+              <td>Escreva o critério antes do prompt: quem recebe, faz o quê, sem perguntar o quê</td>
+            </tr>
+            <tr>
+              <td>Pedir opinião em vez de estrutura</td>
+              <td>"O que você acha de X?" — resposta morna, dos dois lados</td>
+              <td>Delegar o julgamento em vez do preparo</td>
+              <td>Peça cenários, premissas, riscos, comparação por critério — e decida você</td>
+            </tr>
+            <tr>
+              <td>Reescrever em vez de refinar</td>
+              <td>Resposta 80% boa, você reescreve os 20% na mão, toda vez</td>
+              <td>Tratar cada resposta como final, não como iteração</td>
+              <td>Devolva na mesma conversa: "revise considerando [o que faltou]" — 2 iterações batem 1 reescrita</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout-alucinacao">
+      <p class="callout-title">Anti-alucinação — antes do briefing subir</p>
+      <ul>
+        <li><strong>Não deixe a IA inventar número que não está no seu relatório fonte.</strong> O Critério Negativo trava; o protocolo confere: fonte · número · consistência.</li>
+        <li>O briefing que sobe para a diretoria com número inventado não é erro da IA — <strong>é erro seu, com o seu nome</strong>. Revisão de conteúdo não é opcional em documento de decisão.</li>
+        <li>Caso-âncora: <strong>Mata v. Avianca (2023)</strong> — texto fluido, conteúdo fabricado, sanção real. O M4 traz o protocolo completo para você e para a sua equipe.</li>
+      </ul>
+    </div>
+
+    <section class="section entregavel-section">
+      <h2>O que você leva pra amanhã · marcar conforme sai</h2>
+      <p class="secao-lead">5 marcos concretos. Isto é o que fica no seu registro pessoal pós-treinamento.</p>
+      <ul class="entregavel-list" data-storage-key="m2-entregaveis">
+        <li>
+          <label>
+            <input type="checkbox" data-item="1">
+            <span>Rodei o prompt-âncora do módulo — como está — e li a resposta</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-item="2">
+            <span>Adaptei o Contexto pra minha situação real (desidentificada) e rodei de novo</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-item="3">
+            <span>Rodei um 3º prompt totalmente meu com PCTFL+ completo</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-item="4">
+            <span>Apliquei o Critério de Sucesso na avaliação de pelo menos 1 resposta</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" data-item="5">
+            <span>Salvei os 3 prompts (pré-preparo · âncora · advogado do diabo) pra próximo ciclo</span>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <div class="callout callout-marco">
+      <p class="callout-title">Marco: o que você leva para a Mallory na 2ª feira</p>
+      <p>Até sexta-feira, gere com PCTFL avançado 1 documento real do seu cargo — briefing, síntese ou comunicado — e use de verdade: envie ou apresente a quem ele se destina.</p>
+      <p>Como saber que aconteceu: o documento chegou ao destinatário, e o prompt está salvo para o próximo ciclo.</p>
+      <label class="action-check" data-key="m2-marco">
+        <input type="checkbox">
+        <span>Compromisso feito</span>
+      </label>
+    </div>
 
     <nav class="module-nav" aria-label="Navegação entre módulos">
       <a class="nav-prev" href="../m1/">
@@ -70,6 +553,11 @@
         <span class="nav-title">M3 · IA por Área</span>
       </a>
     </nav>
+
+    <div class="module-nav-secondary">
+      <a href="../banco-de-prompts/">Banco de Prompts</a>
+      <a href="../artefatos/">Artefatos</a>
+    </div>
 
   </div>
 </main>
