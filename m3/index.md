@@ -213,36 +213,11 @@ Mesmo método. Muda só a entrada e o rótulo do output.
 
 ## Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact
 
-O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 3 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 (impacto × facilidade) e o risco codificado por cor — pra levar pra reunião de área.
+O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 4 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 (impacto × facilidade) e o risco codificado por cor — pra levar pra reunião de área.
 
 > A partir desta versão, o Prompt-âncora pede que cada linha do Mapa seja classificada em **1 dos 6 Gatilhos** apresentados acima. Isso ancora sua tarefa no padrão macro e prepara a próxima etapa (M4): cada gatilho tem prompt PCTFL característico.
 
-### Prompt 0 · Pré-preparo (opcional) — Se você travar em listar seus 5 processos
-
-```text
-# PAPEL
-Você é um consultor especialista em ajudar gestores a mapear os processos
-que mais consomem tempo de gestão — sem jargão.
-
-# CONTEXTO
-[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
-Estou tentando listar meus 5 processos mais repetitivos da semana e travei —
-sinto que "toco muita coisa", mas não consigo nomear 5 concretos.
-
-# TAREFA
-Me faça 5 perguntas dirigidas (uma por vez, esperando minha resposta) pra
-extrair meus 5 processos recorrentes. Use gatilhos como "toda semana você...",
-"quando fecha o mês...", "quando o comitê pede...", "quando entra um novo
-contrato/fornecedor/pedido...".
-No fim, me devolva a lista dos 5 processos em bullets curtos.
-
-# FORMATO
-Perguntas 1 por vez. Ao fim, lista numerada de 5 processos + 1 linha de contexto cada.
-
-# LIMITAÇÕES
-Se eu responder algo genérico ("gerencio a área"), pergunte mais.
-Não invente processos que eu não citei.
-```
+> **Travou em listar 5 processos?** Antes de colar o prompt-âncora, peça ao Claude: *"me faça 5 perguntas dirigidas, uma por vez, pra extrair meus 5 processos recorrentes da semana"*. Ele conduz — você responde. Não é um segundo prompt, é um empurrão.
 
 **Prompt-âncora — Mapa de Oportunidades (Colaboração · gera Artifact 3D)**
 
@@ -256,7 +231,7 @@ oportunidades priorizadas e defensáveis pra reunião de área".
 
 # CONTEXTO
 [Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
-Meus 5 processos mais repetitivos da semana (ou saída do Prompt 0):
+Meus 5 processos mais repetitivos da semana:
 1. [processo 1 — ex.: consolidar desvios do mês pra diretoria]
 2. [processo 2 — ex.: preparar briefing da reunião de área]
 3. [processo 3 — ex.: triagem de contratos em vencimento]
@@ -264,14 +239,15 @@ Meus 5 processos mais repetitivos da semana (ou saída do Prompt 0):
 5. [processo 5 — ex.: transformar pesquisa de clima em comunicados]
 
 # TAREFA
-Execute em 3 fases, PARANDO em cada uma pra minha validação:
+Execute em 4 fases, PARANDO em cada uma pra minha validação:
 
 1. **IPO executivo por processo** — pra cada um dos 5, desmonte em:
    · **Entra** (o que você recebe — dados brutos, relatório, planilha, contrato)
-   · **Processa** (o que você faz com isso hoje — consolidar, cruzar, redigir, priorizar)
+   · **Processa** (o que você faz com isso hoje)
    · **Sai** (o produto final — briefing, parecer, comunicado, ranking)
    Aponte também: neste processo, **onde exatamente a IA pode entrar?**
-   (regra: IA rende no "processa" quando entrada é clara e saída é definida)
+   Classifique cada processo em 1 dos 6 Gatilhos: Robô Humano · Tela em Branco ·
+   Detetive Cansado · Parceiro de Sparring · Tradutor Técnico · Olho Biônico.
 
 2. **Pontuação impacto × facilidade × risco** — pra cada processo, pontue 1-5:
    · **Impacto** — quanto tempo/dor a IA remove por mês se der certo (5 = economiza 8h+/mês, 1 = economiza 1h ou menos)
@@ -281,10 +257,23 @@ Execute em 3 fases, PARANDO em cada uma pra minha validação:
 
 3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade) / Risco. Aponte a #1 (a que **você deveria testar amanhã antes de pilotar**) e explique em 2 linhas por que ela ganhou.
 
+4. **Pressão final — antes de gerar o Artifact** — pressione o próprio mapa em 4
+   ângulos:
+   · **Processo vago:** algum dos 5 ainda soa genérico ("mexer com relatório")?
+     Reescreva mais específico ou pergunte pra concretizar.
+   · **Nota infantil:** alguma pontuação foi torcida ("dei 5 porque me dá raiva")?
+     Recalibre com critério objetivo.
+   · **Top-1 realista:** o #1 pode ser testado com Claude Pro hoje, sem integrar
+     sistema, sem pedir permissão? Se não, aponte o próximo do ranking que é.
+   · **Risco escondido:** olhando o #1, tem algum dado sensível, cláusula ou número
+     que só sobe pra diretoria? Se sim, recomende o próximo do ranking com risco menor.
+   Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
+
 # FORMATO
-Fase 1 em tabela (Processo · Entra · Processa · Sai · Onde a IA entra).
+Fase 1 em tabela (Processo · Entra · Processa · Sai · Gatilho · Onde a IA entra).
 Fase 2 em tabela (Processo · Impacto · Facilidade · Risco · Justificativas).
 Fase 3 em ranking numerado + parágrafo de 2 linhas explicando o #1.
+Fase 4 em 4 blocos curtos (Processo vago · Nota infantil · Top-1 realista · Risco escondido).
 
 # LIMITAÇÕES
 - Se eu descrever um processo vago ("mexer com relatório"), pergunte antes de pontuar.
@@ -296,9 +285,9 @@ O ranking está pronto se eu consigo defender a ordem numa reunião de área ou 
 citando as notas — não "achei promissor", mas "impacto X, facilidade Y, risco Z".
 
 FORMATO DE ENTREGA (2 partes — ORDEM OBRIGATÓRIA)
-Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
+Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 
-1. Análise textual completa das 3 fases.
+1. Análise textual completa das 4 fases.
 
 2. Artifact HTML self-contained interativo — Mapa de Oportunidades IA (executivo):
    · Paleta Slate Mallory: fundo #262A35, painel #353A45, texto #E8ECF3, azul #4AA6D7,
@@ -337,44 +326,6 @@ Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
    · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.
 ```
 
-**Prompt 2 · Refino — Pressionar o mapa antes de rodar**
-
-Cole quando o Claude entregar as 3 fases, mas ANTES de validar pra gerar o Artifact:
-
-```text
-# PAPEL
-Você é um advogado do diabo — ex-consultor de campo que já viu muito mapa
-bonito virar zero execução.
-
-# CONTEXTO
-Cola abaixo o mapa das 3 fases que acabamos de fazer.
-
-# TAREFA
-Pressione o mapa em 4 ângulos, direto ao ponto:
-
-1. **Processo vago:** aponte qualquer um dos 5 processos que ainda soa genérico
-   ("mexer com relatório"). Reescreva mais específico ou peça a pergunta pra
-   deixar concreto.
-2. **Nota infantil:** ache pontuações que provavelmente foram torcida
-   ("dei 5 em impacto porque me dá raiva"). Recalibra com critério objetivo.
-3. **Top 1 realista:** o #1 do ranking pode ser testado com o Claude Pro que
-   eu tenho hoje, sem integrar sistema, sem pedir permissão? Se não, aponte o
-   próximo do ranking que é.
-4. **Risco escondido:** olhando o #1, tem algum dado sensível, cláusula ou número
-   que só sobe pra diretoria? Se sim, recomende o próximo do ranking com risco menor.
-
-# FORMATO
-4 blocos em ordem. Cada um em 3-5 linhas.
-
-# LIMITAÇÕES
-Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
-
-MAPA:
-[cole as 3 fases da resposta anterior aqui]
-```
-
-*(Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.)*
-
 > **Artefato do módulo:** depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra [Calculadora ROI](../artefatos/calculadora-roi.html) e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.
 
 ---
@@ -384,20 +335,20 @@ MAPA:
 **Habilidade destravada aqui:** você chega com "5 processos na cabeça". Sai com **mapa impresso dos 5 processos ranqueados em 3D** + a #1 testada + método pra aplicar em qualquer processo novo.
 
 **O que a IA faz**
-- Desmonta cada processo em IPO com você (via Prompt 0 se precisar)
-- Executa o Prompt-âncora nas 3 fases
+- Desmonta cada processo em IPO com você (use a dica das 5 perguntas se precisar)
+- Executa o Prompt-âncora nas 4 fases
 - Gera o Artifact HTML interativo com sua matriz 2×2 + risco por cor
 
 **O que você faz**
 - Lista 5 processos de verdade (não os "grandes projetos")
 - Pontua honestamente impacto, facilidade e risco
-- Passa pelo Prompt 2 (advogado do diabo) antes de gerar o Artifact
+- Encara a Fase 4 (pressão do advogado do diabo) antes de gerar o Artifact
 - Roda o #1 do ranking usando o botão "Copiar prompt PCTFL+CS"
 
 **Passo a passo** (~40 min):
 
-1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, cole o **Prompt 0** e responda as perguntas. Se não travou, pule pro passo 2.
-2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase, cole o **Prompt 2** pra refinar, depois autorize o Artifact.
+1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, pule pro passo 2.
+2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase — a Fase 4 é a pressão do advogado do diabo — depois autorize o Artifact.
 3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: os 3 processos com maior risco fazem sentido pra reunião de comitê?
 4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL+CS" do Artifact. Preencha o PCTFL+CS. Rode. Aplique a validação de 30s do M2.
 
