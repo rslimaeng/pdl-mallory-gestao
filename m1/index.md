@@ -255,7 +255,7 @@ de desidentificação prévia.
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
+> **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, registre a hipótese da sua área (rotina, ganho, indicador — 3 linhas) e discuta com 1 par: outro gestor desta turma ou da sua confiança.
 > Como saber que aconteceu: o texto existe, e o par apontou pelo menos 1 furo ou 1 reforço.
 

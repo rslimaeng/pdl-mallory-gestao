@@ -86,29 +86,56 @@
 
     <section class="section">
       <h2>O que a IA generativa é — e por que isso muda a estratégia</h2>
-      <div class="matriz-ia" role="group" aria-label="Matriz de conceitos: Inteligência Artificial contém Machine Learning, que contém Deep Learning, que contém IA Generativa">
-        <div class="matriz-ia__caixas" aria-hidden="true">
-          <div class="caixa caixa-1" data-nivel="ia">
+      <p class="matriz-instrucao">Clique em cada camada pra ver o que ela é. IA Generativa é a mais interna — é a camada que você usa na gestão.</p>
+      <div class="matriz-ia" role="group" aria-label="Matriz de conceitos">
+        <div class="matriz-ia__caixas">
+          <div class="caixa caixa-1" data-nivel="ia" role="button" tabindex="0" aria-pressed="false">
             <span class="caixa-label">Inteligência Artificial</span>
-            <div class="caixa caixa-2" data-nivel="ml">
+            <div class="caixa caixa-2" data-nivel="ml" role="button" tabindex="0" aria-pressed="false">
               <span class="caixa-label">Machine Learning</span>
-              <div class="caixa caixa-3" data-nivel="dl">
+              <div class="caixa caixa-3" data-nivel="dl" role="button" tabindex="0" aria-pressed="false">
                 <span class="caixa-label">Deep Learning</span>
-                <div class="caixa caixa-4 caixa-ativa" data-nivel="genai">
+                <div class="caixa caixa-4 caixa-ativa" data-nivel="genai" role="button" tabindex="0" aria-pressed="true">
                   <span class="caixa-label">IA Generativa</span>
-                  <span class="caixa-voce">a camada que você usa na gestão</span>
+                  <span class="caixa-voce">clique nas camadas ↑</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <aside class="matriz-ia__legenda">
-          <p class="legenda-frase"><strong>IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.</strong> Prevê a próxima palavra por probabilidade estatística — não pensa, não tem intuição, não conhece a Mallory.</p>
-          <ol class="legenda-lista">
-            <li><strong>Fluência ≠ exatidão</strong> — ela escreve com confiança mesmo quando inventa. A validação vira norma da área: protocolo em todo documento assinado (aprofundado no M4).</li>
-            <li><strong>Contexto define o valor</strong> — sem o seu contexto ela responde para uma indústria genérica; com Datasul, ISO 9001 e seu histórico de decisões vira ferramenta de trabalho. O ativo estratégico é o seu conhecimento.</li>
-            <li><strong>O ganho não é no output — é no ciclo</strong> — não é "produzir mais documento", é reduzir o ciclo de decisão: de 4 dias para 1, de reunião de 2h para briefing de 15 min. Aí mora o retorno.</li>
-          </ol>
+          <div class="legenda-bloco" data-nivel="ia" hidden>
+            <p class="legenda-frase"><strong>Inteligência Artificial é o guarda-chuva.</strong> Qualquer sistema que imita comportamento inteligente entra aqui — regras, decisões automáticas, classificação.</p>
+            <ul class="legenda-lista">
+              <li>Existe desde os anos 50 — não é novidade; o que mudou foi a capacidade.</li>
+              <li>Inclui coisas simples (filtro anti-spam com regras) e complexas (carro autônomo).</li>
+              <li>IA generativa é uma fatia pequena — a que virou hype recente.</li>
+            </ul>
+          </div>
+          <div class="legenda-bloco" data-nivel="ml" hidden>
+            <p class="legenda-frase"><strong>Machine Learning é a máquina que aprende com exemplos, sem receita fixa.</strong> Você mostra 10 mil casos, ela extrai o padrão sozinha.</p>
+            <ul class="legenda-lista">
+              <li>Recomendação de filme, filtro de spam, previsão de venda — tudo isso é ML.</li>
+              <li>Precisa de dados. Sem dados bons, não aprende bem.</li>
+              <li>Não gera texto novo — prevê categoria ou número.</li>
+            </ul>
+          </div>
+          <div class="legenda-bloco" data-nivel="dl" hidden>
+            <p class="legenda-frase"><strong>Deep Learning é ML com redes neurais profundas</strong> — camadas empilhadas que aprendem representações complexas do dado.</p>
+            <ul class="legenda-lista">
+              <li>Reconhecimento de imagem, tradução automática, voz-pra-texto.</li>
+              <li>Precisa de muito mais dado e computador que ML clássico.</li>
+              <li>É a base técnica que tornou a IA generativa viável.</li>
+            </ul>
+          </div>
+          <div class="legenda-bloco" data-nivel="genai">
+            <p class="legenda-frase"><strong>IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.</strong> Prevê a próxima palavra por probabilidade estatística — não pensa, não tem intuição, não conhece a Mallory.</p>
+            <ol class="legenda-lista">
+              <li><strong>Fluência ≠ exatidão</strong> — ela escreve com confiança mesmo quando inventa. A validação vira norma da área: protocolo em todo documento assinado (aprofundado no M4).</li>
+              <li><strong>Contexto define o valor</strong> — sem o seu contexto ela responde para uma indústria genérica; com Datasul, ISO 9001 e seu histórico de decisões vira ferramenta de trabalho. O ativo estratégico é o seu conhecimento.</li>
+              <li><strong>O ganho não é no output — é no ciclo</strong> — não é "produzir mais documento", é reduzir o ciclo de decisão: de 4 dias para 1, de reunião de 2h para briefing de 15 min. Aí mora o retorno.</li>
+            </ol>
+          </div>
         </aside>
       </div>
     </section>
@@ -127,6 +154,7 @@
 
     <section class="section" aria-label="WYSIATI e as 3 zonas do que você sabe">
       <h2>O que a IA faz por você — em 3 zonas do que você sabe</h2>
+      <p class="wysiati-instrucao">Passe o mouse em cada zona pra ver o que a IA faz por você lá.</p>
       <div class="wysiati" role="group" aria-label="3 zonas do conhecimento">
         <div class="wysiati__caixas" aria-hidden="true">
           <div class="zona zona-3">
@@ -148,15 +176,15 @@
               <tr><th>Zona</th><th>O que a IA faz por você</th></tr>
             </thead>
             <tbody>
-              <tr>
+              <tr data-zona="1">
                 <td><strong>Sei que sei</strong></td>
                 <td><strong>Padroniza</strong> o que já é operacional — consolida 3 relatórios da área em briefing executivo v1</td>
               </tr>
-              <tr>
+              <tr data-zona="2">
                 <td><strong>Sei que não sei</strong></td>
                 <td><strong>Acelera</strong> o aprendizado — explica a Reforma Tributária (IBS/CBS) do ponto de vista de uma manufatureira</td>
               </tr>
-              <tr>
+              <tr data-zona="3">
                 <td><strong>Não sei que não sei</strong></td>
                 <td><strong>Expande</strong> seu campo de visão — sugere perguntas de risco sobre os desvios do mês antes da reunião de diretoria</td>
               </tr>
@@ -164,7 +192,7 @@
           </table>
         </aside>
       </div>
-      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> a vantagem competitiva mora nas zonas que você menos explora. "Sei que sei" é território de <strong>Autopiloto</strong>; as outras duas são <strong>Colaboração</strong> — a IA como sócio analítico. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
+      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> a vantagem competitiva mora nas zonas que você menos explora. "Sei que sei" é território de <strong>Autopiloto</strong>; as outras duas são <strong>Colaboração</strong> — a IA como sócio analítico. <a href="#modos-explorador">Explorar os 3 modos ↓</a></p>
     </section>
 
     <section class="section delegacao-vs-estruturacao">
@@ -306,33 +334,32 @@
       <p><strong>Regra de ouro:</strong> quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.</p>
       <p><strong>Nota sobre "agente":</strong> você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.</p>
 
-      <div class="modos-simulador" id="modos-simulador" aria-label="Simulador: sua rotina é qual modo?">
-        <div class="simulador-header">
-          <span class="simulador-kicker">SIMULADOR INTERATIVO</span>
-          <h3>Sua rotina é qual modo?</h3>
-          <p>Descreva uma rotina de gestão da sua área. Depois escolha o modo que você acha que ela é. Receba feedback com exemplo Mallory similar.</p>
+      <div class="modos-explorador" id="modos-explorador" aria-label="Explorador dos 3 modos">
+        <div class="explorador-header">
+          <span class="explorador-kicker">EXPLORADOR</span>
+          <h3>Os 3 modos com exemplo</h3>
+          <p>Clique em cada modo pra ver como ele aparece no seu dia.</p>
         </div>
-        <label for="simulador-tarefa" class="simulador-label">Sua rotina em 1 linha (opcional — pode só clicar num modo)</label>
-        <input type="text" id="simulador-tarefa" placeholder="Organizar 200 relatórios de turno por data" maxlength="200">
-        <div class="simulador-sugestao" id="simulador-sugestao" aria-live="polite"></div>
-        <div class="simulador-opcoes">
-          <button class="simulador-opcao" data-modo="autopiloto" type="button">
-            <span class="opcao-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17h10M5 17V9l2-4h10l2 4v8M5 17h2M17 17h2M8 13h.01M16 13h.01"/></svg></span>
-            <span class="opcao-nome">Autopiloto</span>
-            <span class="opcao-desc">IA executa, você revisa</span>
+        <div class="explorador-cards">
+          <button class="explorador-card" data-modo="autopiloto" type="button" aria-pressed="false">
+            <span class="explorador-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17h10M5 17V9l2-4h10l2 4v8M5 17h2M17 17h2M8 13h.01M16 13h.01"/></svg></span>
+            <span class="explorador-nome">Autopiloto</span>
+            <span class="explorador-desc">IA executa, você revisa</span>
           </button>
-          <button class="simulador-opcao" data-modo="colaboracao" type="button">
-            <span class="opcao-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-4-4 4-4M13 7l4 4-4 4M8 13h8"/></svg></span>
-            <span class="opcao-nome">Colaboração</span>
-            <span class="opcao-desc">IA e você juntos</span>
+          <button class="explorador-card" data-modo="colaboracao" type="button" aria-pressed="false">
+            <span class="explorador-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-4-4 4-4M13 7l4 4-4 4M8 13h8"/></svg></span>
+            <span class="explorador-nome">Colaboração</span>
+            <span class="explorador-desc">IA e você juntos</span>
           </button>
-          <button class="simulador-opcao" data-modo="manual" type="button">
-            <span class="opcao-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V4a1.5 1.5 0 013 0v7M9 11V7.5a1.5 1.5 0 00-3 0V15a6 6 0 006 6h1a5 5 0 005-5v-4.5a1.5 1.5 0 00-3 0M12 4v7M15 5.5a1.5 1.5 0 013 0V11"/></svg></span>
-            <span class="opcao-nome">Manual</span>
-            <span class="opcao-desc">Só você decide</span>
+          <button class="explorador-card" data-modo="manual" type="button" aria-pressed="false">
+            <span class="explorador-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V4a1.5 1.5 0 013 0v7M9 11V7.5a1.5 1.5 0 00-3 0V15a6 6 0 006 6h1a5 5 0 005-5v-4.5a1.5 1.5 0 00-3 0M12 4v7M15 5.5a1.5 1.5 0 013 0V11"/></svg></span>
+            <span class="explorador-nome">Manual</span>
+            <span class="explorador-desc">Só você decide</span>
           </button>
         </div>
-        <div class="simulador-resultado" id="simulador-resultado" aria-live="polite"></div>
+        <div class="explorador-painel" id="explorador-painel" aria-live="polite">
+          <p class="explorador-vazio">Escolha um modo acima pra ver o exemplo.</p>
+        </div>
       </div>
     </section>
 
@@ -539,7 +566,7 @@ Sinais de que a resposta falhou:
     </section>
 
     <div class="callout callout-marco">
-      <p class="callout-title">🟣 Marco: o que você leva para a Mallory na 2ª feira</p>
+      <p class="callout-title">Marco: o que você leva para a Mallory na 2ª feira</p>
       <p>Até sexta-feira, registre a hipótese da sua área (rotina, ganho, indicador — 3 linhas) e discuta com 1 par: outro gestor desta turma ou da sua confiança.</p>
       <p>Como saber que aconteceu: o texto existe, e o par apontou pelo menos 1 furo ou 1 reforço.</p>
       <label class="action-check" data-key="m1-marco">
