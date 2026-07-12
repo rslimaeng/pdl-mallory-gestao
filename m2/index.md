@@ -144,6 +144,25 @@ Troque "me ajude" por verbo cirúrgico — no nível de gestor, o verbo já carr
 
 ---
 
+## Por que Claude, se a ementa fala em 3 ferramentas?
+
+A ementa oficial cita **ChatGPT, Claude e Microsoft Copilot** — as 3 dominantes hoje. Não vamos treinar todas as 3 nesta manhã: a habilidade que você leva daqui **transfere**. Um bom pedido bem estruturado (o que o M2 ensina) funciona igual em qualquer uma delas.
+
+**As ferramentas fazem coisas parecidas por caminhos diferentes** — assistentes customizados por outros nomes:
+
+| Ferramenta | Assistente customizado | Onde brilha |
+|---|---|---|
+| **ChatGPT** (OpenAI) | **GPTs** — GPT com contexto e instruções fixas | Ecossistema amplo, plugins, geração de imagem |
+| **Claude** (Anthropic) | **Projects** — pasta com arquivos + instruções | Análise longa, escrita executiva, código, **Cowork** (M5) |
+| **Gemini** (Google) | **Gems** — Gemini com papel fixo | Integração com Google Workspace |
+| **Copilot** (Microsoft) | Copilot for Excel / Word / Teams | Integração nativa no M365 |
+
+**Por que Claude neste treino:** a TI da Mallory adquiriu **licenças Claude Pro pagas** para o programa. Você recebe acesso e leva pra dentro. Se sua área usar outra ferramenta na rotina, os mesmos princípios (Papel · Contexto · Tarefa · Formato · Limitações + Critério de Sucesso) valem — muda a interface, não a habilidade.
+
+**Preview:** no M5 (Claude Cowork) você vai usar o **Projects** — a versão avançada onde o Claude ganha acesso a arquivos e ferramentas. É pra isso que a Pro paga da TI existe.
+
+---
+
 ## Gerador de prompt — ferramenta viva
 
 Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é Delegação com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
