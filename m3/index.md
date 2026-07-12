@@ -386,31 +386,59 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 
 ---
 
-## Momento hands-on — 40 min pra o mapa da sua semana
+## Momento hands-on — 40 min pra o mapa da sua vertical
 
-**Habilidade destravada aqui:** você chega com "5 processos na cabeça". Sai com **mapa impresso dos 5 processos ranqueados em 3D** + a #1 testada + método pra aplicar em qualquer processo novo.
+**Habilidade destravada aqui:** você chega com "5 processos na cabeça". Sai com **mapa impresso dos 5 processos ranqueados em 3D** + a #1 testada + **3 oportunidades priorizadas da sua vertical** (insumo direto pro Canvas do M6) + método pra aplicar em qualquer processo novo.
 
 **O que a IA faz**
-- Desmonta cada processo em IPO com você (use a dica das 5 perguntas se precisar)
-- Executa o Prompt-âncora nas 4 fases
-- Gera o Artifact HTML interativo com sua matriz 2×2 + risco por cor
+
+- Desmonta cada processo em IPO com você (use a dica das 5 perguntas se travar)
+- Executa o Prompt-âncora nas 4 fases (IPO · pontuação I×F×R · ranking 3D · advogado do diabo)
+- Gera o Artifact HTML interativo com matriz 3D + risco por cor
 
 **O que você faz**
+
 - Lista 5 processos de verdade (não os "grandes projetos")
 - Pontua honestamente impacto, facilidade e risco
 - Encara a Fase 4 (pressão do advogado do diabo) antes de gerar o Artifact
-- Roda o #1 do ranking usando o botão "Copiar prompt PCTFL+CS"
+- No bloco em grupo: contribui com os processos da sua vertical e ajuda a priorizar 3
 
 **Passo a passo** (~40 min):
 
-1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, pule pro passo 2.
-2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase — a Fase 4 é a pressão do advogado do diabo — depois autorize o Artifact.
-3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: os 3 processos com maior risco fazem sentido pra reunião de comitê?
-4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL+CS" do Artifact. Preencha o PCTFL+CS. Rode. Aplique a validação de 30s do M2.
+### 1. Individual · 10 min — cada gestor com sua matriz
 
-**Marco ✓:** você sai com o Artifact impresso (ou salvo), a #1 testada com veredito honesto ("serve pra segunda" / "precisa refinar") e pronto pra defender na reunião de área com nota justificada.
+Abra o Claude Pro no celular ou no computador. Cole o **Prompt-âncora** e rode até a **Fase 4** (pressão do advogado do diabo). Autorize o Artifact 3D.
+Se travou nos 5 processos, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, siga direto.
 
-**Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é não testar.
+### 2. Em grupo · 15 min — mapeamento coletivo da vertical
+
+**Sugerimos que se organizem por vertical/área da Mallory** (Financeiro, Jurídico, RH, Planejamento, Logística, TI, Fiscal, Marketing, Produção). Se a divisão da turma não permitir (áreas com só 1 gestor, ou muitos gestores da mesma vertical), agrupem-se de outra forma que faça sentido — por afinidade de dor, por porte de área, por proximidade de escritório.
+
+Cada grupo (4-5 pessoas), com Artifacts individuais na mesa:
+
+- **(2 min) Compartilhem** — cada um mostra a #1 do próprio ranking em 30s.
+- **(10 min) Priorizem 3 da vertical** — escolham 3 oportunidades que fazem sentido do ponto de vista **da área**, não do indivíduo. Podem ser 3 diferentes de 3 pessoas, ou 2 do mesmo tema convergindo. Critério: as 3 que, se rodadas em 90 dias, movem a vertical mais que qualquer outra combinação.
+- **(3 min) Rankeiem as 3** — apliquem o quick win 4×4×1: qual das 3 é 4×4×1 (ou o mais próximo)? Essa vira a **#1 do grupo** — a primeira aposta da vertical.
+
+**Saída do bloco em grupo:** 3 oportunidades priorizadas da vertical + a #1 do grupo destacada. Anote no papel ou no celular — é insumo pro **Canvas Executivo do M6**.
+
+### 3. Individual · 10 min — teste da #1 pessoal
+
+Volte à sua matriz individual. Com as 3 do grupo em mente, olhe sua #1 pessoal — ela ainda faz sentido dado o que a vertical priorizou? Se sim, rode agora usando o botão "Copiar prompt PCTFL+CS" do Artifact. Preencha o PCTFL+CS pra sua #1 e rode.
+Aplique a validação de 30s do M2 na resposta.
+
+### 4. Individual · 5 min — dimensionamento R$/mês
+
+Abra a **Calculadora ROI** e dimensione R$/mês da sua #1 pessoal. É a peça que fecha o argumento: score 3D + R$/mês = proposta pra reunião.
+
+---
+
+**Marco ✓:** você sai com:
+- Artifact 3D impresso ou salvo (matriz + risco por cor)
+- Sua #1 pessoal testada com veredito honesto ("serve pra 2ª feira" / "precisa refinar") e R$/mês dimensionada
+- **3 oportunidades priorizadas da sua vertical** + a #1 do grupo — insumo pra defender na reunião de área ou de S&OP e pra alimentar o Canvas Executivo do M6
+
+**Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é (a) não testar, ou (b) sair sem as 3 da vertical anotadas.
 
 ---
 
