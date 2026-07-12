@@ -1,18 +1,45 @@
-# M3 · IA por Área: Mapeamento de Oportunidades de Alto Impacto
+# M3 · Mapa de Oportunidades IA (executivo)
 
-**Trilha 2 · Módulo 3 de 6 · 1h30**
+**Trilha 2 · Módulo 3 de 6**
 
-Cases da sua área (logística, financeiro, RH, jurídico, TI, marketing, produção) e priorização com framework.
+A habilidade universal deste módulo: **pegar seus processos da semana e ranquear onde a IA rende mais — sem torcida, com critério defensável**. No fim, um mapa 3D (impacto × facilidade × risco) das suas 5 oportunidades.
+
+---
+
+## Três dores que este módulo cura
+
+- **"Todo mundo fala em IA, mas eu não sei onde começar na minha área."** Você vê o hype, precisa de método.
+- **"Não posso pilotar em qualquer processo — assino pela área."** Impacto sem risco na conta = decisão frágil.
+- **"Meu chefe vai pedir por que essa e não aquela."** Ranking sem critério = não passa em comitê.
+
+**No fim deste módulo você vai conseguir:**
+
+- Mapear 5 processos em IPO — **10 min, sem consultor**
+- Pontuar impacto × facilidade × risco — **defensável na reunião de comitê**
+- Sair com Artifact HTML executivo pra levar pra reunião de área ou de S&OP
+- Aplicar o mesmo método em qualquer processo novo — **método fica seu**
+
+---
+
+## As 3 habilidades deste módulo
+
+| # | Habilidade | Hoje (sem método) | Com o Claude | Onde pratica | Nível |
+|---|---|---|---|---|---|
+| 1 | Desmontar processo em IPO executivo | análise "vamos ver" · trava em processo grande | 5 min por processo · claro onde IA entra e onde fica com humano | Exercício momento 1 | L2 |
+| 2 | Pontuar 3D (I × F × R) | "priorizei o que dói mais" (raramente passa em comitê) | matriz 3D · ranking defensável · pronto pra reunião | Artifact do momento 2 | L2 |
+| 3 | Aplicar em qualquer processo novo | reinventa todo trimestre | método fica seu, adapta em 3 min | Casa · Q4 planejamento | L2 → L3 |
+
+**Leitura da tabela:** "Hoje" é o que o processo custa sem método. "Com o Claude" é o que você mesmo passa a fazer. "Nível" segue os 7 níveis do M1 (L2 dados, L3 contexto salvo).
 
 ---
 
 ## O contrato deste módulo
 
-**Você ganha:** o caso canônico da sua área demonstrado ao vivo e o framework de priorização em 3 dimensões — impacto × facilidade × risco.
+**Você ganha:** IPO executivo + framework 3D + Artifact HTML pronto pra comitê.
 
-**Você se compromete a:** mapear com o seu grupo as 3 principais oportunidades da sua área e pontuá-las com nota justificada, não com torcida.
+**Você se compromete a:** listar 5 processos de verdade da sua semana (não os "grandes projetos"), pontuar honestamente incluindo risco, e testar a #1 hoje ou amanhã.
 
-**Tempo de leitura desta página:** 10 min
+**Tempo:** ~15 min de leitura · ~40 min de hands-on.
 
 ---
 
@@ -20,17 +47,17 @@ Cases da sua área (logística, financeiro, RH, jurídico, TI, marketing, produ�
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| A hipótese do M1 e o PCTFL avançado do M2 | Demos ao vivo por área e dinâmica em grupos: mapear, pontuar em 3D, escolher por onde começar | As 3 principais oportunidades da sua área, priorizadas por impacto × facilidade × risco — elas alimentam o M4, o M5 e o Canvas do M6 |
+| PCTFL+CS do M2 + 5 processos da sua semana | Método IPO executivo · demo com caso universal (planilha herdada) · matriz 3D · Artifact ao vivo | Artifact HTML com suas 5 oportunidades ranqueadas em 3D + #1 testada + método pra qualquer processo novo |
 
 ---
 
 ## Por que isso importa aqui dentro
 
-Na reunião de orçamento, cada área defende seu projeto. O que separa proposta aprovada de "interessante, vamos ver" é priorização defensável: por que esta oportunidade, e não as outras dez. É isso que este módulo constrói — não uma lista de ideias, um ranking com critério.
+Na reunião de orçamento ou S&OP, cada gestor defende sua aposta. O que separa "aprovado" de "vamos analisar" é ranking com critério — por que este processo, e não os outros dez. É isso que este módulo constrói.
 
-A sala de hoje cobre a Mallory inteira: logística, financeiro, controladoria, fiscal, jurídico, RH, TI, marketing, planejamento, importação. A IA que rende em cada uma é diferente — o jurídico extrai cláusulas, a logística cruza estoque com demanda, o RH transforma pesquisa em comunicação. Mas o método de priorizar é um só, e vale para todas.
+A T2 tem uma dimensão que a T1 não precisa: **risco**. Gestor assina pela área. Um piloto de impacto alto que toca dado sensível, contrato ou número de diretoria carrega custo de erro que precisa entrar na conta — antes do piloto, não depois.
 
-E a T2 tem uma dimensão que a turma da manhã não precisou aprofundar: **risco**. Gestor responde pela área. Uma oportunidade de impacto alto que toca contrato, dado pessoal ou número de diretoria carrega um custo de erro que precisa entrar na conta — antes do piloto, não depois.
+E o grupo por área ajuda: gestor de outra área vê o seu ranking sem "carinho pelo assunto".
 
 ---
 
@@ -69,76 +96,212 @@ A tentação é começar pelo processo mais importante — "se funcionar ali, fu
 
 ---
 
-## Prompt-âncora do módulo
+## Caso-âncora universal: a planilha herdada (versão executiva)
 
-O padrão "1 fonte, N narrativas" — o caso do RH que todo gestor reconhece. Dados fictícios; roda como está:
+Você recebeu uma planilha do sistema legado ou de um analista que saiu: 500 linhas, categorias tortas, algumas em branco, e o comitê pede um resumo executivo pra reunião de amanhã 9h.
 
-```text
-# PAPEL
-Você é um consultor de comunicação organizacional com experiência em indústria.
+**Sem IA:** ou 3 horas do seu analista consolidando, ou você abrindo o Excel às 22h.
+**Com IA (Colaboração + PCTFL+CS do M2):** a IA lê, categoriza por regra explícita, aponta linhas duvidosas com ⚠️, gera resumo executivo em 1 página. Você revisa em 20 min.
 
-# CONTEXTO
-Sou Gerente de Gente de uma fabricante de eletroportáteis (400+ funcionários, fábrica
-e escritório). Resultado FICTÍCIO da pesquisa de clima: participação 78% · orgulho de
-trabalhar na empresa 82% · comunicação interna 54% (pior dimensão, queda de 8 pontos) ·
-relação com liderança direta 71% · principais comentários abertos citam "decisões
-demoram a chegar ao chão de fábrica" e "mudanças são comunicadas em cima da hora".
+**Por que universal:** herança de planilha é o pão de cada gestor. Muda o campo (fiscal, contas, contratos, propostas, S&OP, pesquisa), mas o método é o mesmo. **O ganho executivo não está em cada categorização — está em ganhar 2h por semana × 4 semanas × cada gestor da área.**
 
-# TAREFA
-Redija 3 comunicações do mesmo resultado, uma para cada público: diretoria (análise
-e proposta), gestores (o que fazer diferente), fábrica (transparência e próximos passos).
+**Onde isso mora na Mallory (gestão):**
+- Consolidar propostas de fornecedores em briefing decisório (Suprimentos)
+- Categorizar 40 contratos em vencimento no trimestre por risco (Jurídico)
+- Resumir 300 tickets do mês em top 5 causas-raiz (TI)
+- Extrair de 15 relatórios de auditoria os pontos que ainda não fecharam (Controladoria)
+- Transformar pesquisa de clima de 200 respostas em 3 comunicados sob medida (RH)
+- Cruzar S&OP com estoque real e apontar gaps por SKU (Planejamento)
 
-# FORMATO
-Diretoria: 1 página com números, diagnóstico e 2 ações propostas. Gestores: 10 linhas
-com as 3 práticas que mudam. Fábrica: 8 linhas em linguagem direta, sem número técnico,
-com 1 compromisso concreto.
-
-# LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-Use apenas os dados do contexto — não crie estatística nem citação nova.
-
-# CRITÉRIO DE SUCESSO
-Cada público entende o que o resultado significa para ele e o que acontece agora —
-sem precisar ler a versão dos outros.
-
-# CRITÉRIO NEGATIVO
-A versão da fábrica não pode soar defensiva nem burocrática. Nenhuma versão promete
-o que não está nas 2 ações propostas.
-```
-
-Na demonstração ao vivo, o mesmo método resolve os outros territórios: o contrato do jurídico, os desvios da controladoria, o estoque × demanda da logística, o S&OP do planejamento.
+Mesmo método. Muda só a entrada e o rótulo do output.
 
 ---
 
-## Exercício
+## Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact
 
-### Camada 1 — Básico (todos · 15 min · em grupos por área)
+O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 3 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 (impacto × facilidade) e o risco codificado por cor — pra levar pra reunião de área.
 
-**Objetivo:** mapear e priorizar as 3 principais oportunidades da sua área.
+### Prompt 0 · Pré-preparo (opcional) — Se você travar em listar seus 5 processos
 
-**Passo a passo:**
-1. Individual (4 min): liste as rotinas da sua área que caem no padrão entrada → processo → saída. Comece pela hipótese do M1 — ela provavelmente é uma delas.
-2. Para cada candidata, preencha em 1 linha: processo · problema (onde dói) · benefício (o que ganha) · risco (o que não pode sair errado).
-3. No grupo: consolidem e pontuem as 3 melhores em 3D — impacto, facilidade, risco — com justificativa de 1 linha por nota.
-4. Ordenem: a melhor combinação 4×4×baixo risco lidera.
+```text
+# PAPEL
+Você é um consultor especialista em ajudar gestores a mapear os processos
+que mais consomem tempo de gestão — sem jargão.
 
-**Resultado esperado:** 3 oportunidades da sua área, pontuadas e ordenadas, com justificativas.
+# CONTEXTO
+[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
+Estou tentando listar meus 5 processos mais repetitivos da semana e travei —
+sinto que "toco muita coisa", mas não consigo nomear 5 concretos.
 
-**Como avaliar:** teste do orçamento — se a diretoria perguntasse "por que essa primeiro?", a justificativa das notas responde? Se a resposta seria "achamos promissora", as notas viraram torcida: refaça com a pergunta "onde está a evidência?".
+# TAREFA
+Me faça 5 perguntas dirigidas (uma por vez, esperando minha resposta) pra
+extrair meus 5 processos recorrentes. Use gatilhos como "toda semana você...",
+"quando fecha o mês...", "quando o comitê pede...", "quando entra um novo
+contrato/fornecedor/pedido...".
+No fim, me devolva a lista dos 5 processos em bullets curtos.
 
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
+# FORMATO
+Perguntas 1 por vez. Ao fim, lista numerada de 5 processos + 1 linha de contexto cada.
 
-**Objetivo:** colocar valor em reais na top-1 — e testá-la ao vivo.
+# LIMITAÇÕES
+Se eu responder algo genérico ("gerencio a área"), pergunte mais.
+Não invente processos que eu não citei.
+```
 
-**Passo a passo:**
-1. Calcule o retorno da top-1: horas economizadas por mês × custo/hora da função (salário mensal ÷ 160). Seja conservador — o número serve para priorizar, não para prometer.
-2. Rode 1 teste real: monte o PCTFL avançado da oportunidade (use o prompt-âncora como esqueleto) com dados fictícios ou desidentificados.
-3. Avalie contra o Critério de Sucesso que você definiu.
-4. Registre em 2 linhas: funcionou? O valor/mês estimado se sustenta?
+**Prompt-âncora — Mapa de Oportunidades (Colaboração · gera Artifact 3D)**
 
-**Resultado esperado:** top-1 com valor mensal estimado em R$ e 1 teste executado.
+Cole no Claude Pro (dentro de um Project novo, ou conversa nova).
 
-**Como avaliar:** se você consegue dizer "essa oportunidade vale ~R$ X/mês e o teste de hoje mostrou Y", você tem o embrião do Canvas do M6. Se o valor deu grande demais para acreditar, refaça a conta conservadora — número inflado morre na primeira pergunta da diretoria.
+```text
+# PAPEL
+Você é uma consultora sênior em transformação de rotina executiva com IA.
+Já ajudou dezenas de gestores a sair do "sei que devia usar" pro "levei 3
+oportunidades priorizadas e defensáveis pra reunião de área".
+
+# CONTEXTO
+[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
+Meus 5 processos mais repetitivos da semana (ou saída do Prompt 0):
+1. [processo 1 — ex.: consolidar desvios do mês pra diretoria]
+2. [processo 2 — ex.: preparar briefing da reunião de área]
+3. [processo 3 — ex.: triagem de contratos em vencimento]
+4. [processo 4 — ex.: cruzar S&OP com estoque real]
+5. [processo 5 — ex.: transformar pesquisa de clima em comunicados]
+
+# TAREFA
+Execute em 3 fases, PARANDO em cada uma pra minha validação:
+
+1. **IPO executivo por processo** — pra cada um dos 5, desmonte em:
+   · **Entra** (o que você recebe — dados brutos, relatório, planilha, contrato)
+   · **Processa** (o que você faz com isso hoje — consolidar, cruzar, redigir, priorizar)
+   · **Sai** (o produto final — briefing, parecer, comunicado, ranking)
+   Aponte também: neste processo, **onde exatamente a IA pode entrar?**
+   (regra: IA rende no "processa" quando entrada é clara e saída é definida)
+
+2. **Pontuação impacto × facilidade × risco** — pra cada processo, pontue 1-5:
+   · **Impacto** — quanto tempo/dor a IA remove por mês se der certo (5 = economiza 8h+/mês, 1 = economiza 1h ou menos)
+   · **Facilidade** — dá pra testar em 2 semanas, sem integrar sistema, com o Claude que você já tem? (5 = testo amanhã, 1 = precisa de projeto de TI)
+   · **Risco** — o que acontece se sair errado (1 = risco baixo: posso testar amanhã, sem tocar dado sensível; 5 = risco alto: toca dado sensível de pessoa, contrato ativo, número de diretoria ainda não publicado)
+   Explique cada nota em 1 linha.
+
+3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade) / Risco. Aponte a #1 (a que **você deveria testar amanhã antes de pilotar**) e explique em 2 linhas por que ela ganhou.
+
+# FORMATO
+Fase 1 em tabela (Processo · Entra · Processa · Sai · Onde a IA entra).
+Fase 2 em tabela (Processo · Impacto · Facilidade · Risco · Justificativas).
+Fase 3 em ranking numerado + parágrafo de 2 linhas explicando o #1.
+
+# LIMITAÇÕES
+- Se eu descrever um processo vago ("mexer com relatório"), pergunte antes de pontuar.
+- Não invente entrada/saída — pergunte se ficar em dúvida.
+- Não pontue 5 em impacto nem 1 em risco sem justificativa concreta.
+
+# CRITÉRIO DE SUCESSO
+O ranking está pronto se eu consigo defender a ordem numa reunião de área ou comitê
+citando as notas — não "achei promissor", mas "impacto X, facilidade Y, risco Z".
+
+FORMATO DE ENTREGA (2 partes — ORDEM OBRIGATÓRIA)
+Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
+
+1. Análise textual completa das 3 fases.
+
+2. Artifact HTML self-contained interativo — Mapa de Oportunidades IA (executivo):
+   · Paleta Slate Mallory: fundo #262A35, painel #353A45, texto #E8ECF3, azul #4AA6D7,
+     amarelo #F7AC19, verde #65A941, vermelho #D72C35.
+     Fontes Archivo (títulos, 500-800) + Inter (corpo, 400-600) + JetBrains Mono
+     (labels, 400-500) via Google Fonts.
+   · Header: eyebrow "MAPA DE OPORTUNIDADES · MALLORY · TRILHA 2 · EXECUTIVO" (mono) +
+     título Archivo "Meu mapa da semana" + subtítulo Inter "5 processos · IPO · matriz 2×2
+     impacto × facilidade + risco por cor" + botão 🖨️ imprimir (window.print).
+   · **Matriz 2×2 SVG**: eixos "Impacto ↑" (vertical) e "Facilidade →" (horizontal),
+     4 quadrantes rotulados (Q1: baixo impacto+baixa facilidade "adiar", Q2: baixo impacto+alta
+     facilidade "adiar mesmo assim", Q3: alto impacto+baixa facilidade "estruturar",
+     Q4: alto impacto+alta facilidade "**FAZER AGORA**" — realçado em amarelo #F7AC19).
+     Cada processo vira um dot na posição (facilidade × 100, 100 - impacto × 100), com
+     número dentro (1-5 conforme ranking) e **cor do dot codificando o risco**:
+     verde #65A941 (risco ≤2), amarelo #F7AC19 (risco 3), vermelho #D72C35 (risco ≥4).
+     Tooltip no hover: nome do processo + nota de risco.
+   · **Tabela de processos** abaixo da matriz: 5 linhas com Nome (input text editável) ·
+     Entra · Processa · Sai (todos inputs) · Impacto (slider 1-5) · Facilidade (slider 1-5)
+     · Risco (slider 1-5) · Ranking (calculado por (I×F)/Risco, número dentro de círculo colorido).
+     Ao mudar qualquer slider, matriz, cor do dot e ranking recalculam ao vivo.
+   · **Card top 1** no rodapé destacando o processo #1 do ranking com fundo âmbar #F7AC19 20%
+     transparente + borda âmbar + label "TESTE ESSA AMANHÃ ANTES DE PILOTAR" (mono) + botão
+     "Copiar prompt PCTFL+CS pra esse processo" que joga no clipboard um PCTFL vazio com
+     Papel/Contexto/Tarefa/Formato/Limitações/Critério de Sucesso pré-preenchidos com o
+     processo selecionado.
+   · **Estado em localStorage** (chave `m3-mapa-oportunidades-t2`) — recarregar preserva.
+   · **@media print A4 paisagem** — todos os inputs viram texto, matriz mantém, botões
+     escondidos.
+   · Rodapé mono: "PDL 2026 · Mallory Eletroportáteis · Trilha 2 · Gestão ·
+     @iacomrafael".
+   · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.
+```
+
+**Prompt 2 · Refino — Pressionar o mapa antes de rodar**
+
+Cole quando o Claude entregar as 3 fases, mas ANTES de validar pra gerar o Artifact:
+
+```text
+# PAPEL
+Você é um advogado do diabo — ex-consultor de campo que já viu muito mapa
+bonito virar zero execução.
+
+# CONTEXTO
+Cola abaixo o mapa das 3 fases que acabamos de fazer.
+
+# TAREFA
+Pressione o mapa em 4 ângulos, direto ao ponto:
+
+1. **Processo vago:** aponte qualquer um dos 5 processos que ainda soa genérico
+   ("mexer com relatório"). Reescreva mais específico ou peça a pergunta pra
+   deixar concreto.
+2. **Nota infantil:** ache pontuações que provavelmente foram torcida
+   ("dei 5 em impacto porque me dá raiva"). Recalibra com critério objetivo.
+3. **Top 1 realista:** o #1 do ranking pode ser testado com o Claude Pro que
+   eu tenho hoje, sem integrar sistema, sem pedir permissão? Se não, aponte o
+   próximo do ranking que é.
+4. **Risco escondido:** olhando o #1, tem algum dado sensível, cláusula ou número
+   que só sobe pra diretoria? Se sim, recomende o próximo do ranking com risco menor.
+
+# FORMATO
+4 blocos em ordem. Cada um em 3-5 linhas.
+
+# LIMITAÇÕES
+Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
+
+MAPA:
+[cole as 3 fases da resposta anterior aqui]
+```
+
+*(Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.)*
+
+---
+
+## Momento hands-on — 40 min pra o mapa da sua semana
+
+**Habilidade destravada aqui:** você chega com "5 processos na cabeça". Sai com **mapa impresso dos 5 processos ranqueados em 3D** + a #1 testada + método pra aplicar em qualquer processo novo.
+
+**O que a IA faz**
+- Desmonta cada processo em IPO com você (via Prompt 0 se precisar)
+- Executa o Prompt-âncora nas 3 fases
+- Gera o Artifact HTML interativo com sua matriz 2×2 + risco por cor
+
+**O que você faz**
+- Lista 5 processos de verdade (não os "grandes projetos")
+- Pontua honestamente impacto, facilidade e risco
+- Passa pelo Prompt 2 (advogado do diabo) antes de gerar o Artifact
+- Roda o #1 do ranking usando o botão "Copiar prompt PCTFL+CS"
+
+**Passo a passo** (~40 min):
+
+1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, cole o **Prompt 0** e responda as perguntas. Se não travou, pule pro passo 2.
+2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase, cole o **Prompt 2** pra refinar, depois autorize o Artifact.
+3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: os 3 processos com maior risco fazem sentido pra reunião de comitê?
+4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL+CS" do Artifact. Preencha o PCTFL+CS. Rode. Aplique a validação de 30s do M2.
+
+**Marco ✓:** você sai com o Artifact impresso (ou salvo), a #1 testada com veredito honesto ("serve pra segunda" / "precisa refinar") e pronto pra defender na reunião de área com nota justificada.
+
+**Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é não testar.
 
 ---
 
@@ -160,7 +323,7 @@ Na demonstração ao vivo, o mesmo método resolve os outros territórios: o con
 ---
 
 > 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
-> Até sexta-feira, execute a top-1 na sua rotina real (com dado que pode usar) — ou apresente o ranking das 3 oportunidades à sua equipe e colha o que eles adicionariam.
+> Até sexta-feira, execute a top-1 na sua rotina real (com dado que pode usar) — ou apresente o ranking das suas oportunidades à sua equipe e colha o que eles adicionariam.
 > Como saber que aconteceu: existe o resultado do teste com antes/depois anotado, ou a equipe viu o ranking e você registrou pelo menos 1 contribuição deles.
 
 ---
