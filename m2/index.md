@@ -1,6 +1,6 @@
 # M2 · IA para Gestores: Prática em Decisão, Análise e Comunicação
 
-**Trilha 2 · Módulo 2 de 6 · 1h15**
+**Trilha 2 · Módulo 2 de 6**
 
 Análise de cenários, extração de insight de relatórios e comunicação estratégica — executados por você, ao vivo.
 
@@ -8,11 +8,9 @@ Análise de cenários, extração de insight de relatórios e comunicação estr
 
 ## O contrato deste módulo
 
-**Você ganha:** o PCTFL avançado — com Critério de Sucesso e Critério Negativo — aplicado às 3 tarefas mais caras do seu cargo: analisar, decidir, comunicar.
+**Você ganha:** o PCTFL avançado — com Critério de Sucesso — aplicado às 3 tarefas mais caras do seu cargo: analisar, decidir, comunicar.
 
 **Você se compromete a:** executar os 3 prompts ao vivo com material da sua área (desidentificado) e avaliar cada resposta contra o critério que você mesmo definiu.
-
-**Tempo de leitura desta página:** 10 min
 
 ---
 
@@ -20,7 +18,7 @@ Análise de cenários, extração de insight de relatórios e comunicação estr
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| A hipótese do M1 e sua conta no Claude configurada | Você aprende as 2 camadas que faltam no seu prompt — Critério de Sucesso e Negativo — e roda 3 execuções reais | 3 prompts de alto valor executados: síntese de relatório, comunicado de liderança e análise de cenário — o método alimenta o M3 |
+| A hipótese do M1 e sua conta no Claude configurada | Você aprende a camada que falta no seu prompt — o Critério de Sucesso — e roda 3 execuções reais | 3 prompts de alto valor executados: síntese de relatório, comunicado de liderança e análise de cenário — o método alimenta o M3 |
 
 ---
 
@@ -34,11 +32,27 @@ Você já usa IA — a diferença desta turma para a da manhã é essa. Mas há 
 
 ---
 
+## Um prompt ruim é sempre culpa do humano
+
+A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. **A engenharia de prompt é a habilidade de escrever a entrada certa.**
+
+**Anthropic Economic Index** confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.
+
+| Prompt vago | Problema | Resultado provável |
+|---|---|---|
+| "Analise esse relatório aí" | Sem foco, sem decisão a suportar | Resumo genérico, ninguém decide com ele |
+| "Faz um comunicado pra diretoria" | Sem tese, sem destinatário | Texto morno, sem posição |
+| "Sintetiza esse dashboard" | Sem hierarquia do que importa | Lista de números sem prioridade |
+
+Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.
+
+---
+
 ## O conceito em 5 pontos
 
-### 1. As 2 camadas que separam prompt funcional de prompt de gestor
+### 1. A camada que separa prompt funcional de prompt de gestor: o Critério de Sucesso
 
-**Critério de Sucesso:** como você saberá que a resposta cumpriu o objetivo — na fórmula *"a resposta funciona se [destinatário] conseguir [ação] sem pedir esclarecimento"*. **Critério Negativo:** o que a resposta não pode ser — tom, formato, conteúdo proibido. Sem o primeiro, você avalia por sensação; sem o segundo, a IA entrega a média da internet.
+**Critério de Sucesso:** como você saberá que a resposta cumpriu o objetivo — na fórmula *"a resposta funciona se [destinatário] conseguir [ação] sem pedir esclarecimento"*. O que a resposta **não pode ser** (tom, formato, conteúdo proibido) entra nas **Limitações**, junto do "não invente" — não é um elemento à parte. Sem o Critério de Sucesso, você avalia por sensação; sem limites claros, a IA entrega a média da internet.
 
 ### 2. Análise de cenário: premissas explícitas, nunca "o que você acha?"
 
@@ -66,6 +80,26 @@ Prompt de gestor se escreve uma vez e se reusa o ano inteiro — o do fechamento
 | Montar cenários com premissas explícitas antes de decidir | Colar relatório com dado confidencial sem desidentificar (M4) |
 | Adaptar a mesma mensagem para diretoria, gestores e time | Assinar número que você não recalculou na fonte |
 | Ensaiar conversa difícil ou antecipar objeções da diretoria | Usar a resposta como parecer técnico — parecer tem responsável, e é você |
+
+---
+
+## O verbo de ação é o núcleo do T
+
+Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um único lugar: o verbo da Tarefa.** Quando o verbo é vago ("me ajude", "veja"), a IA escolhe sozinha o que fazer — e escolhe pra média. Quando o verbo é preciso ("liste", "compare", "reescreva no tom X"), a IA obedece.
+
+**Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
+
+> ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
+
+---
+
+> 💡 **Conexão com o M1: modo + método**
+> No M1 você viu os 3 modos + a separação Delegação × Estruturação. O PCTFL+CS é o
+> método que aparece em cada:
+> - **Delegação (Autopiloto/Colaboração):** PCTFL+CS estruturado, roda e revisa contra o Critério.
+> - **Estruturação (Colaboração no modo sócio-analítico):** PCTFL+CS aberto, com iteração
+>   e crítica em rounds — a IA vira interlocutora, não copista.
+> - **Manual:** PCTFL não entra — decisão executiva sem intermédio.
 
 ---
 
@@ -97,13 +131,11 @@ fechamento com os 2 pontos que exigem decisão da diretoria.
 # LIMITAÇÕES
 Se faltar informação, pergunte. Não invente.
 Use apenas os números do contexto — não crie projeção que os dados não sustentam.
+Não use jargão contábil sem tradução. Não suavize desvio estrutural como se fosse
+pontual. Não proponha ação que dependa de orçamento novo.
 
 # CRITÉRIO DE SUCESSO
 A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.
-
-# CRITÉRIO NEGATIVO
-Não use jargão contábil sem tradução. Não suavize desvio estrutural como se fosse
-pontual. Não proponha ação que dependa de orçamento novo.
 ```
 
 Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reescreva o Critério de Sucesso pensando em quem recebe — e o resto é reuso.
@@ -119,7 +151,7 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 **Passo a passo:**
 1. Rode o prompt-âncora como está e compare a resposta com o Critério de Sucesso dele. Passou? (Ainda sem conta? [claude.ai](https://claude.ai) → "Continuar com Google" — 2 minutos, e o colega do lado ajuda. A maioria da sala já chega logada.)
 2. Adapte: troque o CONTEXTO por um resumo real da sua área (números desidentificados — troque valores reais por aproximados) e rode de novo.
-3. Terceira execução — o comunicado de liderança: na mesma conversa, peça: "Transforme este briefing em um comunicado de 10 linhas para meus coordenadores: o que muda para eles e o que espero de cada um até o fim do mês. Critério de sucesso: cada coordenador sabe sua prioridade sem me perguntar. Negativo: sem tom de cobrança genérica."
+3. Terceira execução — o comunicado de liderança: na mesma conversa, peça: "Transforme este briefing em um comunicado de 10 linhas para meus coordenadores: o que muda para eles e o que espero de cada um até o fim do mês. Critério de sucesso: cada coordenador sabe sua prioridade sem me perguntar. Nas limitações: sem tom de cobrança genérica."
 4. Avalie cada resposta contra o critério que você escreveu — não contra "achei bom".
 
 **Resultado esperado:** 1 briefing da sua área + 1 comunicado derivado dele, ambos avaliados por critério explícito.
@@ -132,13 +164,36 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 
 **Passo a passo:**
 1. Escolha 1 decisão real pendente na sua área (renovar contrato, redistribuir equipe, antecipar compra).
-2. Monte o PCTFL avançado: tarefa = "monte 3 cenários com premissas explícitas e aponte a premissa que, se falhar, derruba cada cenário"; Critério de Sucesso = "consigo defender a escolha em reunião citando premissas, não achismos"; Negativo = "não recomende um cenário — a escolha é minha".
+2. Monte o PCTFL avançado: tarefa = "monte 3 cenários com premissas explícitas e aponte a premissa que, se falhar, derruba cada cenário"; Critério de Sucesso = "consigo defender a escolha em reunião citando premissas, não achismos"; nas Limitações: "não recomende um cenário — a escolha é minha".
 3. Rode. Valide as premissas uma a uma: quais são fato, quais são chute da IA?
 4. Refine: "a premissa 2 do cenário base está errada — [fato real]. Refaça os cenários."
 
 **Resultado esperado:** 3 cenários com premissas marcadas por você como fato ou chute — e 1 refinamento que mudou a análise.
 
 **Como avaliar:** se você consegue apontar qual premissa vigia daqui pra frente, a análise virou instrumento de decisão. Se os 3 cenários parecem intercambiáveis, as premissas ficaram genéricas — aperte o CONTEXTO.
+
+### Camada 3 — Metaprompt: deixe a IA montar o prompt (opcional · +10 min)
+
+**Objetivo:** aprender o atalho pra quando você não quer preencher os 6 campos na mão — pede pra IA construir o prompt pra você a partir do seu objetivo.
+
+**Como funciona:**
+Cole no Claude o modelo abaixo. Ele vai te fazer as perguntas que faltam pra preencher cada elemento, e no fim entrega o prompt pronto — no mesmo padrão do gerador acima.
+
+```text
+Você é especialista em Engenharia de Prompt. Vou te dizer meu objetivo, e você vai criar
+o prompt perfeito pra mim usando o framework PCTFL+CS (Papel, Contexto, Tarefa, Formato,
+Limitações, Critério de Sucesso).
+
+Antes de escrever o prompt final, me faça as perguntas que faltam pra preencher cada elemento.
+
+Meu objetivo é: [descreva o que você quer].
+```
+
+**Quando usar cada um:**
+- **Gerador da seção acima** — pra tarefa que você repete (fechamento mensal, briefing semanal). Reusa o padrão, muda só o contexto.
+- **Metaprompt** — pra pedido novo ou complexo, onde você quer um primeiro rascunho rápido e depois refina.
+
+**Resultado esperado:** 1 prompt gerado por metaprompt, executado, e sua leitura crítica de como a IA estruturou (aprendeu observando).
 
 ---
 
@@ -153,13 +208,30 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 ---
 
 > ⚠️ **Anti-alucinação — antes do briefing subir**
-> - **Não deixe a IA inventar número que não está no seu relatório fonte.** O Critério Negativo trava; o protocolo confere: fonte · número · consistência.
+> - **Não deixe a IA inventar número que não está no seu relatório fonte.** As Limitações travam; o protocolo confere: fonte · número · consistência.
 > - O briefing que sobe para a diretoria com número inventado não é erro da IA — **é erro seu, com o seu nome**. Revisão de conteúdo não é opcional em documento de decisão.
 > - Caso-âncora: **Mata v. Avianca (2023)** — texto fluido, conteúdo fabricado, sanção real. O M4 traz o protocolo completo para você e para a sua equipe.
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
+## Do prompt ao assistente persistente — o próximo passo
+
+Você aprendeu a escrever um prompt PCTFL. O passo seguinte é transformá-lo em um **assistente persistente** — um parceiro especializado que já sabe quem você é e o que você faz, sem você re-explicar a cada nova conversa.
+
+**Como funciona na prática:**
+- Você abre o [Claude Projects](https://claude.ai/projects) (versão paga) e cria um projeto.
+- Coloca lá o seu contexto fixo (seu cargo, sua área, suas normas de trabalho, exemplos do seu formato preferido).
+- Toda conversa nova dentro do projeto já entra com esse contexto — você só descreve a tarefa do momento.
+
+**Existe em outros ecossistemas:** o padrão é o mesmo. **GPTs personalizados** (ChatGPT) e **Gems** (Gemini) seguem a mesma lógica — você cria um assistente com contexto fixo, ele responde já sabendo quem é.
+
+**Por que isso importa:** é o salto de "usei IA hoje" para "tenho IA no meu processo". Você deixa de operar com prompts isolados e passa a operar com assistentes especializados.
+
+> 🔮 **No M5 você vai construir o seu.** A partir do prompt-âncora deste módulo, você monta um assistente que fica funcionando pra você — na sua conta, com o seu contexto. E como gestor, o salto seguinte é **arquitetar assistentes por área ou processo** — um pro fechamento, um pra triagem, um pra briefing — não só o seu individual. Este módulo prepara o método; o M5 prepara a ferramenta.
+
+---
+
+> **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, gere com PCTFL avançado 1 documento real do seu cargo — briefing, síntese ou comunicado — e use de verdade: envie ou apresente a quem ele se destina.
 > Como saber que aconteceu: o documento chegou ao destinatário, e o prompt está salvo para o próximo ciclo.
 
