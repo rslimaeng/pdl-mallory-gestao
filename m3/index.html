@@ -390,61 +390,37 @@
       <p>Mesmo método. Muda só a entrada e o rótulo do output.</p>
     </section>
 
-    <section class="section">
-      <h2>Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact</h2>
-      <p>O prompt roda como está no <a href="https://claude.ai" target="_blank" rel="noopener">Claude Pro</a>. Ele executa em 3 fases (você valida cada uma) e no fim gera um <strong>Artifact HTML interativo</strong> com a matriz 2×2 (impacto × facilidade) e o risco codificado por cor — pra levar pra reunião de área.</p>
+    <section class="section prompt-ancora">
+      <span class="eyebrow">Prompt-âncora do módulo</span>
+      <h2>Mapa das suas oportunidades · gera Artifact 3D</h2>
+      <p class="secao-lead">Um prompt, 4 fases, você valida cada uma antes da IA seguir. No fim, Artifact interativo com sua matriz 2×2 + risco por cor pra levar pra reunião de área.</p>
       <div class="callout callout-info">
         <p>A partir desta versão, o Prompt-âncora pede que cada linha do Mapa seja classificada em <strong>1 dos 6 Gatilhos</strong> apresentados acima. Isso ancora sua tarefa no padrão macro e prepara a próxima etapa (M4): cada gatilho tem prompt PCTFL característico.</p>
       </div>
+      <div class="callout callout-info callout-dica">
+        <p><strong>Travou em listar 5 processos?</strong> Antes de colar o prompt-âncora, peça ao Claude: <em>"me faça 5 perguntas dirigidas, uma por vez, pra extrair meus 5 processos recorrentes da semana"</em>. Ele conduz — você responde. Não é um segundo prompt, é um empurrão.</p>
+      </div>
 
-      <div class="prompt-trio">
-        <div class="prompt-bloco">
-          <div class="prompt-bloco__header">
-            <span class="prompt-bloco__label"><strong>Prompt 0 · Pré-preparo</strong> · opcional — se travar em listar seus 5 processos</span>
-            <div class="prompt-bloco__acoes">
-              <button class="prompt-bloco__copiar" type="button" aria-label="Copiar Prompt 0">Copiar</button>
-            </div>
-          </div>
-          <pre># PAPEL
-Você é um consultor especialista em ajudar gestores a mapear os processos
-que mais consomem tempo de gestão — sem jargão.
+      <ol class="prompt-fases">
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 1</span><h3>IPO por processo + Gatilho</h3><p>Desmonta cada processo em Entra · Processa · Sai + classifica em 1 dos 6 Gatilhos.</p></li>
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 2</span><h3>Pontuação impacto × facilidade × risco</h3><p>1-5 em cada eixo (risco: menor é melhor), com justificativa de 1 linha por nota.</p></li>
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 3</span><h3>Ranking + top-1</h3><p>Ordena por (Impacto × Facilidade) / Risco e destaca a #1 pra testar amanhã.</p></li>
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 4</span><h3>Pressão final — antes do Artifact</h3><p>4 checks (processo vago · nota infantil · top-1 realista · risco escondido) pra não gerar Artifact bonito de mapa fraco.</p></li>
+      </ol>
 
-# CONTEXTO
-[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
-Estou tentando listar meus 5 processos mais repetitivos da semana e travei —
-sinto que "toco muita coisa", mas não consigo nomear 5 concretos.
-
-# TAREFA
-Me faça 5 perguntas dirigidas (uma por vez, esperando minha resposta) pra
-extrair meus 5 processos recorrentes. Use gatilhos como "toda semana você...",
-"quando fecha o mês...", "quando o comitê pede...", "quando entra um novo
-contrato/fornecedor/pedido...".
-No fim, me devolva a lista dos 5 processos em bullets curtos.
-
-# FORMATO
-Perguntas 1 por vez. Ao fim, lista numerada de 5 processos + 1 linha de contexto cada.
-
-# LIMITAÇÕES
-Se eu responder algo genérico ("gerencio a área"), pergunte mais.
-Não invente processos que eu não citei.</pre>
+      <div class="prompt-copiar">
+        <div class="prompt-copiar__header">
+          <span class="mono">PROMPT COMPLETO · COLE NO CLAUDE PRO</span>
+          <button class="btn-copiar" type="button" data-copy-target="#prompt-ancora-m3">Copiar prompt</button>
         </div>
-
-        <div class="prompt-bloco prompt-bloco--ancora">
-          <div class="prompt-bloco__header">
-            <span class="prompt-bloco__label"><strong>Prompt-âncora</strong> · Mapa de Oportunidades · Colaboração</span>
-            <div class="prompt-bloco__acoes">
-              <span class="prompt-bloco__artifact-badge">gera Artifact 3D</span>
-              <button class="prompt-bloco__copiar" type="button" aria-label="Copiar Prompt-âncora">Copiar</button>
-            </div>
-          </div>
-          <pre># PAPEL
+        <pre id="prompt-ancora-m3"># PAPEL
 Você é uma consultora sênior em transformação de rotina executiva com IA.
 Já ajudou dezenas de gestores a sair do "sei que devia usar" pro "levei 3
 oportunidades priorizadas e defensáveis pra reunião de área".
 
 # CONTEXTO
 [Sou/Trabalho como] [seu cargo em Mallory] há [X] anos, respondo pela área de [sua área].
-Meus 5 processos mais repetitivos da semana (ou saída do Prompt 0):
+Meus 5 processos mais repetitivos da semana:
 1. [processo 1 — ex.: consolidar desvios do mês pra diretoria]
 2. [processo 2 — ex.: preparar briefing da reunião de área]
 3. [processo 3 — ex.: triagem de contratos em vencimento]
@@ -452,14 +428,15 @@ Meus 5 processos mais repetitivos da semana (ou saída do Prompt 0):
 5. [processo 5 — ex.: transformar pesquisa de clima em comunicados]
 
 # TAREFA
-Execute em 3 fases, PARANDO em cada uma pra minha validação:
+Execute em 4 fases, PARANDO em cada uma pra minha validação:
 
 1. **IPO executivo por processo** — pra cada um dos 5, desmonte em:
    · **Entra** (o que você recebe — dados brutos, relatório, planilha, contrato)
-   · **Processa** (o que você faz com isso hoje — consolidar, cruzar, redigir, priorizar)
+   · **Processa** (o que você faz com isso hoje)
    · **Sai** (o produto final — briefing, parecer, comunicado, ranking)
    Aponte também: neste processo, **onde exatamente a IA pode entrar?**
-   (regra: IA rende no "processa" quando entrada é clara e saída é definida)
+   Classifique cada processo em 1 dos 6 Gatilhos: Robô Humano · Tela em Branco ·
+   Detetive Cansado · Parceiro de Sparring · Tradutor Técnico · Olho Biônico.
 
 2. **Pontuação impacto × facilidade × risco** — pra cada processo, pontue 1-5:
    · **Impacto** — quanto tempo/dor a IA remove por mês se der certo (5 = economiza 8h+/mês, 1 = economiza 1h ou menos)
@@ -469,10 +446,23 @@ Execute em 3 fases, PARANDO em cada uma pra minha validação:
 
 3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade) / Risco. Aponte a #1 (a que **você deveria testar amanhã antes de pilotar**) e explique em 2 linhas por que ela ganhou.
 
+4. **Pressão final — antes de gerar o Artifact** — pressione o próprio mapa em 4
+   ângulos:
+   · **Processo vago:** algum dos 5 ainda soa genérico ("mexer com relatório")?
+     Reescreva mais específico ou pergunte pra concretizar.
+   · **Nota infantil:** alguma pontuação foi torcida ("dei 5 porque me dá raiva")?
+     Recalibre com critério objetivo.
+   · **Top-1 realista:** o #1 pode ser testado com Claude Pro hoje, sem integrar
+     sistema, sem pedir permissão? Se não, aponte o próximo do ranking que é.
+   · **Risco escondido:** olhando o #1, tem algum dado sensível, cláusula ou número
+     que só sobe pra diretoria? Se sim, recomende o próximo do ranking com risco menor.
+   Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
+
 # FORMATO
-Fase 1 em tabela (Processo · Entra · Processa · Sai · Onde a IA entra).
+Fase 1 em tabela (Processo · Entra · Processa · Sai · Gatilho · Onde a IA entra).
 Fase 2 em tabela (Processo · Impacto · Facilidade · Risco · Justificativas).
 Fase 3 em ranking numerado + parágrafo de 2 linhas explicando o #1.
+Fase 4 em 4 blocos curtos (Processo vago · Nota infantil · Top-1 realista · Risco escondido).
 
 # LIMITAÇÕES
 - Se eu descrever um processo vago ("mexer com relatório"), pergunte antes de pontuar.
@@ -484,9 +474,9 @@ O ranking está pronto se eu consigo defender a ordem numa reunião de área ou 
 citando as notas — não "achei promissor", mas "impacto X, facilidade Y, risco Z".
 
 FORMATO DE ENTREGA (2 partes — ORDEM OBRIGATÓRIA)
-Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
+Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 
-1. Análise textual completa das 3 fases.
+1. Análise textual completa das 4 fases.
 
 2. Artifact HTML self-contained interativo — Mapa de Oportunidades IA (executivo):
    · Paleta Slate Mallory: fundo #262A35, painel #353A45, texto #E8ECF3, azul #4AA6D7,
@@ -523,47 +513,7 @@ Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
    · Rodapé mono: "PDL 2026 · Mallory Eletroportáteis · Trilha 2 · Gestão ·
      @iacomrafael".
    · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.</pre>
-        </div>
-
-        <div class="prompt-bloco">
-          <div class="prompt-bloco__header">
-            <span class="prompt-bloco__label"><strong>Prompt 2 · Refino</strong> · advogado do diabo — antes de gerar o Artifact</span>
-            <div class="prompt-bloco__acoes">
-              <button class="prompt-bloco__copiar" type="button" aria-label="Copiar Prompt 2">Copiar</button>
-            </div>
-          </div>
-          <pre># PAPEL
-Você é um advogado do diabo — ex-consultor de campo que já viu muito mapa
-bonito virar zero execução.
-
-# CONTEXTO
-Cola abaixo o mapa das 3 fases que acabamos de fazer.
-
-# TAREFA
-Pressione o mapa em 4 ângulos, direto ao ponto:
-
-1. **Processo vago:** aponte qualquer um dos 5 processos que ainda soa genérico
-   ("mexer com relatório"). Reescreva mais específico ou peça a pergunta pra
-   deixar concreto.
-2. **Nota infantil:** ache pontuações que provavelmente foram torcida
-   ("dei 5 em impacto porque me dá raiva"). Recalibra com critério objetivo.
-3. **Top 1 realista:** o #1 do ranking pode ser testado com o Claude Pro que
-   eu tenho hoje, sem integrar sistema, sem pedir permissão? Se não, aponte o
-   próximo do ranking que é.
-4. **Risco escondido:** olhando o #1, tem algum dado sensível, cláusula ou número
-   que só sobe pra diretoria? Se sim, recomende o próximo do ranking com risco menor.
-
-# FORMATO
-4 blocos em ordem. Cada um em 3-5 linhas.
-
-# LIMITAÇÕES
-Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
-
-MAPA:
-[cole as 3 fases da resposta anterior aqui]</pre>
-        </div>
       </div>
-      <p><em>Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.</em></p>
       <div class="callout callout-info">
         <p><strong>Artefato do módulo:</strong> depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra <a href="../artefatos/calculadora-roi.html">Calculadora ROI</a> e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.</p>
       </div>
@@ -575,8 +525,8 @@ MAPA:
 
       <div class="callout callout-info">
         <p class="callout-title">O que a IA faz · O que você faz</p>
-        <p><strong>A IA:</strong> desmonta cada processo em IPO com você (via Prompt 0 se precisar) · executa o Prompt-âncora nas 3 fases · gera o Artifact HTML interativo com sua matriz 2×2 + risco por cor.</p>
-        <p><strong>Você:</strong> lista 5 processos de verdade (não os "grandes projetos") · pontua honestamente impacto, facilidade e risco · passa pelo Prompt 2 (advogado do diabo) antes de gerar o Artifact · roda o #1 do ranking usando o botão "Copiar prompt PCTFL+CS".</p>
+        <p><strong>A IA:</strong> desmonta cada processo em IPO com você (use a dica das 5 perguntas se precisar) · executa o Prompt-âncora nas 4 fases · gera o Artifact HTML interativo com sua matriz 2×2 + risco por cor.</p>
+        <p><strong>Você:</strong> lista 5 processos de verdade (não os "grandes projetos") · pontua honestamente impacto, facilidade e risco · encara a Fase 4 (pressão do advogado do diabo) antes de gerar o Artifact · roda o #1 do ranking usando o botão "Copiar prompt PCTFL+CS".</p>
       </div>
 
       <p class="secao-lead"><strong>Passo a passo</strong> (~40 min):</p>
@@ -584,12 +534,12 @@ MAPA:
         <div class="momento-passo">
           <span class="momento-passo__tempo">Individual · 10 min</span>
           <div class="momento-passo__titulo">Destrave seus 5 processos</div>
-          <p class="momento-passo__desc">Abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, cole o <strong>Prompt 0</strong> e responda as perguntas. Se não travou, pule pro passo 2.</p>
+          <p class="momento-passo__desc">Abra o Claude Pro no celular ou no computador. Se travou nos 5 processos, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, pule pro passo 2.</p>
         </div>
         <div class="momento-passo">
           <span class="momento-passo__tempo">Individual · 15 min</span>
           <div class="momento-passo__titulo">Rode o mapa 3D</div>
-          <p class="momento-passo__desc">Cole o <strong>Prompt-âncora</strong>, valide fase por fase, cole o <strong>Prompt 2</strong> pra refinar, depois autorize o Artifact.</p>
+          <p class="momento-passo__desc">Cole o <strong>Prompt-âncora</strong>, valide fase por fase — a Fase 4 é a pressão do advogado do diabo — depois autorize o Artifact.</p>
         </div>
         <div class="momento-passo">
           <span class="momento-passo__tempo">Em grupo · 10 min</span>
@@ -698,5 +648,59 @@ MAPA:
 </footer>
 
 <script src="../assets/script.js" defer></script>
+<script>
+/* M3 v3 (goal 10): copiar prompt-âncora único + accordion "conceito 5 pontos" com progresso.
+   Inline no módulo — não toca o script.js compartilhado (byte-idêntico entre trilhas). */
+(function () {
+  'use strict';
+  var TRILHA = location.pathname.indexOf('gestao') !== -1 ? 't2' : 't1';
+
+  // Botão único "Copiar prompt" (data-copy-target aponta pro bloco do prompt-âncora)
+  document.querySelectorAll('.btn-copiar').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.querySelector(btn.getAttribute('data-copy-target'));
+      if (!target) return;
+      var texto = target.textContent;
+      function done() {
+        var original = btn.textContent;
+        btn.textContent = 'Copiado ✓';
+        btn.classList.add('is-success');
+        setTimeout(function () { btn.textContent = original; btn.classList.remove('is-success'); }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(done, function () { btn.textContent = 'Erro — selecione manual'; });
+      } else {
+        done();
+      }
+    });
+  });
+
+  // Accordion "conceito em 5 pontos": checks + contador de progresso, salvos por trilha
+  var accordion = document.querySelector('.conceito-accordion');
+  if (accordion) {
+    var KEY = 'm3-conceito-entendidos-' + TRILHA;
+    var checks = accordion.querySelectorAll('input[type="checkbox"][data-conceito]');
+    var contador = accordion.querySelector('[data-progresso]');
+    var marcados = [];
+    try { marcados = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { marcados = []; }
+
+    function atualizarContador() {
+      var n = 0;
+      checks.forEach(function (c) { if (c.checked) n++; });
+      if (contador) contador.textContent = n;
+    }
+    checks.forEach(function (c) {
+      if (marcados.indexOf(c.getAttribute('data-conceito')) !== -1) c.checked = true;
+      c.addEventListener('change', function () {
+        var atual = [];
+        checks.forEach(function (x) { if (x.checked) atual.push(x.getAttribute('data-conceito')); });
+        try { localStorage.setItem(KEY, JSON.stringify(atual)); } catch (e) {}
+        atualizarContador();
+      });
+    });
+    atualizarContador();
+  }
+})();
+</script>
 </body>
 </html>
