@@ -63,17 +63,17 @@ E o grupo por área ajuda: gestor de outra área vê o seu ranking sem "carinho 
 
 ## O padrão universal · toda tarefa se desmonta em 3 pedaços
 
-Entra → processa → sai. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando o que entra é claro e o que sai é definido — o meio é onde ela ajuda.
+Entrada → processo → saída. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando a entrada é clara e a saída é definida — o meio é onde ela ajuda.
 
-**01 · Entra — insumo bruto**
+**01 · Entrada — insumo bruto**
 Anotações, apontamentos, extratos, foto de quadro, planilha herdada, transcrição de reunião.
 *Na Mallory:* planilha de fechamento herdada · comentários de pesquisa de clima · relatórios de auditoria acumulados.
 
-**02 · Processa — onde a IA rende**
+**02 · Processo — onde a IA rende**
 Categoriza, resume, extrai padrões, redige rascunho, traduz intenção em fórmula, digitaliza imagem em tabela.
 *Regra de ouro:* se você conseguisse explicar a etapa pro seu analista em 10 segundos, a IA consegue assistir.
 
-**03 · Sai — produto final**
+**03 · Saída — produto final**
 Documento padrão, tabela categorizada, comunicado, DDS, briefing, relatório.
 *Na Mallory:* briefing decisório pro comitê · consolidado de contratos por risco · rascunho de comunicado da diretoria.
 
