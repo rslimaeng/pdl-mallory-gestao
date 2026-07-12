@@ -311,7 +311,7 @@ Execute em 4 fases, PARANDO em cada uma pra minha validação:
    · **Risco** — o que acontece se sair errado (1 = risco baixo: posso testar amanhã, sem tocar dado sensível; 5 = risco alto: toca dado sensível de pessoa, contrato ativo, número de diretoria ainda não publicado)
    Explique cada nota em 1 linha.
 
-3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade) / Risco. Aponte a #1 (a que **você deveria testar amanhã antes de pilotar**) e explique em 2 linhas por que ela ganhou.
+3. **Ranking 3D + top 1** — ranqueie pelo score 3D: (Impacto × Facilidade) / Risco, onde Risco 1 é o mais seguro. Aponte a #1 (a que **você deveria testar amanhã antes de pilotar**) e explique em 2 linhas por que ela ganhou. Se a #1 tiver Risco ≥ 3, sinalize: não é quick win — dê 2ª feira pra planejar governança antes.
 
 4. **Pressão final — antes de gerar o Artifact** — pressione o próprio mapa em 4
    ângulos:
@@ -383,6 +383,8 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 ```
 
 > **Artefato do módulo:** depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra [Calculadora ROI](../artefatos/calculadora-roi.html) e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.
+
+**Fluxo completo do gestor:** Artifact 3D dá o ranking com risco por cor → Calculadora ROI dimensiona R$/mês da top-1 → você chega na reunião de área com **score 3D + R$/mês** da top-1. Sem R$, é fé; com R$, é proposta.
 
 ---
 
