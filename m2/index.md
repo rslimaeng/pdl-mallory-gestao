@@ -48,6 +48,22 @@ Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios execu
 
 ---
 
+## Vago × Situado — a diferença que muda tudo
+
+O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria; o outro recebe o que decide a reunião.
+
+**Exemplo 1 · cenário**
+- 🔴 **Vago:** "O que você acha desse cenário aqui?" → opinião morna dos dois lados, sem premissa explícita — e ninguém decide com isso.
+- 🟢 **Situado:** "Monte 3 cenários (base/otimista/pessimista) pra decidir X, com premissas explícitas em cada. Aponte qual premissa, se falhar, derruba o cenário." → o espaço da decisão organizado — você valida premissas e escolhe com argumento.
+
+**Exemplo 2 · síntese**
+- 🔴 **Vago:** "Faz um resumo desse relatório." → paráfrase sem hierarquia, sem decisão sugerida — trabalho difícil ainda com você.
+- 🟢 **Situado:** "Sintetize este relatório em 1 página pra reunião de diretoria. Formato: abertura com a mensagem central · tabela (Rubrica · Desvio · Estrutural/Pontual · Ação) · fechamento com os 2 pontos que exigem decisão." → briefing que a diretoria lê e decide sem abrir o relatório completo.
+
+A diferença não é a IA. É o quanto você **situa** o pedido — e, no nível de gestor, o quanto você declara o que é uma resposta bem-sucedida. O método a seguir — PCTFL+ — é isso, virado em checklist.
+
+---
+
 ## O conceito em 5 pontos
 
 ### 1. A camada que separa prompt funcional de prompt de gestor: o Critério de Sucesso
@@ -72,6 +88,21 @@ Prompt de gestor se escreve uma vez e se reusa o ano inteiro — o do fechamento
 
 ---
 
+## As 6 camadas — PCTFL + Critério de Sucesso
+
+| Letra | Elemento | O que define | Exemplo (Mallory) |
+|---|---|---|---|
+| **P** | Papel | Quem a IA deve ser | Controller sênior com experiência em indústria de manufatura no Brasil. |
+| **C** | Contexto | A situação real | Fechamento de junho (dados fictícios): desvio +8,5%, frete/energia/manutenção acima do orçado. |
+| **T** | Tarefa | O que fazer (com verbo claro) | "Redija o briefing de desvios: separe estrutural de pontual e sugira 1 ação por desvio relevante." |
+| **F** | Formato | Como entregar | 1 página: abertura + tabela (Rubrica \| Desvio \| Direcionador \| Ação) + os 2 pontos que exigem decisão. |
+| **L** | Limitações | O que NÃO fazer | "Se faltar informação, pergunte. Não invente. Use apenas os números do contexto." |
+| **CS** | Critério de Sucesso | Quando a resposta é boa? | A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo. |
+
+**Regra de ouro:** quanto mais você preenche o PCTFL+CS, menos a IA precisa adivinhar — e menos chance de alucinação ou resultado genérico. O CS é o ponto que mais sobe a qualidade: transforma "achei ok" em "atende o critério".
+
+---
+
 ## Quando aplicar / Quando NÃO aplicar
 
 | 🟢 Quando aplicar | 🔴 Quando NÃO aplicar |
@@ -89,6 +120,16 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 
 **Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
 
+Troque "me ajude" por verbo cirúrgico — no nível de gestor, o verbo já carrega a estrutura da decisão:
+
+| Área | Verbo vago | Verbo cirúrgico | Exemplo |
+|---|---|---|---|
+| Análise | analise, veja | monte cenários, aponte premissa, decomponha | "Monte 3 cenários com premissas explícitas…" |
+| Decisão | recomende, escolha | compare por critério, aponte trade-off, ranqueie | "Compare por [custo, prazo, risco]…" |
+| Comunicação | escreva, faça | reescreva pra diretoria em 1 página, adapte pra 5 linhas de coordenador | "Adapte esta síntese pra 5 linhas de prioridade…" |
+| Diagnóstico | avalie, diga o que acha | liste hipóteses, aponte a mais provável, dê próximo passo pra validar | "Liste 5 hipóteses e a que testaria primeiro…" |
+| Preparação | prepare, ajude | ensaie objeções, aponte perguntas hostis, treine pitch | "Ensaie 5 objeções de diretor cético…" |
+
 > ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
 
 ---
@@ -100,6 +141,12 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 > - **Estruturação (Colaboração no modo sócio-analítico):** PCTFL+CS aberto, com iteração
 >   e crítica em rounds — a IA vira interlocutora, não copista.
 > - **Manual:** PCTFL não entra — decisão executiva sem intermédio.
+
+---
+
+## Gerador de prompt — ferramenta viva
+
+Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é Delegação com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
 
 ---
 
@@ -228,6 +275,18 @@ Você aprendeu a escrever um prompt PCTFL. O passo seguinte é transformá-lo em
 **Por que isso importa:** é o salto de "usei IA hoje" para "tenho IA no meu processo". Você deixa de operar com prompts isolados e passa a operar com assistentes especializados.
 
 > 🔮 **No M5 você vai construir o seu.** A partir do prompt-âncora deste módulo, você monta um assistente que fica funcionando pra você — na sua conta, com o seu contexto. E como gestor, o salto seguinte é **arquitetar assistentes por área ou processo** — um pro fechamento, um pra triagem, um pra briefing — não só o seu individual. Este módulo prepara o método; o M5 prepara a ferramenta.
+
+---
+
+## Entregável do módulo
+
+Ao final do M2, você sai com (marque conforme concluir):
+
+- [ ] Rodei o prompt-âncora do módulo — como está — e li a resposta
+- [ ] Adaptei o Contexto pra minha situação real (desidentificada) e rodei de novo
+- [ ] Rodei um 3º prompt totalmente meu com PCTFL+ completo
+- [ ] Apliquei o Critério de Sucesso na avaliação de pelo menos 1 resposta
+- [ ] Salvei os 3 prompts (pré-preparo · âncora · advogado do diabo) pra próximo ciclo
 
 ---
 
