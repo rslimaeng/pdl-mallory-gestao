@@ -95,31 +95,11 @@ Duas famílias de uso completamente diferentes. Iniciantes só usam a primeira. 
 
 ---
 
-## Os 3 modos oficiais de uso da IA
+## Os 3 modos de uso
 
-Três formas de IA entrar no seu processo. **Este vocabulário te acompanha do M1 ao M6.**
+Três formas de IA entrar no seu processo. **Este vocabulário te acompanha do M1 ao M6.** Regra de ouro: quanto maior o impacto ou o risco, mais Manual. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.
 
-### 🚗 Autopiloto — IA executa, você revisa
-
-- Rotina que segue sempre o mesmo padrão. Baixo risco, alto ganho de tempo.
-- **Exemplo Mallory:** transformar reunião gravada em ata estruturada. Toda semana, mesmo formato.
-- **Quando NÃO usar:** rotina que envolve dado sensível não desidentificado (as 5 categorias do M4).
-
-### 🤝 Colaboração — IA e você pensam juntos
-
-- Rotina que precisa do seu contexto estratégico + iteração. A IA rascunha e propõe cenários; você conduz e decide.
-- **Exemplo Mallory:** estruturar cenários para negociação com fornecedor. IA lista trade-offs; você escolhe onde ceder.
-- **Quando NÃO usar:** quando você quer resposta pronta sem revisar — Colaboração exige seu envolvimento.
-
-### ✋ Manual — IA inspira, você decide
-
-- Decisão de alta responsabilidade autoral. IA no máximo dá referência; a decisão e a assinatura são só suas.
-- **Exemplo Mallory:** decisão de demissão, aprovação de investimento, parecer para a diretoria, posicionamento em crise pública.
-- **Quando NÃO usar:** o Manual não tem exceção. Alta responsabilidade → Manual.
-
-**Regra de ouro:** quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.
-
-**Nota sobre "agente":** você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.
+> **Nota sobre "agente":** você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.
 
 ---
 
@@ -137,9 +117,7 @@ O treinamento faz mais sentido quando você sabe **de onde parte e para onde vai
 | **N6** | Builder | Trabalha no terminal, opera arquivos, constrói sistemas com IA. |
 | **N7** | Workforce de agentes | Múltiplos agentes em paralelo — fronteira. |
 
-**Meta do dia (Trilha 2):** sair em **N3** — PCTFL fluido, biblioteca de prompts começando, contexto seu montado. Alguns gestores chegam a **N4** via Claude Cowork no M5 — quem tem conta Pro compartilhada instala workstation com CLAUDE.md da área.
-
-**Meta pós-treinamento (3-6 meses):** N4 estável — várias ferramentas, biblioteca ativa, 1 processo empacotado em skill.
+**Como avançar de nível:** N1→N2: prompts estruturados (PCTFL — M2). N2→N3: contexto salvo (M6). N3→N4: 3+ ferramentas de tipos diferentes (LLM + Notebook LM + Artifacts + automação). N4→N5: primeira skill/workstation (Claude Cowork no M5).
 
 ---
 
@@ -175,8 +153,10 @@ com 10+ anos ajudando gestores a decidir onde a IA rende — sem hype
 e sem propostas que dependem de projeto de TI.
 
 # CONTEXTO
-Sou gestor da área de [sua área] em uma fabricante de eletroportáteis
-(linha branca: liquidificador, air fryer, ventilador, batedeira).
+[Sou/Trabalho como] [seu cargo: gerente de PCP / controller / gestor de
+operações / coordenador de qualidade / …] da área de [sua área]
+em uma fabricante de eletroportáteis (linha branca: liquidificador, air fryer,
+ventilador, batedeira).
 Estrutura: certificação ISO 9001, ERP Datasul, processos documentados,
 equipe de [tamanho] reportando a mim.
 Minhas rotinas que mais consomem tempo de gestão:
