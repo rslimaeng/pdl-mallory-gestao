@@ -96,6 +96,80 @@ A tentação é começar pelo processo mais importante — "se funcionar ali, fu
 
 ---
 
+## 6 Gatilhos: onde a IA já provou que ajuda
+
+Antes de mapear onde a IA entra na sua semana, **calibre o olhar**. Seis padrões cobrem cerca de 80% das oportunidades reais em qualquer área. Você não precisa inventar do zero — só reconhecer qual dos seis padrões cabe no que você já faz.
+
+### 01 · Robô Humano
+
+**A dor:** tarefas repetitivas que consomem seu tempo intelectual.
+
+**O que a IA resolve:** padronização e formatação em série.
+
+**Exemplo universal:** padronizar dezenas de registros ou anotações em um formato único.
+
+**Aterrissa em Mallory:** consolidação de apontamentos, relatórios ou fichas operacionais recorrentes em uma tabela única.
+
+### 02 · Tela em Branco
+
+**A dor:** bloqueio na hora de começar a produzir algo do zero.
+
+**O que a IA resolve:** rascunho inicial estruturado.
+
+**Exemplo universal:** estruturar comunicado, pauta ou documento com carga política antes de escrever.
+
+**Aterrissa em Mallory:** rascunhar comunicado difícil sobre mudança de regra, abertura de DDS (Diálogo Diário de Segurança) ou memo executivo pra diretoria.
+
+### 03 · Detetive Cansado
+
+**A dor:** excesso de informação pra ler e sintetizar.
+
+**O que a IA resolve:** resumo, extração de pontos-chave, identificação de padrões.
+
+**Exemplo universal:** síntese de corpus longo — relatórios, feedbacks, respostas de pesquisa.
+
+**Aterrissa em Mallory:** extrair padrões recorrentes de comentários de pesquisa de clima, sintetizar relatório de auditoria interna em pontos priorizados.
+
+### 04 · Parceiro de Sparring
+
+**A dor:** decisão difícil ou conversa de risco onde você não pode errar.
+
+**O que a IA resolve:** simulação da conversa, crítica construtiva, refino de argumento.
+
+**Exemplo universal:** ensaio de conversa sensível ou preparo de decisão de alto impacto.
+
+**Aterrissa em Mallory:** preparar conversa com liderado (advertência, feedback corretivo, mudança de escala) ou apresentação de resultado ruim antes da reunião.
+
+### 05 · Tradutor Técnico
+
+**A dor:** você sabe **o que** quer, mas trava na ferramenta.
+
+**O que a IA resolve:** traduzir sua intenção em fórmula, macro, query ou linha de código.
+
+**Exemplo universal:** fórmula complexa, macro de planilha ou query pra extrair dado cruzado.
+
+**Aterrissa em Mallory:** fórmula pra calcular OEE (Overall Equipment Effectiveness — eficiência da linha) na planilha de indicadores, macro pra consolidar apontamentos, query no sistema pra extrair histórico de fornecedor.
+
+### 06 · Olho Biônico
+
+**A dor:** dado preso em imagem, foto de quadro ou objeto físico.
+
+**O que a IA resolve:** digitalização estruturada de conteúdo visual (OCR inteligente).
+
+**Exemplo universal:** transformar foto de quadro ou documento manuscrito em texto estruturado editável.
+
+**Aterrissa em Mallory:** foto do quadro Kaizen ou do gemba (chão de fábrica) transformada em linha de tabela editável na planilha de acompanhamento.
+
+---
+
+**Pergunta de diagnóstico** — pra desbloquear na hora do exercício:
+
+> *"Qual tarefa da minha semana me faz pensar: eu não deveria estar perdendo meu tempo com isso?"*
+
+Essa é a primeira candidata a entrar no seu Mapa de Oportunidades — e provavelmente cai em um dos 6 gatilhos acima.
+
+---
+
 ## Caso-âncora universal: a planilha herdada (versão executiva)
 
 Você recebeu uma planilha do sistema legado ou de um analista que saiu: 500 linhas, categorias tortas, algumas em branco, e o comitê pede um resumo executivo pra reunião de amanhã 9h.
@@ -120,6 +194,8 @@ Mesmo método. Muda só a entrada e o rótulo do output.
 ## Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact
 
 O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 3 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 (impacto × facilidade) e o risco codificado por cor — pra levar pra reunião de área.
+
+> A partir desta versão, o Prompt-âncora pede que cada linha do Mapa seja classificada em **1 dos 6 Gatilhos** apresentados acima. Isso ancora sua tarefa no padrão macro e prepara a próxima etapa (M4): cada gatilho tem prompt PCTFL característico.
 
 ### Prompt 0 · Pré-preparo (opcional) — Se você travar em listar seus 5 processos
 
@@ -221,8 +297,12 @@ Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
      verde #65A941 (risco ≤2), amarelo #F7AC19 (risco 3), vermelho #D72C35 (risco ≥4).
      Tooltip no hover: nome do processo + nota de risco.
    · **Tabela de processos** abaixo da matriz: 5 linhas com Nome (input text editável) ·
+     **Gatilho** (dropdown com 6 opções: Robô Humano · Tela em Branco · Detetive Cansado ·
+     Parceiro de Sparring · Tradutor Técnico · Olho Biônico) ·
      Entra · Processa · Sai (todos inputs) · Impacto (slider 1-5) · Facilidade (slider 1-5)
      · Risco (slider 1-5) · Ranking (calculado por (I×F)/Risco, número dentro de círculo colorido).
+     O Gatilho ajuda o participante a reconhecer o padrão macro e escolher o prompt PCTFL
+     certo no M4. Não afeta o cálculo de Score — é campo de classificação.
      Ao mudar qualquer slider, matriz, cor do dot e ranking recalculam ao vivo.
    · **Card top 1** no rodapé destacando o processo #1 do ranking com fundo âmbar #F7AC19 20%
      transparente + borda âmbar + label "TESTE ESSA AMANHÃ ANTES DE PILOTAR" (mono) + botão
@@ -274,6 +354,8 @@ MAPA:
 ```
 
 *(Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.)*
+
+> **Artefato do módulo:** depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra [Calculadora ROI](../artefatos/calculadora-roi.html) e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.
 
 ---
 
