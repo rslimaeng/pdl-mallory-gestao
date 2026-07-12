@@ -1,16 +1,16 @@
-# M3 · Mapa de Oportunidades IA (executivo)
+# M3 · IA por Área: Mapeamento de Oportunidades de Alto Impacto
 
 **Trilha 2 · Módulo 3 de 6**
 
-A habilidade universal deste módulo: **pegar seus processos da semana e ranquear onde a IA rende mais — sem torcida, com critério defensável**. No fim, um mapa 3D (impacto × facilidade × risco) das suas 5 oportunidades.
+A promessa desta ementa: **quais oportunidades de IA na sua área têm maior retorno — e por onde começar sem paralisar o time.** Sai daqui com 5 oportunidades da sua área desmontadas em IPO, ranqueadas por impacto × facilidade × risco, e a #1 já dimensionada em R$/mês na Calculadora ROI.
 
 ---
 
 ## Três dores que este módulo cura
 
-- **"Todo mundo fala em IA, mas eu não sei onde começar na minha área."** Você vê o hype, precisa de método.
-- **"Não posso pilotar em qualquer processo — assino pela área."** Impacto sem risco na conta = decisão frágil.
-- **"Meu chefe vai pedir por que essa e não aquela."** Ranking sem critério = não passa em comitê.
+- **"Sei que a IA pode transformar 3 processos da minha área — mas se eu abrir 3 frentes ao mesmo tempo, meu time trava e nenhuma anda."** Você precisa de critério pra escolher **por onde começar**. Este módulo te dá matriz impacto × facilidade × risco, aplicada nas suas 5 oportunidades reais.
+- **"O quick win óbvio consome 40h de setup e economiza 2h/mês — o cálculo não fecha, mas eu não faço na hora."** Este módulo te entrega Calculadora ROI: você mesmo dimensiona R$/mês por oportunidade antes de mobilizar time.
+- **"Preciso defender a iniciativa de IA na próxima reunião de diretoria — sem R$ estimado, é fé; com R$, é proposta."** Sai daqui com Canvas parcial da área + top-1 já ROI-dimensionada. Preparo direto pro M6 (Canvas Executivo).
 
 **No fim deste módulo você vai conseguir:**
 
@@ -58,6 +58,26 @@ Na reunião de orçamento ou S&OP, cada gestor defende sua aposta. O que separa 
 A T2 tem uma dimensão que a T1 não precisa: **risco**. Gestor assina pela área. Um piloto de impacto alto que toca dado sensível, contrato ou número de diretoria carrega custo de erro que precisa entrar na conta — antes do piloto, não depois.
 
 E o grupo por área ajuda: gestor de outra área vê o seu ranking sem "carinho pelo assunto".
+
+---
+
+## O padrão universal · toda tarefa se desmonta em 3 pedaços
+
+Entra → processa → sai. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando o que entra é claro e o que sai é definido — o meio é onde ela ajuda.
+
+**01 · Entra — insumo bruto**
+Anotações, apontamentos, extratos, foto de quadro, planilha herdada, transcrição de reunião.
+*Na Mallory:* planilha de fechamento herdada · comentários de pesquisa de clima · relatórios de auditoria acumulados.
+
+**02 · Processa — onde a IA rende**
+Categoriza, resume, extrai padrões, redige rascunho, traduz intenção em fórmula, digitaliza imagem em tabela.
+*Regra de ouro:* se você conseguisse explicar a etapa pro seu analista em 10 segundos, a IA consegue assistir.
+
+**03 · Sai — produto final**
+Documento padrão, tabela categorizada, comunicado, DDS, briefing, relatório.
+*Na Mallory:* briefing decisório pro comitê · consolidado de contratos por risco · rascunho de comunicado da diretoria.
+
+> **Resultado prático:** IPO te dá o mapa da tarefa; a [Calculadora ROI](../artefatos/calculadora-roi.html) te dá o valor — horas economizadas × frequência × custo/hora. Sem R$ estimado, é ideia; com R$, é proposta.
 
 ---
 
