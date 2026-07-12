@@ -101,6 +101,13 @@ Três formas de IA entrar no seu processo. **Este vocabulário te acompanha do M
 
 > **Nota sobre "agente":** você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.
 
+> 💡 **Se você viu a ementa, é a mesma coisa com outro nome.**
+> A ementa fala em **Copiloto · Automação · Agente**. Aqui usamos **Colaboração · Autopiloto · Manual** — nomes mais precisos pra este treino:
+> - **Colaboração** = Copiloto da ementa (IA te ajuda a pensar, você conduz)
+> - **Autopiloto** = Automação da ementa (IA faz o rascunho, você revisa e assina)
+> - **Manual** = a IA fica fora (decisão sobre pessoa, julgamento de segurança, assinatura final) — não estava na ementa; adicionamos por rigor
+> - **Agente** da ementa (IA executa **fora do chat**, mexe em arquivos, roda tarefas) — é o assunto do **M5 (Claude Cowork)**. Fica pra depois.
+
 ---
 
 ## Onde você quer chegar hoje: os 7 níveis de uso da IA
