@@ -6,18 +6,20 @@ A promessa desta ementa: **quais oportunidades de IA na sua área têm maior ret
 
 ---
 
-## Três dores que este módulo cura
+## No fim deste módulo você vai conseguir
 
-- **"Sei que a IA pode transformar 3 processos da minha área — mas se eu abrir 3 frentes ao mesmo tempo, meu time trava e nenhuma anda."** Você precisa de critério pra escolher **por onde começar**. Este módulo te dá matriz impacto × facilidade × risco, aplicada nas suas 5 oportunidades reais.
-- **"O quick win óbvio consome 40h de setup e economiza 2h/mês — o cálculo não fecha, mas eu não faço na hora."** Este módulo te entrega Calculadora ROI: você mesmo dimensiona R$/mês por oportunidade antes de mobilizar time.
-- **"Preciso defender a iniciativa de IA na próxima reunião de diretoria — sem R$ estimado, é fé; com R$, é proposta."** Sai daqui com Canvas parcial da área + top-1 já ROI-dimensionada. Preparo direto pro M6 (Canvas Executivo).
+Cada linha abaixo se transforma em algo que você **faz** — não em algo que você "aprende sobre". A ordem é a ordem em que acontece na aula.
 
-**No fim deste módulo você vai conseguir:**
-
-- Mapear 5 processos em IPO — **10 min, sem consultor**
-- Pontuar impacto × facilidade × risco — **defensável na reunião de comitê**
-- Sair com Artifact HTML executivo pra levar pra reunião de área ou de S&OP
-- Aplicar o mesmo método em qualquer processo novo — **método fica seu**
+- **Mapear 5 processos da sua área em IPO** — 10 min, sem consultor.
+  <br>*Onde acontece:* Fase 1 do Prompt-âncora, no bloco individual da hands-on.
+- **Pontuar impacto × facilidade × risco** — defensável na reunião de comitê.
+  <br>*Onde acontece:* Fase 2 e Fase 3 do Prompt-âncora, com ranking 3D.
+- **Priorizar em grupo 3 oportunidades da sua vertical** — insumo direto pro Canvas Executivo (M6).
+  <br>*Onde acontece:* Bloco em grupo da hands-on (~15 min), mapeamento coletivo por área.
+- **Sair com Artifact HTML executivo** — pra reunião de área ou de S&OP.
+  <br>*Onde acontece:* Fase 4 do Prompt-âncora — Artifact 3D com risco por cor + top-1 já ROI-dimensionada na Calculadora.
+- **Aplicar o mesmo método em qualquer processo novo** — método fica seu.
+  <br>*Onde acontece:* Casa · Q4 planejamento, com a #2 do seu ranking.
 
 ---
 
