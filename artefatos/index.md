@@ -113,13 +113,13 @@ L — LIMITAÇÕES  o que não fazer — sempre abrindo com a regra de ouro:
 Regra do módulo 2: 5 minutos no prompt, 45 a menos no retrabalho.
 ```
 
-### Régua de redesenho: delegar · copiloto · humano
+### Régua de redesenho: Autopiloto · Colaboração · Manual
 
 | Faixa | O que significa | Exemplos |
 |---|---|---|
-| **Delegar** | A IA faz o rascunho ou a compilação inteira; alguém revisa | Relatório recorrente, primeira versão de documento |
-| **Copiloto** | A IA apoia, o humano conduz | Análise, cenário, preparação de decisão |
-| **Humano** | A IA não entra | Decisão sobre pessoa, assinatura de parecer, aprovação final |
+| **Autopiloto** | A IA faz o rascunho ou a compilação inteira; alguém revisa | Relatório recorrente, primeira versão de documento |
+| **Colaboração** | A IA apoia, o humano conduz | Análise, cenário, preparação de decisão |
+| **Manual** | A IA não entra | Decisão sobre pessoa, assinatura de parecer, aprovação final |
 
 Redesenhar processo com IA é decidir a faixa de cada etapa — e escrever isso na diretriz da área (M4).
 
