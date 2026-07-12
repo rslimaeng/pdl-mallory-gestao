@@ -85,25 +85,79 @@ Documento padrão, tabela categorizada, comunicado, DDS, briefing, relatório.
 
 ## O conceito em 5 pontos
 
+Cada ponto abre. Marque como entendido pra travar seu progresso — fica salvo no navegador.
+
 ### 1. O mapa por área — um caso canônico para cada território da sala
 
-**Controladoria/Financeiro:** desvios do mês em 1 página para a diretoria. **Jurídico:** cláusulas de risco de um contrato de 40 páginas antes da reunião. **RH:** pesquisa de clima em 3 comunicados sob medida. **Logística/Importação:** estoque × demanda decidindo prioridade de contêineres. **Planejamento:** indicadores do S&OP virando briefing com cenários. **Fiscal:** triagem de norma e documento — sempre com verificação na fonte. **TI:** triagem de chamados e documentação de sistemas. **Marketing:** briefing de campanha e primeira versão de conteúdo. **Produção:** relatório de paradas e análise de padrão de falhas.
+Cada área da Mallory tem uma dor canônica onde a IA cabe agora. Escolha a linha da sua área — se sua rotina cabe em 2 dessas 9, seu piloto já tem endereço.
+
+| Área | Caso canônico da gestão | Cadência |
+|---|---|---|
+| Controladoria / Financeiro | Desvios do mês em 1 página pra diretoria | Mensal |
+| Jurídico | Cláusulas de risco em contrato de 40 páginas antes da reunião | Ad-hoc |
+| RH | Pesquisa de clima virando 3 comunicados sob medida | Trimestral |
+| Logística / Importação | Estoque × demanda decidindo prioridade de contêineres | Semanal |
+| Planejamento | Indicadores do S&OP virando briefing com cenários | Mensal |
+| Fiscal | Triagem de norma e documento — sempre com verificação na fonte | Ad-hoc |
+| TI | Triagem de chamados + documentação de sistemas | Semanal |
+| Marketing | Briefing de campanha + primeira versão de conteúdo | Ad-hoc |
+| Produção | Relatório de paradas + análise de padrão de falhas | Diária/semanal |
+
+*Aterrissa em Mallory:* se sua rotina de gestor **não aparece em nenhuma linha**, sua vertical é candidata a 3ª oportunidade da hands-on de grupo — traga a dor pra mesa.
 
 ### 2. O framework 3D: impacto × facilidade × risco
 
-**Impacto (1–5):** quanto tempo ou dor a oportunidade remove por mês. **Facilidade (1–5):** dá para testar em 2 semanas, com as ferramentas e dados que você já tem? **Risco (1–5, menor é melhor):** o que acontece se sair errado — toca dado sensível, decisão irreversível, exposição externa? A T1 priorizou em 2D; gestor prioriza em 3D, porque assina pela área.
+A T1 prioriza em 2D (impacto × facilidade). O gestor prioriza em **3D** — porque assina pela área.
+
+| Critério | Escala | Como pontuar | Exemplo Mallory |
+|---|---|---|---|
+| **Impacto** | 1–5 (5 = máximo) | Quanto tempo ou dor a oportunidade remove por mês | Fechamento 4d → 2d: 4 · Fechamento 4d → 1d: 5 |
+| **Facilidade** | 1–5 (5 = máximo) | Dá pra testar em 2 semanas com dados/ferramentas que você já tem? | PCP já dá dado + Excel já tem template: 5 · Precisa novo dashboard: 2 |
+| **Risco** | 1–5 (**menor é melhor**) | Toca dado sensível? Decisão irreversível? Exposição externa? | Briefing interno: 1 · Comunicado pra imprensa: 4 |
+
+**Regra dura:** *seu 5×5×1 é diferente do do seu par que também é gerente — o dado do risco é o que diferencia.* Duas áreas com mesmo impacto e mesma facilidade não têm mesmo risco. A entrada do risco no ranking é o que faz o M3 T2 valer o cargo.
+
+*Aterrissa em Mallory:* jurídico tem risco 3-4 no case típico (dado sensível de contrato); financeiro tem risco 1-2 (número resumido). Isso muda o ranking mesmo se impacto e facilidade forem iguais.
 
 ### 3. A matriz IPO executiva: a IA entra no meio, nunca nas pontas
 
-Toda oportunidade se desmonta em **entrada → processo → saída**. A IA rende no processo — organizar, cruzar, redigir, sintetizar — quando a entrada é clara e a saída é definida. O que ela nunca faz: escolher o critério da entrada ("o que é candidato bom") nem assinar a saída ("aprovado"). Se você não consegue dizer o que entra e o que sai, a oportunidade ainda não está madura para piloto.
+Toda oportunidade se desmonta em **entrada → processo → saída**:
+
+- **Entrada:** o dado bruto (planilha, contrato, ata, briefing recebido).
+- **Processo:** a IA rende aqui — organizar, cruzar, redigir, sintetizar.
+- **Saída:** o entregável (documento, briefing, ranking).
+
+**O que a IA nunca faz:** escolher o critério da entrada ("o que é candidato bom") nem assinar a saída ("aprovado"). Se você não consegue dizer o que **entra** e o que **sai**, a oportunidade ainda não está madura para piloto — volte um passo.
+
+*Aterrissa em Mallory:* fechamento mensal — entra desvio da rubrica X, processa em briefing com direcionador, sai 1 página com 2 decisões pendentes. Se você não sabe o critério da entrada (que rubricas entram no briefing? só as top-5? só as > R$100k?), o piloto trava.
 
 ### 4. O quick win executivo: 4 × 4 × 1
 
-Impacto médio-alto, facilidade média-alta, risco baixo. Essa combinação vence a oportunidade 5×5×4 — porque o primeiro caso da sua área precisa dar certo visivelmente e sem sobressalto. Vitória pequena e segura financia a aposta maior: primeiro o crédito, depois o risco.
+Por que essa combinação vence a oportunidade 5×5×4?
+
+- **Impacto 4** entrega visibilidade sem precisar de milagre.
+- **Facilidade 4** entrega prazo — 2 semanas, não 2 trimestres.
+- **Risco 1** entrega dormir tranquilo — a primeira vitória não pode gerar sobressalto.
+
+**A lógica:** vitória pequena e segura financia a aposta maior. Primeiro o crédito, depois o risco.
+
+*Aterrissa em Mallory:* briefing de desvios (4×4×1) vence "prever ruptura de estoque na base inteira" (5×5×4). O primeiro dá crédito na primeira reunião de comitê. O segundo dá crédito só se durar 4 meses de piloto — e nesses 4 meses, o cético da diretoria tem tempo pra desmontar.
 
 ### 5. O antipadrão do gestor: pilotar no maior processo da área
 
-A tentação é começar pelo processo mais importante — "se funcionar ali, funciona em tudo". Quase sempre trava: processo grande tem mais dono, mais exceção, mais dado sensível e mais gente para convencer. O piloto certo é o processo que você controla sozinho e mede sem pedir licença.
+**A tentação:** começar pelo processo mais importante — "se funcionar ali, funciona em tudo".
+
+**Por que trava:**
+- Processo grande tem mais **dono** — várias pessoas precisam concordar.
+- Processo grande tem mais **exceção** — cada caso é diferente do próximo.
+- Processo grande tem mais **dado sensível** — LGPD, contratos, pessoas.
+- Processo grande tem mais **gente pra convencer** — 3 níveis de aprovação são normais.
+
+Você passa 3 meses convencendo e não roda um piloto.
+
+**O piloto certo:** processo que você **controla sozinho** e mede **sem pedir licença**.
+
+*Aterrissa em Mallory:* briefing da sua área (você controla, você mede) vence S&OP integrado (5 áreas, 3 níveis de aprovação, dado sensível cross-área).
 
 ---
 
