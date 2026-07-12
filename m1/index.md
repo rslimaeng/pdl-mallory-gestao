@@ -144,52 +144,25 @@ Três parcelas silenciosas que não aparecem no orçamento:
 
 ## Prompt-âncora do módulo
 
-O mapeamento inicial da sua área — a ponte para tudo que vem hoje. Autocontido: funciona copiado num chat novo, com definições inline dos 3 modos oficiais:
+O M2 vai te dar o método formal (PCTFL + Critério de Sucesso). Aqui, um par de exemplos macro pra você **ver a diferença que o contexto faz** — antes de aprender a estruturar.
 
-```text
-# PAPEL
-Você é um consultor sênior de transformação com IA em indústria de manufatura,
-com 10+ anos ajudando gestores a decidir onde a IA rende — sem hype
-e sem propostas que dependem de projeto de TI.
+### Sem contexto — pergunta genérica
 
-# CONTEXTO
-[Sou/Trabalho como] [seu cargo: gerente de PCP / controller / gestor de
-operações / coordenador de qualidade / …] da área de [sua área]
-em uma fabricante de eletroportáteis (linha branca: liquidificador, air fryer,
-ventilador, batedeira).
-Estrutura: certificação ISO 9001, ERP Datasul, processos documentados,
-equipe de [tamanho] reportando a mim.
-Minhas rotinas que mais consomem tempo de gestão:
-[liste 3-5 — ex.: análise de desvios mensal, preparação de reunião de diretoria,
-triagem de contratos, consolidação de indicadores]
+    Me ajude a gerar um plano de ação.
 
-# TAREFA
-Classifique cada rotina em um dos 3 modos oficiais:
+A IA vai responder bem — mas genérico. Vai voltar com template SMART, matriz 5W2H, cronograma vazio. Serve pra apresentação de MBA, não pra aprovar em comitê.
 
-- Autopiloto: rotina padronizada. A IA executa, você revisa.
-  Ex.: transformar reunião gravada em ata estruturada.
+### Com contexto — mesma pergunta, sua área
 
-- Colaboração: rotina que precisa do seu contexto + iteração.
-  Ex.: estruturar cenários de negociação com fornecedor.
+    Me ajude a gerar um plano de ação como gerente de área na Mallory
+    (linha de eletroportáteis) pra reduzir retrabalho na montagem no
+    próximo trimestre. Time de 3 supervisores + ~40 operadores.
+    Preciso de algo que caiba em 1 página, com indicador, dono e prazo,
+    e que eu consiga defender na reunião de resultado.
 
-- Manual: decisão de alta responsabilidade autoral.
-  Ex.: decisão de demissão, aprovação de investimento, parecer para diretoria.
+Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um plano — não um template. Pronto pra defender.
 
-Para cada rotina: modo + ganho estimado (horas/mês) + facilidade de começar
-(1-5, sendo 5 = "posso testar amanhã com a conta atual"). Encerre com as 2
-recomendadas para 90 dias e o porquê executivo.
-
-# FORMATO
-Tabela: Rotina | Modo | Ganho (h/mês) | Facilidade (1-5) | Justificativa.
-Depois, parágrafo de 3-4 linhas com as 2 top-priorizadas e por que essas.
-
-# LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-Não proponha nada que dependa de comprar sistema ou aprovar orçamento.
-Não classifique como Autopiloto rotina que envolve dado das 5 categorias
-sensíveis (gente, produto, contrato, diretoria, concorrência) sem processo
-de desidentificação prévia.
-```
+**A regra do M1:** contexto não é enfeite — é o que separa resposta de biblioteca de resposta de área. O M2 vai formalizar isso em 6 elementos.
 
 ---
 

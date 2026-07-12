@@ -371,52 +371,35 @@
 
     <section class="section">
       <h2>Prompt-âncora do módulo</h2>
-      <p>Um template preenchível de sócio analítico — copie, preencha os campos entre colchetes e rode num chat novo. Ele já traz <strong>Critério de Sucesso</strong> e <strong>Critério Negativo</strong>: é o que separa um pedido amador de um briefing executivo.</p>
+      <p>O M2 vai te dar o método formal (PCTFL + Critério de Sucesso). Aqui, um par de exemplos macro pra você <strong>ver a diferença que o contexto faz</strong> — antes de aprender a estruturar.</p>
 
+      <h3>Sem contexto — pergunta genérica</h3>
       <div class="card-prompt">
         <div class="prompt-box">
           <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
-          <pre><code><span class="prompt-marker"># PAPEL</span>
-Você é um sócio analítico que ajuda um gestor Mallory a estruturar decisão, escrever
-comunicação executiva ou analisar situação de negócio. Você pode fazer as duas coisas:
-executar tarefas repetitivas (delegação) ou pensar junto em decisão difícil
-(estruturação do pensamento) — depende do que o gestor pedir.
+          <pre><code>Me ajude a gerar um plano de ação.</code></pre>
+        </div>
+      </div>
+      <p>A IA vai responder bem — mas genérico. Vai voltar com template SMART, matriz 5W2H, cronograma vazio. Serve pra apresentação de MBA, não pra aprovar em comitê.</p>
 
-<span class="prompt-marker"># CONTEXTO</span>
-[Seu cargo + sua área + tempo de casa + 1 linha sobre o desafio de hoje]
-Exemplo: "Gerente de PCP há 6 anos. Estamos ampliando linha 5 e tenho que decidir
-sequência dos 3 novos moldes ainda esta semana."
-
-<span class="prompt-marker"># TAREFA</span>
-[O que você quer]
-Exemplo: "Estruture os prós e contras de cada sequência possível (A→B→C, A→C→B,
-B→A→C) considerando lead time de fornecedor e capacidade de teste."
-
-<span class="prompt-marker"># FORMATO</span>
-[Como quer receber]
-Exemplo: "Tabela comparativa 3 colunas × 5 critérios + parágrafo final de recomendação
-com nível de confiança."
-
-<span class="prompt-marker"># LIMITAÇÕES</span>
-- Nada de dado numérico específico da Mallory (custo, receita, margem)
-- Sem nome de fornecedor
-- Recomendação nunca é ordem — é subsídio pra minha decisão
-
-<span class="prompt-marker"># CRITÉRIO DE SUCESSO</span>
-Eu consigo levar a análise pra reunião de gerentes amanhã e defender uma escolha
-com argumento estruturado.
-
-<span class="prompt-marker"># CRITÉRIO NEGATIVO</span>
-Sinais de que a resposta falhou:
-- Escolhe pra mim sem eu pedir
-- Ignora que capacidade de teste é gargalo
-- Tabela sem coluna de risco</code></pre>
+      <h3>Com contexto — mesma pergunta, sua área</h3>
+      <div class="card-prompt">
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code>Me ajude a gerar um plano de ação como gerente de área na Mallory
+(linha de eletroportáteis) pra reduzir retrabalho na montagem no
+próximo trimestre. Time de 3 supervisores + ~40 operadores.
+Preciso de algo que caiba em 1 página, com indicador, dono e prazo,
+e que eu consiga defender na reunião de resultado.</code></pre>
         </div>
         <label class="action-check" data-key="m1-prompt-ancora">
           <input type="checkbox">
           <span>Rodei este prompt no Claude</span>
         </label>
       </div>
+      <p>Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um plano — não um template. Pronto pra defender.</p>
+
+      <p><strong>A regra do M1:</strong> contexto não é enfeite — é o que separa resposta de biblioteca de resposta de área. O M2 vai formalizar isso em 6 elementos.</p>
     </section>
 
     <section class="section">
