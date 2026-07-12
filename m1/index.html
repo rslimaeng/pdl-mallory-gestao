@@ -262,79 +262,11 @@
     </section>
 
     <section class="section">
-      <h2>Os 3 modos oficiais de uso da IA</h2>
-      <p>Três formas de IA entrar no seu processo. <strong>Este vocabulário te acompanha do M1 ao M6.</strong> Clique para expandir cada modo:</p>
-      <div class="modos-accordion">
-
-        <div class="modo-card open">
-          <button class="modo-header" aria-expanded="true">
-            <span class="modo-numero" aria-hidden="true">1</span>
-            <span>
-              <span class="modo-titulo">Autopiloto</span>
-              <span class="modo-resumo">IA executa, você revisa</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Rotina que segue sempre o mesmo padrão. Baixo risco, alto ganho de tempo de gestão.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>Transformar reunião gravada em ata estruturada. Toda semana, mesmo formato.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>Rotina que envolve dado sensível não desidentificado (as 5 categorias do M4).</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div class="modo-card">
-          <button class="modo-header" aria-expanded="false">
-            <span class="modo-numero" aria-hidden="true">2</span>
-            <span>
-              <span class="modo-titulo">Colaboração</span>
-              <span class="modo-resumo">IA e você pensam juntos</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Rotina que precisa do seu contexto estratégico + iteração. A IA rascunha e propõe cenários; você conduz e decide.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>Estruturar cenários para negociação com fornecedor. A IA lista trade-offs; você escolhe onde ceder.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>Quando você quer resposta pronta sem revisar — Colaboração exige seu envolvimento.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div class="modo-card">
-          <button class="modo-header" aria-expanded="false">
-            <span class="modo-numero" aria-hidden="true">3</span>
-            <span>
-              <span class="modo-titulo">Manual</span>
-              <span class="modo-resumo">IA inspira, você decide</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Decisão de alta responsabilidade autoral. A IA no máximo dá referência; a decisão e a assinatura são só suas.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>Decisão de demissão, aprovação de investimento, parecer para a diretoria, posicionamento em crise pública.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>O Manual não tem exceção. Alta responsabilidade → Manual.</dd>
-            </dl>
-          </div>
-        </div>
-
-      </div>
-
-      <p><strong>Regra de ouro:</strong> quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.</p>
+      <h2>Os 3 modos de uso</h2>
+      <p>Três formas de IA entrar no seu processo. <strong>Este vocabulário te acompanha do M1 ao M6.</strong> Regra de ouro: quanto maior o impacto ou o risco, mais Manual. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.</p>
       <p><strong>Nota sobre "agente":</strong> você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.</p>
 
-      <div class="modos-explorador" id="modos-explorador" aria-label="Explorador dos 3 modos">
+      <div class="modos-explorador" id="modos-explorador" data-trilha="t2" aria-label="Explorador dos 3 modos">
         <div class="explorador-header">
           <span class="explorador-kicker">EXPLORADOR</span>
           <h3>Os 3 modos com exemplo</h3>
@@ -379,7 +311,7 @@
         </div>
         <div class="nivel-card" role="tabpanel" id="nivel-card"></div>
       </div>
-      <p><strong>Meta do dia (Trilha 2):</strong> sair em <strong>N3</strong> — PCTFL fluido, biblioteca de prompts começando, contexto seu montado. Alguns gestores chegam a <strong>N4</strong> via Claude Cowork no M5. <strong>Meta pós-treinamento (3-6 meses):</strong> N4 estável — várias ferramentas, biblioteca ativa, 1 processo empacotado em skill.</p>
+      <p><strong>Como avançar de nível:</strong> N1→N2: prompts estruturados (PCTFL — M2). N2→N3: contexto salvo (M6). N3→N4: 3+ ferramentas de tipos diferentes (LLM + Notebook LM + Artifacts + automação). N4→N5: primeira skill/workstation (Claude Cowork no M5).</p>
       <div class="autodiagnostico-cta">
         <p>Quer descobrir seu nível atual com 7 perguntas honestas?</p>
         <button class="btn-primary" id="abrir-autodiagnostico" type="button">Descobrir meu nível →</button>
@@ -451,7 +383,7 @@ executar tarefas repetitivas (delegação) ou pensar junto em decisão difícil
 (estruturação do pensamento) — depende do que o gestor pedir.
 
 <span class="prompt-marker"># CONTEXTO</span>
-[Gestor preenche: sua área + tempo de casa + 1 linha sobre o desafio de hoje]
+[Seu cargo + sua área + tempo de casa + 1 linha sobre o desafio de hoje]
 Exemplo: "Gerente de PCP há 6 anos. Estamos ampliando linha 5 e tenho que decidir
 sequência dos 3 novos moldes ainda esta semana."
 
