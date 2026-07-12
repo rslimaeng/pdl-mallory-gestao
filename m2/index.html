@@ -142,37 +142,55 @@
     <section class="section">
       <h2>PCTFL+ — as 6 camadas do prompt de gestor</h2>
       <p class="secao-lead">As 5 do prompt profissional, mais a que separa "achei ok" de "atende o critério".</p>
-      <div class="pctfl-grid">
-        <div class="pctfl-card">
-          <span class="pctfl-letra">P</span>
-          <span class="pctfl-nome">Papel</span>
-          <span class="pctfl-desc">Quem a IA deve ser — senioridade e perspectiva.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">C</span>
-          <span class="pctfl-nome">Contexto</span>
-          <span class="pctfl-desc">A situação real e os insumos — sem isso, indústria genérica.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">T</span>
-          <span class="pctfl-nome">Tarefa</span>
-          <span class="pctfl-desc">Verbo cirúrgico — monte cenários, compare, decomponha.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">F</span>
-          <span class="pctfl-nome">Formato</span>
-          <span class="pctfl-desc">Estrutura da resposta — tabela, 1 página, N colunas.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">L</span>
-          <span class="pctfl-nome">Limitações</span>
-          <span class="pctfl-desc">O que não fazer e o que a resposta não pode ser (tom, conteúdo proibido) — e a regra "não invente".</span>
-        </div>
-        <div class="pctfl-card pctfl-card-plus">
-          <span class="pctfl-letra pctfl-letra-plus">CS</span>
-          <span class="pctfl-nome">Critério de Sucesso</span>
-          <span class="pctfl-desc">A resposta funciona se [destinatário] conseguir [ação] sem pedir esclarecimento.</span>
-        </div>
+      <div class="pctfl-tabela-wrap">
+        <table class="pctfl-tabela">
+          <thead>
+            <tr>
+              <th class="col-letra">Letra</th>
+              <th class="col-elemento">Elemento</th>
+              <th class="col-define">O que define</th>
+              <th class="col-exemplo">Exemplo (Mallory)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="letra letra-p">P</td>
+              <td>Papel</td>
+              <td>Quem a IA deve ser</td>
+              <td>Controller sênior com experiência em indústria de manufatura no Brasil.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-c">C</td>
+              <td>Contexto</td>
+              <td>A situação real</td>
+              <td>Fechamento de junho (dados fictícios): desvio +8,5%, com frete, energia e manutenção acima do orçado.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-t">T</td>
+              <td>Tarefa</td>
+              <td>O que fazer (com verbo claro)</td>
+              <td>"Redija o briefing de desvios: separe estrutural de pontual e sugira 1 ação por desvio relevante."</td>
+            </tr>
+            <tr>
+              <td class="letra letra-f">F</td>
+              <td>Formato</td>
+              <td>Como entregar</td>
+              <td>1 página: abertura + tabela (Rubrica | Desvio | Direcionador | Ação) + os 2 pontos que exigem decisão.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-l">L</td>
+              <td>Limitações</td>
+              <td>O que NÃO fazer</td>
+              <td>"Se faltar informação, pergunte. Não invente. Use apenas os números do contexto."</td>
+            </tr>
+            <tr class="row-plus">
+              <td class="letra letra-cs">CS</td>
+              <td>Critério de Sucesso</td>
+              <td>Quando a resposta é boa?</td>
+              <td>A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="callout callout-info">
         <p class="callout-title">A camada que separa prompt funcional de prompt de gestor</p>
@@ -225,42 +243,42 @@
               <span class="campo-letra">P</span> Papel
               <span class="campo-hint">quem a IA deve ser</span>
             </label>
-            <textarea id="pctfl-papel" data-campo="papel" rows="2" placeholder="Você é um controller sênior com experiência em indústria de manufatura no Brasil."></textarea>
+            <textarea id="pctfl-papel" data-campo="papel" rows="2" placeholder="Você é um [consultor / analista sênior / sparring / …] com [X] anos em [sua área ou indústria]."></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-contexto">
               <span class="campo-letra">C</span> Contexto
               <span class="campo-hint">a situação real + insumos, sem inventar</span>
             </label>
-            <textarea id="pctfl-contexto" data-campo="contexto" rows="4" placeholder="Fechamento de junho de uma fabricante de eletroportáteis. Dados FICTÍCIOS: orçado R$ 8,2 mi / realizado R$ 8,9 mi. Frete 3º mês acima. Manutenção estourou por parada não programada da injetora 7."></textarea>
+            <textarea id="pctfl-contexto" data-campo="contexto" rows="4" placeholder="[situação real desidentificada: dado, cenário, prazo]. Ex: &quot;Fechamento de junho, desvio +8,5% na rubrica X, decisão sobe pra diretoria quinta.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-tarefa">
               <span class="campo-letra">T</span> Tarefa
               <span class="campo-hint">verbo cirúrgico (ver tabela acima)</span>
             </label>
-            <textarea id="pctfl-tarefa" data-campo="tarefa" rows="2" placeholder="Redija o briefing de desvios: separe estrutural de pontual, explique o direcionador de cada um e sugira 1 ação por desvio relevante."></textarea>
+            <textarea id="pctfl-tarefa" data-campo="tarefa" rows="2" placeholder="[verbo executivo + estrutura esperada]. Ex: &quot;Redija o briefing separando desvio estrutural de pontual e sugira 1 ação por desvio relevante.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-formato">
               <span class="campo-letra">F</span> Formato
               <span class="campo-hint">como quer receber</span>
             </label>
-            <textarea id="pctfl-formato" data-campo="formato" rows="2" placeholder="1 página: parágrafo de abertura + tabela (Rubrica | Desvio | Estrutural/Pontual | Direcionador | Ação) + fechamento com os 2 pontos que exigem decisão."></textarea>
+            <textarea id="pctfl-formato" data-campo="formato" rows="2" placeholder="[formato executivo]. Ex: &quot;1 página: parágrafo de abertura + tabela (Rubrica | Desvio | Ação) + fechamento com os 2 pontos que exigem decisão.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-limites">
               <span class="campo-letra">L</span> Limitações
               <span class="campo-hint">o que não fazer + regra de ouro</span>
             </label>
-            <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. Use apenas os números do contexto — não crie projeção que os dados não sustentam."></textarea>
+            <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. [restrições]. Ex: &quot;Use só os números do contexto. Não crie projeção sem base. Nunca cite jargão sem tradução.&quot;"></textarea>
           </div>
           <div class="gerador-campo gerador-campo-avancado">
             <label for="pctfl-sucesso">
               <span class="campo-letra campo-letra-plus">CS</span> Critério de Sucesso
               <span class="campo-hint">como você saberá que funcionou</span>
             </label>
-            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo."></textarea>
+            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="[como saber que a resposta funcionou]. Ex: &quot;A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.&quot;"></textarea>
           </div>
 
           <div class="gerador-acoes">
