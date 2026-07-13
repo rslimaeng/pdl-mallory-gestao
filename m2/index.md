@@ -64,6 +64,66 @@ A diferença não é a IA. É o quanto você **situa** o pedido — e, no nível
 
 ---
 
+## Quando a fonte é planilha — o segundo caso do módulo
+
+Até aqui você viu prompt sobre **relatório curto ou número já resumido** — briefing, comunicado, cenário. Existe um segundo caso, o mais desconfortável pro gestor: **quando a fonte é planilha de 500-2.000 linhas de dado bruto** que ninguém teve tempo de olhar linha por linha. Fluxo de caixa detalhado, apontamento de refugo por lote, extrato do cartão corporativo, base de reclamação de cliente. **Manual leva horas; Excel manual não pega tudo; IA em 1 prompt correto extrai o que importa em minutos — se você validar amostra antes de confiar no todo.**
+
+Aqui a lente é diferente. Você não pede pra IA "resumir". Você pede pra ela **enxergar padrão que você não teria tempo de enxergar sozinho** — e depois valida.
+
+### O caso âncora: refugo por lote da injetora 7 nos últimos 90 dias
+
+Situação concreta que todo gestor Mallory reconhece. Você tem uma planilha exportada do Datasul: 800 linhas · colunas *lote · data · turno · operador · quantidade produzida · refugo · tipo de defeito*. Pedir "resuma isso" volta lixo. **O prompt que funciona tem 3 fases sequenciais na mesma conversa** — cada fase entra na próxima.
+
+**Fase 1 · Diagnóstico da planilha (antes de analisar)**
+
+Você começa pedindo pra IA **descrever o dado**, não interpretar ainda:
+
+    Descreva o padrão desta planilha: colunas, tipos de valor, período coberto,
+    valores extremos por coluna. Aponte lacunas (células vazias, coluna com
+    domínio ambíguo, formato inconsistente). Não interprete ainda. Só descreva.
+
+**Por que:** você economiza a dor de descobrir uma coluna corrompida depois de 20 min de análise. Se a Fase 1 acusa problema, você limpa a planilha antes de seguir — 2 minutos de disciplina evitam 40 min de conclusão errada.
+
+**Fase 2 · Categorização com marcação explícita de lacuna**
+
+Depois do diagnóstico limpo, você pede categorização — e força a IA a **marcar o que ela não sabe**:
+
+    Agrupe as linhas de refugo por causa provável em 4 categorias:
+    setup/regulagem, material, operador em treinamento, ruído de processo.
+    Nas linhas onde a causa não é clara pelos dados, marque com [A_INVESTIGAR].
+    Não invente causa que os dados não sustentam.
+
+**Por que:** sem a instrução de marcar `[A_INVESTIGAR]`, a IA preenche tudo com palpite — e você não sabe onde ela chutou. Com a instrução, ela devolve com honestidade: "70% categorizado, 30% precisa de olho humano". Você olha só os 30%.
+
+**Fase 3 · Caça a anomalias**
+
+Depois da categorização, o pedido que Excel não faz sozinho:
+
+    Aponte as 5 linhas mais anômalas desta planilha por 3 critérios:
+    (1) outlier de volume de refugo dentro do próprio turno,
+    (2) combinação turno × operador com defeito raro na base histórica,
+    (3) tipo de defeito que aparece 1x isolado (não é padrão, é evento).
+    Pra cada linha, explique em 1 linha por que chamou a atenção.
+
+**O que sai:** 5 pontos concretos pra você conversar com o PCP e o supervisor de turno. Não são conclusões prontas — são hipóteses de investigação priorizadas pela IA a partir do padrão do dado.
+
+### A regra da amostra — antes de qualquer conclusão
+
+**Antes de assinar qualquer análise que vai virar decisão, valide 5 linhas aleatórias contra a fonte.** Abra a planilha, escolha 5 linhas ao acaso, confira o que a IA disse contra o dado bruto. Se as 5 batem, a probabilidade de o todo estar coerente é alta. Se 1 das 5 falha, ajuste o prompt e rode de novo — **não** conserte no output final.
+
+Este é o **contrato de confiança com IA em dado**: humano assina depois de amostrar, nunca depois só de ler. É a mesma disciplina de auditoria interna aplicada num ciclo 20× mais rápido.
+
+### Quando este caso vale — e quando não
+
+| 🟢 Use análise de dado bruto quando | 🔴 Não use quando |
+|---|---|
+| A planilha tem 200+ linhas e você não teria tempo de olhar linha por linha | O dado tá em 3 planilhas que precisam ser cruzadas primeiro — limpe antes |
+| O padrão de valor já está estruturado (colunas nomeadas, tipos consistentes) | Coluna livre-texto é a mais importante — precisa de tratamento antes (M4) |
+| Você quer priorizar 5-10 pontos para investigação humana | Você quer que a IA "decida" — decisão fica com você, sempre |
+| Você pode validar amostra na fonte antes de confiar | Você não tem acesso à fonte pra amostrar — sem amostra, sem assinatura |
+
+---
+
 ## O conceito em 5 pontos
 
 ### 1. A camada que separa prompt funcional de prompt de gestor: o Critério de Sucesso
@@ -238,7 +298,23 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 
 **Como avaliar:** se você consegue apontar qual premissa vigia daqui pra frente, a análise virou instrumento de decisão. Se os 3 cenários parecem intercambiáveis, as premissas ficaram genéricas — aperte o CONTEXTO.
 
-### Camada 3 — Metaprompt: deixe a IA montar o prompt (opcional · +10 min)
+### Camada 3 — Análise de dado bruto (para quem terminou 2 · +10-15 min)
+
+**Objetivo:** aplicar as 3 fases (diagnóstico → categorização → anomalias) numa planilha real sua.
+
+**Pré-requisito:** planilha do seu dia que você **nunca teve tempo de olhar linha por linha** — 200+ linhas, dado desidentificado. Sugestões: extrato do cartão corporativo do trimestre, apontamento de refugo/parada da sua linha, base de reclamação de cliente, planilha de fechamento com detalhamento por rubrica.
+
+**Passo a passo:**
+1. Cole a planilha (ou os primeiros 50 linhas se for muito grande) no chat e rode a **Fase 1 · Diagnóstico** exatamente como está na seção acima. Leia com atenção: a IA aponta lacuna, coluna ambígua, formato quebrado? Corrija a planilha antes de seguir.
+2. Rode a **Fase 2 · Categorização** com as 4 categorias adaptadas ao seu caso (custo tem outras categorias; reclamação de cliente tem outras). **Não pule a instrução `[A_INVESTIGAR]`** — se tirar, você perde a honestidade da IA.
+3. Rode a **Fase 3 · Caça a anomalias**. Ajuste os 3 critérios pro seu contexto (o "turno × operador" só faz sentido pra refugo — pra custo, seria "categoria × fornecedor", etc).
+4. **Aplique a regra da amostra:** escolha 5 linhas aleatórias no output da Fase 3, abra a planilha bruta, confira uma a uma. Bateu? Continue. Não bateu? Volte a Fase 2 com prompt corrigido.
+
+**Resultado esperado:** 5 pontos concretos que valem levar pra próxima reunião de área — com a certeza (validada por amostra) de que não são invenção da IA.
+
+**Como avaliar:** se você consegue explicar cada um dos 5 pontos a um colega apontando pra linha da planilha bruta, o exercício funcionou. Se ficou "a IA disse que...", volte à amostra — sem amostra, o output é opinião, não análise.
+
+### Camada 4 — Metaprompt: deixe a IA montar o prompt (opcional · +10 min)
 
 **Objetivo:** aprender o atalho pra quando você não quer preencher os 6 campos na mão — pede pra IA construir o prompt pra você a partir do seu objetivo.
 
