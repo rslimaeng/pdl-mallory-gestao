@@ -30,6 +30,8 @@ Você entende como gestores estão usando IA hoje — dado real, não hype — e
 
 **E tem infraestrutura invisível a favor.** Datasul entrega dado estruturado. ISO 9001 entrega processo documentado. O PDL entrega liderança treinada em conjunto. IA não cria ordem — amplifica a que existe. A Mallory tem mais ordem que a média; a vantagem é largar dessa base.
 
+**E tem um segundo tempo neste jogo.** O que vem até aqui é você, gestor, mais rápido — briefing em 15 min, síntese em 20, decisão em horas em vez de dias. Vale. Mas o salto real da manufatureira que sai na frente **não é o gestor mais produtivo — é o ciclo da empresa mais curto**. Fechamento em 1 dia, briefing na 3ª, decisão na 5ª, ação na 6ª. Quem hoje faz esse ciclo em 3 semanas está competindo com quem faz em 1. É essa a lente do M1: **onde a Mallory como sistema fica mais rápida** — não só onde você fica.
+
 ---
 
 ## O que a IA generativa é — e por que isso muda a estratégia
@@ -107,6 +109,46 @@ Três formas de IA entrar no seu processo. **Este vocabulário te acompanha do M
 > - **Autopiloto** = Automação da ementa (IA faz o rascunho, você revisa e assina)
 > - **Manual** = a IA fica fora (decisão sobre pessoa, julgamento de segurança, assinatura final) — não estava na ementa; adicionamos por rigor
 > - **Agente** da ementa (IA executa **fora do chat**, mexe em arquivos, roda tarefas) — é o assunto do **M5 (Claude Cowork)**. Fica pra depois.
+
+---
+
+## IA no gestor × IA na empresa — os 2 níveis do jogo
+
+Você já tem o vocabulário do primeiro nível: 3 modos, Delegação × Estruturação, 3 zonas do que você sabe. Tudo isso é **você, gestor, com IA na sua mão** — turno útil, agenda mais leve, decisão melhor preparada. Real. Vale a semana.
+
+Mas quando você olha as manufatureiras que estão saindo na frente — não as *startups* de IA, as **empresas físicas com produto físico** —, o padrão que se repete é diferente. Não é que o gestor virou mais produtivo. É que **o processo da empresa aprendeu a andar mais rápido, com IA rodando dentro dele, não ao lado dele**. Este é o segundo nível — e ele começa a existir a partir do que você entende dele.
+
+### O contraste em 1 tabela
+
+| | **IA no gestor** (nível 1) | **IA na empresa** (nível 2) |
+|---|---|---|
+| **Escopo** | Tarefa do dia — briefing, comunicado, análise | Fluxo — do dado bruto à decisão à ação, ciclo inteiro |
+| **Contexto que a IA lê** | Janela da conversa atual | Datasul + ISO 9001 + histórico + gravações, acesso permanente |
+| **Onde o humano entra** | Você conduz cada prompt | Você projeta o processo; a IA opera dentro dele |
+| **O que mede o ganho** | Sua hora salva por semana | Tempo do ciclo da empresa (dado → decisão → ação) |
+| **Onde vive** | No seu chat | Nos processos, ferramentas, memória acumulada |
+
+Não é escolher um dos dois — é **subir do 1 pro 2 nas frentes onde faz sentido**. E o gestor que entende o nível 2 é quem propõe a próxima peça certa quando a Mallory decidir dedicar uma pessoa ao tema.
+
+### As 5 camadas da IA na empresa
+
+O padrão que se repete em quem já opera assim tem 5 camadas. Não é receita — é lente. Serve pra você **enxergar em qual camada a Mallory está hoje**.
+
+**1. Captura — tudo que acontece vira artefato.** Reunião gravada, decisão registrada, chamada com cliente transcrita, apontamento salvo. Hoje: parte no e-mail, parte na cabeça de quem tava na sala. IA precisa de dado; dado precisa existir primeiro. *Mallory hoje:* Datasul captura processo; ISO 9001 captura qualidade; reunião de comitê, decisão de escritório e chamada com fornecedor ainda não. *Peça mais barata do nível 2:* padronizar geração de artefato onde ainda não tem.
+
+**2. Contexto integrado — a IA lê os artefatos, não um por vez.** Um assistente por área que vê Datasul, ISO, histórico do último trimestre, minuta da última reunião — tudo ao mesmo tempo. Sem re-explicar. *Mallory hoje:* dado estruturado existe, mas em silo. *Peça de médio prazo:* juntar as 2-3 fontes que já existem numa camada onde a IA opera.
+
+**3. Execução com humano na revisão.** Rascunho de briefing, primeira versão de análise, síntese de reunião — a IA faz; o humano lê e assina. Baixo risco escala rápido (Autopiloto); alto risco fica em Colaboração. **Este é o modo que este treinamento te dá.** *Mallory hoje:* algumas áreas já usam pontualmente. *Peça imediata:* transformar em rotina em 3-5 processos que se repetem todo mês.
+
+**4. Memória que acumula.** O prompt que funcionou pro fechamento de junho serve pro de julho, agosto, setembro. O padrão de resposta que a IA aprendeu semana passada volta na semana que vem. *Mallory hoje:* cada gestor recomeça do zero em cada conversa. *Peça de médio prazo:* prompts salvos por área (é o que o **M6** deste treino monta).
+
+**5. Auto-melhoria — o sistema aprende com o erro.** Quando a IA erra sempre no mesmo tipo de caso, o padrão de correção vira instrução salva. Erro corrigido de vez, não caso a caso. *Mallory hoje:* longe. *Peça de horizonte:* o que uma empresa de manufatura brasileira alcança em 24-36 meses trabalhando as camadas 1-4 primeiro.
+
+### O que muda no seu papel de gestor
+
+O gestor que só opera no nível 1 vira **usuário melhor de ferramenta**. O gestor que entende o nível 2 vira **arquiteto do processo com IA** — é ele quem propõe qual peça a empresa faz a seguir, com qual retorno esperado, em qual prazo. **Esse gestor não é substituído pela IA. É o gestor que decide onde a IA entra.** É este o corte que este PDL quer treinar em vocês nos próximos 4 meses — começando por saber a lente das 5 camadas, terminando por operar em pelo menos 1 delas.
+
+**Regra prática deste módulo:** ao formular sua hipótese de vantagem no exercício, escreva 2 frases — uma sobre **você, gestor** (nível 1); outra sobre **onde essa vantagem conecta com a Mallory-como-sistema** (nível 2). O exercício exige as duas.
 
 ---
 
