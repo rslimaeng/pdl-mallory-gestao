@@ -790,7 +790,7 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
     target.addEventListener('toggle', sync);
   });
   window.addEventListener('beforeprint', function () {
-    document.querySelectorAll('.prompt-copiar__details').forEach(function (d) { d.open = true; });
+    document.querySelectorAll('.prompt-copiar__details, .conceito-item').forEach(function (d) { d.open = true; });
   });
 })();
 </script>
