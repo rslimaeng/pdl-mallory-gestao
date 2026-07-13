@@ -442,6 +442,8 @@ Abra a **Calculadora ROI** e dimensione R$/mês da sua #1 pessoal. É a peça qu
 
 **Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é (a) não testar, ou (b) sair sem as 3 da vertical anotadas.
 
+> **Como as 3 oportunidades da vertical viram assistentes no M5:** o M5 desta trilha (Claude Cowork) é onde os prompts salvos de área viram **assistentes por processo** — um pro fechamento, um pra triagem de contratos, um pra síntese de S&OP. As 3 oportunidades priorizadas da vertical hoje são a lista de espera dos primeiros 3 assistentes que a sua área vai construir no M5. Cada oportunidade que vira assistente é o salto de "eu uso IA" para "minha área tem IA rodando".
+
 ---
 
 ## Os 3 erros mais comuns
