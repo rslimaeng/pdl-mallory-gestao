@@ -18,7 +18,7 @@ Análise de cenários, extração de insight de relatórios e comunicação estr
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| A hipótese do M1 e sua conta no Claude configurada | Você aprende a camada que falta no seu prompt — o Critério de Sucesso — e roda 3 execuções reais | 3 prompts de alto valor executados: síntese de relatório, comunicado de liderança e análise de cenário — o método alimenta o M3 |
+| A hipótese do M1 e sua conta no Claude configurada | Você aprende a camada que falta no seu prompt — o Critério de Sucesso — e roda 3 execuções reais | 3 prompts de alto valor executados: síntese de relatório, comunicado de liderança e análise de cenário — o método alimenta o M3 (matriz 3D · ranking por (I×F)/Risco) |
 
 ---
 
@@ -388,6 +388,10 @@ Ao final do M2, você sai com (marque conforme concluir):
 > **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, gere com PCTFL avançado 1 documento real do seu cargo — briefing, síntese ou comunicado — e use de verdade: envie ou apresente a quem ele se destina.
 > Como saber que aconteceu: o documento chegou ao destinatário, e o prompt está salvo para o próximo ciclo.
+
+---
+
+> **Como esses 3 prompts alimentam o Canvas Executivo (M6):** o Canvas Executivo do M6 tem uma linha "Como vou comunicar internamente e pra diretoria". Os 3 prompts que você salva hoje (síntese executiva · comunicado de liderança · análise de cenário) são exatamente a arquitetura de comunicação da sua iniciativa de IA — sem re-preparar cada peça, você chega no M6 com o time de comunicação pronto.
 
 ---
 
