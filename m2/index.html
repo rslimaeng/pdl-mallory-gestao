@@ -140,6 +140,90 @@
     </section>
 
     <section class="section">
+      <h2>Quando a fonte é planilha — o segundo caso do módulo</h2>
+      <p>Até aqui você viu prompt sobre <strong>relatório curto ou número já resumido</strong> — briefing, comunicado, cenário. Existe um segundo caso, o mais desconfortável pro gestor: <strong>quando a fonte é planilha de 500-2.000 linhas de dado bruto</strong> que ninguém teve tempo de olhar linha por linha. Fluxo de caixa detalhado, apontamento de refugo por lote, extrato do cartão corporativo, base de reclamação de cliente. <strong>Manual leva horas; Excel manual não pega tudo; IA em 1 prompt correto extrai o que importa em minutos — se você validar amostra antes de confiar no todo.</strong></p>
+      <p>Aqui a lente é diferente. Você não pede pra IA "resumir". Você pede pra ela <strong>enxergar padrão que você não teria tempo de enxergar sozinho</strong> — e depois valida.</p>
+
+      <h3>O caso âncora: refugo por lote da injetora 7 nos últimos 90 dias</h3>
+      <p>Situação concreta que todo gestor Mallory reconhece. Você tem uma planilha exportada do Datasul: 800 linhas · colunas <em>lote · data · turno · operador · quantidade produzida · refugo · tipo de defeito</em>. Pedir "resuma isso" volta lixo. <strong>O prompt que funciona tem 3 fases sequenciais na mesma conversa</strong> — cada fase entra na próxima.</p>
+
+      <p><strong>Fase 1 · Diagnóstico da planilha (antes de analisar)</strong></p>
+      <p>Você começa pedindo pra IA <strong>descrever o dado</strong>, não interpretar ainda:</p>
+      <div class="card-prompt">
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code>Descreva o padrão desta planilha: colunas, tipos de valor, período coberto,
+valores extremos por coluna. Aponte lacunas (células vazias, coluna com
+domínio ambíguo, formato inconsistente). Não interprete ainda. Só descreva.</code></pre>
+        </div>
+      </div>
+      <p><strong>Por que:</strong> você economiza a dor de descobrir uma coluna corrompida depois de 20 min de análise. Se a Fase 1 acusa problema, você limpa a planilha antes de seguir — 2 minutos de disciplina evitam 40 min de conclusão errada.</p>
+
+      <p><strong>Fase 2 · Categorização com marcação explícita de lacuna</strong></p>
+      <p>Depois do diagnóstico limpo, você pede categorização — e força a IA a <strong>marcar o que ela não sabe</strong>:</p>
+      <div class="card-prompt">
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code>Agrupe as linhas de refugo por causa provável em 4 categorias:
+setup/regulagem, material, operador em treinamento, ruído de processo.
+Nas linhas onde a causa não é clara pelos dados, marque com [A_INVESTIGAR].
+Não invente causa que os dados não sustentam.</code></pre>
+        </div>
+      </div>
+      <p><strong>Por que:</strong> sem a instrução de marcar <code>[A_INVESTIGAR]</code>, a IA preenche tudo com palpite — e você não sabe onde ela chutou. Com a instrução, ela devolve com honestidade: "70% categorizado, 30% precisa de olho humano". Você olha só os 30%.</p>
+
+      <p><strong>Fase 3 · Caça a anomalias</strong></p>
+      <p>Depois da categorização, o pedido que Excel não faz sozinho:</p>
+      <div class="card-prompt">
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code>Aponte as 5 linhas mais anômalas desta planilha por 3 critérios:
+(1) outlier de volume de refugo dentro do próprio turno,
+(2) combinação turno × operador com defeito raro na base histórica,
+(3) tipo de defeito que aparece 1x isolado (não é padrão, é evento).
+Pra cada linha, explique em 1 linha por que chamou a atenção.</code></pre>
+        </div>
+      </div>
+      <p><strong>O que sai:</strong> 5 pontos concretos pra você conversar com o PCP e o supervisor de turno. Não são conclusões prontas — são hipóteses de investigação priorizadas pela IA a partir do padrão do dado.</p>
+
+      <div class="callout callout-info">
+        <p class="callout-title">A regra da amostra — antes de qualquer conclusão</p>
+        <p><strong>Antes de assinar qualquer análise que vai virar decisão, valide 5 linhas aleatórias contra a fonte.</strong> Abra a planilha, escolha 5 linhas ao acaso, confira o que a IA disse contra o dado bruto. Se as 5 batem, a probabilidade de o todo estar coerente é alta. Se 1 das 5 falha, ajuste o prompt e rode de novo — <strong>não</strong> conserte no output final.</p>
+        <p>Este é o <strong>contrato de confiança com IA em dado</strong>: humano assina depois de amostrar, nunca depois só de ler. É a mesma disciplina de auditoria interna aplicada num ciclo 20× mais rápido.</p>
+      </div>
+
+      <h3>Quando este caso vale — e quando não</h3>
+      <div class="table-wrap">
+        <table class="table-aplicar">
+          <thead>
+            <tr>
+              <th>🟢 Use análise de dado bruto quando</th>
+              <th>🔴 Não use quando</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A planilha tem 200+ linhas e você não teria tempo de olhar linha por linha</td>
+              <td>O dado tá em 3 planilhas que precisam ser cruzadas primeiro — limpe antes</td>
+            </tr>
+            <tr>
+              <td>O padrão de valor já está estruturado (colunas nomeadas, tipos consistentes)</td>
+              <td>Coluna livre-texto é a mais importante — precisa de tratamento antes (M4)</td>
+            </tr>
+            <tr>
+              <td>Você quer priorizar 5-10 pontos para investigação humana</td>
+              <td>Você quer que a IA "decida" — decisão fica com você, sempre</td>
+            </tr>
+            <tr>
+              <td>Você pode validar amostra na fonte antes de confiar</td>
+              <td>Você não tem acesso à fonte pra amostrar — sem amostra, sem assinatura</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
       <h2>PCTFL+ — as 6 camadas do prompt de gestor</h2>
       <p class="secao-lead">As 5 do prompt profissional, mais a que separa "achei ok" de "atende o critério".</p>
       <div class="pctfl-tabela-wrap">
@@ -396,7 +480,8 @@
         <div class="tabs-list" role="tablist" aria-label="Camadas do exercício">
           <button class="tab-button active" role="tab" aria-selected="true" data-tab="0">Camada 1 — Básico</button>
           <button class="tab-button" role="tab" aria-selected="false" data-tab="1">Camada 2 — Desafio</button>
-          <button class="tab-button" role="tab" aria-selected="false" data-tab="2">Camada 3 — Metaprompt</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="2">Camada 3 — Dado bruto</button>
+          <button class="tab-button" role="tab" aria-selected="false" data-tab="3">Camada 4 — Metaprompt</button>
         </div>
 
         <div class="tab-panel active" role="tabpanel">
@@ -507,7 +592,24 @@ Não seja educado. Seja preciso.</pre>
 
         <div class="tab-panel" role="tabpanel">
           <div class="exercise-block">
-            <h3>Camada 3 — Metaprompt: deixe a IA montar o prompt <span class="badge badge-hands-on">opcional · +10 min</span></h3>
+            <h3>Camada 3 — Análise de dado bruto <span class="badge badge-hands-on">para quem terminou 2 · +10-15 min</span></h3>
+            <p><strong>Objetivo:</strong> aplicar as 3 fases (diagnóstico → categorização → anomalias) numa planilha real sua.</p>
+            <p><strong>Pré-requisito:</strong> planilha do seu dia que você <strong>nunca teve tempo de olhar linha por linha</strong> — 200+ linhas, dado desidentificado. Sugestões: extrato do cartão corporativo do trimestre, apontamento de refugo/parada da sua linha, base de reclamação de cliente, planilha de fechamento com detalhamento por rubrica.</p>
+            <p><strong>Passo a passo:</strong></p>
+            <ol>
+              <li>Cole a planilha (ou os primeiros 50 linhas se for muito grande) no chat e rode a <strong>Fase 1 · Diagnóstico</strong> exatamente como está na seção acima. Leia com atenção: a IA aponta lacuna, coluna ambígua, formato quebrado? Corrija a planilha antes de seguir.</li>
+              <li>Rode a <strong>Fase 2 · Categorização</strong> com as 4 categorias adaptadas ao seu caso (custo tem outras categorias; reclamação de cliente tem outras). <strong>Não pule a instrução <code>[A_INVESTIGAR]</code></strong> — se tirar, você perde a honestidade da IA.</li>
+              <li>Rode a <strong>Fase 3 · Caça a anomalias</strong>. Ajuste os 3 critérios pro seu contexto (o "turno × operador" só faz sentido pra refugo — pra custo, seria "categoria × fornecedor", etc).</li>
+              <li><strong>Aplique a regra da amostra:</strong> escolha 5 linhas aleatórias no output da Fase 3, abra a planilha bruta, confira uma a uma. Bateu? Continue. Não bateu? Volte a Fase 2 com prompt corrigido.</li>
+            </ol>
+            <p><strong>Resultado esperado:</strong> 5 pontos concretos que valem levar pra próxima reunião de área — com a certeza (validada por amostra) de que não são invenção da IA.</p>
+            <p><strong>Como avaliar:</strong> se você consegue explicar cada um dos 5 pontos a um colega apontando pra linha da planilha bruta, o exercício funcionou. Se ficou "a IA disse que...", volte à amostra — sem amostra, o output é opinião, não análise.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" role="tabpanel">
+          <div class="exercise-block">
+            <h3>Camada 4 — Metaprompt: deixe a IA montar o prompt <span class="badge badge-hands-on">opcional · +10 min</span></h3>
             <p><strong>Objetivo:</strong> aprender o atalho pra quando você não quer preencher os 6 campos na mão — pede pra IA construir o prompt pra você a partir do seu objetivo.</p>
             <p><strong>Como funciona:</strong> cole no Claude o modelo abaixo. Ele vai te fazer as perguntas que faltam pra preencher cada elemento, e no fim entrega o prompt pronto — no mesmo padrão do gerador acima.</p>
             <div class="card-prompt">
