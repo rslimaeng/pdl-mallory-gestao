@@ -159,6 +159,14 @@ Você passa 3 meses convencendo e não roda um piloto.
 
 *Aterrissa em Mallory:* briefing da sua área (você controla, você mede) vence S&OP integrado (5 áreas, 3 níveis de aprovação, dado sensível cross-área).
 
+**Régua dos 3 modos aplicada à sua área:** o mapeamento em grupo vai gerar oportunidades em modos diferentes.
+
+- **Autopiloto** — briefing mensal de desvios, síntese de relatório recorrente. A IA executa; você revisa e assina.
+- **Colaboração** — cenários pra decisão de área, estruturação de argumento pra comitê. Você e a IA pensam juntos.
+- **Manual** — decisão sobre pessoa da equipe, negociação com fornecedor-chave, aprovação de risco alto. A IA fica fora.
+
+A regra de ouro do treinamento vale aqui: **quanto maior o impacto ou o risco, mais Manual o modo.** Se a #1 do grupo tem Risco ≥ 3 (Fase 3 do prompt-âncora), você já sabe que é **Colaboração no máximo, nunca Autopiloto** — mesmo se o Score 3D for alto.
+
 ---
 
 ## Quando aplicar / Quando NÃO aplicar
