@@ -256,7 +256,7 @@ Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um 
 1. Na mesma conversa, peça: *"Assuma o papel de um diretor cético. Aponte os 3 motivos mais prováveis desta hipótese falhar na prática. Não suavize."* Cole sua hipótese.
 2. Avalie cada objeção: é real no contexto da Mallory? O que a neutraliza?
 3. Reescreva a hipótese incorporando a defesa mais importante.
-4. Guarde as objeções — voltam no M6, quando você montar a argumentação para a diretoria.
+4. Guarde as objeções — voltam no **Canvas Executivo (M6)**, quando você montar a argumentação para a diretoria.
 
 **Resultado esperado:** hipótese v2, mais dura de derrubar, com as objeções mapeadas.
 
