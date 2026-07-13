@@ -152,6 +152,22 @@ O gestor que só opera no nível 1 vira **usuário melhor de ferramenta**. O ges
 
 ---
 
+## Mallory em 3 tempos — a lente das 5 camadas aplicada
+
+Não é previsão. É a lente que te ajuda a **enxergar onde propor a próxima peça** — hoje, no próximo ciclo, no plano de 3 anos. Números e prazos são realistas pra manufatureira brasileira estabelecida (não startup).
+
+| Camada | Mallory hoje | Mallory em 12 meses | Mallory em 36 meses |
+|---|---|---|---|
+| **1 · Captura** | Datasul + ISO 9001. Escritório: e-mail e cabeça de gestor. | Comitê gravado. Chamada com cliente-chave transcrita. 5 processos padronizados. | Toda decisão relevante tem artefato. Nada volta a "ficou na cabeça de fulano". |
+| **2 · Contexto integrado** | Silos: Datasul não conversa com registro de reunião. | 1 assistente por área com acesso a 2-3 fontes. Piloto em 2 áreas. | 6-8 assistentes de área operando com contexto próprio. |
+| **3 · Execução com humano na revisão** | Uso pontual, cada gestor por conta. | Rotina em 3-5 processos mensais (fechamento, briefing, síntese). Este treino é o combustível. | Padrão em decisão gerencial. Baixo risco escala Autopiloto; alto risco em Colaboração. |
+| **4 · Memória que acumula** | Cada conversa começa do zero. | Prompts salvos por área. **É o que o M6 desta trilha monta.** | Assistentes por processo, não só por pessoa. |
+| **5 · Auto-melhoria** | Longe. | Longe — não é a fase certa. | Padrão de correção salvo vira instrução do assistente. Erro do processo corrige uma vez. |
+
+**Leitura:** o salto real está entre "hoje" e "12 meses" nas camadas 1-3. Camadas 4-5 vêm depois — e vêm porque as 3 primeiras funcionaram. Vender camada 5 sem camada 1 pronta é como comprar torno CNC sem ter matéria-prima.
+
+---
+
 ## Onde você quer chegar hoje: os 7 níveis de uso da IA
 
 O treinamento faz mais sentido quando você sabe **de onde parte e para onde vai**. Existem 7 níveis de maturidade (versão Mallory):
@@ -224,12 +240,13 @@ Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um 
 **Passo a passo:**
 1. Rode o prompt-âncora com as rotinas reais da sua área (sem dado sensível — nomes de rubrica bastam, valores não).
 2. Leia a tabela. Concorde ou discorde: você conhece a área melhor que a IA.
-3. Escreva a hipótese em 1 frase: *"Na minha área, a IA gera vantagem em **[rotina]**, porque **[ganho]**, e o indicador que prova é **[métrica que já existe]**."*
-4. Teste de qualidade: os 3 campos têm substância?
+3. Escreva a hipótese em 1 frase — **nível 1 (você, gestor):** *"Na minha área, a IA gera vantagem em **[rotina]**, porque **[ganho]**, e o indicador que prova é **[métrica que já existe]**."*
+4. Escreva a segunda frase — **nível 2 (Mallory como sistema):** *"Essa vantagem contribui pra Mallory ganhar velocidade em **[qual das 5 camadas]** — porque **[como conecta com o processo maior]**."*
+5. Teste de qualidade: os 3 campos da frase 1 têm substância? A frase 2 aponta pra camada 1, 2, 3, 4 ou 5 explicitamente?
 
-**Resultado esperado:** sua hipótese escrita, com indicador nomeado.
+**Resultado esperado:** sua hipótese escrita em 2 frases: a de gestor (com indicador) e a de Mallory-como-sistema (com camada nomeada).
 
-**Como avaliar:** se um colega de outra área lê e entende o que muda e como medir, ela está pronta. Se o indicador é "produtividade" genérica, refaça — indicador de verdade tem dono e número hoje.
+**Como avaliar:** se um colega de outra área lê e entende (a) o que muda na sua rotina e como medir, e (b) qual camada da Mallory ganha velocidade, está pronta. Se o indicador é "produtividade" genérica, refaça — indicador de verdade tem dono e número hoje. Se a frase 2 diz "vamos digitalizar" sem apontar camada, refaça — sem lente das 5 camadas, o nível 2 vira slogan.
 
 ### Camada 2 — Desafio (para quem terminou · +10-15 min)
 
