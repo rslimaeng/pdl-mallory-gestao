@@ -304,11 +304,43 @@ Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um 
 
 ## Os 3 erros mais comuns
 
-| Erro | Sintoma | Causa | Como corrigir |
-|---|---|---|---|
-| Hipótese de tecnologia, não de negócio | "Implantar IA na área" — sem rotina, sem ganho, sem indicador | Partir da ferramenta, não do processo | Comece pela rotina cara. A frase-modelo do exercício força os 3 campos |
-| Esperar o projeto corporativo | "Quando o TI lançar a solução oficial, a gente entra" | Confundir governança (que é do TI) com uso (que é seu) | O TI define as regras do jogo; jogar na sua área é decisão sua |
-| Só Delegação, nunca Estruturação | Usa a IA só para "produzir mais rápido" — nunca para pensar melhor | Reproduzir hábito de "assistente de execução" | A Camada 2 do exercício obriga o corte. Repita em qualquer decisão de peso |
+Antes de escrever sua hipótese, olhe os erros que **quase toda primeira turma comete**. Cada erro tem 3 leituras — como aparece, por que acontece, como corrigir — e um par de exemplos *errado* × *certo* pra você reconhecer se está caindo no padrão.
+
+### Erro 1 · Hipótese de tecnologia, não de negócio
+
+*Você fala sobre a ferramenta antes de falar sobre o problema.*
+
+- **Como aparece:** a frase começa em "implantar IA na área" — sem rotina nomeada, sem ganho esperado, sem indicador que prova.
+- **Por que acontece:** você parte da **ferramenta** (IA), não do **processo** (o quê exatamente hoje custa caro).
+- **Como corrigir:** comece pela rotina cara da sua área. A **frase-modelo do exercício** (rotina · ganho · indicador) força os 3 campos.
+
+**❌ Assim não:** *"Vamos implantar IA no comercial pra vender mais."* — sem rotina específica, sem ganho medido, sem indicador — vira slogan.
+
+**✅ Assim sim:** *"A cotação personalizada leva 4h por proposta hoje. IA rascunha em 45min. Prova: propostas enviadas por semana no Datasul."* — rotina + ganho + indicador — os 3 campos preenchidos.
+
+### Erro 2 · Esperar o projeto corporativo
+
+*Você adia o começo esperando o TI oficializar.*
+
+- **Como aparece:** "Quando o TI lançar a solução oficial, a gente entra." Enquanto isso, a rotina cara continua rodando manual.
+- **Por que acontece:** você confunde **governança** (que é do TI: regras, segurança, dado sensível) com **uso** (que é seu: sua rotina, seu prompt, sua hora).
+- **Como corrigir:** o TI define as regras do jogo. Jogar dentro delas na sua área — sem dado sensível, com ferramenta aprovada — é **decisão sua**.
+
+**❌ Assim não:** *"O TI ainda está avaliando o Copilot Enterprise. A gente espera."* — enquanto espera, a rotina cara segue custando o mesmo por 6-12 meses.
+
+**✅ Assim sim:** *"Enquanto o TI decide o assistente corporativo, uso ChatGPT no plano pago pra rascunhar comunicados internos — sem dado de cliente. Já salva 30min/semana."* — governança respeitada, uso começou.
+
+### Erro 3 · Só Delegação, nunca Estruturação
+
+*Você usa IA só pra "fazer mais rápido", nunca pra "pensar melhor".*
+
+- **Como aparece:** toda tarefa vira "me redija um e-mail", "me faça um resumo", "me gere um relatório" — nunca "me ajude a decidir X".
+- **Por que acontece:** você reproduz o hábito de tratar IA como **assistente de execução** — o mais fácil de imaginar, o mais raso em retorno.
+- **Como corrigir:** a **Camada 2** do exercício obriga o corte: a hipótese precisa dizer **o que se decide melhor**, não só o que sai mais rápido. Repita em qualquer decisão de peso.
+
+**❌ Assim não:** *"Uso IA pra redigir e-mails de cobrança mais rápido."* — ganho de execução, zero ganho de julgamento. O e-mail continua sendo o mesmo padrão.
+
+**✅ Assim sim:** *"Antes da reunião de S&OP, uso IA como sócio pra estressar 3 cenários de demanda — o que muda se cair 15%, se subir 20%, se atrasar o fornecedor A. Chego com hipóteses testadas, não com opinião crua."* — Delegação: rascunhar. Estruturação: pensar. Você fez as duas.
 
 ---
 

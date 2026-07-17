@@ -3318,3 +3318,52 @@ table.m1-contraste tbody td strong { color: var(--text-primary); font-weight: 50
   .m3-timeline-hdr, .m3-row { grid-template-columns: 1fr; }
   .m3-cam { border-right: 0; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px; padding-right: 0; }
 }
+
+/* ============================================================
+   §4 (goal-16 · T2) · Os 3 erros mais comuns — cards didáticos
+   3 leituras (aparece/acontece/corrige) + par de exemplos ❌/✅.
+   ============================================================ */
+.err-cards { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.err-card {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-left: 3px solid rgba(215, 44, 53, .5); border-radius: 12px; padding: 22px 24px;
+}
+.err-header { display: grid; grid-template-columns: 50px 1fr; gap: 16px; align-items: start; margin-bottom: 20px; }
+.err-num {
+  font-family: var(--font-title); font-weight: 800; font-size: 32px; color: var(--accent-red);
+  line-height: 1; background: rgba(215, 44, 53, .10); border-radius: 8px;
+  height: 50px; width: 50px; display: flex; align-items: center; justify-content: center;
+}
+.err-nome { font-family: var(--font-title); font-weight: 700; font-size: 20px; color: var(--text-primary); line-height: 1.25; margin-top: 4px; }
+.err-sub { color: var(--text-secondary); font-size: 13.5px; margin-top: 4px; }
+
+.err-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; background: rgba(0, 0, 0, .12);
+  border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; margin-bottom: 18px;
+}
+.err-cell { padding: 14px 16px; border-right: 1px solid var(--border-subtle); }
+.err-cell:last-child { border-right: 0; }
+.err-cell-lbl { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 500; margin-bottom: 6px; }
+.err-cell-lbl-sintoma { color: var(--accent-red); }
+.err-cell-lbl-causa { color: var(--text-dim); }
+.err-cell-lbl-corrigir { color: var(--accent-green); }
+.err-cell-txt { color: var(--text-secondary); font-size: 13px; line-height: 1.55; }
+.err-cell-txt strong { color: var(--text-primary); font-weight: 500; }
+.err-cell-txt em { color: var(--text-primary); font-style: italic; }
+
+.err-exemplos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.err-ex { padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border-subtle); }
+.err-ex--errado { background: rgba(215, 44, 53, .06); border-color: rgba(215, 44, 53, .25); }
+.err-ex--certo { background: rgba(101, 169, 65, .06); border-color: rgba(101, 169, 65, .28); }
+.err-ex-lbl { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.err-ex--errado .err-ex-lbl { color: var(--red-text); }
+.err-ex--certo .err-ex-lbl { color: var(--accent-green); }
+.err-ex-txt { color: var(--text-primary); font-size: 13.5px; line-height: 1.55; }
+.err-ex-txt em { color: var(--text-secondary); font-style: italic; display: block; margin-top: 4px; font-size: 12.5px; }
+
+@media (max-width: 900px) {
+  .err-grid { grid-template-columns: 1fr; }
+  .err-cell { border-right: 0; border-bottom: 1px solid var(--border-subtle); }
+  .err-cell:last-child { border-bottom: 0; }
+  .err-exemplos { grid-template-columns: 1fr; }
+}
