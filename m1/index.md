@@ -46,17 +46,29 @@ Três implicações estratégicas para o gestor:
 
 ---
 
-## O que gestores realmente fazem com IA — dado global
+## O que empresas estão fazendo com IA — dado global
 
-O **Anthropic Economic Index** — análise contínua de milhões de conversas do Claude no trabalho — mostra um padrão estável em todo o mundo: **redação, análise de informação e síntese executiva dominam o uso profissional**. Decisão automatizada quase não aparece.
+*Pesquisa Anthropic · Economic Index · set 2025 + jun 2026*
 
-Traduzindo para o gestor Mallory:
+A Anthropic publica análise contínua de milhões de conversas do Claude no trabalho. 4 métricas resumem o estado do mercado corporativo:
 
-- **80% do valor está em preparar decisão**, não em decidir. A IA transforma dado bruto em briefing legível; a decisão continua no comitê.
-- **A curva de adoção é diferente por área.** Áreas de texto e gente (RH, marketing, jurídico) adotam primeiro: o insumo já é linguagem. Financeiro e planejamento vêm no meio. Produção vem por último — o dado é físico e o custo de erro é alto.
-- **Nas manufatureiras que lideram**, a sequência se repete: back-office primeiro (relatórios, contratos, triagem), depois previsão de demanda e análise de paradas, por último a fábrica em si.
+| Métrica | Dado | Contexto |
+|---|---|---|
+| Adoção corporativa EUA | **9,7%** | ↑ +162% em 22 meses (era 3,7% em out/2023) |
+| Gap setor líder × retardatário | **10×** | TI ~25% vs Alimentação ~2,5% |
+| Tráfego API é automação | **77%** | empresas delegam mais que profissionais individuais |
+| Empresas economizam custos | **27%** | reduzindo serviços externos (agências, consultorias) |
 
-Saber onde sua área está na curva evita duas armadilhas: **começar tarde demais ou prometer cedo demais**.
+### Onde IA entra nas empresas — a curva de adoção por área
+
+- **Texto & gente (adotam primeiro · alto volume)** — RH, marketing, jurídico. O insumo já é linguagem, ROI aparece em semanas.
+- **Financeiro & planejamento (adotam no meio · impacto grande)** — análise de desvios, previsão, briefings executivos. Reduz ciclo de decisão.
+- **Produção & operações (ainda cedo · custo de erro alto)** — relatórios de turno, análise de paradas. Chega, mas por último.
+- **Fábrica em si (barreira crítica)** — dado físico, custo de erro alto. Decisão continua no comitê.
+
+> **Como isso vira decisão pra você, gestor.** Saber onde sua área está na curva evita duas armadilhas: **começar tarde demais ou prometer cedo demais**. A sequência da manufatureira que lidera é sempre a mesma — back-office primeiro (contratos, DRE, triagem), depois previsão e análise, por último o chão. E o tempo de decisão virou variável competitiva: quem hoje faz o ciclo em 3 semanas está competindo com quem faz em 1.
+
+*fonte: anthropic.com/economic-index · relatórios set/2025 · mar/2026 · jun/2026*
 
 ---
 
