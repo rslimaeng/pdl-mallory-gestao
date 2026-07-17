@@ -24,27 +24,38 @@ Análise de cenários, extração de insight de relatórios e comunicação estr
 
 ## Por que isso importa aqui dentro
 
-O comitê é quinta-feira. Você tem o relatório de 30 páginas da sua área, os números do mês e 40 minutos livres na agenda até lá. O que você faz nesses 40 minutos define a qualidade da sua fala — e hoje eles vão embora em compilar e formatar, não em pensar.
+### O comitê é amanhã — e a IA multiplica o que você faz com o pouco tempo que sobra
 
-Você já usa IA — a diferença desta turma para a da manhã é essa. Mas há um degrau entre usar e extrair valor consistente: quando você mostra a resposta da IA para outra pessoa e ela diz "não era bem isso", o problema quase nunca é a IA. É a definição de "bom" que ficou na sua cabeça e não entrou no prompt.
+**A cena · quinta-feira.** Você tem o relatório de 30 páginas da sua área, os números do mês e um bloco livre na agenda até lá. O que você faz nesse tempo define a qualidade da sua fala — e hoje ele vai embora em **compilar e formatar**, não em *pensar*.
 
-É o mesmo princípio de delegar para a equipe. Dizer só *o que* fazer é briefing incompleto. Delegação de gestor entrega o pacote: faça isto, baseie-se nestes dados, evite estes erros, e vou avaliar por este critério. O PCTFL avançado é exatamente isso — por escrito, para a IA.
+**O degrau que fica no meio: "não era bem isso".** Quando você mostra a resposta da IA pra outra pessoa e ela diz isso, o problema **quase nunca é a IA**. É a definição de "bom" que ficou na sua cabeça e **não entrou no prompt**.
+
+**3 chaves pra entender o que muda:**
+
+1. **Você já usa IA.** A diferença desta turma pra a da manhã: aqui não é primeiro contato — é o degrau do *uso consistente*.
+2. **Delegar de gestor ≠ delegar solto.** Dizer só *o que* fazer é briefing incompleto. Gestor entrega o pacote: faça isto, com estes dados, evite estes erros, avalio por este critério.
+3. **O PCTFL avançado é isso — por escrito.** Deixa de "prompt que funciona às vezes" e vira **ativo reusável da área**.
 
 ---
 
 ## Um prompt ruim é sempre culpa do humano
 
-A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. **A engenharia de prompt é a habilidade de escrever a entrada certa.**
+A IA é previsível. Entrada vaga → saída vaga. Entrada precisa → saída precisa. Mesmo mecanismo do supervisor — **calibrado pros 3 pedidos mais caros do seu cargo:** analisar, comunicar, decidir.
 
-**Anthropic Economic Index** confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.
+**No nível de gestor, o degrau é declarar o que é uma resposta bem-sucedida.** Sem isso, a IA entrega a média da internet — e você reescreve.
 
-| Prompt vago | Problema | Resultado provável |
+> 📊 **26,7% — a preocupação nº 1 com IA no mundo.** *Inconfiabilidade* (inconsistência e alucinação) é o que mais preocupa quem usa IA no trabalho. É exatamente o que o **PCTFL+CS** resolve.
+> *fonte: Anthropic Economic Index*
+
+**3 casos que todo gestor reconhece:**
+
+| 🔴 Prompt vago | Problema | Resultado provável |
 |---|---|---|
 | "Analise esse relatório aí" | Sem foco, sem decisão a suportar | Resumo genérico, ninguém decide com ele |
 | "Faz um comunicado pra diretoria" | Sem tese, sem destinatário | Texto morno, sem posição |
 | "Sintetiza esse dashboard" | Sem hierarquia do que importa | Lista de números sem prioridade |
 
-Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.
+Esse módulo te dá o método pra sair desses 3 — em **3 exercícios executados por você, ao vivo**: síntese de relatório, comunicado de liderança, análise de cenário. Cada um vira **prompt reusável** pro seu próximo ciclo.
 
 ---
 
@@ -64,17 +75,34 @@ A diferença não é a IA. É o quanto você **situa** o pedido — e, no nível
 
 ---
 
-## Quando a fonte é planilha — o segundo caso do módulo
+## Quando a fonte é planilha — decompor em partes pra saber onde a IA entra
 
-Até aqui você viu prompt sobre **relatório curto ou número já resumido** — briefing, comunicado, cenário. Existe um segundo caso, o mais desconfortável pro gestor: **quando a fonte é planilha de 500-2.000 linhas de dado bruto** que ninguém teve tempo de olhar linha por linha. Fluxo de caixa detalhado, apontamento de refugo por lote, extrato do cartão corporativo, base de reclamação de cliente. **Manual leva horas; Excel manual não pega tudo; IA em 1 prompt correto extrai o que importa em minutos — se você validar amostra antes de confiar no todo.**
+Até aqui você viu prompt sobre **relatório curto ou número já resumido** — briefing, comunicado, cenário. Existe um segundo caso, o mais desconfortável pro gestor: **planilha de 500-2.000 linhas de dado bruto** que ninguém teve tempo de olhar linha por linha. Fluxo de caixa detalhado, apontamento de refugo por lote, extrato do cartão corporativo, base de reclamação de cliente.
 
-Aqui a lente é diferente. Você não pede pra IA "resumir". Você pede pra ela **enxergar padrão que você não teria tempo de enxergar sozinho** — e depois valida.
+Pedir *"resuma isso"* volta lixo. **O prompt que funciona não é 1 prompt gigante — são 3 fases sequenciais na mesma conversa.** Cada fase resolve uma parte diferente do problema.
+
+### Sem decompor vs. Decompondo em 3 fases
+
+- 🔴 **Sem decompor — 1 prompt gigante:** *"analisa essa planilha aí"* — a IA escolhe sozinha o que fazer, chuta o que não sabe, e você não consegue nem apontar onde ela errou.
+- 🟢 **Decompondo em 3 fases — Diagnóstico → Categorização → Anomalias:** cada fase entra na próxima. Você **vê o resultado parcial** antes de avançar — e pode corrigir sem refazer tudo.
 
 ### O caso âncora: refugo por lote da injetora 7 nos últimos 90 dias
 
-Situação concreta que todo gestor Mallory reconhece. Você tem uma planilha exportada do Datasul: 800 linhas · colunas *lote · data · turno · operador · quantidade produzida · refugo · tipo de defeito*. Pedir "resuma isso" volta lixo. **O prompt que funciona tem 3 fases sequenciais na mesma conversa** — cada fase entra na próxima.
+Situação concreta que todo gestor Mallory reconhece. Planilha exportada do Datasul: **800 linhas · colunas *lote · data · turno · operador · quantidade produzida · refugo · tipo de defeito***.
 
-**Fase 1 · Diagnóstico da planilha (antes de analisar)**
+*Amostra ilustrativa (dados fictícios) das primeiras linhas da planilha:*
+
+| lote | data | turno | operador | qtd | refugo | defeito |
+|---|---|---|---|---|---|---|
+| L-2617 | 04/mai | A | OP-14 | 3.200 | 48 | rebarba |
+| L-2618 | 04/mai | B | OP-22 | 3.180 | **312** | **bolha superficial** |
+| L-2619 | 05/mai | A | OP-14 | 3.240 | 52 | rebarba |
+| L-2620 | 05/mai | C | OP-31 | 2.980 | 71 | rebarba |
+| … | … | … | … | … | … | … |
+
+**As 3 fases:**
+
+**Fase 1 · Diagnóstico da planilha (antes de analisar)** — 💡 *valida o dado antes de confiar*
 
 Você começa pedindo pra IA **descrever o dado**, não interpretar ainda:
 
@@ -82,9 +110,10 @@ Você começa pedindo pra IA **descrever o dado**, não interpretar ainda:
     valores extremos por coluna. Aponte lacunas (células vazias, coluna com
     domínio ambíguo, formato inconsistente). Não interprete ainda. Só descreva.
 
-**Por que:** você economiza a dor de descobrir uma coluna corrompida depois de 20 min de análise. Se a Fase 1 acusa problema, você limpa a planilha antes de seguir — 2 minutos de disciplina evitam 40 min de conclusão errada.
+- ✅ **Sai daqui com:** mapa da planilha — colunas mapeadas, período coberto, valores extremos, lacunas apontadas. Você corrige o que precisa antes de seguir.
+- ⚠ **Se pular:** você descobre coluna corrompida *depois* de já ter feito análise em cima dela. Disciplina de *diagnosticar antes de interpretar* evita retrabalho.
 
-**Fase 2 · Categorização com marcação explícita de lacuna**
+**Fase 2 · Categorização com marcação explícita de lacuna** — 🎯 *força honestidade da IA*
 
 Depois do diagnóstico limpo, você pede categorização — e força a IA a **marcar o que ela não sabe**:
 
@@ -93,9 +122,10 @@ Depois do diagnóstico limpo, você pede categorização — e força a IA a **m
     Nas linhas onde a causa não é clara pelos dados, marque com [A_INVESTIGAR].
     Não invente causa que os dados não sustentam.
 
-**Por que:** sem a instrução de marcar `[A_INVESTIGAR]`, a IA preenche tudo com palpite — e você não sabe onde ela chutou. Com a instrução, ela devolve com honestidade: "70% categorizado, 30% precisa de olho humano". Você olha só os 30%.
+- ✅ **Sai daqui com:** 70% categorizado por padrão claro. 30% marcado `[A_INVESTIGAR]` — pra você olhar só esses.
+- ⚠ **Se pular `[A_INVESTIGAR]`:** a IA preenche tudo com palpite. Você **não sabe onde ela chutou** — e leva pra reunião análise inventada com cara de dado.
 
-**Fase 3 · Caça a anomalias**
+**Fase 3 · Caça a anomalias** — 🎯 *5 pontos pra próxima reunião*
 
 Depois da categorização, o pedido que Excel não faz sozinho:
 
@@ -105,13 +135,21 @@ Depois da categorização, o pedido que Excel não faz sozinho:
     (3) tipo de defeito que aparece 1x isolado (não é padrão, é evento).
     Pra cada linha, explique em 1 linha por que chamou a atenção.
 
-**O que sai:** 5 pontos concretos pra você conversar com o PCP e o supervisor de turno. Não são conclusões prontas — são hipóteses de investigação priorizadas pela IA a partir do padrão do dado.
+- ✅ **Sai daqui com** (exemplo de output): *"L-2618 · turno B · OP-22 · 312 refugos (9,8%) — 4× a média do turno; defeito 'bolha superficial' aparece só nesta linha em 90 dias."*
+- ⚠ **Não são conclusões — são hipóteses priorizadas** pra você conversar com PCP e supervisor de turno. A decisão fica com você — sempre.
 
 ### A regra da amostra — antes de qualquer conclusão
 
-**Antes de assinar qualquer análise que vai virar decisão, valide 5 linhas aleatórias contra a fonte.** Abra a planilha, escolha 5 linhas ao acaso, confira o que a IA disse contra o dado bruto. Se as 5 batem, a probabilidade de o todo estar coerente é alta. Se 1 das 5 falha, ajuste o prompt e rode de novo — **não** conserte no output final.
+**Antes de assinar qualquer análise que vai virar decisão, valide 5 linhas aleatórias contra a fonte.** Abra a planilha, escolha 5 linhas ao acaso, confira o que a IA disse contra o dado bruto. Se as 5 batem, a probabilidade do todo estar coerente é alta. Se 1 das 5 falha, ajuste o prompt e rode de novo — **não** conserte no output final.
 
-Este é o **contrato de confiança com IA em dado**: humano assina depois de amostrar, nunca depois só de ler. É a mesma disciplina de auditoria interna aplicada num ciclo 20× mais rápido.
+Este é o **contrato de confiança com IA em dado**: humano assina depois de amostrar, nunca depois só de ler. É a mesma disciplina de auditoria interna, aplicada com IA no meio do ciclo.
+
+> 🧭 **O que você acabou de aprender — sem perceber.**
+> Você decompôs um problema grande em 3 partes menores — e é isso que a IA faz bem.
+>
+> As 3 fases (**diagnóstico → categorização → anomalias**) não são "truque de planilha". São um **exercício de pensar em processo** — dividir a tarefa em pedaços onde cada um tem *entrada clara, processamento definido, saída verificável*. É a mesma ginástica mental que você vai destravar de vez no **M3, com o método IPO** (Input · Processo · Output) — só que lá aplicado a *oportunidades da sua área*, não a uma planilha.
+>
+> **No exercício a seguir**, você vai executar essas 3 fases com uma planilha real da sua área. E vai perceber que *o método fica com você* — aplica em fluxo de caixa, extrato do cartão, reclamação de cliente, apontamento de qualidade. **Uma vez decomposto, reusa o ano inteiro.**
 
 ### Quando este caso vale — e quando não
 
@@ -180,15 +218,15 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 
 **Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
 
-Troque "me ajude" por verbo cirúrgico — no nível de gestor, o verbo já carrega a estrutura da decisão:
+Troque "me ajude" por verbo cirúrgico — no nível de gestor, o verbo já carrega a estrutura da decisão + o que muda na resposta:
 
-| Área | Verbo vago | Verbo cirúrgico | Exemplo |
+| Área | 🔴 Verbo vago (exemplo) | 🟢 Verbo cirúrgico (exemplo) | Como muda a resposta da IA |
 |---|---|---|---|
-| Análise | analise, veja | monte cenários, aponte premissa, decomponha | "Monte 3 cenários com premissas explícitas…" |
-| Decisão | recomende, escolha | compare por critério, aponte trade-off, ranqueie | "Compare por [custo, prazo, risco]…" |
-| Comunicação | escreva, faça | reescreva pra diretoria em 1 página, adapte pra 5 linhas de coordenador | "Adapte esta síntese pra 5 linhas de prioridade…" |
-| Diagnóstico | avalie, diga o que acha | liste hipóteses, aponte a mais provável, dê próximo passo pra validar | "Liste 5 hipóteses e a que testaria primeiro…" |
-| Preparação | prepare, ajude | ensaie objeções, aponte perguntas hostis, treine pitch | "Ensaie 5 objeções de diretor cético…" |
+| **Análise** | "o que você acha desse cenário?" | "monte 3 cenários com premissas explícitas…" | 🔴 opinião equilibrada, sem premissa nomeada · 🟢 base/otimista/pessimista com premissa-matadora de cada |
+| **Decisão** | "qual opção você recomenda?" | "compare por [custo, prazo, risco]…" | 🔴 "recomendo B" sem lastro · 🟢 tabela comparativa por 3 critérios, decisão defensável |
+| **Comunicação** | "escreve pra diretoria" | "adapte pra 5 linhas de prioridade…" | 🔴 3 parágrafos morninhos, sem tese · 🟢 1 página com abertura + tabela + 2 pontos de decisão |
+| **Diagnóstico** | "avalie esse resultado" | "liste 5 hipóteses e a que testaria primeiro…" | 🔴 diagnóstico descritivo, sem próximo passo · 🟢 5 hipóteses priorizadas + próxima ação de validação |
+| **Preparação** | "prepare essa reunião" | "ensaie 5 objeções de diretor cético…" | 🔴 sumário genérico da reunião · 🟢 5 objeções concretas + rebatida, você chega treinado |
 
 > ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
 
@@ -204,26 +242,35 @@ Troque "me ajude" por verbo cirúrgico — no nível de gestor, o verbo já carr
 
 ---
 
-## Por que Claude, se a ementa fala em 3 ferramentas?
+## Claude está no centro deste treino — e é o que a Mallory te entrega
 
-A ementa oficial cita **ChatGPT, Claude e Microsoft Copilot** — as 3 dominantes hoje. Não vamos treinar todas as 3 nesta manhã: a habilidade que você leva daqui **transfere**. Um bom pedido bem estruturado (o que o M2 ensina) funciona igual em qualquer uma delas.
+A TI da Mallory adquiriu **licenças Claude Pro pagas** para o programa. Você recebe acesso e leva pra dentro da sua rotina. Não é por acaso — Claude tem **4 recursos que ainda não existem na concorrência com essa maturidade**, e são justamente os que transformam prompt isolado em **ativo reusável da área**.
 
-**As ferramentas fazem coisas parecidas por caminhos diferentes** — assistentes customizados por outros nomes:
+**Os 4 recursos do ecossistema Claude:**
 
-| Ferramenta | Assistente customizado | Onde brilha |
+1. **Projects — uma pasta por processo.** Você guarda contexto fixo (arquivos da área, instruções, exemplos do seu padrão) e toda conversa nova já entra sabendo quem é. Um Project pro fechamento mensal, um pra triagem de reclamação, um pra briefing de diretoria. *Aprofunda no M5.*
+
+2. **Skills — competências plugáveis.** Pacotes prontos que dão à IA uma habilidade específica — ler PDF/planilha, gerar apresentação, análise financeira executiva. Você ativa e a IA já sabe fazer sem você explicar o método. *Reduz a curva de "monta prompt do zero" pra "escolhe a skill certa".*
+
+3. **Artefatos — app interativo direto no chat.** Claude gera calculadora, dashboard, formulário, matriz de decisão — funcionando no navegador, na hora, sem programador. Você pede "monta uma calculadora de ROI da minha área" e sai com uma. *É como este M2 e o M3 têm ferramentas vivas embutidas.*
+
+4. **Cowork & Claude Code — Claude executa, não só responde.** No M5 você vai ver o Claude ler seus arquivos, cruzar planilha, gerar relatório e devolver documento pronto — não texto pra você copiar. É o salto de "assistente" pra "colaborador digital".
+
+**A ementa cita 3 ferramentas — onde cada uma brilha:**
+
+| Ferramenta | Empresa · Assistente customizado | Onde brilha |
 |---|---|---|
-| **ChatGPT** (OpenAI) | **GPTs** — GPT com contexto e instruções fixas | Ecossistema amplo, plugins, geração de imagem |
-| **Claude** (Anthropic) | **Projects** — pasta com arquivos + instruções | Análise longa, escrita executiva, código, **Cowork** (M5) |
-| **Gemini** (Google) | **Gems** — Gemini com papel fixo | Integração com Google Workspace |
-| **Copilot** (Microsoft) | Copilot for Excel / Word / Teams | Integração nativa no M365 |
+| **ChatGPT** | OpenAI · **GPTs** | Ecossistema amplo, plugins, geração de imagem, versão gratuita popular |
+| **Gemini** | Google · **Gems** | Integração nativa com Google Workspace (Docs, Sheets, Gmail) |
+| **Copilot** | Microsoft · **Copilot for M365** | Integração nativa no Excel / Word / Teams — se sua rotina mora ali, ele mora ali |
 
-**Por que Claude neste treino:** a TI da Mallory adquiriu **licenças Claude Pro pagas** para o programa. Você recebe acesso e leva pra dentro. Se sua área usar outra ferramenta na rotina, os mesmos princípios (Papel · Contexto · Tarefa · Formato · Limitações + Critério de Sucesso) valem — muda a interface, não a habilidade.
-
-**Preview:** no M5 (Claude Cowork) você vai usar o **Projects** — a versão avançada onde o Claude ganha acesso a arquivos e ferramentas. É pra isso que a Pro paga da TI existe.
+> **O método (PCTFL+CS) transfere entre ferramentas.** Os 6 elementos (Papel · Contexto · Tarefa · Formato · Limitações + Critério de Sucesso) funcionam em qualquer uma. O que **não transfere** é o ecossistema — Projects, Skills, Artefatos e Cowork são o motivo de Claude estar no centro deste treino.
+>
+> **Preview M5:** você vai construir seu primeiro Project + brincar com Skills + gerar seu primeiro Artefato ao vivo.
 
 ---
 
-## Gerador de prompt — ferramenta viva
+## Monte seu prompt agora — ferramenta viva
 
 Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é Delegação com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
 
@@ -268,6 +315,36 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 
 ---
 
+## Dois padrões que valem o módulo — os que se pagam sozinhos
+
+Você não sai do M2 lembrando dos "5 pontos". Você sai com **dois padrões executivos** que se pagam sozinhos: um **substitui a pergunta de opinião** por análise vigiável; o outro **rende 3 documentos pelo preço de 1**.
+
+### Padrão 1 · Nunca "o que você acha?"
+
+**Cenários com premissas explícitas** — pergunta de opinião gera resposta de opinião. Você quer estrutura.
+
+    Monte 3 cenários (base / otimista / pessimista) para [decisão],
+    com premissas explícitas em cada. Aponte qual premissa,
+    se falhar, derruba o cenário.
+
+**Quando ativa:** *toda decisão real da sua área.* Renovar contrato de frete · redistribuir equipe · antecipar compra. A IA organiza o espaço da decisão; você valida premissas e escolhe com argumento.
+
+*Amarra no M3* — matriz 3D (I × F / Risco) usa esse mesmo raciocínio pra priorizar oportunidades da sua área.
+
+### Padrão 2 · Uma fonte, N narrativas
+
+**O mesmo resultado vira 3 documentos em minutos** — ninguém tem tempo de escrever 3 documentos, e a IA transforma o primeiro nos outros.
+
+    Adapte esta síntese pra [audiência] em [formato]:
+    o que muda pra ela e o que espero de cada um.
+    Critério: cada [destinatário] sabe sua prioridade sem me perguntar.
+
+**Quando ativa:** *todo ciclo de fechamento.* Fechamento do mês vira: 1 página analítica pra diretoria · 5 linhas de prioridade pros coordenadores · 1 comunicado pro time. 3 documentos, mesmo dado, 15 minutos.
+
+*Amarra no M6* — no Canvas Executivo, a linha "Como vou comunicar internamente e pra diretoria" ganha os 3 prompts prontos.
+
+---
+
 ## Exercício
 
 ### Camada 1 — Básico (todos · 10-15 min)
@@ -284,6 +361,21 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 
 **Como avaliar:** pergunta-teste: se você enviasse agora, o destinatário executaria sem te procurar? Se a resposta é "ia me ligar para perguntar X", o X faltou no prompt — ajuste e rode de novo.
 
+> **Exemplo trabalhado · Gestor de PCP · S&OP**
+>
+> *Rotina escolhida:* fechamento semanal de desvios de produção — refugo por lote, parada não programada, ajuste no plano da semana seguinte.
+>
+> ```text
+> Sintetize o fechamento da semana em 1 página pro S&OP de quinta-feira.
+> Formato: mensagem central + tabela (Linha · Desvio · Direcionador · Ação)
+> + os 2 pontos que exigem decisão.
+>
+> Depois: adapte pra comunicado de 10 linhas pros 4 coordenadores de turno
+> — o que muda pra cada turno e o que espero até sexta.
+> ```
+>
+> *Por que passa no teste:* destinatário nomeado (S&OP quinta / 4 coordenadores), formato travado, e o CS é a decisão que o comitê tem que tomar sem abrir o Datasul completo.
+
 ### Camada 2 — Desafio (para quem terminou · +10-15 min)
 
 **Objetivo:** o terceiro prompt — análise de cenário com premissas explícitas.
@@ -297,6 +389,22 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 **Resultado esperado:** 3 cenários com premissas marcadas por você como fato ou chute — e 1 refinamento que mudou a análise.
 
 **Como avaliar:** se você consegue apontar qual premissa vigia daqui pra frente, a análise virou instrumento de decisão. Se os 3 cenários parecem intercambiáveis, as premissas ficaram genéricas — aperte o CONTEXTO.
+
+> **Exemplo trabalhado · Gestor Comercial · frete**
+>
+> *Decisão escolhida:* contrato do frete subiu 35% no 3º mês seguido — renovar, renegociar agora, ou trocar operador antes de setembro (janela do novo contrato).
+>
+> ```text
+> Monte 3 cenários (renovar / renegociar agora / trocar operador) com
+> premissas explícitas. Aponte, em cada, qual premissa, se falhar,
+> derruba o cenário. Não recomende — a escolha é minha.
+>
+> Refino após validar: "A premissa 2 do cenário 'renovar' está errada
+> — o volume do 4T vai cair 20%, não crescer 5%. Refaça só o 'renovar'
+> com esse fato."
+> ```
+>
+> *Por que passa no teste:* 3 caminhos vigiados por premissas nomeadas (volume trimestral, câmbio USD/BRL, capacidade do concorrente). Você defende no comitê citando o que está monitorando — não achismo.
 
 ### Camada 3 — Análise de dado bruto (para quem terminou 2 · +10-15 min)
 
@@ -313,6 +421,24 @@ Para o seu caso: troque o CONTEXTO pelos seus números (desidentificados), reesc
 **Resultado esperado:** 5 pontos concretos que valem levar pra próxima reunião de área — com a certeza (validada por amostra) de que não são invenção da IA.
 
 **Como avaliar:** se você consegue explicar cada um dos 5 pontos a um colega apontando pra linha da planilha bruta, o exercício funcionou. Se ficou "a IA disse que...", volte à amostra — sem amostra, o output é opinião, não análise.
+
+> **Exemplo trabalhado · Gestor Financeiro · cartão corporativo**
+>
+> *Planilha escolhida:* extrato do cartão corporativo do trimestre — 640 lançamentos, colunas *data · centro de custo · fornecedor · categoria · valor · nota fiscal*.
+>
+> ```text
+> Fase 2 · Categorize os lançamentos por causa em 4 grupos:
+> viagem / material de escritório / evento / infra-TI.
+> Nas linhas onde a categoria não é clara pelo texto,
+> marque [A_INVESTIGAR]. Não invente.
+>
+> Fase 3 · Aponte os 5 lançamentos mais anômalos:
+> (1) valor 3× acima da média do centro de custo,
+> (2) fornecedor que aparece 1x isolado,
+> (3) lançamento sem NF.
+> ```
+>
+> *Por que passa no teste:* categorias adaptadas ao contexto financeiro (não copiadas do refugo), `[A_INVESTIGAR]` preservado, critérios de anomalia calibrados pra despesa (centro de custo × fornecedor).
 
 ### Camada 4 — Metaprompt: deixe a IA montar o prompt (opcional · +10 min)
 
@@ -336,6 +462,25 @@ Meu objetivo é: [descreva o que você quer].
 - **Metaprompt** — pra pedido novo ou complexo, onde você quer um primeiro rascunho rápido e depois refina.
 
 **Resultado esperado:** 1 prompt gerado por metaprompt, executado, e sua leitura crítica de como a IA estruturou (aprendeu observando).
+
+> **Exemplo trabalhado · Gestor de Qualidade · reclamação de cliente**
+>
+> *Objetivo escolhido:* "Quero analisar 30 reclamações do último mês e identificar padrões pra atacar as 3 causas-raiz mais frequentes na próxima reunião de RNC."
+>
+> ```text
+> Meu objetivo é: analisar 30 reclamações do último mês e identificar
+> padrões pra atacar as 3 causas-raiz mais frequentes na reunião de RNC
+> de quarta.
+>
+> [A IA responde com 4 perguntas: (1) formato das reclamações?
+>  (2) origem do cliente — B2B/B2C? (3) já tem categorização prévia?
+>  (4) o que já foi tentado?]
+>
+> Você responde as 4 e a IA devolve PCTFL+CS completo, pronto pra rodar
+> na próxima janela.
+> ```
+>
+> *Por que passa no teste:* você deu só o objetivo — a IA extraiu o resto via perguntas. A leitura crítica no fim é o ganho: você vê quais campos são não-óbvios pra próxima vez que montar sozinho.
 
 ---
 
