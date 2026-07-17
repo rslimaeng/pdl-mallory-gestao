@@ -3367,3 +3367,90 @@ table.m1-contraste tbody td strong { color: var(--text-primary); font-weight: 50
   .err-cell:last-child { border-bottom: 0; }
   .err-exemplos { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   §5 (goal-16 · T2) · Exercício — split passos | exemplo trabalhado
+   (dentro das tabs existentes). Persona Gestor de PCP.
+   ============================================================ */
+.ex-objetivo {
+  color: var(--text-primary); font-size: 15px; margin-bottom: 20px;
+  padding-left: 14px; border-left: 3px solid var(--accent-blue);
+}
+.ex-objetivo strong { color: var(--text-primary); font-weight: 700; }
+
+.ex-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.ex-passos-box { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 22px 24px; }
+.ex-passos-lbl { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 12px; font-weight: 500; }
+.ex-passos { list-style: none; counter-reset: passo; padding: 0; margin: 0 0 18px; }
+.ex-passos li {
+  counter-increment: passo; position: relative; padding-left: 34px; padding-bottom: 12px;
+  font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+}
+.ex-passos li:last-child { padding-bottom: 0; }
+.ex-passos li::before {
+  content: counter(passo); position: absolute; left: 0; top: 2px; width: 22px; height: 22px;
+  border-radius: 50%; background: rgba(74, 166, 215, .15); color: var(--accent-blue);
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.ex-passos li strong { color: var(--text-primary); font-weight: 600; }
+.ex-passos li em { color: var(--text-primary); font-style: italic; background: rgba(74, 166, 215, .06); padding: 2px 5px; border-radius: 3px; }
+.ex-meta { padding-top: 14px; border-top: 1px solid var(--border-subtle); margin-top: 6px; }
+.ex-meta-item { margin-bottom: 12px; }
+.ex-meta-item:last-child { margin-bottom: 0; }
+.ex-meta-lbl { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.3px; margin-bottom: 4px; font-weight: 500; }
+.ex-meta-txt { color: var(--text-secondary); font-size: 13.5px; line-height: 1.55; }
+.ex-meta-txt strong { color: var(--text-primary); font-weight: 500; }
+
+.ex-exemplo {
+  background: linear-gradient(180deg, rgba(101, 169, 65, .06), var(--bg-card) 60%);
+  border: 1px solid rgba(101, 169, 65, .25); border-radius: 12px; padding: 22px 24px;
+}
+.ex-exemplo-hdr { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.ex-exemplo-icon {
+  width: 34px; height: 34px; border-radius: 50%; background: rgba(101, 169, 65, .15);
+  color: var(--accent-green); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-title); font-weight: 700; font-size: 13px; border: 1px solid rgba(101, 169, 65, .35);
+}
+.ex-exemplo-lbl { font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-green); text-transform: uppercase; letter-spacing: 1.3px; font-weight: 500; display: block; }
+.ex-exemplo-name { font-family: var(--font-title); font-weight: 600; font-size: 16px; color: var(--text-primary); margin-top: 1px; }
+.ex-exemplo-contexto {
+  color: var(--text-secondary); font-size: 13px; margin-bottom: 14px; padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(255, 255, 255, .10); line-height: 1.55;
+}
+.ex-exemplo-contexto strong { color: var(--text-primary); }
+.ex-exemplo-bloco { margin-bottom: 14px; }
+.ex-exemplo-bloco:last-child { margin-bottom: 0; }
+.ex-exemplo-bloco-lbl { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.3px; font-weight: 500; margin-bottom: 6px; color: var(--text-dim); }
+.ex-exemplo-bloco-lbl-n1 { color: var(--accent-blue); }
+.ex-exemplo-bloco-lbl-n2 { color: var(--purple-text); }
+.ex-exemplo-quote {
+  background: rgba(255, 255, 255, .03); border-left: 3px solid var(--border-subtle);
+  padding: 12px 14px; border-radius: 4px; color: var(--text-primary); font-size: 13.5px;
+  line-height: 1.6; font-style: italic;
+}
+.ex-exemplo-quote--n1 { border-left-color: var(--accent-blue); }
+.ex-exemplo-quote--n2 { border-left-color: var(--purple-text); }
+.ex-exemplo-quote strong { color: var(--text-primary); font-weight: 600; font-style: normal; background: rgba(74, 166, 215, .10); padding: 1px 4px; border-radius: 3px; }
+.ex-exemplo-quote--n2 strong { background: rgba(138, 58, 137, .15); }
+.ex-exemplo-nota {
+  margin-top: 12px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.55;
+  padding-left: 12px; border-left: 2px solid rgba(101, 169, 65, .35);
+}
+.ex-exemplo-nota strong { color: var(--text-primary); font-weight: 500; }
+
+/* Camada 2 · objeções */
+.ex-obj { margin-bottom: 12px; padding: 12px 14px; background: rgba(255, 255, 255, .03); border-radius: 6px; border-left: 3px solid rgba(215, 44, 53, .4); }
+.ex-obj-num { font-family: var(--font-mono); font-size: 10.5px; color: var(--red-text); font-weight: 600; margin-right: 6px; }
+.ex-obj-txt { color: var(--text-primary); font-size: 13.5px; line-height: 1.55; font-style: italic; display: inline; }
+.ex-obj-defesa { margin-top: 8px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.55; padding-left: 16px; position: relative; }
+.ex-obj-defesa::before { content: "\2192"; position: absolute; left: 0; color: var(--accent-green); font-weight: 700; }
+.ex-obj-defesa strong { color: var(--text-primary); font-weight: 500; }
+.ex-v2 { margin-top: 14px; padding: 12px 14px; background: rgba(101, 169, 65, .08); border: 1px solid rgba(101, 169, 65, .25); border-radius: 6px; }
+.ex-v2-lbl { font-family: var(--font-mono); font-size: 10.5px; color: var(--accent-green); text-transform: uppercase; letter-spacing: 1.3px; font-weight: 500; margin-bottom: 6px; }
+.ex-v2-txt { color: var(--text-primary); font-size: 13px; line-height: 1.6; font-style: italic; }
+.ex-v2-txt strong { color: var(--text-primary); font-weight: 600; font-style: normal; }
+
+@media (max-width: 900px) {
+  .ex-split { grid-template-columns: 1fr; }
+}

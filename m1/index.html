@@ -791,33 +791,105 @@ e que eu consiga defender na reunião de resultado.</code></pre>
         <div class="tab-panel active" role="tabpanel">
           <div class="exercise-block">
             <h3>Camada 1 — Básico <span class="badge badge-hands-on">todos · 10-15 min</span></h3>
-            <p><strong>Objetivo:</strong> formular a hipótese da sua área — por escrito.</p>
-            <p><strong>Passo a passo:</strong></p>
-            <ol>
-              <li>Rode o prompt-âncora com as rotinas reais da sua área (sem dado sensível — nomes de rubrica bastam, valores não).</li>
-              <li>Leia a tabela. Concorde ou discorde: você conhece a área melhor que a IA.</li>
-              <li>Escreva a hipótese em 1 frase — <strong>nível 1 (você, gestor):</strong> <em>"Na minha área, a IA gera vantagem em [rotina], porque [ganho], e o indicador que prova é [métrica que já existe]."</em></li>
-              <li>Escreva a segunda frase — <strong>nível 2 (Mallory como sistema):</strong> <em>"Essa vantagem contribui pra Mallory ganhar velocidade em [qual das 5 camadas] — porque [como conecta com o processo maior]."</em></li>
-              <li>Teste de qualidade: os 3 campos da frase 1 têm substância? A frase 2 aponta pra camada 1, 2, 3, 4 ou 5 explicitamente?</li>
-            </ol>
-            <p><strong>Resultado esperado:</strong> sua hipótese escrita em 2 frases: a de gestor (com indicador) e a de Mallory-como-sistema (com camada nomeada).</p>
-            <p><strong>Como avaliar:</strong> se um colega de outra área lê e entende (a) o que muda na sua rotina e como medir, e (b) qual camada da Mallory ganha velocidade, está pronta. Se o indicador é "produtividade" genérica, refaça — indicador de verdade tem dono e número hoje. Se a frase 2 diz "vamos digitalizar" sem apontar camada, refaça — sem lente das 5 camadas, o nível 2 vira slogan.</p>
+            <p class="ex-objetivo"><strong>Objetivo:</strong> formular a hipótese da sua área — por escrito.</p>
+            <div class="ex-split">
+              <div class="ex-passos-box">
+                <div class="ex-passos-lbl">Passo a passo</div>
+                <ol class="ex-passos">
+                  <li>Rode o <strong>prompt-âncora</strong> com as rotinas reais da sua área (sem dado sensível — nomes de rubrica bastam, valores não).</li>
+                  <li>Leia a tabela. Concorde ou discorde: você conhece a área melhor que a IA.</li>
+                  <li>Escreva a hipótese em 1 frase — <strong>nível 1 (você, gestor):</strong> <em>"Na minha área, a IA gera vantagem em [rotina], porque [ganho], e o indicador que prova é [métrica que já existe]."</em></li>
+                  <li>Escreva a segunda frase — <strong>nível 2 (Mallory como sistema):</strong> <em>"Essa vantagem contribui pra Mallory ganhar velocidade em [qual das 5 camadas] — porque [como conecta com o processo maior]."</em></li>
+                  <li><strong>Teste de qualidade:</strong> os 3 campos da frase 1 têm substância? A frase 2 aponta pra camada 1, 2, 3, 4 ou 5 explicitamente?</li>
+                </ol>
+                <div class="ex-meta">
+                  <div class="ex-meta-item">
+                    <div class="ex-meta-lbl">Resultado esperado</div>
+                    <p class="ex-meta-txt">Sua hipótese escrita em <strong>2 frases</strong>: a de gestor (com indicador) e a de Mallory-como-sistema (com camada nomeada).</p>
+                  </div>
+                  <div class="ex-meta-item">
+                    <div class="ex-meta-lbl">Como avaliar</div>
+                    <p class="ex-meta-txt">Se um colega de outra área lê e entende <strong>(a)</strong> o que muda na sua rotina e como medir, e <strong>(b)</strong> qual camada da Mallory ganha velocidade, está pronta. Se o indicador é "produtividade" genérica, refaça — indicador de verdade tem dono e número hoje. Se a frase 2 diz "vamos digitalizar" sem apontar camada, refaça — sem lente das 5 camadas, o nível 2 vira slogan.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ex-exemplo">
+                <div class="ex-exemplo-hdr">
+                  <div class="ex-exemplo-icon">EX</div>
+                  <div>
+                    <span class="ex-exemplo-lbl">Exemplo trabalhado</span>
+                    <div class="ex-exemplo-name">Gestor de PCP</div>
+                  </div>
+                </div>
+                <p class="ex-exemplo-contexto"><strong>Rotina escolhida:</strong> consolidação da previsão semanal de demanda por SKU — fecha toda 6ª pra reunião de S&amp;OP na 2ª. Hoje: 3h de compilação manual entre Datasul, planilha de vendas e ajuste de sazonalidade.</p>
+                <div class="ex-exemplo-bloco">
+                  <div class="ex-exemplo-bloco-lbl ex-exemplo-bloco-lbl-n1">Frase 1 · Nível 1 (você, gestor)</div>
+                  <p class="ex-exemplo-quote ex-exemplo-quote--n1">"Na minha área, a IA gera vantagem em <strong>consolidar a previsão semanal de demanda por SKU</strong>, porque <strong>hoje leva 3h e a IA rascunha em 30min sob minha revisão</strong>, e o indicador que prova é <strong>o tempo entre fechamento da semana e envio da minuta pro S&amp;OP (hoje 3h; alvo 45min)</strong>."</p>
+                </div>
+                <div class="ex-exemplo-bloco">
+                  <div class="ex-exemplo-bloco-lbl ex-exemplo-bloco-lbl-n2">Frase 2 · Nível 2 (Mallory como sistema)</div>
+                  <p class="ex-exemplo-quote ex-exemplo-quote--n2">"Essa vantagem contribui pra Mallory ganhar velocidade na <strong>camada 3 (Execução com humano na revisão)</strong> — porque <strong>padroniza uma rotina mensal, gera o rascunho e libera o gestor pra decidir; nas próximas rodadas, alimenta a camada 4 quando os prompts salvos por SKU virarem biblioteca no M6</strong>."</p>
+                </div>
+                <p class="ex-exemplo-nota"><strong>Por que passa no teste de qualidade:</strong> os 3 campos da frase 1 têm dono e número (rotina nomeada · ganho medido · indicador que já existe no Datasul). A frase 2 aponta camada explicitamente (3) e conecta com a próxima (4 via M6).</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="tab-panel" role="tabpanel">
           <div class="exercise-block">
             <h3>Camada 2 — Desafio <span class="badge badge-hands-on">para quem terminou · +10-15 min</span></h3>
-            <p><strong>Objetivo:</strong> submeter a hipótese ao cético antes que o cético seja a diretoria. Este é um exercício clássico de <strong>Estruturação do Pensamento</strong>.</p>
-            <p><strong>Passo a passo:</strong></p>
-            <ol>
-              <li>Na mesma conversa, peça: <em>"Assuma o papel de um diretor cético. Aponte os 3 motivos mais prováveis desta hipótese falhar na prática. Não suavize."</em> Cole sua hipótese.</li>
-              <li>Avalie cada objeção: é real no contexto da Mallory? O que a neutraliza?</li>
-              <li>Reescreva a hipótese incorporando a defesa mais importante.</li>
-              <li>Guarde as objeções — voltam no <strong>Canvas Executivo (M6)</strong>, quando você montar a argumentação para a diretoria.</li>
-            </ol>
-            <p><strong>Resultado esperado:</strong> hipótese v2, mais dura de derrubar, com as objeções mapeadas.</p>
-            <p><strong>Como avaliar:</strong> se pelo menos 1 objeção te fez ajustar a hipótese, o exercício funcionou. Se nenhuma incomodou, a provocação foi rasa — peça objeções mais agressivas.</p>
+            <p class="ex-objetivo"><strong>Objetivo:</strong> submeter a hipótese ao cético antes que o cético seja a diretoria. Este é um exercício clássico de <strong>Estruturação do Pensamento</strong>.</p>
+            <div class="ex-split">
+              <div class="ex-passos-box">
+                <div class="ex-passos-lbl">Passo a passo</div>
+                <ol class="ex-passos">
+                  <li>Na mesma conversa, peça: <em>"Assuma o papel de um diretor cético. Aponte os 3 motivos mais prováveis desta hipótese falhar na prática. Não suavize."</em> Cole sua hipótese.</li>
+                  <li>Avalie cada objeção: <strong>é real no contexto da Mallory?</strong> O que a neutraliza?</li>
+                  <li>Reescreva a hipótese <strong>incorporando a defesa mais importante</strong>.</li>
+                  <li>Guarde as objeções — voltam no <strong>Canvas Executivo (M6)</strong>, quando você montar a argumentação para a diretoria.</li>
+                </ol>
+                <div class="ex-meta">
+                  <div class="ex-meta-item">
+                    <div class="ex-meta-lbl">Resultado esperado</div>
+                    <p class="ex-meta-txt">Hipótese <strong>v2</strong>, mais dura de derrubar, com as objeções mapeadas.</p>
+                  </div>
+                  <div class="ex-meta-item">
+                    <div class="ex-meta-lbl">Como avaliar</div>
+                    <p class="ex-meta-txt">Se pelo menos <strong>1 objeção te fez ajustar a hipótese</strong>, o exercício funcionou. Se nenhuma incomodou, a provocação foi rasa — peça objeções mais agressivas.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ex-exemplo">
+                <div class="ex-exemplo-hdr">
+                  <div class="ex-exemplo-icon">EX</div>
+                  <div>
+                    <span class="ex-exemplo-lbl">Exemplo trabalhado · continuação</span>
+                    <div class="ex-exemplo-name">3 objeções do diretor cético</div>
+                  </div>
+                </div>
+                <p class="ex-exemplo-contexto">A IA, no papel de diretor cético, atacou a hipótese do gestor de PCP em 3 frentes:</p>
+                <div class="ex-obj">
+                  <span class="ex-obj-num">Obj 1</span>
+                  <span class="ex-obj-txt">"E se a IA errar num SKU crítico e o S&amp;OP tomar decisão errada em cima?"</span>
+                  <p class="ex-obj-defesa"><strong>Neutraliza:</strong> o modo é <strong>Colaboração</strong>, não Autopiloto. Revisão do gestor é obrigatória antes do envio; erro cabe na revisão, não no S&amp;OP.</p>
+                </div>
+                <div class="ex-obj">
+                  <span class="ex-obj-num">Obj 2</span>
+                  <span class="ex-obj-txt">"Isso não é só trocar uma planilha por outra? Cadê o ganho real além de tempo?"</span>
+                  <p class="ex-obj-defesa"><strong>Neutraliza:</strong> o ganho não é substituir planilha — é liberar as <strong>2h15min salvas pra estressar cenários</strong> antes do S&amp;OP (Estruturação), não só compilar (Delegação). Muda o que o gestor leva pra reunião.</p>
+                </div>
+                <div class="ex-obj">
+                  <span class="ex-obj-num">Obj 3</span>
+                  <span class="ex-obj-txt">"Datasul + planilha + sazonalidade — a IA precisa reingerir tudo toda semana. Vai virar 'pilotar e parar'?"</span>
+                  <p class="ex-obj-defesa"><strong>Valida em parte:</strong> por isso a rotina começa como <strong>piloto na Camada 3</strong> e vira insumo pra Camada 2 (contexto integrado) quando o TI decidir a fonte permanente. Explicita o horizonte.</p>
+                </div>
+                <div class="ex-v2">
+                  <div class="ex-v2-lbl">Hipótese v2 · com defesa incorporada</div>
+                  <p class="ex-v2-txt">"A IA gera vantagem em <strong>consolidar a previsão semanal de demanda por SKU no modo Colaboração</strong> — sempre com revisão, porque a decisão S&amp;OP tem peso em compra e produção. Reduz compilação de 3h pra 45min/semana, liberando <strong>2h15min pra estressar 3 cenários de demanda antes da reunião</strong> (Estruturação). Indicador: tempo entre fechamento da semana e minuta S&amp;OP (alvo 45min). Camada 3 hoje; insumo pra Camada 4 quando a biblioteca de prompts por SKU for montada no M6."</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -286,6 +286,20 @@ Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um 
 
 **Como avaliar:** se um colega de outra área lê e entende (a) o que muda na sua rotina e como medir, e (b) qual camada da Mallory ganha velocidade, está pronta. Se o indicador é "produtividade" genérica, refaça — indicador de verdade tem dono e número hoje. Se a frase 2 diz "vamos digitalizar" sem apontar camada, refaça — sem lente das 5 camadas, o nível 2 vira slogan.
 
+#### Exemplo trabalhado · Gestor de PCP
+
+**Rotina escolhida:** consolidação da previsão semanal de demanda por SKU — fecha toda 6ª pra reunião de S&OP na 2ª. Hoje: 3h de compilação manual entre Datasul, planilha de vendas e ajuste de sazonalidade.
+
+**Frase 1 · Nível 1 (você, gestor):**
+
+> *"Na minha área, a IA gera vantagem em **consolidar a previsão semanal de demanda por SKU**, porque **hoje leva 3h e a IA rascunha em 30min sob minha revisão**, e o indicador que prova é **o tempo entre fechamento da semana e envio da minuta pro S&OP (hoje 3h; alvo 45min)**."*
+
+**Frase 2 · Nível 2 (Mallory como sistema):**
+
+> *"Essa vantagem contribui pra Mallory ganhar velocidade na **camada 3 (Execução com humano na revisão)** — porque **padroniza uma rotina mensal, gera o rascunho e libera o gestor pra decidir; nas próximas rodadas, alimenta a camada 4 quando os prompts salvos por SKU virarem biblioteca no M6**."*
+
+**Por que passa no teste de qualidade:** os 3 campos da frase 1 têm dono e número (rotina nomeada · ganho medido · indicador que já existe no Datasul). A frase 2 aponta camada explicitamente (3) e conecta com a próxima (4 via M6).
+
 ### Camada 2 — Desafio (para quem terminou · +10-15 min)
 
 **Objetivo:** submeter a hipótese ao cético antes que o cético seja a diretoria. Este é um exercício clássico de **Estruturação do Pensamento**.
@@ -299,6 +313,23 @@ Agora vem indicador, dono, prazo, formato de 1 página, tom de comitê. Fica um 
 **Resultado esperado:** hipótese v2, mais dura de derrubar, com as objeções mapeadas.
 
 **Como avaliar:** se pelo menos 1 objeção te fez ajustar a hipótese, o exercício funcionou. Se nenhuma incomodou, a provocação foi rasa — peça objeções mais agressivas.
+
+#### Exemplo trabalhado · continuação — 3 objeções do diretor cético
+
+A IA, no papel de diretor cético, atacou a hipótese do gestor de PCP em 3 frentes:
+
+- **Objeção 1:** *"E se a IA errar num SKU crítico e o S&OP tomar decisão errada em cima?"*
+  → **Neutraliza:** o modo é **Colaboração**, não Autopiloto. Revisão do gestor é obrigatória antes do envio; erro cabe na revisão, não no S&OP.
+
+- **Objeção 2:** *"Isso não é só trocar uma planilha por outra? Cadê o ganho real além de tempo?"*
+  → **Neutraliza:** o ganho não é substituir planilha — é liberar as **2h15min salvas pra estressar cenários** antes do S&OP (Estruturação), não só compilar (Delegação). Muda o que o gestor leva pra reunião.
+
+- **Objeção 3:** *"Datasul + planilha + sazonalidade — a IA precisa reingerir tudo toda semana. Vai virar 'pilotar e parar'?"*
+  → **Valida em parte:** por isso a rotina começa como **piloto na Camada 3** e vira insumo pra Camada 2 (contexto integrado) quando o TI decidir a fonte permanente. Explicita o horizonte.
+
+**Hipótese v2 · com defesa incorporada:**
+
+> *"A IA gera vantagem em **consolidar a previsão semanal de demanda por SKU no modo Colaboração** — sempre com revisão, porque a decisão S&OP tem peso em compra e produção. Reduz compilação de 3h pra 45min/semana, liberando **2h15min pra estressar 3 cenários de demanda antes da reunião** (Estruturação). Indicador: tempo entre fechamento da semana e minuta S&OP (alvo 45min). Camada 3 hoje; insumo pra Camada 4 quando a biblioteca de prompts por SKU for montada no M6."*
 
 ---
 
