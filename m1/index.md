@@ -158,29 +158,15 @@ Mas quando você olha as manufatureiras que estão saindo na frente — não as 
 
 ### O contraste em 1 tabela
 
-| | **IA no gestor** (nível 1) | **IA na empresa** (nível 2) |
+| | **IA no gestor** (Nível 1) | **IA na empresa** (Nível 2) |
 |---|---|---|
-| **Escopo** | Tarefa do dia — briefing, comunicado, análise | Fluxo — do dado bruto à decisão à ação, ciclo inteiro |
-| **Contexto que a IA lê** | Janela da conversa atual | Datasul + ISO 9001 + histórico + gravações, acesso permanente |
-| **Onde o humano entra** | Você conduz cada prompt | Você projeta o processo; a IA opera dentro dele |
+| **Escopo** | Tarefa do dia — briefing, comunicado, análise | **Fluxo** — do dado bruto à decisão à ação, ciclo inteiro |
+| **Contexto que a IA lê** | Janela da conversa atual | Datasul + ISO 9001 + histórico + gravações, **acesso permanente** |
+| **Onde o humano entra** | Você conduz cada prompt | Você **projeta o processo**; a IA opera dentro dele |
 | **O que mede o ganho** | Sua hora salva por semana | Tempo do ciclo da empresa (dado → decisão → ação) |
 | **Onde vive** | No seu chat | Nos processos, ferramentas, memória acumulada |
 
 Não é escolher um dos dois — é **subir do 1 pro 2 nas frentes onde faz sentido**. E o gestor que entende o nível 2 é quem propõe a próxima peça certa quando a Mallory decidir dedicar uma pessoa ao tema.
-
-### As 5 camadas da IA na empresa
-
-O padrão que se repete em quem já opera assim tem 5 camadas. Não é receita — é lente. Serve pra você **enxergar em qual camada a Mallory está hoje**.
-
-**1. Captura — tudo que acontece vira artefato.** Reunião gravada, decisão registrada, chamada com cliente transcrita, apontamento salvo. Hoje: parte no e-mail, parte na cabeça de quem tava na sala. IA precisa de dado; dado precisa existir primeiro. *Mallory hoje:* Datasul captura processo; ISO 9001 captura qualidade; reunião de comitê, decisão de escritório e chamada com fornecedor ainda não. *Peça mais barata do nível 2:* padronizar geração de artefato onde ainda não tem.
-
-**2. Contexto integrado — a IA lê os artefatos, não um por vez.** Um assistente por área que vê Datasul, ISO, histórico do último trimestre, minuta da última reunião — tudo ao mesmo tempo. Sem re-explicar. *Mallory hoje:* dado estruturado existe, mas em silo. *Peça de médio prazo:* juntar as 2-3 fontes que já existem numa camada onde a IA opera.
-
-**3. Execução com humano na revisão.** Rascunho de briefing, primeira versão de análise, síntese de reunião — a IA faz; o humano lê e assina. Baixo risco escala rápido (Autopiloto); alto risco fica em Colaboração. **Este é o modo que este treinamento te dá.** *Mallory hoje:* algumas áreas já usam pontualmente. *Peça imediata:* transformar em rotina em 3-5 processos que se repetem todo mês.
-
-**4. Memória que acumula.** O prompt que funcionou pro fechamento de junho serve pro de julho, agosto, setembro. O padrão de resposta que a IA aprendeu semana passada volta na semana que vem. *Mallory hoje:* cada gestor recomeça do zero em cada conversa. *Peça de médio prazo:* prompts salvos por área (é o que o **M6** deste treino monta).
-
-**5. Auto-melhoria — o sistema aprende com o erro.** Quando a IA erra sempre no mesmo tipo de caso, o padrão de correção vira instrução salva. Erro corrigido de vez, não caso a caso. *Mallory hoje:* longe. *Peça de horizonte:* o que uma empresa de manufatura brasileira alcança em 24-36 meses trabalhando as camadas 1-4 primeiro.
 
 ### O que muda no seu papel de gestor
 
@@ -188,21 +174,35 @@ O gestor que só opera no nível 1 vira **usuário melhor de ferramenta**. O ges
 
 **Regra prática deste módulo:** ao formular sua hipótese de vantagem no exercício, escreva 2 frases — uma sobre **você, gestor** (nível 1); outra sobre **onde essa vantagem conecta com a Mallory-como-sistema** (nível 2). O exercício exige as duas.
 
+### As 5 camadas da IA na empresa
+
+O padrão que se repete em quem já opera assim tem **5 camadas**. Não é receita — é lente. Serve pra você **enxergar em qual camada faz sentido investir agora**. Cada camada tem 2 leituras: **como funciona** (o que a operação faz) e **o que precisa ter pra rodar** (o pré-requisito). Camadas assentam umas nas outras — pular etapa custa caro.
+
+**1. Captura.** Tudo que acontece vira artefato. Reunião gravada, decisão registrada, chamada com cliente transcrita, apontamento salvo. **IA precisa de dado; dado precisa existir primeiro.** *Como funciona:* todo evento relevante — reunião, decisão, chamada, apontamento — gera um artefato pesquisável (texto, transcrição, log). Nada fica só na cabeça de quem estava na sala. *O que precisa ter:* sistema que capture processo (ERP), qualidade (norma), e conversa/decisão (gravação, transcrição, ata). Rotina de arquivo. `[Camada-base]`
+
+**2. Contexto integrado — a IA lê os artefatos, não um por vez.** Um assistente por área que vê ERP, norma, histórico do último trimestre, minuta da última reunião — tudo ao mesmo tempo. Sem re-explicar. *Como funciona:* um assistente por área acessa múltiplas fontes ao mesmo tempo e responde já com contexto — sem precisar carregar dado no prompt cada vez. *O que precisa ter:* Camada 1 pronta + 2-3 fontes conectadas na mesma camada de acesso. Sem silo. `[Intermediária]`
+
+**3. Execução com humano na revisão.** Rascunho de briefing, primeira versão de análise, síntese de reunião — **a IA faz; o humano lê e assina**. Baixo risco escala rápido (Autopiloto); alto risco fica em Colaboração. **Este é o modo que este treinamento te dá.** *Como funciona:* processo repetitivo é mapeado. IA entrega rascunho; gestor lê, ajusta e assina. Baixo risco vira rotina; alto risco continua em conversa. *O que precisa ter:* 3-5 processos que se repetem todo mês identificados. Prompt-âncora por processo. Gestor treinado nos 3 modos. `[Ponto de entrada]`
+
+**4. Memória que acumula.** O prompt que funcionou pro fechamento de junho **serve pro de julho, agosto, setembro**. O padrão de resposta que a IA aprendeu semana passada volta na semana que vem. *Como funciona:* prompts que funcionaram viram biblioteca da área. Novo gestor entra e usa; ninguém recomeça do zero em cada conversa. *O que precisa ter:* Camada 3 rodando + biblioteca de prompts por área — é o que o **M6** deste treino monta. `[Médio prazo]`
+
+**5. Auto-melhoria — o sistema aprende com o erro.** Quando a IA erra sempre no mesmo tipo de caso, o padrão de correção vira instrução salva. **Erro corrigido de vez, não caso a caso.** *Como funciona:* erro repetido gera correção; correção vira instrução do assistente. Loop de melhoria contínua sem depender de retreinar do zero. *O que precisa ter:* Camadas 1-4 estáveis + instrumentação de correção. Horizonte de manufatura brasileira estabelecida: 24-36 meses. `[Camada-horizonte]`
+
 ---
 
-## Mallory em 3 tempos — a lente das 5 camadas aplicada
+## Caminho de evolução — em 12 e 36 meses
 
-Não é previsão. É a lente que te ajuda a **enxergar onde propor a próxima peça** — hoje, no próximo ciclo, no plano de 3 anos. Números e prazos são realistas pra manufatureira brasileira estabelecida (não startup).
+Não é previsão. É a lente que te ajuda a **enxergar onde propor a próxima peça** — no próximo ciclo, no plano de 3 anos. Números e prazos são realistas pra manufatureira brasileira estabelecida (não startup). Cada linha mostra **o que fazer em cada horizonte** pra evoluir naquela camada.
 
-| Camada | Mallory hoje | Mallory em 12 meses | Mallory em 36 meses |
-|---|---|---|---|
-| **1 · Captura** | Datasul + ISO 9001. Escritório: e-mail e cabeça de gestor. | Comitê gravado. Chamada com cliente-chave transcrita. 5 processos padronizados. | Toda decisão relevante tem artefato. Nada volta a "ficou na cabeça de fulano". |
-| **2 · Contexto integrado** | Silos: Datasul não conversa com registro de reunião. | 1 assistente por área com acesso a 2-3 fontes. Piloto em 2 áreas. | 6-8 assistentes de área operando com contexto próprio. |
-| **3 · Execução com humano na revisão** | Uso pontual, cada gestor por conta. | Rotina em 3-5 processos mensais (fechamento, briefing, síntese). Este treino é o combustível. | Padrão em decisão gerencial. Baixo risco escala Autopiloto; alto risco em Colaboração. |
-| **4 · Memória que acumula** | Cada conversa começa do zero. | Prompts salvos por área. **É o que o M6 desta trilha monta.** | Assistentes por processo, não só por pessoa. |
-| **5 · Auto-melhoria** | Longe. | Longe — não é a fase certa. | Padrão de correção salvo vira instrução do assistente. Erro do processo corrige uma vez. |
+| Camada | Em 12 meses (próximo ciclo) | Em 36 meses (plano de 3 anos) |
+|---|---|---|
+| **1 · Captura** | Comitê gravado. Chamada com cliente-chave transcrita. **5 processos padronizados** com artefato gerado. | Toda decisão relevante tem artefato. Nada mais volta a "ficou na cabeça de fulano". |
+| **2 · Contexto integrado** | **1 assistente por área** com acesso a 2-3 fontes. Piloto em 2 áreas. | 6-8 assistentes de área operando com contexto próprio, uso rotineiro. |
+| **3 · Execução com humano na revisão** | Rotina em **3-5 processos mensais** (fechamento, briefing, síntese). Este treino é o combustível. | Padrão em decisão gerencial. Baixo risco escala Autopiloto; alto risco em Colaboração. |
+| **4 · Memória que acumula** | Prompts salvos por área. **É o que o M6 desta trilha monta.** | Assistentes por processo, não só por pessoa. Biblioteca de prompts madura por área. |
+| **5 · Auto-melhoria** | Ainda não é a fase certa — foco fica em 1-3. | Padrão de correção salvo vira instrução do assistente. Erro do processo corrige uma vez. |
 
-**Leitura:** o salto real está entre "hoje" e "12 meses" nas camadas 1-3. Camadas 4-5 vêm depois — e vêm porque as 3 primeiras funcionaram. Vender camada 5 sem camada 1 pronta é como comprar torno CNC sem ter matéria-prima.
+**Leitura:** o salto real de **12 meses** está concentrado nas camadas 1-3. Camadas 4-5 vêm depois — e vêm porque as 3 primeiras funcionaram. *Investir em camada 5 antes da camada 1 é como comprar torno CNC sem ter matéria-prima.*
 
 ---
 

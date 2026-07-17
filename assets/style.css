@@ -51,6 +51,7 @@ table {
   --bg-card: rgba(255, 255, 255, .045);
   --text-primary: #FFFFFF;
   --text-secondary: #E0E0E0;
+  --text-dim: #7A8398;   /* goal-16 §3 · texto terciário (kickers, números apagados) */
 
   /* Cores de Destaque (Linha Colorida PDL) */
   --accent-blue: #4AA6D7;
@@ -3183,4 +3184,137 @@ body.modal-open { overflow: hidden; }
   .modos-porque { grid-template-columns: 1fr; }
   .modos-autoridade { grid-template-columns: 1fr; text-align: left; }
   .modos-autoridade-avatar { margin-bottom: 8px; }
+}
+
+/* ============================================================
+   §3 (goal-16 · T2) · IA no gestor × IA na empresa (3 marcos)
+   m1-split · contraste · 5 camadas (cards) · caminho de evolução.
+   Vars do design-system; --text-dim adicionado ao :root.
+   ============================================================ */
+
+/* --- Marco 1 · split 2 níveis --- */
+.m1-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 32px; }
+.m1-side {
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: 12px; padding: 20px 22px;
+}
+.m1-side--n1 { border-left: 4px solid var(--accent-blue); }
+.m1-side--n2 { border-left: 4px solid var(--accent-purple); }
+.m1-tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 10.5px;
+  padding: 3px 9px; border-radius: 4px; text-transform: uppercase;
+  letter-spacing: 1.3px; font-weight: 500; margin-bottom: 10px;
+}
+.m1-side--n1 .m1-tag { background: rgba(74, 166, 215, .15); color: var(--accent-blue); }
+.m1-side--n2 .m1-tag { background: rgba(138, 58, 137, .18); color: var(--purple-text); }
+.m1-side-title { font-family: var(--font-title); font-weight: 700; font-size: 20px; color: var(--text-primary); margin-bottom: 6px; }
+.m1-side-frase { color: var(--text-secondary); font-size: 14px; line-height: 1.55; }
+.m1-side-frase strong { color: var(--text-primary); }
+
+/* --- Marco 1 · tabela de contraste --- */
+table.m1-contraste {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border: 1px solid var(--border-subtle); border-radius: 12px; overflow: hidden; margin-top: 20px;
+}
+table.m1-contraste th, table.m1-contraste td {
+  padding: 16px 18px; text-align: left; vertical-align: top;
+  border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);
+}
+table.m1-contraste tr:last-child th, table.m1-contraste tr:last-child td { border-bottom: 0; }
+table.m1-contraste th:last-child, table.m1-contraste td:last-child { border-right: 0; }
+table.m1-contraste thead th {
+  background: rgba(255, 255, 255, .03); font-family: var(--font-mono); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.3px; font-weight: 500; color: var(--text-dim);
+}
+table.m1-contraste thead th.n1 { color: var(--accent-blue); }
+table.m1-contraste thead th.n2 { color: var(--purple-text); }
+table.m1-contraste tbody th {
+  font-family: var(--font-title); font-weight: 600; font-size: 14px; color: var(--text-primary);
+  width: 220px; background: rgba(255, 255, 255, .015);
+}
+table.m1-contraste tbody td { color: var(--text-secondary); font-size: 13.5px; line-height: 1.6; }
+table.m1-contraste tbody td strong { color: var(--text-primary); font-weight: 500; }
+
+/* --- Marco 1 · regra prática --- */
+.m1-regra { margin-top: 22px; background: var(--bg-card); border-left: 3px solid var(--accent-blue); border-radius: 4px; padding: 16px 20px; }
+.m1-regra-lbl {
+  font-family: var(--font-mono); font-size: 11px; color: var(--accent-blue);
+  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; font-weight: 500;
+}
+.m1-regra-txt { color: var(--text-secondary); font-size: 14px; line-height: 1.65; }
+.m1-regra-txt strong { color: var(--text-primary); }
+
+/* --- Marco 2 · 5 camadas (cards) --- */
+.m2-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+.m2-card {
+  background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px;
+  padding: 20px 22px; display: grid; grid-template-columns: 56px 1fr 1fr 1fr; gap: 18px;
+  align-items: stretch; position: relative;
+}
+.m2-card--highlight { border-color: rgba(74, 166, 215, .45); background: linear-gradient(180deg, rgba(74, 166, 215, .06), var(--bg-card)); }
+.m2-num { font-family: var(--font-title); font-weight: 800; font-size: 42px; color: var(--text-dim); line-height: 1; padding-top: 2px; }
+.m2-card--highlight .m2-num { color: var(--accent-blue); }
+.m2-nome { font-family: var(--font-title); font-weight: 600; font-size: 16.5px; color: var(--text-primary); margin-bottom: 6px; }
+.m2-def { color: var(--text-secondary); font-size: 13.5px; line-height: 1.55; }
+.m2-def strong { color: var(--text-primary); font-weight: 500; }
+.m2-col { padding-left: 16px; border-left: 1px solid var(--border-subtle); }
+.m2-col-lbl { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.3px; margin-bottom: 6px; font-weight: 500; }
+.m2-col-txt { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+.m2-col-txt strong { color: var(--text-primary); font-weight: 500; }
+.m2-col--funciona .m2-col-lbl { color: var(--accent-blue); }
+.m2-col--precisa .m2-col-lbl { color: var(--accent-yellow); }
+.m2-badge-treino {
+  position: absolute; top: -10px; right: 20px; background: var(--accent-blue); color: white;
+  font-family: var(--font-mono); font-size: 10.5px; padding: 4px 10px; border-radius: 4px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 500;
+}
+.m2-complexidade {
+  display: inline-block; margin-top: 8px; font-family: var(--font-mono); font-size: 10px;
+  padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500;
+}
+.m2-complexidade--base { background: rgba(101, 169, 65, .10); color: var(--accent-green); border: 1px solid rgba(101, 169, 65, .25); }
+.m2-complexidade--intermed { background: rgba(247, 172, 25, .12); color: var(--accent-yellow); border: 1px solid rgba(247, 172, 25, .3); }
+.m2-complexidade--avancada { background: rgba(138, 58, 137, .15); color: var(--purple-text); border: 1px solid rgba(138, 58, 137, .35); }
+
+/* --- Marco 3 · caminho de evolução (12 e 36 meses) --- */
+.m3-timeline-hdr {
+  display: grid; grid-template-columns: 260px 1fr 1fr; gap: 12px;
+  padding: 0 16px 14px; border-bottom: 1px solid var(--border-subtle); margin-bottom: 4px;
+}
+.m3-tempo { display: flex; flex-direction: column; gap: 3px; }
+.m3-tempo-kicker { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
+.m3-tempo-12 .m3-tempo-kicker { color: var(--accent-green); }
+.m3-tempo-36 .m3-tempo-kicker { color: var(--purple-text); }
+.m3-tempo-title { font-family: var(--font-title); font-weight: 600; font-size: 15px; color: var(--text-primary); }
+.m3-tempo-sub { font-size: 12px; color: var(--text-dim); }
+.m3-row {
+  display: grid; grid-template-columns: 260px 1fr 1fr; gap: 12px; padding: 16px;
+  background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 10px;
+  margin-bottom: 6px; align-items: stretch;
+}
+.m3-row--highlight { border-color: rgba(74, 166, 215, .4); background: linear-gradient(180deg, rgba(74, 166, 215, .04), var(--bg-card)); }
+.m3-cam { padding-right: 12px; border-right: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 4px; }
+.m3-cam-num-nome { display: flex; align-items: baseline; gap: 10px; }
+.m3-cam-num { font-family: var(--font-title); font-weight: 800; font-size: 24px; color: var(--text-dim); line-height: 1; }
+.m3-row--highlight .m3-cam-num { color: var(--accent-blue); }
+.m3-cam-nome { font-family: var(--font-title); font-weight: 600; font-size: 15px; color: var(--text-primary); }
+.m3-cam-frase { color: var(--text-secondary); font-size: 12px; line-height: 1.45; margin-top: 2px; }
+.m3-cell { padding: 2px 8px 2px 2px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.55; }
+.m3-cell strong { color: var(--text-primary); font-weight: 500; }
+.m3-cell--fora { color: var(--text-dim); font-style: italic; }
+.m3-leitura {
+  margin-top: 22px; padding: 16px 20px; background: rgba(101, 169, 65, .06);
+  border-left: 3px solid var(--accent-green); border-radius: 4px; font-size: 14.5px;
+  color: var(--text-secondary); line-height: 1.65;
+}
+.m3-leitura strong { color: var(--text-primary); }
+.m3-leitura em { color: var(--text-secondary); font-style: italic; }
+
+@media (max-width: 900px) {
+  .m1-split { grid-template-columns: 1fr; }
+  table.m1-contraste tbody th { width: auto; }
+  .m2-card { grid-template-columns: 1fr; }
+  .m2-col { padding-left: 0; border-left: 0; border-top: 1px solid var(--border-subtle); padding-top: 12px; }
+  .m3-timeline-hdr, .m3-row { grid-template-columns: 1fr; }
+  .m3-cam { border-right: 0; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px; padding-right: 0; }
 }
