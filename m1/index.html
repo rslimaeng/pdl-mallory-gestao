@@ -308,9 +308,102 @@
       </aside>
     </section>
 
-    <section class="section">
+    <section class="section modos-t2">
       <h2>Os 3 modos de uso</h2>
-      <p>Três formas de IA entrar no seu processo. <strong>Este vocabulário te acompanha do M1 ao M6.</strong> Regra de ouro: quanto maior o impacto ou o risco, mais Manual. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.</p>
+      <p>Três formas de IA entrar no seu processo — cada uma com um <strong>loop de uso</strong> distinto. <strong>Este vocabulário te acompanha do M1 ao M6.</strong> A matriz abaixo resolve 90% das decisões:</p>
+
+      <div class="modos-matriz" role="table" aria-label="Matriz 3 modos: impacto × rotina">
+        <div class="modos-col-hdr" role="columnheader">Decisão única / não se repete</div>
+        <div class="modos-col-hdr modos-col-hdr-2" role="columnheader">Processo que se repete todo mês</div>
+        <div class="modos-yaxis">Impacto alto ↑</div>
+
+        <div class="modos-cell modos-cell-manual modos-cell-tl" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🖐</span><span class="modos-cell-mode">Manual</span></div>
+          <div class="modos-cell-sub">Alto impacto · único</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>A IA <strong>fica fora do processo</strong>. Pode ajudar antes (contexto) ou depois (registro), mas <strong>a decisão e a assinatura são suas</strong>.</div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Aprovar orçamento anual da área</li>
+            <li>Demitir · reposicionar coordenador</li>
+            <li>Fechar acordo comercial de longo prazo</li>
+            <li>Definir estratégia de 3 anos</li>
+            <li>Aprovar CAPEX crítico</li>
+            <li>Decidir M&amp;A ou parceria estratégica</li>
+            <li>Homologar contrato master com cliente</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-colab modos-cell-tr" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤝</span><span class="modos-cell-mode">Colaboração</span></div>
+          <div class="modos-cell-sub">Alto impacto · rotineiro</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>IA prepara síntese → você desafia → IA reformula → você decide. <strong>Você conduz.</strong> Sua expertise da área é o que trava o resultado.</div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Reunião de comitê mensal (síntese IA, decisão sua)</li>
+            <li>Plano de contingência trimestral</li>
+            <li>Avaliação de risco recorrente</li>
+            <li>Revisão mensal de KPI crítico</li>
+            <li>Reunião de S&amp;OP integrado</li>
+            <li>Priorização de projetos do trimestre</li>
+            <li>Análise de margem por linha (mensal)</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-colab modos-cell-bl" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤝</span><span class="modos-cell-mode">Colaboração</span></div>
+          <div class="modos-cell-sub">Baixo impacto · único</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>Você define o problema → IA modela cenários → você valida hipóteses → IA refina. <strong>Ganho vem da iteração rápida</strong>, não da 1ª resposta.</div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Briefing pra diretoria de projeto novo</li>
+            <li>Análise de cenário pra pivotagem tática</li>
+            <li>Cenário "e se o real cair 15%?"</li>
+            <li>Análise ad-hoc de proposta comercial</li>
+            <li>Estudo de viabilidade de fornecedor novo</li>
+            <li>Draft de position paper pra CEO</li>
+            <li>Análise de impacto de mudança regulatória</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-auto modos-cell-br" role="cell">
+          <span class="modos-badge-comece">🎯 comece aqui</span>
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤖</span><span class="modos-cell-mode">Autopiloto</span></div>
+          <div class="modos-cell-sub">Baixo impacto · rotineiro</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>Você define o padrão <strong>uma vez</strong> → IA repete todo mês → você confere em 5 min e assina. <strong>3 processos assim = 1º ganho de ciclo</strong> (M5 formaliza).</div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Síntese do fechamento mensal</li>
+            <li>Relatório de KPIs semanal</li>
+            <li>Resumo de reunião gravada</li>
+            <li>Ata estruturada de comitê</li>
+            <li>Comunicado padrão ao time</li>
+            <li>Newsletter interna da área</li>
+            <li>Consolidação de reports das lideranças</li>
+            <li>Preparação da pauta semanal 1×1</li>
+          </ul>
+        </div>
+
+        <div class="modos-xaxis">Rotina baixa ← → Rotina alta</div>
+      </div>
+
+      <div class="modos-regra">
+        <h4>Regra de ouro — e por que é assim</h4>
+        <p>Quanto mais no canto <strong>inferior-direito</strong> (processo mensal + baixo impacto de erro pontual), mais <strong class="modos-strong-green">Autopiloto</strong> — <strong>o retorno aparece primeiro aqui</strong>. Quanto mais no canto <strong>superior-esquerdo</strong> (decisão única + alto impacto), mais <strong class="modos-strong-red">Manual</strong>. Lembre: <strong>3 processos mensais em Autopiloto = seu 1º ganho de ciclo</strong> (o M5 formaliza como assistentes por processo).</p>
+        <div class="modos-porque">
+          <div class="modos-por"><div class="modos-por-num">Por que rotineiro?</div><div class="modos-por-txt">A equação de delegar só fecha quando <strong>o tempo de checar &lt; tempo de fazer</strong>. Processo repetido = você aprende a checar em minutos — a matemática só fecha aqui.</div></div>
+          <div class="modos-por"><div class="modos-por-num">Por que baixo impacto?</div><div class="modos-por-txt">Atenção do gestor é o recurso escasso. Delegue onde erro se corrige, <strong>guarde seu tempo pra decisão que muda o ano</strong>. É gestão 101 aplicada a agentes.</div></div>
+        </div>
+      </div>
+
+      <div class="modos-autoridade">
+        <div class="modos-autoridade-avatar" aria-hidden="true">EM</div>
+        <div class="modos-autoridade-content">
+          <div class="modos-autoridade-name">Ethan Mollick</div>
+          <div class="modos-autoridade-cred">Professor da <strong>Wharton School</strong> (Univ. Pennsylvania) · autor do best-seller <strong>"Co-Intelligence"</strong> (2024) · newsletter <strong>One Useful Thing</strong> (~500k assinantes) — referência global em como executivos e organizações usam IA no trabalho real.</div>
+          <blockquote class="modos-autoridade-quote">"As habilidades que a gente sempre chamou de 'soft' — saber pedir, saber dar feedback, saber avaliar — viraram as hard skills da era dos agentes. Quem sabe gerir gente sabe gerir IA."</blockquote>
+          <div class="modos-autoridade-source">One Useful Thing · <em>Management as AI Superpower</em> · 2026</div>
+        </div>
+      </div>
       <p><strong>Nota sobre "agente":</strong> você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.</p>
 
       <div class="modos-explorador" id="modos-explorador" data-trilha="t2" aria-label="Explorador dos 3 modos">

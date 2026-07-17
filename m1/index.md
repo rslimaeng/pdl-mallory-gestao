@@ -111,7 +111,33 @@ Duas famílias de uso completamente diferentes. Iniciantes só usam a primeira. 
 
 ## Os 3 modos de uso
 
-Três formas de IA entrar no seu processo. **Este vocabulário te acompanha do M1 ao M6.** Regra de ouro: quanto maior o impacto ou o risco, mais Manual. Comece pelo Autopiloto na próxima semana — é onde o retorno aparece primeiro.
+Três formas de IA entrar no seu processo — cada uma com um **loop de uso** distinto. **Este vocabulário te acompanha do M1 ao M6.** A matriz abaixo resolve 90% das decisões:
+
+### Matriz: Impacto × Rotina
+
+|  | **Decisão única / não se repete** | **Processo que se repete todo mês** |
+|---|---|---|
+| **Impacto alto ↑** | 🖐 **Manual** — aprovar orçamento anual da área · demitir/reposicionar coordenador · fechar acordo comercial de longo prazo · definir estratégia de 3 anos · aprovar CAPEX crítico · decidir M&A ou parceria estratégica · homologar contrato master | 🤝 **Colaboração** — reunião de comitê mensal (síntese IA, decisão sua) · plano de contingência trimestral · avaliação de risco recorrente · revisão mensal de KPI crítico · reunião de S&OP integrado · priorização de projetos do trimestre · análise de margem por linha |
+| **Impacto baixo** | 🤝 **Colaboração** — briefing pra diretoria de projeto novo · análise de cenário pra pivotagem · cenário "e se o real cair 15%?" · análise ad-hoc de proposta · viabilidade de fornecedor novo · draft de position paper pra CEO · impacto de mudança regulatória | 🤖 **Autopiloto 🎯 comece aqui** — síntese do fechamento mensal · relatório de KPIs semanal · resumo de reunião gravada · ata estruturada de comitê · comunicado padrão · newsletter interna · consolidação de reports · pauta semanal 1×1 |
+
+**Como funciona cada modo:**
+
+- 🖐 **Manual** — A IA **fica fora do processo**. Pode ajudar antes (contexto) ou depois (registro), mas **a decisão e a assinatura são suas**.
+- 🤝 **Colaboração** — IA prepara síntese → você desafia → IA reformula → você decide. **Você conduz.** Sua expertise da área é o que trava o resultado.
+- 🤖 **Autopiloto** — Você define o padrão **uma vez** → IA repete todo mês → você confere em 5 min e assina. **3 processos assim = 1º ganho de ciclo** (o M5 formaliza como assistentes por processo).
+
+### Regra de ouro — e por que é assim
+
+Quanto mais no canto **inferior-direito** (processo mensal + baixo impacto de erro pontual), mais **Autopiloto** — **o retorno aparece primeiro aqui**. Quanto mais no canto **superior-esquerdo** (decisão única + alto impacto), mais **Manual**. Lembre: **3 processos mensais em Autopiloto = seu 1º ganho de ciclo** (o M5 formaliza como assistentes por processo).
+
+- **Por que rotineiro?** A equação de delegar só fecha quando **o tempo de checar < tempo de fazer**. Processo repetido = você aprende a checar em minutos — a matemática só fecha aqui.
+- **Por que baixo impacto?** Atenção do gestor é o recurso escasso. Delegue onde erro se corrige, **guarde seu tempo pra decisão que muda o ano**. É gestão 101 aplicada a agentes.
+
+> **Ethan Mollick** — Professor da **Wharton School** (Univ. Pennsylvania) · autor do best-seller **"Co-Intelligence"** (2024) · newsletter **One Useful Thing** (~500k assinantes) — referência global em como executivos e organizações usam IA no trabalho real.
+>
+> *"As habilidades que a gente sempre chamou de 'soft' — saber pedir, saber dar feedback, saber avaliar — viraram as hard skills da era dos agentes. Quem sabe gerir gente sabe gerir IA."*
+>
+> — One Useful Thing · *Management as AI Superpower* · 2026
 
 > **Nota sobre "agente":** você vai ver a palavra por aí (Claude Cowork, ferramentas emergentes). Agente = evolução do Autopiloto quando ele começa a decidir próximos passos por conta. É horizonte, tratado no M5 desta tarde. Por enquanto, os 3 modos oficiais cobrem sua realidade.
 
