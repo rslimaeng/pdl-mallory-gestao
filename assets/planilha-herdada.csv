@@ -1,0 +1,736 @@
+#,Data,Área,Indicador,Valor atual,Meta,Status,Impacto,Comentário,Ação pendente,Prazo
+1,May/2026,T.I.,Uptime crítico,3207.9,2704.2,Amarelo,Baixo,,Renegociar contrato com fornecedor principal,18/08/2026
+2,Jan/2026,comercial,Volume de vendas,1687.9,1724.3,VERMELHO,crít.,diretoria quer entender causa raiz,Reunião com fornecedor de planejamento,
+3,2026-04-16,operacoes,Taxa de entrega no prazo,1634.3,1336.8,Verde,Baixo,regulatório pode mudar em Q4,,08/2026
+4,2026-02-17,Recursos Humanos,Tempo médio de contratação,1737.9,2042.7,Em análise,Médio,concorrência opera com número melhor,Revisar processo de aprovação com Financeiro,05-09
+5,mês 04/26,MKT,Alcance orgânico,2230.3,2717.3,crítico,Médio,depende de decisão da matriz,Reunião com fornecedor de sistema,Q10 26
+6,03/06/2026,sup.,Concentração de fornecedor,1131.0,1182.2,Crítico,crít.,sinal fraco de reversão desde a última medição,Contratar consultoria externa pra diagnóstico,03/08/2026
+7,Feb/2026,IT,Aderência SLA,2597.3,2310.6,Em análise,Crítico,cliente já sinalizou insatisfação sobre isso,Automatizar coleta do dado,Q07 26
+8,May/2026,Tecnologia da Informação,Aderência SLA,4803.5,6197.1,VERMELHO,crít.,concorrência opera com número melhor,Rodar piloto de 30 dias em 1 filial,06/10/2026
+9,mês 04/26,OPS,Refugo (%),3023.3,2467.9,Amarelo,ALTO,melhorou nos últimos 2 meses,Investir em capacitação da equipe,08/2026
+10,Mar/2026,IT,Uptime crítico,4403.0,4374.7,ok,,métrica não normalizada — comparação difícil,,17-07
+11,17/04/2026,Gestão de Pessoas,eNPS,2834.4,2931.4,Em análise,BAIXO,vinculado a projeto estratégico em curso,Definir donos por indicador,Q07 26
+12,mês 07/26,IT,Cobertura de backup,1927.2,1823.2,Alerta,Baixo,risco de exposição em relatório trimestral,Automatizar coleta do dado,Q07 26
+13,mês 03/26,Marketing,Leads qualificados,713.3,719.2,OK,ALTO,área quer discutir a meta em revisão,,Q08 26
+14,2026-03-13,TI,Uptime crítico,1441.7,1599.7,em analise,Crítico,envolve 3 áreas — precisa dono claro,Investir em capacitação da equipe,Q06 26
+15,mês 04/26,Pessoas,Índice de acidentes,465.6,569.0,Amarelo,,aparece nas últimas 3 reuniões de comitê,,29/09/2026
+16,25/01/2026,RH,Tempo médio de contratação,3964.7,3805.9,ok,crít.,compromisso assumido pela diretoria em Q3,Rodar piloto de 30 dias em 1 filial,
+17,Apr/2026,operacoes,OEE,1819.1,1884.1,VERMELHO,Crítico,gerente anterior deixou sem tratamento,Trazer dado externo pra benchmark,29-07
+18,May/2026,OPS,Refugo (%),1080.5,798.1,Em atenção,Alto,concorrência opera com número melhor,Reunião com fornecedor de orçamento,
+19,Jun/2026,Mkt,Leads qualificados,3801.7,3588.7,em analise,,depende de decisão da matriz,,04/11/2026
+20,Jun/2026,comercial,Volume de vendas,372.5,421.8,ok,Médio,sinal fraco de reversão desde a última medição,Propor revisão do escopo do projeto,Q09 26
+21,08/03/2026,Recursos Humanos,eNPS,1413.6,1382.5,AMARELO,medio,envolve 3 áreas — precisa dono claro,Redefinir cadência de análise,Q06 26
+22,mês 06/26,Comercial,Pipeline qualificado,1460.6,1822.7,ok,BAIXO,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,10/2026
+23,Feb/2026,Controladoria/Fin,Despesa administrativa,319.5,264.8,Alerta,,regulatório pode mudar em Q4,Preparar defesa da meta pro comitê,24/07/2026
+24,Apr/2026,mkt digital,CAC digital,1535.0,1311.3,verde,ALTO,compromisso assumido pela diretoria em Q3,Propor plano de recuperação de 90 dias,07/2026
+25,mês 03/26,r.h.,Absenteísmo,4265.5,5260.9,Crítico,ALTO,meta pode estar defasada em relação ao mercado,Redefinir cadência de análise,23-07
+26,08/06/2026,Com,Volume de vendas,183.7,176.9,ok,Alto,pode virar oportunidade se estruturado,Renegociar contrato com fornecedor principal,09/2026
+27,mês 03/26,FIN,Despesa administrativa,4944.0,6197.4,Crítico,Médio,,Escalar pro comitê de TI,
+28,24/02/2026,Comercial,Pipeline qualificado,2427.1,2250.5,Em atenção,ALTO,diretoria quer entender causa raiz,Renegociar contrato com fornecedor principal,
+29,mês 04/26,rh/pessoas,Cobertura de treinamento,4239.1,2978.4,atenção,BAIXO,métrica não normalizada — comparação difícil,Renegociar contrato com fornecedor principal,07/2026
+30,2026-04-12,Financeiro,Despesa administrativa,4430.3,3179.0,VERMELHO,crít.,depende de decisão da matriz,Propor plano de recuperação de 90 dias,
+31,Jun/2026,Fin,Prazo médio de pagamento,3796.0,4839.2,Verde,Alto,envolve 3 áreas — precisa dono claro,Propor plano de recuperação de 90 dias,03-09
+32,2026-06-08,operações,Taxa de entrega no prazo,3166.7,2419.7,Em atenção,medio,meta pode estar defasada em relação ao mercado,Trazer dado externo pra benchmark,06/2026
+33,mês 02/26,r.h.,Cobertura de treinamento,710.3,835.8,em analise,Médio,cliente já sinalizou insatisfação sobre isso,Definir donos por indicador,07/2026
+34,Apr/2026,Financeiro,Custo por unidade,3197.9,4027.3,ok,Alto,,Investir em capacitação da equipe,01-11
+35,22/02/2026,SC,OTIF,4776.9,4970.2,Vermelho,,auditoria externa questionou na última visita,Reunião com fornecedor de sistema,07/2026
+36,2026-02-22,Finance,Fluxo de caixa mensal,2621.0,2672.2,ok,ALTO,auditoria externa questionou na última visita,Propor plano de recuperação de 90 dias,
+37,Mar/2026,Operações,Refugo (%),4964.9,5485.7,Em atenção,Alto,pode virar oportunidade se estruturado,Renegociar contrato com fornecedor principal,02-10
+38,2026-06-30,Fin,Margem operacional,691.4,715.9,Amarelo,medio,sinal fraco de reversão desde a última medição,Investir em capacitação da equipe,Q06 26
+39,mês 04/26,SC,Redução de custo,1409.8,1802.7,Em atenção,BAIXO,aparece nas últimas 3 reuniões de comitê,Automatizar coleta do dado,
+40,Apr/2026,OPS,Produtividade por linha,3663.0,3838.6,AMARELO,crít.,aguardando definição de budget,Trazer dado externo pra benchmark,Q06 26
+41,mês 05/26,Op,Taxa de entrega no prazo,1590.7,1279.3,verde,medio,regulatório pode mudar em Q4,Contratar analista sênior pra área,04-11
+42,May/2026,Financeiro,Fluxo de caixa mensal,3488.7,4308.3,Verde,medio,métrica não normalizada — comparação difícil,Preparar defesa da meta pro comitê,Q08 26
+43,15/06/2026,Operacional,Produtividade por linha,2013.9,1877.7,Em atenção,Alto,meta pode estar defasada em relação ao mercado,Trazer dado externo pra benchmark,13-07
+44,12/07/2026,Fin,Custo por unidade,1911.9,2143.3,Alerta,medio,meta pode estar defasada em relação ao mercado,Propor plano de recuperação de 90 dias,26/10/2026
+45,mês 01/26,Fin,EBITDA,4177.6,4607.7,AMARELO,Médio,sinal fraco de reversão desde a última medição,Contratar analista sênior pra área,Q10 26
+46,Apr/2026,Gestão de Pessoas,Turnover,1786.5,2025.2,ok,BAIXO,aparece nas últimas 3 reuniões de comitê,Redefinir cadência de análise,28/07/2026
+47,Feb/2026,Marketing,Leads qualificados,2976.3,3547.5,Vermelho,BAIXO,diretoria quer entender causa raiz,Contratar analista sênior pra área,11-11
+48,2026-01-19,Suprimentos,OTIF,3230.8,3124.6,VERMELHO,Alto,pode virar oportunidade se estruturado,Escalar pro comitê de Financeiro,Q08 26
+49,mês 02/26,Financeiro,Margem operacional,2404.0,2002.1,Em atenção,ALTO,sinal fraco de reversão desde a última medição,Alinhar meta trimestral com direção,08-11
+50,2026-03-06,Suprimentos,Concentração de fornecedor,1116.7,864.6,crítico,BAIXO,concorrência opera com número melhor,Alinhar meta trimestral com direção,
+51,2026-03-05,Financeiro,Margem operacional,3460.9,2784.9,Amarelo,medio,meta pode estar defasada em relação ao mercado,Escalar pro comitê de Marketing,
+52,mês 02/26,Pessoas,Absenteísmo,1426.6,1403.3,Verde,BAIXO,diretoria quer entender causa raiz,Escalar pro comitê de Suprimentos,Q08 26
+53,Apr/2026,mkt digital,Custo por lead,4608.5,3687.2,Crítico,,gerente anterior deixou sem tratamento,Renegociar contrato com fornecedor principal,
+54,16/05/2026,Finance,,3559.7,3502.7,ok,ALTO,auditoria vai voltar em 45 dias,Alinhar meta trimestral com direção,02/11/2026
+55,mês 03/26,COM,CAC,3867.9,2875.5,Amarelo,,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,
+56,mês 06/26,Operações,Taxa de entrega no prazo,2170.3,2495.4,Em atenção,Médio,gerente anterior deixou sem tratamento,Renegociar contrato com fornecedor principal,
+57,09/06/2026,,Margem operacional,3389.6,4154.9,Em atenção,,auditoria externa questionou na última visita,,Q08 26
+58,Jul/2026,Comercial,Novos clientes,3882.5,4245.0,Vermelho,BAIXO,,Contratar analista sênior pra área,Q10 26
+59,mês 07/26,comercial,Ticket médio,4624.9,5439.2,verde,Médio,auditoria externa questionou na última visita,,
+60,2026-02-07,OPS,Taxa de entrega no prazo,3799.9,2677.7,OK,ALTO,área quer discutir a meta em revisão,,
+61,2026-03-24,Operacional,Índice de retrabalho,4380.3,3072.3,Verde,Baixo,diretoria quer entender causa raiz,Alinhar meta trimestral com direção,08/2026
+62,Apr/2026,FIN,DSO (dias),4714.3,5682.6,crítico,,diretoria quer entender causa raiz,Definir donos por indicador,Q06 26
+63,mês 03/26,IT,Chamados abertos,1660.5,1443.0,em analise,Baixo,aguardando definição de budget,Renegociar contrato com fornecedor principal,22-07
+64,2026-05-09,COM,Churn,4149.2,3296.6,Verde,Crítico,diretoria quer entender causa raiz,Reunião com fornecedor de sistema,08/06/2026
+65,2026-04-28,r.h.,Tempo médio de contratação,1687.3,1560.0,verde,BAIXO,meta pode estar defasada em relação ao mercado,Investir em capacitação da equipe,07/06/2026
+66,mês 07/26,Mkt,Custo por lead,4034.3,5021.5,crítico,Alto,risco de exposição em relatório trimestral,Trazer dado externo pra benchmark,
+67,27/03/2026,comercial,Ticket médio,3198.9,3778.2,Em análise,Baixo,aparece nas últimas 3 reuniões de comitê,Rodar piloto de 30 dias em 1 filial,10-07
+68,2026-05-24,OPS,Taxa de entrega no prazo,4748.0,5988.0,Amarelo,crít.,,Renegociar contrato com fornecedor principal,Q10 26
+69,mês 03/26,sup.,OTIF,2147.1,1833.7,atenção,,diretoria quer entender causa raiz,Trazer dado externo pra benchmark,03/10/2026
+70,mês 05/26,r.h.,Absenteísmo,3391.9,3947.2,Verde,Médio,compromisso assumido pela diretoria em Q3,Alinhar leitura com par de outra área,
+71,2026-06-18,Com,Churn,1419.1,1030.2,ok,Alto,cliente já sinalizou insatisfação sobre isso,Automatizar coleta do dado,03-06
+72,mês 01/26,IT,MTTR,1082.0,761.6,verde,,conselho pediu detalhe na reunião de novembro,Revisar processo de aprovação com Marketing,
+73,mês 05/26,Pessoas,Tempo médio de contratação,1897.8,1385.0,Crítico,,,Contratar consultoria externa pra diagnóstico,29-06
+74,Feb/2026,FIN,Fluxo de caixa mensal,4146.6,3719.2,Em análise,Baixo,impacto direto no P&L do próximo trimestre,Trazer dado externo pra benchmark,11/2026
+75,mês 04/26,COM,Taxa de conversão,2017.4,1712.9,Amarelo,medio,sinal fraco de reversão desde a última medição,,12-09
+76,06/03/2026,Financeiro,EBITDA,932.0,815.7,AMARELO,Crítico,aguardando definição de budget,Propor revisão do escopo do projeto,05/10/2026
+77,2026-07-02,,DSO (dias),3520.9,4266.9,Em análise,ALTO,melhorou nos últimos 2 meses,Definir donos por indicador,06/10/2026
+78,2026-03-18,Operacional,Produtividade por linha,2608.9,2029.8,AMARELO,,gerente anterior deixou sem tratamento,Reunião com fornecedor de reporting,
+79,mês 03/26,r.h.,Turnover,1044.7,1285.2,Crítico,BAIXO,métrica não normalizada — comparação difícil,,06/2026
+80,Jan/2026,Compras,OTIF,1920.1,2190.3,Amarelo,BAIXO,pode virar oportunidade se estruturado,Reunião com fornecedor de dashboard,
+81,Apr/2026,Ops,,928.4,1037.3,Crítico,medio,aguardando definição de budget,,25/10/2026
+82,Apr/2026,financeiro,EBITDA,2082.5,2398.2,crítico,Alto,gerente anterior deixou sem tratamento,Renegociar contrato com fornecedor principal,10-06
+83,mês 04/26,Suprimentos,Ruptura de estoque,2303.2,1886.3,VERMELHO,,melhorou nos últimos 2 meses,Redefinir cadência de análise,26/08/2026
+84,Jan/2026,supply chain,Prazo médio de entrega,1060.3,924.3,ok,crít.,auditoria externa questionou na última visita,Alinhar meta trimestral com direção,
+85,16/05/2026,RH,Cobertura de treinamento,4800.4,3795.9,em analise,crít.,regulatório pode mudar em Q4,,Q09 26
+86,mês 06/26,mkt digital,Leads qualificados,2873.9,3129.8,atenção,Baixo,vinculado a projeto estratégico em curso,Propor revisão do escopo do projeto,Q07 26
+87,2026-07-13,comercial,Volume de vendas,1759.6,1289.4,verde,Médio,,Definir donos por indicador,30/09/2026
+88,Feb/2026,Operações,Lead time,2128.8,1768.4,atenção,Médio,diretoria quer entender causa raiz,Automatizar coleta do dado,15-10
+89,mês 06/26,RH,Absenteísmo,933.0,670.8,Amarelo,Baixo,diretoria quer entender causa raiz,Renegociar contrato com fornecedor principal,09/07/2026
+90,14/02/2026,rh/pessoas,Aderência ao plano de desenvolvimento,2655.3,2226.4,Em atenção,Alto,envolve 3 áreas — precisa dono claro,Propor plano de recuperação de 90 dias,11-07
+91,mês 03/26,sup.,Redução de custo,4937.5,4914.6,crítico,medio,compromisso assumido pela diretoria em Q3,Alinhar leitura com par de outra área,
+92,mês 05/26,T.I.,Índice de vulnerabilidades,3009.8,3323.5,Verde,medio,meta pode estar defasada em relação ao mercado,Redefinir cadência de análise,20/10/2026
+93,21/01/2026,Recursos Humanos,Aderência ao plano de desenvolvimento,1028.0,1095.6,OK,Alto,concorrência opera com número melhor,Investir em capacitação da equipe,
+94,May/2026,Marketing,CAC digital,607.8,785.5,Amarelo,Alto,vinculado a projeto estratégico em curso,Reunião com fornecedor de orçamento,07/2026
+95,14/05/2026,Vendas,Volume de vendas,4784.5,6055.2,ok,crít.,sinal fraco de reversão desde a última medição,Redefinir cadência de análise,08/07/2026
+96,2026-03-05,Ops,Lead time,4945.1,4949.2,AMARELO,medio,,Automatizar coleta do dado,
+97,2026-02-02,Compras,Concentração de fornecedor,124.5,157.7,Verde,,impacto direto no P&L do próximo trimestre,Escalar pro comitê de RH,04-08
+98,15/02/2026,comercial,Ticket médio,937.1,1183.0,Amarelo,,conselho pediu detalhe na reunião de novembro,Rodar piloto de 30 dias em 1 filial,
+99,2026-07-09,Sup,OTIF,2790.6,2204.8,Em análise,Médio,auditoria vai voltar em 45 dias,Renegociar contrato com fornecedor principal,27/08/2026
+100,2026-05-30,mkt digital,Engajamento social,3852.9,3240.4,ok,Médio,pode virar oportunidade se estruturado,Automatizar coleta do dado,
+101,Jul/2026,Fin,DSO (dias),1104.8,1178.0,ok,crít.,área quer discutir a meta em revisão,Contratar consultoria externa pra diagnóstico,27-07
+102,mês 03/26,TI,Índice de vulnerabilidades,844.1,667.4,ok,Alto,depende de decisão da matriz,,09/06/2026
+103,2026-01-28,Sup,OTIF,2858.5,3189.0,Em atenção,Alto,pode virar oportunidade se estruturado,Alinhar meta trimestral com direção,23/09/2026
+104,2026-07-13,marketing,CAC digital,3323.8,3413.2,verde,BAIXO,vinculado a projeto estratégico em curso,Preparar defesa da meta pro comitê,
+105,15/06/2026,OPS,Produtividade por linha,3542.4,2938.7,Vermelho,Baixo,melhorou nos últimos 2 meses,Redefinir cadência de análise,14-06
+106,Mar/2026,Vendas/Com,Pipeline qualificado,2373.8,3031.9,verde,BAIXO,,Trazer dado externo pra benchmark,13/11/2026
+107,05/07/2026,,Aderência SLA,537.0,627.4,Amarelo,,sinal fraco de reversão desde a última medição,Alinhar meta trimestral com direção,Q08 26
+108,mês 01/26,Ops,Taxa de entrega no prazo,3033.3,3000.6,Verde,Baixo,aguardando definição de budget,Preparar defesa da meta pro comitê,Q09 26
+109,mês 02/26,Operacional,Produtividade por linha,2045.5,1950.9,AMARELO,Crítico,sinal fraco de reversão desde a última medição,Contratar analista sênior pra área,07-06
+110,18/03/2026,rh/pessoas,Absenteísmo,3648.2,3892.4,Vermelho,,diretoria quer entender causa raiz,Definir donos por indicador,08/2026
+111,mês 04/26,Tecnologia,Chamados abertos,2587.9,3206.4,ok,medio,concorrência opera com número melhor,,09/2026
+112,26/05/2026,,eNPS,1979.6,2518.4,AMARELO,BAIXO,depende de decisão da matriz,Reunião com fornecedor de contratos,09/2026
+113,26/06/2026,OPS,Lead time,615.6,621.1,atenção,ALTO,vinculado a projeto estratégico em curso,Contratar analista sênior pra área,18-09
+114,2026-07-09,ti,Aderência SLA,4373.6,4128.5,Verde,crít.,gerente anterior deixou sem tratamento,Rodar piloto de 30 dias em 1 filial,
+115,Apr/2026,T.I.,Tempo de recuperação,1541.8,1633.7,AMARELO,Alto,métrica não normalizada — comparação difícil,Redefinir cadência de análise,26-10
+116,Apr/2026,marketing,Alcance orgânico,912.7,771.1,verde,,,Renegociar contrato com fornecedor principal,09/11/2026
+117,mês 05/26,Tecnologia da Informação,Uptime crítico,2440.2,2442.0,atenção,Baixo,métrica não normalizada — comparação difícil,Automatizar coleta do dado,Q06 26
+118,29/05/2026,mkt digital,Custo por lead,2955.2,2265.9,Crítico,medio,melhorou nos últimos 2 meses,Alinhar leitura com par de outra área,
+119,Jun/2026,Operacional,Índice de retrabalho,1567.7,1901.9,OK,Crítico,auditoria vai voltar em 45 dias,Renegociar contrato com fornecedor principal,Q10 26
+120,mês 04/26,Suprimentos,Prazo médio de entrega,2330.1,2081.3,Vermelho,,auditoria vai voltar em 45 dias,Contratar consultoria externa pra diagnóstico,01/10/2026
+121,mês 07/26,Ops,Refugo (%),1244.9,1166.8,Verde,,meta pode estar defasada em relação ao mercado,Propor plano de recuperação de 90 dias,
+122,02/04/2026,rh/pessoas,Absenteísmo,4804.5,4305.8,Vermelho,Crítico,diretoria quer entender causa raiz,Contratar consultoria externa pra diagnóstico,18/06/2026
+123,Jun/2026,supply chain,Nível de estoque,3417.4,3600.4,Vermelho,,sinal fraco de reversão desde a última medição,Redefinir cadência de análise,07/2026
+124,May/2026,Controladoria/Fin,Fluxo de caixa mensal,1911.0,2224.9,em analise,medio,impacto direto no P&L do próximo trimestre,Investir em capacitação da equipe,10/2026
+125,Jan/2026,SC,Ruptura de estoque,1688.7,1386.0,verde,,diretoria quer entender causa raiz,,18-09
+126,04/05/2026,supply chain,Redução de custo,2210.8,2033.6,em analise,,conselho pediu detalhe na reunião de novembro,Trazer dado externo pra benchmark,13-06
+127,mês 06/26,Com,Churn,1173.4,1457.0,AMARELO,,aguardando definição de budget,,20/07/2026
+128,mês 02/26,Comercial,Volume de vendas,2536.0,2464.8,Alerta,Baixo,diretoria quer entender causa raiz,,08/2026
+129,04/07/2026,Gestão de Pessoas,eNPS,3934.1,4106.9,em analise,Baixo,,,30/07/2026
+130,2026-06-20,T.I.,Uptime crítico,3251.7,3544.7,Vermelho,BAIXO,cliente já sinalizou insatisfação sobre isso,Contratar consultoria externa pra diagnóstico,06/2026
+131,2026-04-21,RH,Aderência ao plano de desenvolvimento,510.8,412.4,Vermelho,BAIXO,auditoria vai voltar em 45 dias,Escalar pro comitê de Financeiro,
+132,2026-03-06,Compras,Ruptura de estoque,4549.5,5693.3,ok,,pode virar oportunidade se estruturado,Contratar analista sênior pra área,21-06
+133,2026-07-04,Operações,Produtividade por linha,765.4,649.8,em analise,Crítico,compromisso assumido pela diretoria em Q3,Contratar analista sênior pra área,Q09 26
+134,May/2026,COM,,4706.6,4690.6,AMARELO,medio,auditoria externa questionou na última visita,,08/2026
+135,2026-05-12,RH,Tempo médio de contratação,2263.8,1983.0,em analise,ALTO,concorrência opera com número melhor,,08/2026
+136,15/03/2026,Recursos Humanos,Aderência ao plano de desenvolvimento,3879.9,3115.7,ok,ALTO,diretoria quer entender causa raiz,Contratar consultoria externa pra diagnóstico,
+137,23/06/2026,Op,Produtividade por linha,4055.4,4679.3,OK,medio,,,
+138,2026-06-02,MKT,Engajamento social,3832.9,3000.3,Crítico,Alto,pode virar oportunidade se estruturado,Automatizar coleta do dado,
+139,Jul/2026,Pessoas,eNPS,4920.3,3513.0,Em análise,,aguardando definição de budget,Contratar analista sênior pra área,Q08 26
+140,Jun/2026,rh/pessoas,eNPS,3273.2,3186.3,ok,Alto,impacto direto no P&L do próximo trimestre,,31/10/2026
+141,Jun/2026,mkt digital,Engajamento social,2793.7,2476.6,Amarelo,medio,compromisso assumido pela diretoria em Q3,Alinhar leitura com par de outra área,12/11/2026
+142,22/03/2026,Mkt,CAC digital,1110.7,1392.5,Vermelho,Baixo,impacto direto no P&L do próximo trimestre,Rodar piloto de 30 dias em 1 filial,05-08
+143,06/04/2026,marketing,Custo por lead,3583.8,2751.7,verde,ALTO,depende de decisão da matriz,Alinhar meta trimestral com direção,
+144,2026-07-01,financeiro,DSO (dias),2380.8,2500.8,Alerta,Baixo,aparece nas últimas 3 reuniões de comitê,Redefinir cadência de análise,09/2026
+145,23/04/2026,Recursos Humanos,Cobertura de treinamento,771.5,898.1,VERMELHO,medio,,Escalar pro comitê de Marketing,08/2026
+146,mês 06/26,Suprimentos,Redução de custo,4528.3,4622.9,ok,medio,aguardando definição de budget,Automatizar coleta do dado,Q10 26
+147,mês 06/26,operações,Índice de retrabalho,2279.9,1647.9,Alerta,Alto,pode virar oportunidade se estruturado,,18/08/2026
+148,2026-03-16,Fin,EBITDA,2370.5,1874.6,Crítico,BAIXO,métrica não normalizada — comparação difícil,Revisar processo de aprovação com Marketing,Q06 26
+149,11/07/2026,ti,Uptime crítico,1069.6,891.8,Vermelho,Alto,diretoria quer entender causa raiz,Preparar defesa da meta pro comitê,27-06
+150,Feb/2026,Operacional,Produtividade por linha,306.8,218.9,Verde,ALTO,auditoria externa questionou na última visita,Contratar analista sênior pra área,Q07 26
+151,Apr/2026,Finance,EBITDA,722.6,513.0,OK,,,Contratar analista sênior pra área,07/10/2026
+152,May/2026,T.I.,Chamados abertos,67.7,50.2,Verde,,meta pode estar defasada em relação ao mercado,Definir donos por indicador,
+153,Feb/2026,Ops,,4675.4,4337.5,Vermelho,medio,área quer discutir a meta em revisão,Contratar consultoria externa pra diagnóstico,Q10 26
+154,Mar/2026,mkt digital,Custo por lead,1631.4,1886.4,crítico,Alto,auditoria externa questionou na última visita,Contratar consultoria externa pra diagnóstico,
+155,mês 02/26,Vendas,Volume de vendas,3694.9,4443.6,Em atenção,Alto,concorrência opera com número melhor,Renegociar contrato com fornecedor principal,
+156,mês 02/26,MKT,Alcance orgânico,2883.8,2876.8,crítico,crít.,aguardando definição de budget,Contratar consultoria externa pra diagnóstico,Q07 26
+157,01/06/2026,T.I.,Aderência SLA,2492.0,3061.2,verde,crít.,aguardando definição de budget,Revisar processo de aprovação com Comercial,28-09
+158,Mar/2026,T.I.,Aderência SLA,2422.8,2933.0,em analise,BAIXO,auditoria externa questionou na última visita,Alinhar leitura com par de outra área,Q08 26
+159,mês 07/26,financeiro,DSO (dias),932.7,984.1,Em atenção,BAIXO,sinal fraco de reversão desde a última medição,Investir em capacitação da equipe,09/2026
+160,14/05/2026,marketing,Custo por lead,2328.0,2506.2,VERMELHO,Alto,melhorou nos últimos 2 meses,Contratar analista sênior pra área,
+161,mês 02/26,Operações,OEE,596.2,747.5,Alerta,Crítico,,Rodar piloto de 30 dias em 1 filial,10/2026
+162,17/02/2026,r.h.,Absenteísmo,430.9,308.3,verde,Médio,,,Q06 26
+163,mês 02/26,COM,Taxa de conversão,2522.6,2146.1,VERMELHO,medio,auditoria externa questionou na última visita,,16-08
+164,19/06/2026,Sup,Ruptura de estoque,4978.5,5872.3,VERMELHO,Baixo,impacto direto no P&L do próximo trimestre,,06/2026
+165,mês 03/26,COM,Churn,2527.7,2921.2,Crítico,,conselho pediu detalhe na reunião de novembro,Renegociar contrato com fornecedor principal,09/2026
+166,Jul/2026,ti,Aderência SLA,4367.8,3548.4,AMARELO,crít.,concorrência opera com número melhor,Reunião com fornecedor de auditoria,02/10/2026
+167,mês 06/26,sup.,Ruptura de estoque,4406.5,3713.4,OK,,depende de decisão da matriz,,02/11/2026
+168,mês 04/26,Operacional,OEE,2571.0,1844.9,AMARELO,,compromisso assumido pela diretoria em Q3,Preparar defesa da meta pro comitê,11/2026
+169,25/06/2026,Recursos Humanos,Cobertura de treinamento,1785.3,1596.8,Alerta,Baixo,sinal fraco de reversão desde a última medição,Preparar defesa da meta pro comitê,
+170,15/03/2026,Vendas/Com,Pipeline qualificado,4677.5,5795.7,Em atenção,Médio,regulatório pode mudar em Q4,Escalar pro comitê de Marketing,06/2026
+171,mês 05/26,T.I.,Tempo de recuperação,1336.1,1371.7,Em atenção,,gerente anterior deixou sem tratamento,Escalar pro comitê de Financeiro,Q09 26
+172,2026-03-27,,Nível de estoque,597.9,433.4,verde,,gerente anterior deixou sem tratamento,Alinhar leitura com par de outra área,01/07/2026
+173,mês 03/26,MKT,ROI campanhas,1466.3,1825.9,Em análise,ALTO,aparece nas últimas 3 reuniões de comitê,Redefinir cadência de análise,Q09 26
+174,04/07/2026,Com,Taxa de conversão,4831.5,4477.9,Verde,,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,11/11/2026
+175,Feb/2026,Fin,Custo por unidade,4689.5,4014.4,ok,BAIXO,conselho pediu detalhe na reunião de novembro,Redefinir cadência de análise,07/2026
+176,2026-02-08,sup.,Concentração de fornecedor,3407.6,4392.1,verde,Crítico,gerente anterior deixou sem tratamento,Redefinir cadência de análise,21/08/2026
+177,23/05/2026,Vendas/Com,Novos clientes,421.1,463.2,verde,ALTO,,Investir em capacitação da equipe,
+178,mês 03/26,Op,Índice de retrabalho,2724.4,3407.6,OK,ALTO,cliente já sinalizou insatisfação sobre isso,Contratar consultoria externa pra diagnóstico,01/09/2026
+179,mês 07/26,Compras,Ruptura de estoque,346.4,271.5,em analise,Médio,risco de exposição em relatório trimestral,,04-11
+180,mês 06/26,Fin,DSO (dias),2253.2,2265.5,AMARELO,,aguardando definição de budget,Definir donos por indicador,30-10
+181,Apr/2026,,Produtividade por linha,3494.6,3561.9,Em atenção,Crítico,regulatório pode mudar em Q4,Alinhar meta trimestral com direção,04-09
+182,13/07/2026,Recursos Humanos,Absenteísmo,4528.4,4511.3,atenção,Alto,,Investir em capacitação da equipe,Q09 26
+183,Feb/2026,mkt digital,Engajamento social,1663.5,1951.1,Amarelo,Alto,métrica não normalizada — comparação difícil,,29-08
+184,28/06/2026,Finance,Margem operacional,4686.1,4628.0,Em análise,Médio,,Redefinir cadência de análise,18-08
+185,2026-02-10,T.I.,Uptime crítico,4940.9,6158.6,Alerta,Alto,vinculado a projeto estratégico em curso,Escalar pro comitê de RH,Q07 26
+186,mês 07/26,Pessoas,Tempo médio de contratação,4703.4,3869.5,Em análise,Baixo,,Definir donos por indicador,Q06 26
+187,Jul/2026,marketing,CAC digital,4693.8,4960.6,atenção,Baixo,gerente anterior deixou sem tratamento,Alinhar meta trimestral com direção,Q10 26
+188,Feb/2026,Operacional,Lead time,4545.9,4310.9,AMARELO,,gerente anterior deixou sem tratamento,Trazer dado externo pra benchmark,Q06 26
+189,mês 03/26,Comercial,Churn,871.2,722.9,Amarelo,Médio,aguardando definição de budget,Propor revisão do escopo do projeto,
+190,mês 06/26,Compras,Redução de custo,440.7,342.5,Amarelo,Crítico,regulatório pode mudar em Q4,,28/08/2026
+191,24/01/2026,supply chain,Concentração de fornecedor,2118.5,2544.7,Alerta,crít.,pode virar oportunidade se estruturado,Reunião com fornecedor de BI,09/2026
+192,,,,,,,,,,
+193,Jul/2026,Op,Taxa de entrega no prazo,4034.9,4356.2,em analise,ALTO,vinculado a projeto estratégico em curso,,14/08/2026
+194,Apr/2026,Recursos Humanos,Aderência ao plano de desenvolvimento,857.4,692.9,Alerta,medio,impacto direto no P&L do próximo trimestre,,02/09/2026
+195,2026-05-16,operacoes,Taxa de entrega no prazo,1447.7,1745.8,em analise,Médio,métrica não normalizada — comparação difícil,,20/08/2026
+196,Jun/2026,Comercial,Volume de vendas,1482.5,1239.3,Verde,Crítico,métrica não normalizada — comparação difícil,Propor plano de recuperação de 90 dias,Q10 26
+197,22/04/2026,Controladoria/Fin,Custo por unidade,2024.6,1577.3,Em atenção,Crítico,cliente já sinalizou insatisfação sobre isso,Trazer dado externo pra benchmark,02/09/2026
+198,23/05/2026,mkt digital,ROI campanhas,4072.2,3599.5,Vermelho,Alto,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,Q10 26
+199,2026-07-17,FIN,Custo por unidade,1137.9,1419.9,em analise,Alto,gerente anterior deixou sem tratamento,Renegociar contrato com fornecedor principal,10/2026
+200,mês 02/26,SC,Ruptura de estoque,2452.7,1934.6,Em atenção,Baixo,auditoria externa questionou na última visita,Escalar pro comitê de Suprimentos,25-08
+201,04/02/2026,IT,Uptime crítico,577.1,650.3,atenção,BAIXO,gerente anterior deixou sem tratamento,Escalar pro comitê de Operações,06/2026
+202,19/06/2026,RH,Cobertura de treinamento,2590.2,3278.9,VERMELHO,Baixo,,Renegociar contrato com fornecedor principal,13-11
+203,mês 05/26,,MTTR,4921.2,6365.1,Vermelho,Médio,gerente anterior deixou sem tratamento,Alinhar meta trimestral com direção,Q11 26
+204,Jun/2026,TI,Chamados abertos,1560.3,1538.3,OK,,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,
+205,mês 06/26,sup.,Nível de estoque,4767.9,5588.5,OK,BAIXO,sinal fraco de reversão desde a última medição,Propor revisão do escopo do projeto,
+206,mês 02/26,Vendas/Com,Novos clientes,4579.0,3278.1,verde,Médio,impacto direto no P&L do próximo trimestre,Investir em capacitação da equipe,10/2026
+207,mês 03/26,Suprimentos,Redução de custo,2762.7,2527.8,atenção,Médio,área quer discutir a meta em revisão,,09/10/2026
+208,23/04/2026,Finance,Despesa administrativa,1678.9,2029.7,crítico,Médio,cliente já sinalizou insatisfação sobre isso,Definir donos por indicador,Q10 26
+209,2026-05-15,Tecnologia da Informação,Uptime crítico,1743.2,1503.1,AMARELO,Baixo,aguardando definição de budget,Propor plano de recuperação de 90 dias,Q09 26
+210,mês 04/26,,Taxa de entrega no prazo,2772.8,2658.8,OK,,depende de decisão da matriz,Propor revisão do escopo do projeto,29-07
+211,2026-04-05,Recursos Humanos,eNPS,4382.7,3905.2,ok,crít.,depende de decisão da matriz,Rodar piloto de 30 dias em 1 filial,07/2026
+212,2026-02-04,COM,CAC,4529.8,4038.5,ok,Alto,área quer discutir a meta em revisão,Alinhar meta trimestral com direção,
+213,11/06/2026,,Cobertura de treinamento,167.3,214.9,Amarelo,Médio,aguardando definição de budget,Preparar defesa da meta pro comitê,10/10/2026
+214,09/03/2026,Operacional,Lead time,3652.4,4033.1,verde,Médio,risco de exposição em relatório trimestral,Rodar piloto de 30 dias em 1 filial,16-09
+215,2026-05-26,Gestão de Pessoas,Absenteísmo,1719.0,1922.8,Verde,Alto,,Redefinir cadência de análise,31/10/2026
+216,May/2026,Mkt,Custo por lead,3386.5,3926.7,AMARELO,Médio,,Investir em capacitação da equipe,
+217,mês 03/26,IT,Aderência SLA,1556.9,1484.0,crítico,,meta pode estar defasada em relação ao mercado,Investir em capacitação da equipe,19/09/2026
+218,Apr/2026,Vendas,Taxa de conversão,474.6,401.2,VERMELHO,Alto,depende de decisão da matriz,Trazer dado externo pra benchmark,18/07/2026
+219,29/05/2026,mkt digital,Custo por lead,690.3,678.9,verde,medio,regulatório pode mudar em Q4,Reunião com fornecedor de contratos,18/07/2026
+220,2026-03-03,MKT,ROI campanhas,1450.5,1321.5,Em análise,BAIXO,vinculado a projeto estratégico em curso,Automatizar coleta do dado,
+221,Feb/2026,mkt digital,Alcance orgânico,1848.5,2187.3,Crítico,Médio,meta pode estar defasada em relação ao mercado,Reunião com fornecedor de reporting,11/11/2026
+222,mês 05/26,Gestão de Pessoas,Turnover,2296.3,1662.1,Alerta,,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,06/2026
+223,24/01/2026,Financeiro,Despesa administrativa,3869.3,4837.3,ok,,vinculado a projeto estratégico em curso,Contratar analista sênior pra área,31/07/2026
+224,mês 06/26,operacoes,Produtividade por linha,114.1,87.6,Verde,medio,compromisso assumido pela diretoria em Q3,Investir em capacitação da equipe,10/10/2026
+225,Jul/2026,Com,Volume de vendas,1888.2,2357.6,Em atenção,ALTO,concorrência opera com número melhor,Automatizar coleta do dado,Q09 26
+226,2026-07-12,Operacional,,2553.4,2868.0,Verde,Crítico,aparece nas últimas 3 reuniões de comitê,Alinhar meta trimestral com direção,
+227,12/03/2026,mkt digital,Leads qualificados,1682.8,2111.1,Verde,BAIXO,regulatório pode mudar em Q4,Contratar consultoria externa pra diagnóstico,
+228,May/2026,Marketing,Engajamento social,2743.0,2493.7,OK,BAIXO,risco de exposição em relatório trimestral,Escalar pro comitê de TI,22-09
+229,mês 06/26,Compras,Prazo médio de entrega,1030.8,953.8,atenção,Alto,,Investir em capacitação da equipe,Q09 26
+230,May/2026,SC,OTIF,4562.2,4750.9,AMARELO,medio,impacto direto no P&L do próximo trimestre,,Q08 26
+231,10/07/2026,SC,OTIF,2263.4,2126.8,crítico,Médio,aguardando definição de budget,Alinhar leitura com par de outra área,Q10 26
+232,29/04/2026,Financeiro,Margem operacional,1603.2,1493.5,ok,,depende de decisão da matriz,Automatizar coleta do dado,27-10
+233,Jan/2026,sup.,Nível de estoque,2374.3,1756.2,verde,Crítico,aguardando definição de budget,Investir em capacitação da equipe,18-07
+234,mês 07/26,operações,Lead time,839.6,994.7,Em atenção,Crítico,regulatório pode mudar em Q4,Investir em capacitação da equipe,
+235,Feb/2026,marketing,ROI campanhas,3550.2,3288.5,crítico,Alto,impacto direto no P&L do próximo trimestre,Propor plano de recuperação de 90 dias,10/2026
+236,mês 05/26,supply chain,,3533.5,4223.1,ok,,depende de decisão da matriz,Escalar pro comitê de Suprimentos,
+237,Feb/2026,Sup,Nível de estoque,3755.7,3399.2,ok,BAIXO,cliente já sinalizou insatisfação sobre isso,Propor plano de recuperação de 90 dias,Q11 26
+238,2026-06-30,Recursos Humanos,Aderência ao plano de desenvolvimento,2083.9,2588.6,Crítico,,gerente anterior deixou sem tratamento,Alinhar meta trimestral com direção,16/10/2026
+239,2026-06-10,Tecnologia,Índice de vulnerabilidades,4619.7,4785.5,em analise,Alto,depende de decisão da matriz,Preparar defesa da meta pro comitê,
+240,mês 01/26,IT,MTTR,943.1,808.3,AMARELO,,auditoria externa questionou na última visita,Preparar defesa da meta pro comitê,06-09
+241,Feb/2026,Operações,OEE,4506.3,5638.5,Verde,,pode virar oportunidade se estruturado,Rodar piloto de 30 dias em 1 filial,07/11/2026
+242,14/05/2026,Comercial,Pipeline qualificado,3157.7,2719.5,Vermelho,crít.,aparece nas últimas 3 reuniões de comitê,Alinhar leitura com par de outra área,
+243,20/06/2026,Sup,Concentração de fornecedor,2905.6,3533.5,verde,,auditoria externa questionou na última visita,Alinhar leitura com par de outra área,08/10/2026
+244,22/05/2026,sup.,Ruptura de estoque,4502.6,4683.7,Em análise,Alto,impacto direto no P&L do próximo trimestre,Redefinir cadência de análise,Q07 26
+245,2026-01-26,Tecnologia da Informação,Tempo de recuperação,4531.5,3833.7,Verde,Baixo,,Redefinir cadência de análise,
+246,2026-06-26,Operações,Lead time,4048.8,4588.9,Em análise,,impacto direto no P&L do próximo trimestre,Investir em capacitação da equipe,12/11/2026
+247,Jan/2026,Finance,DSO (dias),1134.0,1228.1,Verde,crít.,diretoria quer entender causa raiz,,11/2026
+248,Apr/2026,Sup,Nível de estoque,2360.0,2265.1,atenção,Crítico,depende de decisão da matriz,Revisar processo de aprovação com Operações,
+249,13/06/2026,FIN,Margem operacional,723.8,622.3,OK,Crítico,compromisso assumido pela diretoria em Q3,Redefinir cadência de análise,
+250,mês 02/26,Pessoas,Aderência ao plano de desenvolvimento,798.9,1005.8,OK,Crítico,,Reunião com fornecedor de dashboard,08/2026
+251,mês 05/26,rh/pessoas,Cobertura de treinamento,3008.8,2548.1,VERMELHO,medio,aguardando definição de budget,Contratar consultoria externa pra diagnóstico,Q10 26
+252,Jul/2026,Mkt,Engajamento social,155.5,187.8,OK,Alto,,,Q09 26
+253,mês 01/26,Compras,OTIF,3383.1,2479.5,verde,Crítico,pode virar oportunidade se estruturado,Contratar analista sênior pra área,06/2026
+254,2026-03-31,Operações,Lead time,2134.4,1835.8,em analise,,impacto direto no P&L do próximo trimestre,Propor plano de recuperação de 90 dias,08/11/2026
+255,03/03/2026,comercial,Novos clientes,2533.9,2742.2,Alerta,medio,área quer discutir a meta em revisão,Definir donos por indicador,20/09/2026
+256,19/03/2026,marketing,Leads qualificados,1590.3,1814.5,Em análise,,depende de decisão da matriz,Escalar pro comitê de TI,06/2026
+257,2026-06-28,supply chain,Prazo médio de entrega,4099.5,4146.1,Alerta,medio,área quer discutir a meta em revisão,Redefinir cadência de análise,
+258,2026-02-27,Finance,Despesa administrativa,221.3,163.4,Em atenção,Alto,meta pode estar defasada em relação ao mercado,Investir em capacitação da equipe,Q07 26
+259,2026-05-26,sup.,Prazo médio de entrega,1759.1,1995.2,OK,Crítico,conselho pediu detalhe na reunião de novembro,Escalar pro comitê de RH,06/2026
+260,mês 06/26,Fin,DSO (dias),4467.4,4023.7,verde,Alto,risco de exposição em relatório trimestral,Revisar processo de aprovação com Suprimentos,12/10/2026
+261,09/04/2026,Vendas/Com,CAC,3144.4,4020.3,Em análise,,vinculado a projeto estratégico em curso,Redefinir cadência de análise,Q10 26
+262,Jun/2026,Vendas/Com,,973.3,968.9,Alerta,BAIXO,aparece nas últimas 3 reuniões de comitê,Redefinir cadência de análise,
+263,mês 05/26,Comercial,Ticket médio,2779.4,3330.1,OK,,auditoria vai voltar em 45 dias,Revisar processo de aprovação com Marketing,09/2026
+264,Jun/2026,ti,MTTR,636.2,530.1,Crítico,Baixo,sinal fraco de reversão desde a última medição,Propor revisão do escopo do projeto,21/08/2026
+265,16/05/2026,SC,Redução de custo,4602.9,5935.6,AMARELO,,cliente já sinalizou insatisfação sobre isso,,28-09
+266,2026-02-07,Comercial,Ticket médio,3149.2,2557.5,OK,,vinculado a projeto estratégico em curso,,24/09/2026
+267,Mar/2026,Operacional,Lead time,672.5,849.5,Verde,,,Alinhar meta trimestral com direção,Q06 26
+268,mês 01/26,marketing,ROI campanhas,619.0,595.0,ok,Médio,risco de exposição em relatório trimestral,Rodar piloto de 30 dias em 1 filial,Q07 26
+269,2026-01-29,Compras,Prazo médio de entrega,4719.7,4245.2,AMARELO,crít.,cliente já sinalizou insatisfação sobre isso,Alinhar meta trimestral com direção,06-11
+270,mês 05/26,Comercial,Ticket médio,2010.0,1848.5,OK,BAIXO,depende de decisão da matriz,,06/2026
+271,2026-03-05,Mkt,Engajamento social,98.9,104.3,crítico,ALTO,pode virar oportunidade se estruturado,Propor plano de recuperação de 90 dias,Q06 26
+272,mês 05/26,IT,MTTR,4765.0,3949.2,OK,,conselho pediu detalhe na reunião de novembro,Contratar consultoria externa pra diagnóstico,Q07 26
+273,mês 06/26,ti,,1437.8,1751.1,OK,Crítico,pode virar oportunidade se estruturado,Alinhar meta trimestral com direção,Q08 26
+274,2026-02-19,T.I.,Cobertura de backup,1958.8,1625.9,crítico,Alto,pode virar oportunidade se estruturado,Alinhar leitura com par de outra área,Q08 26
+275,22/03/2026,,Prazo médio de entrega,853.7,976.5,atenção,medio,vinculado a projeto estratégico em curso,Rodar piloto de 30 dias em 1 filial,14/11/2026
+276,Mar/2026,Financeiro,Margem operacional,4283.0,3258.4,Em atenção,Baixo,auditoria vai voltar em 45 dias,,
+277,06/03/2026,marketing,ROI campanhas,677.0,606.1,Verde,ALTO,sinal fraco de reversão desde a última medição,Contratar consultoria externa pra diagnóstico,Q06 26
+278,2026-03-10,Gestão de Pessoas,eNPS,3886.8,2923.2,VERMELHO,medio,impacto direto no P&L do próximo trimestre,Renegociar contrato com fornecedor principal,08/2026
+279,mês 03/26,Financeiro,Custo por unidade,4666.8,5694.1,verde,Médio,vinculado a projeto estratégico em curso,Preparar defesa da meta pro comitê,15/11/2026
+280,28/06/2026,SC,Prazo médio de entrega,1577.7,1946.7,Crítico,BAIXO,envolve 3 áreas — precisa dono claro,Trazer dado externo pra benchmark,
+281,May/2026,Controladoria/Fin,Prazo médio de pagamento,2634.7,3106.6,ok,Alto,conselho pediu detalhe na reunião de novembro,Preparar defesa da meta pro comitê,16-10
+282,2026-01-31,operacoes,Tempo médio de setup,1977.6,2368.4,Verde,crít.,área quer discutir a meta em revisão,Rodar piloto de 30 dias em 1 filial,
+283,mês 04/26,Vendas/Com,Novos clientes,3240.7,3685.5,crítico,,,Contratar consultoria externa pra diagnóstico,09/2026
+284,mês 06/26,ti,Chamados abertos,169.9,209.3,Em atenção,ALTO,melhorou nos últimos 2 meses,Renegociar contrato com fornecedor principal,
+285,2026-06-11,Pessoas,Cobertura de treinamento,2737.1,2697.9,ok,Baixo,auditoria externa questionou na última visita,Contratar analista sênior pra área,Q10 26
+286,09/03/2026,Compras,Prazo médio de entrega,2100.4,1803.0,VERMELHO,,concorrência opera com número melhor,Redefinir cadência de análise,
+287,01/05/2026,mkt digital,CAC digital,2988.2,3673.9,Em análise,,,Investir em capacitação da equipe,11/2026
+288,2026-06-24,RH,Absenteísmo,3352.0,4132.5,Vermelho,ALTO,aguardando definição de budget,Redefinir cadência de análise,11/07/2026
+289,15/03/2026,TI,Aderência SLA,2211.7,2425.9,Em análise,BAIXO,aparece nas últimas 3 reuniões de comitê,Propor plano de recuperação de 90 dias,06/11/2026
+290,26/06/2026,mkt digital,CAC digital,415.1,384.8,VERMELHO,,pode virar oportunidade se estruturado,Propor revisão do escopo do projeto,
+291,Feb/2026,sup.,Redução de custo,3211.3,2708.7,Amarelo,Baixo,diretoria quer entender causa raiz,Trazer dado externo pra benchmark,28-09
+292,2026-04-07,Gestão de Pessoas,,3632.5,3632.8,Vermelho,crít.,meta pode estar defasada em relação ao mercado,Propor revisão do escopo do projeto,
+293,2026-06-08,Vendas,Novos clientes,4537.5,4128.7,em analise,ALTO,depende de decisão da matriz,Automatizar coleta do dado,11/2026
+294,2026-02-15,Suprimentos,Nível de estoque,3000.2,3079.1,ok,Alto,aparece nas últimas 3 reuniões de comitê,Alinhar meta trimestral com direção,
+295,15/03/2026,Mkt,Engajamento social,1738.8,1442.2,AMARELO,ALTO,,Alinhar leitura com par de outra área,
+296,,,,,,,,,,
+297,mês 02/26,IT,MTTR,3458.8,2933.7,em analise,Alto,auditoria externa questionou na última visita,Propor plano de recuperação de 90 dias,
+298,04/03/2026,rh/pessoas,eNPS,4260.5,4746.0,Vermelho,ALTO,sinal fraco de reversão desde a última medição,,10/2026
+299,2026-06-28,Gestão de Pessoas,Aderência ao plano de desenvolvimento,425.8,417.3,Verde,Baixo,gerente anterior deixou sem tratamento,Trazer dado externo pra benchmark,09/2026
+300,07/05/2026,Vendas/Com,Ticket médio,4175.0,5220.6,Amarelo,,pode virar oportunidade se estruturado,Contratar analista sênior pra área,10/2026
+301,2026-07-12,SC,Ruptura de estoque,407.0,333.3,Em atenção,crít.,aparece nas últimas 3 reuniões de comitê,Trazer dado externo pra benchmark,08/2026
+302,Jan/2026,MKT,Custo por lead,3355.2,3737.2,Em atenção,Baixo,aguardando definição de budget,Propor revisão do escopo do projeto,Q08 26
+303,24/06/2026,Gestão de Pessoas,Absenteísmo,1980.8,2063.8,Alerta,Baixo,aguardando definição de budget,Propor revisão do escopo do projeto,09/2026
+304,Jun/2026,Controladoria/Fin,Fluxo de caixa mensal,3133.7,2586.5,Em atenção,crít.,auditoria vai voltar em 45 dias,Alinhar meta trimestral com direção,Q07 26
+305,Apr/2026,Marketing,ROI campanhas,2623.5,2959.8,Em atenção,ALTO,aguardando definição de budget,Alinhar meta trimestral com direção,30/07/2026
+306,25/01/2026,Tecnologia,Tempo de recuperação,3941.2,4190.9,AMARELO,BAIXO,auditoria externa questionou na última visita,Preparar defesa da meta pro comitê,
+307,2026-05-11,mkt digital,Custo por lead,4365.3,4255.4,Amarelo,crít.,conselho pediu detalhe na reunião de novembro,,20/08/2026
+308,Feb/2026,Finance,Despesa administrativa,2289.4,2321.3,Em análise,ALTO,,,16/10/2026
+309,mês 01/26,,,4619.2,5505.8,verde,crít.,compromisso assumido pela diretoria em Q3,Propor revisão do escopo do projeto,
+310,2026-05-20,Fin,Custo por unidade,523.4,508.8,OK,Crítico,aparece nas últimas 3 reuniões de comitê,Renegociar contrato com fornecedor principal,10/2026
+311,mês 01/26,Comercial,Churn,1264.9,1179.7,ok,ALTO,conselho pediu detalhe na reunião de novembro,Propor plano de recuperação de 90 dias,Q08 26
+312,Jul/2026,Mkt,Leads qualificados,2674.8,2062.6,Em atenção,Baixo,auditoria externa questionou na última visita,Contratar consultoria externa pra diagnóstico,26-08
+313,mês 05/26,ti,Uptime crítico,4132.6,3062.0,Em atenção,Alto,métrica não normalizada — comparação difícil,Escalar pro comitê de Financeiro,24/08/2026
+314,03/06/2026,MKT,,4710.3,3709.7,crítico,,gerente anterior deixou sem tratamento,Revisar processo de aprovação com Operações,03/10/2026
+315,02/03/2026,supply chain,Redução de custo,1833.4,1905.3,Amarelo,Baixo,concorrência opera com número melhor,Alinhar leitura com par de outra área,08-11
+316,Jul/2026,mkt digital,Custo por lead,1068.4,957.0,Em atenção,ALTO,melhorou nos últimos 2 meses,Redefinir cadência de análise,23-08
+317,Mar/2026,Operações,Tempo médio de setup,3639.7,3645.5,AMARELO,,risco de exposição em relatório trimestral,Trazer dado externo pra benchmark,10/2026
+318,2026-05-03,Tecnologia da Informação,Uptime crítico,1827.3,2150.6,crítico,,métrica não normalizada — comparação difícil,Trazer dado externo pra benchmark,
+319,mês 01/26,Operacional,Tempo médio de setup,1905.1,2414.5,verde,Médio,envolve 3 áreas — precisa dono claro,Propor plano de recuperação de 90 dias,
+320,,,,,,,,,,
+321,2026-07-13,Tecnologia da Informação,Cobertura de backup,3594.2,3890.4,Em atenção,Alto,impacto direto no P&L do próximo trimestre,Trazer dado externo pra benchmark,04/08/2026
+322,mês 05/26,Compras,Concentração de fornecedor,2914.4,3353.9,Crítico,Médio,depende de decisão da matriz,Alinhar meta trimestral com direção,23/09/2026
+323,2026-01-24,,Fluxo de caixa mensal,4948.0,3583.1,Vermelho,BAIXO,,Revisar processo de aprovação com Financeiro,
+324,2026-07-02,Op,Refugo (%),3711.8,4157.8,ok,,métrica não normalizada — comparação difícil,,27-06
+325,Mar/2026,MKT,ROI campanhas,3669.1,4532.6,Em atenção,Alto,compromisso assumido pela diretoria em Q3,Preparar defesa da meta pro comitê,15-11
+326,2026-03-04,Ops,Produtividade por linha,4465.9,3674.8,Alerta,,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,09/2026
+327,mês 05/26,Ops,OEE,2969.3,3851.2,verde,Alto,conselho pediu detalhe na reunião de novembro,,22-06
+328,Jun/2026,Compras,Redução de custo,827.1,760.4,atenção,Alto,métrica não normalizada — comparação difícil,,07/2026
+329,mês 05/26,Recursos Humanos,Aderência ao plano de desenvolvimento,2876.9,3548.0,atenção,ALTO,vinculado a projeto estratégico em curso,Contratar analista sênior pra área,06-09
+330,May/2026,Mkt,,4724.8,4533.2,crítico,ALTO,,Renegociar contrato com fornecedor principal,
+331,mês 06/26,MKT,Custo por lead,3212.8,3575.5,AMARELO,Médio,pode virar oportunidade se estruturado,Escalar pro comitê de Suprimentos,07/2026
+332,2026-05-02,Compras,Nível de estoque,3663.6,4209.9,Amarelo,Alto,,Propor plano de recuperação de 90 dias,26-10
+333,2026-04-23,comercial,Volume de vendas,3540.7,4342.4,VERMELHO,Alto,compromisso assumido pela diretoria em Q3,Renegociar contrato com fornecedor principal,Q11 26
+334,Mar/2026,marketing,Custo por lead,2509.1,2343.1,atenção,,aparece nas últimas 3 reuniões de comitê,Revisar processo de aprovação com Operações,Q08 26
+335,2026-06-12,marketing,Leads qualificados,3610.9,3428.6,Vermelho,Médio,,Trazer dado externo pra benchmark,Q08 26
+336,28/06/2026,Tecnologia,Índice de vulnerabilidades,3692.6,4000.3,Vermelho,medio,aparece nas últimas 3 reuniões de comitê,,
+337,08/07/2026,Controladoria/Fin,EBITDA,710.6,543.6,ok,ALTO,auditoria externa questionou na última visita,Reunião com fornecedor de sistema,
+338,mês 04/26,r.h.,Tempo médio de contratação,4366.3,4903.8,AMARELO,BAIXO,depende de decisão da matriz,Renegociar contrato com fornecedor principal,Q11 26
+339,Jun/2026,FIN,EBITDA,4936.2,3821.1,em analise,Médio,sinal fraco de reversão desde a última medição,Trazer dado externo pra benchmark,06/2026
+340,Mar/2026,Mkt,Custo por lead,494.1,623.6,Amarelo,crít.,diretoria quer entender causa raiz,Definir donos por indicador,10/2026
+341,2026-01-31,IT,Índice de vulnerabilidades,628.3,590.9,Amarelo,medio,área quer discutir a meta em revisão,Renegociar contrato com fornecedor principal,16/09/2026
+342,mês 01/26,Controladoria/Fin,Custo por unidade,1188.4,864.7,ok,BAIXO,envolve 3 áreas — precisa dono claro,Renegociar contrato com fornecedor principal,11-10
+343,09/02/2026,Suprimentos,Redução de custo,3186.6,2687.6,Amarelo,ALTO,cliente já sinalizou insatisfação sobre isso,,03/06/2026
+344,mês 02/26,,CAC digital,2412.9,2531.9,Em análise,,vinculado a projeto estratégico em curso,Redefinir cadência de análise,Q09 26
+345,Apr/2026,Marketing,Engajamento social,1798.9,1501.4,VERMELHO,Médio,auditoria externa questionou na última visita,Automatizar coleta do dado,
+346,13/05/2026,operações,Índice de retrabalho,368.8,459.0,Em análise,crít.,conselho pediu detalhe na reunião de novembro,Investir em capacitação da equipe,09/2026
+347,Jul/2026,Marketing,Engajamento social,3291.5,3223.6,Verde,Médio,meta pode estar defasada em relação ao mercado,Preparar defesa da meta pro comitê,21-07
+348,,,,,,,,,,
+349,2026-04-14,Tecnologia,Chamados abertos,2880.8,2134.1,OK,Baixo,regulatório pode mudar em Q4,Definir donos por indicador,Q07 26
+350,02/06/2026,IT,Chamados abertos,2476.9,2274.4,AMARELO,,,Rodar piloto de 30 dias em 1 filial,
+351,mês 06/26,Tecnologia,Cobertura de backup,832.1,1068.6,VERMELHO,ALTO,compromisso assumido pela diretoria em Q3,Renegociar contrato com fornecedor principal,Q09 26
+352,Feb/2026,Marketing,Engajamento social,3710.6,2958.4,Em análise,,concorrência opera com número melhor,Alinhar meta trimestral com direção,
+353,Jan/2026,,DSO (dias),4633.7,3883.6,ok,,diretoria quer entender causa raiz,Revisar processo de aprovação com Comercial,
+354,Apr/2026,Operacional,Produtividade por linha,3154.1,3773.9,Alerta,Baixo,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,30-07
+355,mês 02/26,supply chain,OTIF,1665.4,1614.9,Crítico,ALTO,depende de decisão da matriz,Renegociar contrato com fornecedor principal,14/09/2026
+356,15/02/2026,Fin,Custo por unidade,4227.0,3142.3,OK,Crítico,depende de decisão da matriz,Reunião com fornecedor de orçamento,10/2026
+357,02/04/2026,supply chain,Prazo médio de entrega,716.9,735.2,OK,,meta pode estar defasada em relação ao mercado,,Q09 26
+358,mês 06/26,mkt digital,ROI campanhas,4259.0,3318.6,OK,medio,cliente já sinalizou insatisfação sobre isso,Contratar consultoria externa pra diagnóstico,Q08 26
+359,Jul/2026,Gestão de Pessoas,Índice de acidentes,4886.3,4957.1,Em análise,,pode virar oportunidade se estruturado,,07/2026
+360,mês 05/26,Tecnologia,Aderência SLA,4451.5,3654.3,VERMELHO,Alto,auditoria externa questionou na última visita,,Q06 26
+361,29/06/2026,Fin,Margem operacional,4253.7,3830.5,VERMELHO,Crítico,cliente já sinalizou insatisfação sobre isso,Preparar defesa da meta pro comitê,09/2026
+362,,,,,,,,,,
+363,2026-03-29,COM,Pipeline qualificado,697.4,799.2,Verde,Crítico,pode virar oportunidade se estruturado,Reunião com fornecedor de sistema,Q06 26
+364,Jun/2026,Vendas,Ticket médio,1514.9,1953.0,Vermelho,Alto,aguardando definição de budget,,21-07
+365,Apr/2026,Suprimentos,Concentração de fornecedor,1362.1,961.0,crítico,medio,aguardando definição de budget,Revisar processo de aprovação com Financeiro,04-09
+366,Mar/2026,SC,Prazo médio de entrega,3873.0,3946.7,OK,Crítico,diretoria quer entender causa raiz,Alinhar leitura com par de outra área,
+367,Apr/2026,Vendas,Volume de vendas,1529.0,1958.6,em analise,,auditoria externa questionou na última visita,,
+368,mês 01/26,Pessoas,Índice de acidentes,4849.0,6169.8,Crítico,Baixo,área quer discutir a meta em revisão,Revisar processo de aprovação com TI,07-06
+369,2026-01-22,sup.,Redução de custo,1117.0,1052.7,ok,Alto,impacto direto no P&L do próximo trimestre,,Q10 26
+370,2026-02-03,Operacional,Tempo médio de setup,2815.4,2947.9,ok,Crítico,,Rodar piloto de 30 dias em 1 filial,Q07 26
+371,mês 03/26,Vendas,Churn,279.0,294.0,Em atenção,ALTO,concorrência opera com número melhor,Escalar pro comitê de Marketing,13-08
+372,mês 07/26,IT,Aderência SLA,1979.0,1399.2,OK,Alto,métrica não normalizada — comparação difícil,Investir em capacitação da equipe,
+373,mês 04/26,Pessoas,Turnover,4032.3,3096.0,VERMELHO,ALTO,auditoria vai voltar em 45 dias,Escalar pro comitê de Comercial,Q06 26
+374,2026-05-15,FIN,Margem operacional,1892.6,1529.6,OK,,compromisso assumido pela diretoria em Q3,Propor revisão do escopo do projeto,20/10/2026
+375,mês 02/26,r.h.,Índice de acidentes,2776.6,2648.3,Vermelho,BAIXO,,Propor plano de recuperação de 90 dias,
+376,Apr/2026,comercial,,329.8,254.7,ok,crít.,sinal fraco de reversão desde a última medição,Renegociar contrato com fornecedor principal,01-10
+377,May/2026,Operações,OEE,350.9,420.8,Alerta,Baixo,vinculado a projeto estratégico em curso,Contratar analista sênior pra área,09-10
+378,2026-04-16,Compras,Nível de estoque,2471.2,2503.4,Vermelho,BAIXO,cliente já sinalizou insatisfação sobre isso,Trazer dado externo pra benchmark,08/2026
+379,2026-02-22,marketing,Engajamento social,1451.5,1163.6,ok,ALTO,vinculado a projeto estratégico em curso,Redefinir cadência de análise,09-11
+380,mês 02/26,Com,CAC,1716.4,2005.5,Em análise,Médio,melhorou nos últimos 2 meses,Preparar defesa da meta pro comitê,
+381,Mar/2026,Vendas,CAC,3311.8,3617.8,Alerta,ALTO,concorrência opera com número melhor,Propor plano de recuperação de 90 dias,01/11/2026
+382,14/06/2026,MKT,Alcance orgânico,4808.1,6209.6,Amarelo,BAIXO,,Propor plano de recuperação de 90 dias,Q06 26
+383,2026-04-01,Compras,OTIF,562.4,567.1,atenção,crít.,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,Q07 26
+384,2026-04-16,,MTTR,890.0,775.6,verde,ALTO,cliente já sinalizou insatisfação sobre isso,Escalar pro comitê de Operações,20/10/2026
+385,2026-03-12,Op,Tempo médio de setup,4082.8,4178.0,OK,ALTO,depende de decisão da matriz,Alinhar meta trimestral com direção,09/2026
+386,21/05/2026,mkt digital,ROI campanhas,1990.8,1876.5,verde,,cliente já sinalizou insatisfação sobre isso,Alinhar meta trimestral com direção,12/09/2026
+387,Apr/2026,,Alcance orgânico,1889.5,1652.9,OK,Baixo,pode virar oportunidade se estruturado,Renegociar contrato com fornecedor principal,06/2026
+388,03/06/2026,operações,OEE,2023.9,2053.1,VERMELHO,Médio,sinal fraco de reversão desde a última medição,Investir em capacitação da equipe,16-10
+389,2026-04-17,ti,Uptime crítico,2332.3,1648.2,verde,ALTO,auditoria externa questionou na última visita,Reunião com fornecedor de contratações,Q08 26
+390,Jun/2026,Tecnologia,Uptime crítico,1331.6,1716.7,OK,Baixo,compromisso assumido pela diretoria em Q3,Contratar consultoria externa pra diagnóstico,
+391,2026-03-22,TI,Uptime crítico,1527.9,1485.2,Em atenção,Alto,auditoria vai voltar em 45 dias,Propor revisão do escopo do projeto,Q10 26
+392,Mar/2026,OPS,Refugo (%),4706.1,5089.9,atenção,,vinculado a projeto estratégico em curso,Propor revisão do escopo do projeto,08/2026
+393,,,,,,,,,,
+394,May/2026,sup.,OTIF,4338.0,4100.2,Em análise,BAIXO,aparece nas últimas 3 reuniões de comitê,Reunião com fornecedor de dashboard,28/08/2026
+395,mês 01/26,IT,Uptime crítico,2680.4,2294.3,Em atenção,Médio,meta pode estar defasada em relação ao mercado,Investir em capacitação da equipe,25-07
+396,Jun/2026,sup.,OTIF,834.8,944.0,atenção,Alto,aguardando definição de budget,Renegociar contrato com fornecedor principal,16-07
+397,mês 07/26,Fin,Margem operacional,3105.5,3928.6,Vermelho,ALTO,aguardando definição de budget,Automatizar coleta do dado,Q07 26
+398,2026-02-13,Op,Produtividade por linha,409.3,422.3,Vermelho,ALTO,conselho pediu detalhe na reunião de novembro,Trazer dado externo pra benchmark,Q09 26
+399,Mar/2026,Suprimentos,OTIF,1012.2,1230.9,AMARELO,ALTO,envolve 3 áreas — precisa dono claro,Definir donos por indicador,Q09 26
+400,12/05/2026,marketing,,2991.3,3811.2,Amarelo,,meta pode estar defasada em relação ao mercado,Definir donos por indicador,
+401,29/05/2026,Vendas/Com,Churn,3257.6,4158.3,em analise,Crítico,risco de exposição em relatório trimestral,Automatizar coleta do dado,12/11/2026
+402,mês 05/26,Ops,Taxa de entrega no prazo,1093.6,1264.6,Em análise,ALTO,área quer discutir a meta em revisão,Contratar analista sênior pra área,25/09/2026
+403,mês 02/26,Op,Produtividade por linha,4410.7,4888.9,crítico,,compromisso assumido pela diretoria em Q3,Propor revisão do escopo do projeto,10/2026
+404,Jan/2026,comercial,Volume de vendas,3422.0,3992.2,em analise,,métrica não normalizada — comparação difícil,Propor plano de recuperação de 90 dias,06-08
+405,Jul/2026,Compras,Ruptura de estoque,3809.8,4131.4,verde,,pode virar oportunidade se estruturado,Contratar analista sênior pra área,05/06/2026
+406,Feb/2026,Tecnologia,Aderência SLA,3467.4,3851.6,AMARELO,Médio,,Definir donos por indicador,13-10
+407,2026-04-17,Comercial,Churn,4667.6,4990.8,Verde,crít.,meta pode estar defasada em relação ao mercado,Reunião com fornecedor de contratos,07/2026
+408,Jan/2026,Fin,Despesa administrativa,4426.7,4675.6,Alerta,Médio,,Propor revisão do escopo do projeto,08/07/2026
+409,May/2026,operações,OEE,4307.5,3813.3,atenção,Alto,melhorou nos últimos 2 meses,Reunião com fornecedor de contratos,11/2026
+410,May/2026,Marketing,Leads qualificados,811.4,655.1,OK,ALTO,aguardando definição de budget,Propor revisão do escopo do projeto,
+411,2026-06-13,supply chain,Ruptura de estoque,2225.6,2133.6,em analise,Alto,melhorou nos últimos 2 meses,Renegociar contrato com fornecedor principal,31/10/2026
+412,mês 06/26,Com,Novos clientes,418.6,489.2,atenção,Médio,,Alinhar meta trimestral com direção,Q10 26
+413,10/05/2026,supply chain,Concentração de fornecedor,3736.4,4414.3,em analise,BAIXO,melhorou nos últimos 2 meses,Reunião com fornecedor de dashboard,19-08
+414,Apr/2026,RH,Absenteísmo,2997.0,2596.1,verde,,auditoria vai voltar em 45 dias,Trazer dado externo pra benchmark,
+415,mês 05/26,Marketing,Engajamento social,3434.7,3594.0,Crítico,BAIXO,área quer discutir a meta em revisão,Automatizar coleta do dado,Q09 26
+416,2026-02-08,Operações,,1668.2,1704.6,Em atenção,,conselho pediu detalhe na reunião de novembro,Definir donos por indicador,Q09 26
+417,2026-05-04,Vendas/Com,Pipeline qualificado,56.0,68.7,Alerta,Alto,gerente anterior deixou sem tratamento,Propor plano de recuperação de 90 dias,Q08 26
+418,2026-07-16,rh/pessoas,Índice de acidentes,1963.7,1652.4,Em atenção,,área quer discutir a meta em revisão,Propor plano de recuperação de 90 dias,09/2026
+419,,,,,,,,,,
+420,2026-01-25,IT,Chamados abertos,370.0,273.0,ok,Médio,pode virar oportunidade se estruturado,Renegociar contrato com fornecedor principal,09/2026
+421,2026-06-24,SC,OTIF,3884.5,3125.3,OK,crít.,impacto direto no P&L do próximo trimestre,Contratar analista sênior pra área,07/2026
+422,18/02/2026,MKT,Custo por lead,482.2,377.0,crítico,Alto,depende de decisão da matriz,Preparar defesa da meta pro comitê,04/07/2026
+423,mês 07/26,Vendas/Com,Churn,3343.8,3161.5,Crítico,,sinal fraco de reversão desde a última medição,Renegociar contrato com fornecedor principal,24-09
+424,2026-04-18,Suprimentos,Ruptura de estoque,1856.9,1609.3,Amarelo,Crítico,regulatório pode mudar em Q4,,Q07 26
+425,18/03/2026,Marketing,Leads qualificados,1734.5,1811.2,crítico,Alto,impacto direto no P&L do próximo trimestre,Automatizar coleta do dado,Q09 26
+426,Jun/2026,rh/pessoas,Cobertura de treinamento,3733.9,3713.3,Vermelho,Crítico,risco de exposição em relatório trimestral,Propor plano de recuperação de 90 dias,
+427,mês 03/26,operações,Tempo médio de setup,2759.2,2602.4,Em análise,BAIXO,pode virar oportunidade se estruturado,Definir donos por indicador,
+428,2026-01-19,operações,Produtividade por linha,2675.9,3132.5,atenção,BAIXO,regulatório pode mudar em Q4,Propor plano de recuperação de 90 dias,06-11
+429,mês 03/26,Tecnologia da Informação,Tempo de recuperação,4631.0,3678.7,OK,BAIXO,aguardando definição de budget,Preparar defesa da meta pro comitê,
+430,12/04/2026,Compras,OTIF,3809.4,4757.3,Em atenção,BAIXO,concorrência opera com número melhor,Renegociar contrato com fornecedor principal,07-08
+431,13/05/2026,comercial,Pipeline qualificado,736.5,689.8,Verde,Baixo,diretoria quer entender causa raiz,,24-09
+432,2026-02-05,IT,Aderência SLA,630.0,782.0,Em atenção,Médio,compromisso assumido pela diretoria em Q3,Escalar pro comitê de Marketing,11/2026
+433,Jul/2026,Com,Taxa de conversão,1627.9,1932.2,Em análise,crít.,impacto direto no P&L do próximo trimestre,Investir em capacitação da equipe,05-09
+434,19/03/2026,RH,Índice de acidentes,4376.3,3616.3,verde,BAIXO,concorrência opera com número melhor,Reunião com fornecedor de planejamento,19-08
+435,2026-05-17,Suprimentos,OTIF,3480.4,3162.5,Verde,BAIXO,impacto direto no P&L do próximo trimestre,Contratar analista sênior pra área,09/2026
+436,mês 07/26,TI,MTTR,2753.8,2152.8,ok,medio,auditoria externa questionou na última visita,Revisar processo de aprovação com Comercial,
+437,Apr/2026,Controladoria/Fin,Custo por unidade,2511.2,2530.7,Em atenção,Médio,aguardando definição de budget,Automatizar coleta do dado,Q07 26
+438,2026-04-18,comercial,Novos clientes,107.3,121.5,crítico,,métrica não normalizada — comparação difícil,Renegociar contrato com fornecedor principal,18/07/2026
+439,2026-07-03,rh/pessoas,Absenteísmo,2499.0,2520.2,Em atenção,ALTO,risco de exposição em relatório trimestral,Alinhar meta trimestral com direção,
+440,mês 03/26,Pessoas,Tempo médio de contratação,4123.4,4735.1,em analise,ALTO,regulatório pode mudar em Q4,Trazer dado externo pra benchmark,
+441,Feb/2026,IT,,643.1,492.7,em analise,medio,impacto direto no P&L do próximo trimestre,Reunião com fornecedor de contratações,Q06 26
+442,mês 05/26,Tecnologia da Informação,Chamados abertos,3782.8,4338.1,Verde,Baixo,área quer discutir a meta em revisão,Revisar processo de aprovação com RH,
+443,2026-02-12,OPS,Taxa de entrega no prazo,649.8,760.2,ok,medio,cliente já sinalizou insatisfação sobre isso,Automatizar coleta do dado,15-10
+444,12/07/2026,Pessoas,Índice de acidentes,2926.2,3405.1,atenção,Alto,métrica não normalizada — comparação difícil,Alinhar leitura com par de outra área,Q08 26
+445,mês 01/26,Operações,Lead time,1909.4,2184.3,Em atenção,ALTO,auditoria externa questionou na última visita,Preparar defesa da meta pro comitê,Q10 26
+446,,,,,,,,,,
+447,Mar/2026,Vendas/Com,Pipeline qualificado,731.4,668.4,VERMELHO,Baixo,aparece nas últimas 3 reuniões de comitê,Rodar piloto de 30 dias em 1 filial,
+448,mês 04/26,Operações,Taxa de entrega no prazo,1603.4,1700.9,OK,BAIXO,vinculado a projeto estratégico em curso,Rodar piloto de 30 dias em 1 filial,16-10
+449,Jun/2026,T.I.,Aderência SLA,4864.6,4344.0,Crítico,ALTO,auditoria externa questionou na última visita,Redefinir cadência de análise,19-09
+450,25/01/2026,Recursos Humanos,Cobertura de treinamento,4993.8,5407.4,atenção,medio,meta pode estar defasada em relação ao mercado,Rodar piloto de 30 dias em 1 filial,
+451,17/06/2026,COM,CAC,347.3,253.8,verde,Baixo,,Revisar processo de aprovação com Operações,29-06
+452,mês 03/26,Tecnologia da Informação,Índice de vulnerabilidades,2037.3,1458.3,Vermelho,Médio,regulatório pode mudar em Q4,Redefinir cadência de análise,26/09/2026
+453,Apr/2026,ti,MTTR,2800.9,3300.9,Amarelo,Médio,auditoria externa questionou na última visita,Reunião com fornecedor de dashboard,07/2026
+454,mês 05/26,Recursos Humanos,Cobertura de treinamento,2255.5,1606.9,verde,Médio,pode virar oportunidade se estruturado,Revisar processo de aprovação com RH,23/10/2026
+455,2026-06-29,r.h.,Absenteísmo,1607.3,1168.6,Em atenção,BAIXO,,Investir em capacitação da equipe,09/09/2026
+456,mês 05/26,Mkt,Engajamento social,4212.0,3749.7,ok,BAIXO,diretoria quer entender causa raiz,Investir em capacitação da equipe,10/2026
+457,2026-06-26,IT,Aderência SLA,2964.0,2428.2,Alerta,,cliente já sinalizou insatisfação sobre isso,Contratar consultoria externa pra diagnóstico,
+458,mês 04/26,TI,Aderência SLA,3791.9,3470.1,Alerta,Crítico,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,Q08 26
+459,2026-06-23,Tecnologia,Chamados abertos,3877.4,4098.7,Amarelo,Médio,compromisso assumido pela diretoria em Q3,Propor revisão do escopo do projeto,11/07/2026
+460,14/04/2026,,MTTR,1499.9,1590.7,Amarelo,medio,cliente já sinalizou insatisfação sobre isso,Propor plano de recuperação de 90 dias,
+461,2026-03-10,Compras,Prazo médio de entrega,3135.1,3081.8,Verde,Baixo,área quer discutir a meta em revisão,,Q07 26
+462,01/02/2026,Controladoria/Fin,Prazo médio de pagamento,2981.8,2890.6,AMARELO,,conselho pediu detalhe na reunião de novembro,Preparar defesa da meta pro comitê,02-07
+463,mês 04/26,,Taxa de entrega no prazo,4326.5,4388.3,verde,crít.,depende de decisão da matriz,Rodar piloto de 30 dias em 1 filial,
+464,2026-03-14,Tecnologia da Informação,Uptime crítico,3004.0,3494.4,Em análise,ALTO,pode virar oportunidade se estruturado,Automatizar coleta do dado,19-10
+465,2026-07-02,supply chain,Ruptura de estoque,2778.2,3576.2,Alerta,Crítico,,Contratar analista sênior pra área,Q10 26
+466,2026-02-24,T.I.,Aderência SLA,1491.6,1377.0,Em análise,,depende de decisão da matriz,Escalar pro comitê de Financeiro,
+467,Mar/2026,COM,Volume de vendas,777.4,969.3,atenção,Crítico,,Revisar processo de aprovação com RH,Q09 26
+468,21/02/2026,financeiro,EBITDA,2077.6,1886.5,Amarelo,crít.,área quer discutir a meta em revisão,Automatizar coleta do dado,02-08
+469,mês 06/26,operações,OEE,1394.8,1735.0,verde,,,Trazer dado externo pra benchmark,
+470,2026-02-15,comercial,Taxa de conversão,1058.9,1077.9,Verde,,,Revisar processo de aprovação com Suprimentos,17/10/2026
+471,18/07/2026,Tecnologia da Informação,Cobertura de backup,2980.2,3026.7,em analise,Alto,depende de decisão da matriz,Rodar piloto de 30 dias em 1 filial,11/08/2026
+472,08/03/2026,RH,Índice de acidentes,4462.6,5230.1,Amarelo,Baixo,área quer discutir a meta em revisão,Rodar piloto de 30 dias em 1 filial,Q06 26
+473,Jul/2026,Vendas,Pipeline qualificado,1748.0,1937.5,em analise,BAIXO,sinal fraco de reversão desde a última medição,Propor plano de recuperação de 90 dias,08/2026
+474,mês 03/26,Gestão de Pessoas,Índice de acidentes,3762.0,2882.2,Amarelo,ALTO,área quer discutir a meta em revisão,Renegociar contrato com fornecedor principal,Q11 26
+475,2026-07-14,FIN,Custo por unidade,4546.0,3447.5,Alerta,,pode virar oportunidade se estruturado,Contratar analista sênior pra área,18-08
+476,2026-05-25,,eNPS,1800.9,1443.5,VERMELHO,medio,envolve 3 áreas — precisa dono claro,,Q07 26
+477,Jun/2026,FIN,DSO (dias),2148.4,1885.0,atenção,Médio,risco de exposição em relatório trimestral,Propor revisão do escopo do projeto,
+478,mês 04/26,T.I.,Tempo de recuperação,1158.5,1007.4,atenção,,regulatório pode mudar em Q4,Escalar pro comitê de Financeiro,17-07
+479,mês 05/26,COM,Pipeline qualificado,1674.4,1598.7,Crítico,,envolve 3 áreas — precisa dono claro,Automatizar coleta do dado,07-07
+480,2026-05-09,Gestão de Pessoas,Cobertura de treinamento,3155.2,2957.1,Em análise,ALTO,gerente anterior deixou sem tratamento,Alinhar leitura com par de outra área,
+481,2026-03-27,Marketing,Engajamento social,1510.4,1198.7,Em atenção,,impacto direto no P&L do próximo trimestre,Propor revisão do escopo do projeto,14/10/2026
+482,Jan/2026,Fin,Despesa administrativa,1211.9,1129.3,AMARELO,Baixo,melhorou nos últimos 2 meses,Rodar piloto de 30 dias em 1 filial,
+483,mês 06/26,Com,CAC,1279.0,992.6,AMARELO,Baixo,concorrência opera com número melhor,Alinhar meta trimestral com direção,
+484,2026-04-30,Fin,Custo por unidade,2741.2,1937.5,AMARELO,medio,aparece nas últimas 3 reuniões de comitê,,13-08
+485,,,,,,,,,,
+486,mês 06/26,Tecnologia,MTTR,3918.8,3095.1,Amarelo,,pode virar oportunidade se estruturado,Redefinir cadência de análise,12-06
+487,mês 02/26,Marketing,CAC digital,3839.5,2897.0,Vermelho,,vinculado a projeto estratégico em curso,Revisar processo de aprovação com Comercial,27-06
+488,16/05/2026,Compras,Ruptura de estoque,2132.4,2538.0,verde,,meta pode estar defasada em relação ao mercado,Contratar consultoria externa pra diagnóstico,Q07 26
+489,2026-03-28,Suprimentos,OTIF,1771.6,2283.0,Verde,Crítico,auditoria externa questionou na última visita,Propor revisão do escopo do projeto,07/2026
+490,11/02/2026,COM,Pipeline qualificado,3587.4,4024.2,atenção,crít.,regulatório pode mudar em Q4,Preparar defesa da meta pro comitê,Q07 26
+491,Feb/2026,Comercial,Novos clientes,818.7,925.9,Amarelo,Baixo,meta pode estar defasada em relação ao mercado,Propor plano de recuperação de 90 dias,08/2026
+492,17/02/2026,,OTIF,4411.8,5097.3,Em análise,ALTO,conselho pediu detalhe na reunião de novembro,,03/10/2026
+493,2026-06-29,Recursos Humanos,Índice de acidentes,2578.3,3153.5,verde,Médio,,,09/2026
+494,mês 06/26,Sup,Prazo médio de entrega,2888.5,3164.5,Vermelho,crít.,auditoria vai voltar em 45 dias,Reunião com fornecedor de reporting,02-07
+495,11/04/2026,Vendas/Com,Volume de vendas,1273.7,1114.7,Em atenção,Alto,envolve 3 áreas — precisa dono claro,Alinhar meta trimestral com direção,10/2026
+496,2026-03-28,IT,Chamados abertos,4170.5,3662.1,atenção,Médio,depende de decisão da matriz,Revisar processo de aprovação com Suprimentos,Q10 26
+497,Apr/2026,Vendas,Ticket médio,1950.0,1878.4,atenção,Baixo,sinal fraco de reversão desde a última medição,,09-10
+498,mês 02/26,Vendas,Taxa de conversão,4197.4,3838.8,crítico,,,Alinhar leitura com par de outra área,Q07 26
+499,Mar/2026,marketing,Leads qualificados,3013.9,3689.1,Amarelo,Médio,pode virar oportunidade se estruturado,,07-06
+500,Jun/2026,OPS,Tempo médio de setup,3778.4,3181.4,verde,Médio,pode virar oportunidade se estruturado,Escalar pro comitê de Comercial,21-08
+501,2026-05-07,Fin,DSO (dias),2523.2,1890.1,Em análise,ALTO,auditoria externa questionou na última visita,Definir donos por indicador,Q08 26
+502,25/06/2026,Finance,,2912.2,3687.0,Verde,Médio,pode virar oportunidade se estruturado,,Q08 26
+503,Feb/2026,Compras,Redução de custo,1340.8,1425.7,Alerta,crít.,melhorou nos últimos 2 meses,Rodar piloto de 30 dias em 1 filial,
+504,Mar/2026,Compras,Prazo médio de entrega,4872.6,3681.5,Amarelo,,auditoria vai voltar em 45 dias,Redefinir cadência de análise,25/10/2026
+505,2026-06-30,operacoes,Índice de retrabalho,558.9,657.2,Em atenção,,aguardando definição de budget,Preparar defesa da meta pro comitê,07-09
+506,02/06/2026,SC,,1542.7,1187.2,crítico,medio,métrica não normalizada — comparação difícil,Propor revisão do escopo do projeto,10/06/2026
+507,13/05/2026,Controladoria/Fin,EBITDA,3491.0,2563.4,atenção,ALTO,métrica não normalizada — comparação difícil,,13-09
+508,Apr/2026,COM,Churn,1229.1,1045.4,AMARELO,Crítico,gerente anterior deixou sem tratamento,,
+509,2026-01-21,Mkt,CAC digital,2297.6,2383.2,atenção,,aparece nas últimas 3 reuniões de comitê,Reunião com fornecedor de reporting,16-07
+510,08/07/2026,Financeiro,EBITDA,929.4,1111.6,Em análise,BAIXO,métrica não normalizada — comparação difícil,Escalar pro comitê de Operações,10/2026
+511,05/07/2026,financeiro,Fluxo de caixa mensal,1495.1,1458.7,Vermelho,Alto,pode virar oportunidade se estruturado,Alinhar leitura com par de outra área,Q09 26
+512,Jun/2026,MKT,CAC digital,1810.0,1378.2,verde,crít.,,Contratar consultoria externa pra diagnóstico,Q09 26
+513,Feb/2026,Tecnologia da Informação,Uptime crítico,1764.0,1780.5,Vermelho,,depende de decisão da matriz,Definir donos por indicador,07/2026
+514,,,,,,,,,,
+515,2026-05-12,Finance,Despesa administrativa,237.5,235.1,atenção,medio,envolve 3 áreas — precisa dono claro,,
+516,Apr/2026,,Cobertura de treinamento,180.9,210.3,Vermelho,ALTO,risco de exposição em relatório trimestral,Alinhar leitura com par de outra área,15-11
+517,07/07/2026,Mkt,Alcance orgânico,4519.1,3922.3,verde,crít.,,Rodar piloto de 30 dias em 1 filial,Q09 26
+518,2026-04-18,Financeiro,Margem operacional,3540.8,4430.5,em analise,medio,meta pode estar defasada em relação ao mercado,Definir donos por indicador,Q07 26
+519,Mar/2026,Comercial,CAC,4709.5,4811.6,Verde,medio,depende de decisão da matriz,Alinhar leitura com par de outra área,
+520,24/02/2026,Com,Pipeline qualificado,3684.9,2778.9,Verde,Alto,,Propor revisão do escopo do projeto,
+521,mês 03/26,marketing,ROI campanhas,1154.3,1409.9,Alerta,Médio,melhorou nos últimos 2 meses,Alinhar meta trimestral com direção,02-08
+522,Mar/2026,,Nível de estoque,2300.8,1925.1,OK,ALTO,compromisso assumido pela diretoria em Q3,Preparar defesa da meta pro comitê,Q07 26
+523,2026-07-07,FIN,DSO (dias),4611.7,3831.0,Vermelho,Alto,envolve 3 áreas — precisa dono claro,Contratar consultoria externa pra diagnóstico,14-07
+524,Apr/2026,Op,Refugo (%),966.9,1012.2,Em análise,ALTO,,Trazer dado externo pra benchmark,02-07
+525,13/02/2026,T.I.,Aderência SLA,1542.9,1153.2,verde,Alto,cliente já sinalizou insatisfação sobre isso,Contratar consultoria externa pra diagnóstico,Q08 26
+526,26/02/2026,Recursos Humanos,Tempo médio de contratação,4831.3,4130.9,AMARELO,medio,compromisso assumido pela diretoria em Q3,Trazer dado externo pra benchmark,10/2026
+527,2026-05-24,Vendas/Com,,4215.4,3487.2,Amarelo,Crítico,,Contratar analista sênior pra área,Q11 26
+528,30/05/2026,Tecnologia da Informação,Índice de vulnerabilidades,4261.7,5063.7,OK,Alto,pode virar oportunidade se estruturado,Propor revisão do escopo do projeto,Q08 26
+529,mês 05/26,,Volume de vendas,2663.7,2011.2,Em análise,medio,sinal fraco de reversão desde a última medição,,
+530,2026-02-20,Sup,Redução de custo,472.6,526.6,Vermelho,,depende de decisão da matriz,Propor revisão do escopo do projeto,09/2026
+531,2026-04-12,mkt digital,Leads qualificados,672.7,759.0,OK,medio,gerente anterior deixou sem tratamento,Reunião com fornecedor de BI,
+532,Jan/2026,rh/pessoas,Absenteísmo,3055.3,3208.4,AMARELO,Baixo,regulatório pode mudar em Q4,Definir donos por indicador,10/2026
+533,Feb/2026,IT,MTTR,3834.2,4338.1,crítico,Baixo,métrica não normalizada — comparação difícil,Escalar pro comitê de Comercial,21/09/2026
+534,2026-04-21,MKT,ROI campanhas,1930.1,1549.8,AMARELO,ALTO,auditoria vai voltar em 45 dias,Contratar analista sênior pra área,
+535,Apr/2026,Mkt,CAC digital,759.5,612.3,Alerta,Alto,compromisso assumido pela diretoria em Q3,Propor revisão do escopo do projeto,Q07 26
+536,04/03/2026,Vendas/Com,Volume de vendas,719.1,862.0,em analise,Baixo,vinculado a projeto estratégico em curso,Automatizar coleta do dado,03-11
+537,22/04/2026,IT,Índice de vulnerabilidades,2376.2,2162.7,Verde,,regulatório pode mudar em Q4,Alinhar leitura com par de outra área,
+538,2026-04-17,FIN,DSO (dias),568.0,681.6,Verde,,cliente já sinalizou insatisfação sobre isso,,08/09/2026
+539,Mar/2026,MKT,Custo por lead,3314.0,2605.9,crítico,Médio,concorrência opera com número melhor,Redefinir cadência de análise,02-11
+540,04/07/2026,TI,Tempo de recuperação,2056.8,2530.4,Crítico,medio,conselho pediu detalhe na reunião de novembro,Trazer dado externo pra benchmark,Q08 26
+541,2026-05-03,Finance,Fluxo de caixa mensal,1089.4,1208.6,VERMELHO,,métrica não normalizada — comparação difícil,Contratar analista sênior pra área,
+542,2026-07-11,sup.,Concentração de fornecedor,3656.4,3144.7,Verde,Médio,regulatório pode mudar em Q4,Alinhar leitura com par de outra área,10/2026
+543,25/02/2026,Finance,EBITDA,3376.7,3221.7,ok,,gerente anterior deixou sem tratamento,Automatizar coleta do dado,06-06
+544,2026-05-11,IT,Uptime crítico,1729.7,1237.6,verde,ALTO,melhorou nos últimos 2 meses,Alinhar meta trimestral com direção,Q07 26
+545,Feb/2026,r.h.,eNPS,4695.2,5661.0,atenção,ALTO,envolve 3 áreas — precisa dono claro,Renegociar contrato com fornecedor principal,16-09
+546,2026-03-21,Gestão de Pessoas,eNPS,3009.0,2824.9,OK,,concorrência opera com número melhor,Preparar defesa da meta pro comitê,07/11/2026
+547,mês 07/26,comercial,Pipeline qualificado,3694.5,4293.3,Verde,BAIXO,conselho pediu detalhe na reunião de novembro,Investir em capacitação da equipe,Q07 26
+548,2026-03-10,ti,Índice de vulnerabilidades,587.6,615.9,ok,Crítico,,Rodar piloto de 30 dias em 1 filial,17/07/2026
+549,05/07/2026,operacoes,Taxa de entrega no prazo,4758.7,4529.7,ok,Alto,gerente anterior deixou sem tratamento,Renegociar contrato com fornecedor principal,
+550,05/04/2026,comercial,CAC,3591.5,2742.2,Verde,,depende de decisão da matriz,Contratar analista sênior pra área,06/2026
+551,mês 03/26,Vendas,Churn,2765.7,2322.9,Alerta,crít.,aguardando definição de budget,Redefinir cadência de análise,13-11
+552,mês 06/26,MKT,Alcance orgânico,2023.2,2020.2,OK,BAIXO,aguardando definição de budget,Reunião com fornecedor de compliance,09/2026
+553,06/06/2026,supply chain,Redução de custo,2481.3,2841.5,Em análise,BAIXO,pode virar oportunidade se estruturado,Investir em capacitação da equipe,25/08/2026
+554,Apr/2026,MKT,ROI campanhas,1730.9,2162.2,AMARELO,,aguardando definição de budget,,19-09
+555,09/02/2026,mkt digital,ROI campanhas,4423.7,3879.4,Verde,Baixo,aparece nas últimas 3 reuniões de comitê,Preparar defesa da meta pro comitê,02/08/2026
+556,mês 05/26,rh/pessoas,,764.6,692.8,crítico,medio,sinal fraco de reversão desde a última medição,Revisar processo de aprovação com Operações,
+557,20/01/2026,Marketing,Engajamento social,4909.3,4222.7,Crítico,,aparece nas últimas 3 reuniões de comitê,Trazer dado externo pra benchmark,10/2026
+558,Apr/2026,Operações,Taxa de entrega no prazo,2419.5,1895.6,verde,Alto,envolve 3 áreas — precisa dono claro,,Q08 26
+559,mês 07/26,Vendas,Volume de vendas,4150.8,4912.8,Amarelo,,envolve 3 áreas — precisa dono claro,Contratar analista sênior pra área,Q06 26
+560,mês 06/26,mkt digital,Engajamento social,344.6,262.1,Vermelho,ALTO,auditoria vai voltar em 45 dias,,09/2026
+561,Mar/2026,Finance,Custo por unidade,4518.6,3534.7,Em análise,,sinal fraco de reversão desde a última medição,Investir em capacitação da equipe,18/06/2026
+562,2026-03-18,COM,Novos clientes,3192.6,3185.5,verde,Baixo,auditoria externa questionou na última visita,Reunião com fornecedor de contratações,
+563,05/03/2026,rh/pessoas,Absenteísmo,1242.5,905.3,Amarelo,medio,risco de exposição em relatório trimestral,Revisar processo de aprovação com Operações,
+564,Apr/2026,r.h.,Turnover,474.1,549.9,Em atenção,Baixo,envolve 3 áreas — precisa dono claro,Reunião com fornecedor de contratações,19-10
+565,mês 06/26,SC,Nível de estoque,3682.6,2831.7,atenção,Baixo,aparece nas últimas 3 reuniões de comitê,Contratar consultoria externa pra diagnóstico,17/06/2026
+566,May/2026,FIN,Prazo médio de pagamento,2846.2,2844.6,atenção,Crítico,vinculado a projeto estratégico em curso,Alinhar leitura com par de outra área,11/2026
+567,Apr/2026,financeiro,Custo por unidade,1653.0,1166.2,atenção,Médio,aguardando definição de budget,,10/2026
+568,2026-01-28,Tecnologia,,2091.6,2660.2,Amarelo,Médio,aparece nas últimas 3 reuniões de comitê,Propor revisão do escopo do projeto,08/11/2026
+569,2026-07-14,ti,Uptime crítico,2753.3,3149.2,Alerta,,gerente anterior deixou sem tratamento,Automatizar coleta do dado,
+570,Mar/2026,Marketing,Custo por lead,1502.4,1812.2,Crítico,Médio,depende de decisão da matriz,Contratar consultoria externa pra diagnóstico,21/09/2026
+571,2026-03-13,supply chain,Nível de estoque,1673.5,2137.6,AMARELO,Baixo,área quer discutir a meta em revisão,Contratar consultoria externa pra diagnóstico,06/08/2026
+572,22/04/2026,Sup,Prazo médio de entrega,1759.3,2210.7,AMARELO,,,Contratar consultoria externa pra diagnóstico,03-11
+573,2026-02-23,supply chain,OTIF,3968.8,4079.8,Em análise,Médio,vinculado a projeto estratégico em curso,Trazer dado externo pra benchmark,09/2026
+574,2026-03-16,Marketing,CAC digital,586.6,444.8,Amarelo,,gerente anterior deixou sem tratamento,,21-10
+575,04/04/2026,Recursos Humanos,Índice de acidentes,4240.7,3380.1,Vermelho,Alto,envolve 3 áreas — precisa dono claro,Alinhar leitura com par de outra área,01-07
+576,04/06/2026,Marketing,ROI campanhas,3122.6,3189.9,Crítico,crít.,aguardando definição de budget,,
+577,mês 03/26,Fin,Fluxo de caixa mensal,455.4,576.5,Vermelho,,aparece nas últimas 3 reuniões de comitê,Propor plano de recuperação de 90 dias,
+578,mês 02/26,SC,Redução de custo,3487.6,3039.3,Crítico,ALTO,auditoria vai voltar em 45 dias,Alinhar leitura com par de outra área,07/2026
+579,24/02/2026,Recursos Humanos,Tempo médio de contratação,2232.3,2087.2,verde,BAIXO,compromisso assumido pela diretoria em Q3,,Q07 26
+580,mês 06/26,T.I.,Uptime crítico,2049.4,2204.5,crítico,crít.,aguardando definição de budget,Contratar consultoria externa pra diagnóstico,23-10
+581,,,,,,,,,,
+582,2026-07-07,,Produtividade por linha,745.8,934.0,Crítico,Baixo,cliente já sinalizou insatisfação sobre isso,,22-08
+583,2026-05-13,mkt digital,CAC digital,2501.3,3203.4,Verde,ALTO,meta pode estar defasada em relação ao mercado,Trazer dado externo pra benchmark,
+584,,,,,,,,,,
+585,25/03/2026,Mkt,Engajamento social,3281.5,4162.3,AMARELO,ALTO,melhorou nos últimos 2 meses,,
+586,15/03/2026,Suprimentos,,2311.8,2118.9,Vermelho,BAIXO,concorrência opera com número melhor,,05/10/2026
+587,mês 06/26,,Refugo (%),1347.5,1137.1,em analise,crít.,,Propor plano de recuperação de 90 dias,11-10
+588,16/07/2026,Fin,DSO (dias),3459.8,2923.4,Crítico,Crítico,auditoria vai voltar em 45 dias,Propor revisão do escopo do projeto,Q08 26
+589,mês 02/26,,ROI campanhas,4001.4,4599.0,em analise,Baixo,pode virar oportunidade se estruturado,Automatizar coleta do dado,
+590,mês 01/26,RH,Cobertura de treinamento,3765.5,3981.5,em analise,medio,vinculado a projeto estratégico em curso,Alinhar meta trimestral com direção,
+591,Jun/2026,T.I.,Cobertura de backup,721.5,541.4,atenção,Médio,gerente anterior deixou sem tratamento,Escalar pro comitê de Financeiro,18-06
+592,,,,,,,,,,
+593,28/03/2026,Recursos Humanos,eNPS,3947.1,5016.7,Verde,,gerente anterior deixou sem tratamento,Rodar piloto de 30 dias em 1 filial,
+594,2026-07-02,Suprimentos,Nível de estoque,1028.6,1027.4,Crítico,BAIXO,depende de decisão da matriz,Preparar defesa da meta pro comitê,Q06 26
+595,mês 04/26,Vendas/Com,CAC,3925.4,4874.0,OK,Baixo,vinculado a projeto estratégico em curso,,
+596,11/03/2026,operacoes,Taxa de entrega no prazo,3668.4,3156.4,em analise,Crítico,risco de exposição em relatório trimestral,,
+597,,,,,,,,,,
+598,May/2026,Compras,Redução de custo,315.3,372.0,crítico,,meta pode estar defasada em relação ao mercado,Rodar piloto de 30 dias em 1 filial,
+599,mês 01/26,Ops,OEE,4850.9,6018.5,atenção,crít.,conselho pediu detalhe na reunião de novembro,Redefinir cadência de análise,09/2026
+600,Jul/2026,Mkt,Engajamento social,1819.4,1635.7,Crítico,Baixo,pode virar oportunidade se estruturado,Automatizar coleta do dado,
+601,2026-06-02,Fin,Margem operacional,1486.2,1864.1,verde,crít.,pode virar oportunidade se estruturado,Propor revisão do escopo do projeto,10/2026
+602,mês 02/26,Gestão de Pessoas,Tempo médio de contratação,3050.1,2871.6,Em análise,Crítico,métrica não normalizada — comparação difícil,Trazer dado externo pra benchmark,07/2026
+603,mês 07/26,Tecnologia da Informação,Uptime crítico,3692.5,3680.9,Alerta,Baixo,sinal fraco de reversão desde a última medição,,10/2026
+604,19/01/2026,Op,Refugo (%),506.9,640.1,Alerta,Crítico,envolve 3 áreas — precisa dono claro,Alinhar leitura com par de outra área,
+605,2026-05-22,marketing,CAC digital,3047.5,2659.5,Em atenção,Alto,cliente já sinalizou insatisfação sobre isso,Redefinir cadência de análise,29/09/2026
+606,,,,,,,,,,
+607,Feb/2026,Gestão de Pessoas,Índice de acidentes,1706.9,1889.1,Alerta,Crítico,sinal fraco de reversão desde a última medição,Revisar processo de aprovação com Marketing,25-08
+608,2026-07-03,MKT,Leads qualificados,3371.9,2428.8,Em atenção,Crítico,gerente anterior deixou sem tratamento,Reunião com fornecedor de sistema,18/07/2026
+609,2026-06-04,financeiro,Despesa administrativa,3121.5,3945.3,Em atenção,,,Alinhar meta trimestral com direção,
+610,Feb/2026,Marketing,CAC digital,1902.7,1820.8,verde,Baixo,métrica não normalizada — comparação difícil,Escalar pro comitê de TI,24/08/2026
+611,mês 06/26,Mkt,Engajamento social,3974.3,4576.5,OK,Crítico,cliente já sinalizou insatisfação sobre isso,Preparar defesa da meta pro comitê,15-11
+612,2026-05-16,comercial,Taxa de conversão,4258.3,2983.8,em analise,Médio,aparece nas últimas 3 reuniões de comitê,Redefinir cadência de análise,11/2026
+613,Jul/2026,Suprimentos,Prazo médio de entrega,3197.8,2689.7,crítico,Baixo,aguardando definição de budget,,14-08
+614,Jul/2026,sup.,OTIF,4405.6,3871.2,crítico,Crítico,envolve 3 áreas — precisa dono claro,Renegociar contrato com fornecedor principal,Q09 26
+615,2026-02-17,r.h.,,2041.0,1928.7,OK,Crítico,aparece nas últimas 3 reuniões de comitê,Propor revisão do escopo do projeto,05/09/2026
+616,mês 04/26,Vendas/Com,Taxa de conversão,4103.5,4348.9,em analise,Crítico,métrica não normalizada — comparação difícil,,10/2026
+617,mês 07/26,Controladoria/Fin,Prazo médio de pagamento,1930.7,1584.4,Verde,Médio,métrica não normalizada — comparação difícil,Propor plano de recuperação de 90 dias,Q09 26
+618,10/02/2026,Operacional,Refugo (%),4457.6,3913.2,em analise,ALTO,auditoria vai voltar em 45 dias,Trazer dado externo pra benchmark,10/07/2026
+619,mês 03/26,Comercial,Churn,905.7,685.6,verde,crít.,compromisso assumido pela diretoria em Q3,Escalar pro comitê de RH,02-09
+620,2026-04-01,Marketing,Custo por lead,1093.7,1206.9,ok,,sinal fraco de reversão desde a última medição,Alinhar meta trimestral com direção,
+621,Jan/2026,operações,OEE,674.6,831.0,atenção,BAIXO,cliente já sinalizou insatisfação sobre isso,Automatizar coleta do dado,30/10/2026
+622,Mar/2026,T.I.,Índice de vulnerabilidades,2952.5,3380.5,crítico,Médio,área quer discutir a meta em revisão,Escalar pro comitê de Suprimentos,Q11 26
+623,2026-01-21,marketing,Engajamento social,2772.9,2140.0,AMARELO,Crítico,pode virar oportunidade se estruturado,Rodar piloto de 30 dias em 1 filial,07-10
+624,mês 02/26,Controladoria/Fin,Margem operacional,2884.2,2263.6,Em análise,,concorrência opera com número melhor,Investir em capacitação da equipe,
+625,Jul/2026,Operações,Produtividade por linha,950.3,1051.5,em analise,Baixo,sinal fraco de reversão desde a última medição,Escalar pro comitê de Operações,
+626,10/02/2026,Mkt,Leads qualificados,1853.9,2302.0,Vermelho,BAIXO,,Alinhar leitura com par de outra área,13/07/2026
+627,2026-03-03,Vendas/Com,CAC,463.9,602.0,Em atenção,ALTO,auditoria externa questionou na última visita,Alinhar leitura com par de outra área,Q08 26
+628,mês 07/26,FIN,Despesa administrativa,4970.9,5314.5,Alerta,crít.,depende de decisão da matriz,Automatizar coleta do dado,Q07 26
+629,Mar/2026,ti,Cobertura de backup,4728.4,4852.7,Em análise,,área quer discutir a meta em revisão,Propor plano de recuperação de 90 dias,14-09
+630,mês 06/26,Comercial,Pipeline qualificado,3803.5,4730.0,Alerta,BAIXO,área quer discutir a meta em revisão,Contratar analista sênior pra área,01-09
+631,2026-03-02,rh/pessoas,Índice de acidentes,2804.0,3084.2,em analise,crít.,meta pode estar defasada em relação ao mercado,Automatizar coleta do dado,11-09
+632,16/05/2026,Financeiro,Custo por unidade,4892.2,4722.5,Vermelho,,compromisso assumido pela diretoria em Q3,Escalar pro comitê de Marketing,21/06/2026
+633,08/05/2026,Operações,Produtividade por linha,664.1,691.5,Em análise,BAIXO,aparece nas últimas 3 reuniões de comitê,Preparar defesa da meta pro comitê,
+634,2026-04-19,Suprimentos,Redução de custo,2791.6,2812.1,Alerta,,,Renegociar contrato com fornecedor principal,08/2026
+635,mês 05/26,Compras,Nível de estoque,2423.8,2500.8,AMARELO,crít.,regulatório pode mudar em Q4,Alinhar leitura com par de outra área,02/09/2026
+636,mês 05/26,Recursos Humanos,Absenteísmo,1495.5,1658.6,em analise,Crítico,,Definir donos por indicador,10/2026
+637,Mar/2026,SC,Nível de estoque,1980.5,2199.2,Verde,Crítico,envolve 3 áreas — precisa dono claro,,04/11/2026
+638,mês 02/26,MKT,Leads qualificados,913.8,822.9,Verde,Crítico,risco de exposição em relatório trimestral,Alinhar leitura com par de outra área,04/10/2026
+639,2026-02-05,Pessoas,Índice de acidentes,4284.2,4719.2,Vermelho,Médio,auditoria externa questionou na última visita,,
+640,19/05/2026,Gestão de Pessoas,Índice de acidentes,4041.6,3289.0,ok,Alto,envolve 3 áreas — precisa dono claro,Redefinir cadência de análise,
+641,Apr/2026,IT,Chamados abertos,1194.9,1153.0,atenção,BAIXO,conselho pediu detalhe na reunião de novembro,Renegociar contrato com fornecedor principal,02-11
+642,mês 03/26,SC,Concentração de fornecedor,1924.3,2371.6,Em atenção,Crítico,,Contratar analista sênior pra área,08-09
+643,May/2026,mkt digital,Custo por lead,1539.3,1636.1,em analise,BAIXO,cliente já sinalizou insatisfação sobre isso,Propor revisão do escopo do projeto,07/2026
+644,31/03/2026,Comercial,Ticket médio,1335.4,977.1,verde,medio,auditoria externa questionou na última visita,Alinhar leitura com par de outra área,24/08/2026
+645,2026-04-23,TI,MTTR,4283.4,3238.1,Amarelo,,auditoria externa questionou na última visita,Alinhar leitura com par de outra área,27-08
+646,2026-05-05,RH,Tempo médio de contratação,667.5,739.0,Vermelho,,auditoria externa questionou na última visita,Investir em capacitação da equipe,08/2026
+647,Jul/2026,Suprimentos,Redução de custo,828.0,1066.6,VERMELHO,Crítico,compromisso assumido pela diretoria em Q3,Propor plano de recuperação de 90 dias,Q06 26
+648,19/05/2026,comercial,Ticket médio,3626.0,3752.7,crítico,Médio,,Propor plano de recuperação de 90 dias,30/10/2026
+649,mês 07/26,T.I.,MTTR,1944.8,1683.3,OK,,envolve 3 áreas — precisa dono claro,Contratar analista sênior pra área,29-08
+650,2026-03-31,T.I.,MTTR,2694.6,3435.6,VERMELHO,BAIXO,pode virar oportunidade se estruturado,Renegociar contrato com fornecedor principal,Q06 26
+651,2026-01-24,Fin,Margem operacional,619.6,767.6,Verde,Alto,compromisso assumido pela diretoria em Q3,Contratar analista sênior pra área,10/2026
+652,28/01/2026,Fin,EBITDA,79.2,101.3,Amarelo,,diretoria quer entender causa raiz,Propor plano de recuperação de 90 dias,10/2026
+653,mês 02/26,T.I.,Cobertura de backup,4470.6,3330.8,OK,,compromisso assumido pela diretoria em Q3,Alinhar leitura com par de outra área,
+654,mês 03/26,Marketing,Alcance orgânico,1596.6,1714.5,em analise,,cliente já sinalizou insatisfação sobre isso,Reunião com fornecedor de contratações,27/08/2026
+655,2026-05-08,comercial,CAC,3448.0,3092.3,verde,Médio,aguardando definição de budget,Investir em capacitação da equipe,08/2026
+656,14/02/2026,RH,Cobertura de treinamento,1431.8,1288.0,ok,Baixo,área quer discutir a meta em revisão,Renegociar contrato com fornecedor principal,
+657,mês 04/26,Vendas,Ticket médio,1946.9,1501.2,Em análise,BAIXO,envolve 3 áreas — precisa dono claro,Investir em capacitação da equipe,02-10
+658,2026-02-20,Ops,Taxa de entrega no prazo,4731.7,4099.1,Vermelho,,compromisso assumido pela diretoria em Q3,Preparar defesa da meta pro comitê,
+659,mês 06/26,IT,Índice de vulnerabilidades,963.7,680.1,verde,,diretoria quer entender causa raiz,Revisar processo de aprovação com RH,Q10 26
+660,06/02/2026,Compras,Ruptura de estoque,467.9,381.6,atenção,medio,pode virar oportunidade se estruturado,Trazer dado externo pra benchmark,09/2026
+661,2026-02-20,Controladoria/Fin,Despesa administrativa,4998.2,5595.1,ok,Baixo,regulatório pode mudar em Q4,Propor plano de recuperação de 90 dias,
+662,2026-06-24,Finance,Fluxo de caixa mensal,1946.3,2168.3,atenção,,diretoria quer entender causa raiz,Alinhar leitura com par de outra área,20-09
+663,11/03/2026,Ops,OEE,2765.6,2118.4,Em análise,,,Reunião com fornecedor de sistema,13/10/2026
+664,13/02/2026,Operacional,Tempo médio de setup,4168.1,4052.3,atenção,Crítico,melhorou nos últimos 2 meses,Preparar defesa da meta pro comitê,23-08
+665,2026-06-30,Op,Produtividade por linha,4273.9,4359.3,Crítico,crít.,auditoria externa questionou na última visita,Preparar defesa da meta pro comitê,
+666,Mar/2026,TI,Tempo de recuperação,3476.8,4515.5,em analise,Alto,melhorou nos últimos 2 meses,Renegociar contrato com fornecedor principal,
+667,27/03/2026,operacoes,OEE,2193.6,2521.4,Crítico,ALTO,depende de decisão da matriz,Definir donos por indicador,
+668,Mar/2026,Controladoria/Fin,DSO (dias),336.0,335.9,crítico,Alto,gerente anterior deixou sem tratamento,Preparar defesa da meta pro comitê,27/08/2026
+669,31/03/2026,Tecnologia da Informação,,1479.2,1146.0,verde,Médio,gerente anterior deixou sem tratamento,,
+670,16/06/2026,r.h.,Absenteísmo,2442.8,1955.5,ok,crít.,conselho pediu detalhe na reunião de novembro,Contratar analista sênior pra área,Q10 26
+671,May/2026,Comercial,Taxa de conversão,177.8,132.1,em analise,ALTO,compromisso assumido pela diretoria em Q3,Contratar analista sênior pra área,09/2026
+672,mês 04/26,Controladoria/Fin,Margem operacional,2235.7,2497.9,Verde,medio,impacto direto no P&L do próximo trimestre,Preparar defesa da meta pro comitê,08/2026
+673,mês 06/26,FIN,EBITDA,4733.1,4098.9,em analise,Crítico,vinculado a projeto estratégico em curso,Escalar pro comitê de Operações,09/2026
+674,mês 04/26,FIN,DSO (dias),3121.3,2622.6,atenção,Baixo,cliente já sinalizou insatisfação sobre isso,Rodar piloto de 30 dias em 1 filial,
+675,mês 04/26,Mkt,CAC digital,357.7,322.8,em analise,,métrica não normalizada — comparação difícil,Escalar pro comitê de TI,06/2026
+676,2026-02-25,Com,Volume de vendas,1613.6,1618.9,Verde,,cliente já sinalizou insatisfação sobre isso,Preparar defesa da meta pro comitê,
+677,2026-05-02,Com,Churn,3280.5,3290.6,Em atenção,ALTO,gerente anterior deixou sem tratamento,Alinhar meta trimestral com direção,Q07 26
+678,10/04/2026,Op,Índice de retrabalho,1269.1,1398.5,Vermelho,ALTO,concorrência opera com número melhor,Rodar piloto de 30 dias em 1 filial,Q07 26
+679,Apr/2026,,Ruptura de estoque,3752.7,3311.7,OK,BAIXO,melhorou nos últimos 2 meses,Trazer dado externo pra benchmark,11/2026
+680,mês 02/26,operacoes,Refugo (%),2151.7,2454.7,AMARELO,,conselho pediu detalhe na reunião de novembro,Reunião com fornecedor de orçamento,24-09
+681,27/05/2026,Marketing,Alcance orgânico,3109.6,3469.0,Alerta,BAIXO,vinculado a projeto estratégico em curso,Reunião com fornecedor de orçamento,
+682,Jun/2026,Gestão de Pessoas,Absenteísmo,1885.6,1906.2,ok,Alto,envolve 3 áreas — precisa dono claro,Investir em capacitação da equipe,Q06 26
+683,2026-04-20,RH,Cobertura de treinamento,284.9,250.3,atenção,Médio,vinculado a projeto estratégico em curso,Trazer dado externo pra benchmark,
+684,2026-05-18,Finance,Margem operacional,2041.9,1913.1,VERMELHO,BAIXO,vinculado a projeto estratégico em curso,Automatizar coleta do dado,22/09/2026
+685,Jan/2026,Comercial,Churn,209.1,242.2,Em análise,Alto,diretoria quer entender causa raiz,,12-11
+686,2026-03-11,r.h.,,275.4,268.2,VERMELHO,Crítico,depende de decisão da matriz,Alinhar meta trimestral com direção,15-09
+687,Feb/2026,T.I.,MTTR,1096.2,1342.7,ok,Médio,aguardando definição de budget,,
+688,mês 05/26,Fin,Despesa administrativa,2101.1,2358.2,AMARELO,ALTO,,Reunião com fornecedor de sistema,
+689,09/02/2026,operacoes,Produtividade por linha,1427.2,1661.8,Em atenção,ALTO,envolve 3 áreas — precisa dono claro,Rodar piloto de 30 dias em 1 filial,19-07
+690,mês 02/26,Compras,Redução de custo,3703.3,4732.5,OK,Crítico,envolve 3 áreas — precisa dono claro,Contratar analista sênior pra área,06/2026
+691,Jan/2026,operações,,4900.1,3486.2,Em atenção,BAIXO,pode virar oportunidade se estruturado,Propor revisão do escopo do projeto,05/07/2026
+692,Feb/2026,Comercial,Volume de vendas,2412.1,2507.5,atenção,crít.,concorrência opera com número melhor,,Q06 26
+693,Jan/2026,Op,Tempo médio de setup,1537.9,1293.7,verde,Crítico,meta pode estar defasada em relação ao mercado,Trazer dado externo pra benchmark,10/2026
+694,mês 02/26,Financeiro,Margem operacional,3852.3,4232.0,Crítico,crít.,sinal fraco de reversão desde a última medição,Alinhar meta trimestral com direção,05/09/2026
+695,2026-05-24,MKT,Alcance orgânico,591.8,539.5,Amarelo,,cliente já sinalizou insatisfação sobre isso,Alinhar meta trimestral com direção,03-11
+696,Feb/2026,r.h.,Cobertura de treinamento,4600.0,3715.4,Crítico,BAIXO,auditoria externa questionou na última visita,,
+697,2026-06-17,Comercial,Taxa de conversão,2292.3,2735.9,Alerta,BAIXO,concorrência opera com número melhor,Revisar processo de aprovação com Financeiro,06-09
+698,10/02/2026,Gestão de Pessoas,Turnover,2301.4,2188.6,em analise,ALTO,sinal fraco de reversão desde a última medição,Revisar processo de aprovação com Operações,Q06 26
+699,Apr/2026,Fin,Fluxo de caixa mensal,3187.6,2454.8,atenção,medio,melhorou nos últimos 2 meses,Revisar processo de aprovação com Operações,10/2026
+700,mês 02/26,rh/pessoas,Índice de acidentes,420.4,318.7,em analise,crít.,envolve 3 áreas — precisa dono claro,Reunião com fornecedor de auditoria,19-10
+701,May/2026,Operações,Tempo médio de setup,1167.0,1053.2,Alerta,BAIXO,gerente anterior deixou sem tratamento,Contratar analista sênior pra área,25/06/2026
+702,mês 05/26,Marketing,CAC digital,1613.3,1594.1,Alerta,Médio,compromisso assumido pela diretoria em Q3,,Q09 26
+703,Apr/2026,Marketing,Leads qualificados,2599.4,2423.3,em analise,medio,auditoria externa questionou na última visita,Rodar piloto de 30 dias em 1 filial,Q10 26
+704,05/03/2026,financeiro,Fluxo de caixa mensal,489.0,490.0,ok,,envolve 3 áreas — precisa dono claro,,Q09 26
+705,mês 07/26,Operacional,Taxa de entrega no prazo,4345.5,3552.0,atenção,crít.,risco de exposição em relatório trimestral,Reunião com fornecedor de contratos,22-10
+706,Jul/2026,Financeiro,Despesa administrativa,4948.6,5551.7,Alerta,,depende de decisão da matriz,Redefinir cadência de análise,22-08
+707,Jul/2026,RH,Aderência ao plano de desenvolvimento,2533.5,3255.2,Crítico,Médio,pode virar oportunidade se estruturado,,
+708,04/04/2026,Recursos Humanos,Tempo médio de contratação,1895.6,1648.3,Crítico,,,Automatizar coleta do dado,05-08
+709,2026-07-16,Pessoas,Índice de acidentes,1315.1,1606.3,Alerta,Médio,,Escalar pro comitê de Financeiro,31/08/2026
+710,Jun/2026,Op,Tempo médio de setup,4312.8,5181.8,VERMELHO,Médio,auditoria vai voltar em 45 dias,,26-08
+711,Jun/2026,IT,Chamados abertos,2214.1,2067.8,verde,medio,meta pode estar defasada em relação ao mercado,Investir em capacitação da equipe,23-10
+712,May/2026,MKT,Engajamento social,2556.8,3257.1,atenção,,depende de decisão da matriz,Rodar piloto de 30 dias em 1 filial,Q08 26
+713,2026-05-30,Pessoas,Turnover,1327.5,1335.4,crítico,medio,cliente já sinalizou insatisfação sobre isso,Propor plano de recuperação de 90 dias,26/06/2026
+714,10/03/2026,Operações,Taxa de entrega no prazo,641.5,804.9,em analise,,,Alinhar leitura com par de outra área,
+715,Jan/2026,Gestão de Pessoas,Turnover,83.8,80.0,VERMELHO,,envolve 3 áreas — precisa dono claro,Automatizar coleta do dado,25-07
+716,2026-01-27,SC,Prazo médio de entrega,2874.0,2407.4,atenção,ALTO,compromisso assumido pela diretoria em Q3,Reunião com fornecedor de contratações,
+717,16/06/2026,OPS,OEE,1875.6,1393.6,OK,Médio,auditoria externa questionou na última visita,Redefinir cadência de análise,19/09/2026
+718,2026-02-12,Vendas/Com,Novos clientes,1560.3,1193.1,Alerta,,depende de decisão da matriz,Renegociar contrato com fornecedor principal,03/10/2026
+719,01/02/2026,ti,Uptime crítico,2178.2,2379.6,VERMELHO,ALTO,aparece nas últimas 3 reuniões de comitê,Propor revisão do escopo do projeto,
+720,2026-06-06,Operações,Refugo (%),2691.9,3489.4,Verde,ALTO,métrica não normalizada — comparação difícil,Contratar analista sênior pra área,
+721,18/02/2026,comercial,CAC,1042.6,1219.3,Verde,BAIXO,gerente anterior deixou sem tratamento,Reunião com fornecedor de dashboard,01-08
+722,mês 07/26,MKT,Custo por lead,1190.7,1385.6,ok,,auditoria vai voltar em 45 dias,Alinhar leitura com par de outra área,02-08
+723,mês 01/26,Suprimentos,Redução de custo,3423.6,2677.7,Verde,medio,cliente já sinalizou insatisfação sobre isso,Preparar defesa da meta pro comitê,06/2026
+724,11/04/2026,Compras,Prazo médio de entrega,1118.5,1114.3,OK,BAIXO,auditoria vai voltar em 45 dias,Alinhar meta trimestral com direção,20-10
+725,2026-06-14,Vendas,Pipeline qualificado,3107.7,3845.5,em analise,Médio,meta pode estar defasada em relação ao mercado,Preparar defesa da meta pro comitê,09/2026
+726,2026-02-03,Recursos Humanos,eNPS,953.0,1094.4,Alerta,crít.,regulatório pode mudar em Q4,Investir em capacitação da equipe,Q06 26
+727,2026-05-05,Com,Volume de vendas,2841.1,3371.4,atenção,crít.,pode virar oportunidade se estruturado,Revisar processo de aprovação com RH,Q07 26
+728,2026-05-17,MKT,Leads qualificados,2496.0,1782.8,Em análise,Crítico,meta pode estar defasada em relação ao mercado,Escalar pro comitê de Comercial,09/2026
+729,mês 02/26,Pessoas,Índice de acidentes,4680.8,3782.6,Em atenção,crít.,compromisso assumido pela diretoria em Q3,Revisar processo de aprovação com TI,10/2026
+730,2026-05-31,Tecnologia,Tempo de recuperação,3185.6,4090.1,Alerta,Médio,sinal fraco de reversão desde a última medição,Revisar processo de aprovação com Suprimentos,
+731,2026-03-04,Suprimentos,,741.1,943.8,Verde,ALTO,métrica não normalizada — comparação difícil,Reunião com fornecedor de BI,08/2026
+732,mês 04/26,MKT,,4484.1,5496.1,Verde,,compromisso assumido pela diretoria em Q3,,Q09 26
+733,mês 07/26,Gestão de Pessoas,Turnover,2182.3,1961.7,Crítico,,aguardando definição de budget,Redefinir cadência de análise,10/2026
+734,Apr/2026,COM,Churn,1811.6,1837.0,OK,Baixo,vinculado a projeto estratégico em curso,Propor revisão do escopo do projeto,Q10 26
+735,Feb/2026,MKT,ROI campanhas,4160.6,3941.6,VERMELHO,medio,gerente anterior deixou sem tratamento,Alinhar leitura com par de outra área,11/2026
