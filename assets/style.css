@@ -4037,3 +4037,139 @@ table.m1-contraste tbody td strong { color: var(--text-primary); font-weight: 50
 .gat--verde { border-left: 3px solid var(--accent-green); background: color-mix(in oklab, var(--accent-green) 7%, var(--bg-card)); padding: 15px 18px; }
 .gat--vermelho { border-left: 3px solid var(--accent-red); background: color-mix(in oklab, var(--accent-red) 7%, var(--bg-card)); padding: 15px 18px; }
 .gat-frase { color: var(--text-primary); font-size: 14px; line-height: 1.55; margin: 0; }
+
+/* ============================================================
+   ONDA 22 · M5 T2 — 4 movimentos (accordion), demo NotebookLM, Cowork pillar/regua,
+   rota-tabs, skill-gallery, case-card, Simulador de Workstation.
+   Zero hex novo: tokens + color-mix(in oklab). Accent roxo (T2).
+   ============================================================ */
+
+/* Conteúdo rico dentro do .hab-card (lista da Constituição, régua L0-L3) */
+.hab-card em { color: var(--text-secondary); }
+.hab-card code { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-primary); }
+.hab-card-list { margin: 8px 0 0; padding-left: 20px; color: var(--text-secondary); font-size: 14.5px; line-height: 1.65; }
+.hab-card-list li { margin-bottom: 9px; }
+.hab-card-list li:last-child { margin-bottom: 0; }
+.hab-card-list li strong { color: var(--text-primary); }
+.hab-card > * + p { margin-top: 10px; }
+.regua-list li { padding-left: 4px; border-left: 2px solid var(--border-subtle); margin-left: -2px; padding-bottom: 2px; }
+
+/* Ponto 2 (jailbreak) — pillar roxo + selo; Ponto 4 (régua) — modificador sem cor extra */
+.hab-card.pillar { position: relative; border-left: 4px solid var(--accent-purple); background: color-mix(in oklab, var(--accent-purple) 6%, var(--bg-card)); }
+.hab-card.pillar .hab-card-head { padding-right: 92px; }
+.hab-card-selo { position: absolute; top: 16px; right: 16px; font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--purple-text); background: color-mix(in oklab, var(--accent-purple) 16%, transparent); padding: 3px 9px; border-radius: var(--radius-sm); }
+.hab-card.regua { border-left: 3px solid var(--accent-purple); }
+@media (max-width: 520px) { .hab-card.pillar .hab-card-head { padding-right: 0; } .hab-card-selo { position: static; display: inline-block; margin-bottom: 10px; } }
+
+/* Os 4 movimentos — conteúdo do accordion (dado · playbook · pergunta) */
+.acc-lista { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+.mov-bloco { margin: 0 0 14px; padding-left: 14px; border-left: 3px solid var(--border-subtle); }
+.mov-bloco:last-child { margin-bottom: 0; }
+.mov-label { display: block; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+.mov-bloco p { color: var(--text-secondary); font-size: 14.5px; line-height: 1.65; margin: 0 0 8px; }
+.mov-bloco p:last-child { margin-bottom: 0; }
+.mov-bloco p strong { color: var(--text-primary); }
+.mov-bloco ul, .mov-bloco ol { margin: 6px 0 8px; padding-left: 20px; color: var(--text-secondary); font-size: 14.5px; line-height: 1.6; }
+.mov-bloco li { margin-bottom: 6px; }
+.mov-bloco li strong { color: var(--text-primary); }
+.mov-dado { border-left-color: var(--accent-purple); }
+.mov-playbook { border-left-color: var(--accent-green); }
+.mov-pergunta { border-left-color: var(--accent-yellow); background: color-mix(in oklab, var(--accent-yellow) 6%, transparent); padding: 12px 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.mov-dado .mov-label { color: var(--purple-text); }
+.mov-playbook .mov-label { color: var(--accent-green); }
+.mov-pergunta .mov-label { color: var(--accent-yellow); }
+
+/* Duas ferramentas — rodapé do .demo + tabela Chat × NotebookLM × Cowork */
+.demo-rodape { margin: 16px 0 0; color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+.demo-rodape strong { color: var(--text-primary); }
+.ferr-tabela-titulo { font-family: var(--font-title); font-size: 16px; color: var(--text-primary); margin: 22px 0 10px; }
+.ferr-tabela { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.5; }
+.ferr-tabela th { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .03em; text-transform: uppercase; color: var(--text-dim); text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border-subtle); }
+.ferr-tabela td { color: var(--text-secondary); padding: 11px 12px; border-bottom: 1px solid var(--border-subtle); vertical-align: top; }
+.ferr-tabela tr:last-child td { border-bottom: none; }
+.ferr-tag { font-family: var(--font-mono); font-size: 11.5px; padding: 3px 9px; border-radius: var(--radius-sm); white-space: nowrap; display: inline-block; }
+.ferr-tag--chat { color: var(--accent-blue); background: color-mix(in oklab, var(--accent-blue) 14%, transparent); }
+.ferr-tag--nlm { color: var(--purple-text); background: color-mix(in oklab, var(--accent-purple) 16%, transparent); }
+.ferr-tag--cw { color: var(--accent-green); background: color-mix(in oklab, var(--accent-green) 14%, transparent); }
+
+/* Exercício — nota + subgrupos (L0/L1, L2/L2.5/L3) */
+.ho-nota { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 11px 14px; margin: 12px 0; color: var(--text-secondary); font-size: 13.5px; line-height: 1.55; }
+.ho-nota strong { color: var(--text-primary); }
+.ho-subgrupo { margin: 16px 0; }
+.ho-subgrupo-label { display: block; font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--purple-text); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border-subtle); }
+
+/* Rota-tabs (bifurcação Camada 1) */
+.rota-tabs { margin-top: 6px; }
+.rota-tabs__nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.rota-tab { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 100px; padding: 7px 16px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+.rota-tab:hover { color: var(--text-primary); }
+.rota-tab[aria-selected="true"] { color: var(--text-primary); background: color-mix(in oklab, var(--accent-purple) 20%, var(--bg-card)); border-color: var(--accent-purple); }
+.rota-panel[hidden] { display: none; }
+.rota-hint { font-size: 13px; color: var(--text-dim); font-style: italic; margin: 0 0 10px; line-height: 1.5; }
+
+/* Galeria de skills (L3) */
+.skill-gallery { margin: 20px 0 4px; }
+.skill-gallery__titulo { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 12px; }
+.skill-gallery__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px) { .skill-gallery__grid { grid-template-columns: 1fr; } }
+.skill-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-purple); border-radius: var(--radius); padding: 14px 16px; }
+.skill-card__nome { display: inline-block; font-family: var(--font-mono); font-size: 12.5px; color: var(--purple-text); background: color-mix(in oklab, var(--accent-purple) 12%, transparent); padding: 2px 8px; border-radius: var(--radius-sm); margin-bottom: 8px; }
+.skill-card p { color: var(--text-secondary); font-size: 13.5px; line-height: 1.55; margin: 0 0 8px; }
+.skill-card__area { font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; color: var(--text-dim); }
+
+/* Cases industriais — case-card */
+.case-lista { display: flex; flex-direction: column; gap: 16px; margin-bottom: 18px; }
+.case-card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px 22px; }
+.case-card__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.case-card__empresa { font-family: var(--font-title); font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.case-card__br { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: .06em; color: var(--accent-green); background: color-mix(in oklab, var(--accent-green) 14%, transparent); padding: 2px 6px; border-radius: var(--radius-sm); vertical-align: middle; margin-left: 6px; }
+.case-card__fonte { font-size: 11.5px; color: var(--text-dim); line-height: 1.5; max-width: 60%; text-align: right; }
+.case-card__selo { display: inline-block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .05em; text-transform: uppercase; padding: 2px 7px; border-radius: var(--radius-sm); margin-left: 4px; white-space: nowrap; }
+.case-card__selo--editorial { color: var(--accent-green); background: color-mix(in oklab, var(--accent-green) 14%, transparent); }
+.case-card__selo--story { color: var(--accent-yellow); background: color-mix(in oklab, var(--accent-yellow) 14%, transparent); }
+.case-card > p { color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin: 0 0 12px; }
+.case-card > p strong { color: var(--text-primary); }
+.case-card__nums { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.case-num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--purple-text); background: color-mix(in oklab, var(--accent-purple) 12%, transparent); padding: 4px 10px; border-radius: var(--radius-sm); }
+.case-card__quote { margin: 0; padding: 10px 0 0 14px; border-left: 3px solid var(--accent-purple); color: var(--text-secondary); font-size: 13.5px; line-height: 1.6; font-style: italic; }
+@media (max-width: 640px) { .case-card__fonte { max-width: 100%; text-align: left; } .case-card__head { justify-content: flex-start; } }
+
+/* Simulador de Workstation — base de formulário (porta .vld-* do T1) + sim-* */
+.vld-label { display: block; font-family: var(--font-mono); font-size: 12px; letter-spacing: .03em; color: var(--text-dim); margin: 14px 0 6px; }
+.vld-label strong { color: var(--text-secondary); }
+.vld-textarea { width: 100%; background: var(--bg-dark); border: 1px solid var(--border-subtle); border-radius: var(--radius); color: var(--text-primary); font-family: var(--font-mono); font-size: 13px; line-height: 1.55; padding: 12px 14px; resize: vertical; }
+.vld-textarea:focus, .sim-input:focus { outline: none; border-color: var(--accent-purple); box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent-purple) 25%, transparent); }
+.vld-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.vld-privacy { font-size: 11.5px; color: var(--text-dim); margin: 12px 0 0; }
+.sim-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; margin-top: 20px; align-items: start; }
+@media (max-width: 900px) { .sim-grid { grid-template-columns: 1fr; } }
+.sim-col { display: flex; flex-direction: column; }
+.sim-secao { border-top: 1px solid var(--border-subtle); padding-top: 14px; margin-top: 14px; }
+.sim-secao:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.sim-secao__label { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--purple-text); margin-bottom: 4px; }
+.sim-input { width: 100%; background: var(--bg-dark); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: var(--text-primary); font-family: var(--font-body); font-size: 13.5px; padding: 9px 12px; }
+select.sim-input { font-family: var(--font-body); }
+.sim-radios { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.sim-radio, .sim-check { display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.45; cursor: pointer; }
+.sim-radio input, .sim-check input { margin-top: 2px; flex-shrink: 0; accent-color: var(--accent-purple); }
+.sim-checks { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.sim-livre { margin-top: 2px; }
+.sim-refs { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.sim-ref-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 520px) { .sim-ref-row { grid-template-columns: 1fr; } }
+.sim-col--out { position: sticky; top: 16px; }
+.sim-out-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.sim-out-head .mono { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .04em; color: var(--text-dim); }
+.sim-out-actions { display: flex; gap: 8px; }
+.sim-out-btn { font-size: 12px; padding: 5px 12px; }
+.sim-out { background: var(--bg-dark); border: 1px solid var(--border-subtle); border-radius: var(--radius); color: var(--text-secondary); font-family: var(--font-mono); font-size: 12px; line-height: 1.55; padding: 16px 18px; white-space: pre-wrap; overflow-x: auto; min-height: 180px; margin: 0; }
+
+/* Print — abre accordions/tabs, esconde botões, expande Simulador */
+@media print {
+  .rota-tab, .vld-actions, .sim-out-actions, .btn-copiar, .btn-toggle-prompt { display: none !important; }
+  .rota-panel[hidden] { display: block !important; }
+  .sim-grid { grid-template-columns: 1fr; }
+  .sim-col--out { position: static; }
+  .prompt-copiar__details { display: block !important; }
+  .acc-item, .case-card, .skill-card, .mov-bloco, .ho-subgrupo, .sim-out { break-inside: avoid; }
+}
