@@ -98,6 +98,15 @@ Todo documento assistido por IA que sobe assinado por você precisa passar por d
 
 O território mais sensível da sala executiva — revisão de contrato — feito do jeito certo (dado fictício, limitação explícita), com Fase 2 que sai da mesa como **diretriz mínima da sua área**.
 
+> **✅ Checklist de anonimização — rode você mesmo, antes de colar qualquer coisa na IA.** O contrato do exercício é fictício. Mas na sua rotina, quando você trouxer um documento real (contrato, planilha, ata, avaliação), vale a regra: a IA **não é quem limpa o dado — você limpa antes**. Antes de colar, passe por estes pontos:
+>
+> - Troquei **nome de pessoa** por "Colaborador A / Gestor B"?
+> - Mascarei **matrícula, CPF, salário, avaliação**?
+> - Tirei **número e cláusula de contrato, preço, condição comercial**?
+> - Removi **parâmetro de produto/processo** e **dado de diretoria** (resultado não divulgado, plano, decisão em discussão)?
+> - Tirei **informação de concorrência** (preço, condição, negociação) e **dado de cliente**?
+> - Sobrou algo que identifica **gente · produto · contrato · diretoria · concorrência**? Então **não mando** — ou mascaro primeiro.
+
 ```text
 # PAPEL
 Você é um consultor de governança de dados em indústria, com especialização em uso
