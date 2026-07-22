@@ -1,13 +1,273 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M6 · Canvas Executivo de IA · Mallory PDL 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="../assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M6 · Canvas Mallory de IA no Trabalho · Trilha 2 · Gestão · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-blue:#7B9EFF;
+  --accent-purple:#B394FF;
+  --success:#6EE7B7;
+  --warning:#FBBF24;
+  --danger:#F87171;
+  --skill:#6EE7B7;
+  --connector:#7B9EFF;
+  --plugin:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+  --radius-lg:14px;
+  --font-title:'Archivo',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+  /* Cor accent da trilha (§5.3) — Trilha 2 = roxo */
+  --accent-trilha:#B394FF;
+  --accent-trilha-glow:rgba(179,148,255,.10);
+  --accent-trilha-border:rgba(179,148,255,.32);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:var(--font-body);
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained — não linka o style.css compartilhado) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:var(--font-title);font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-trilha);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-trilha);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:64px;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-trilha);text-decoration:none;}
+.footer-meta{font-size:13px;}
+
+.wrap{max-width:1180px;margin:0 auto;padding:44px 24px 24px;}
+
+/* ===== Module hero ===== */
+.hero{margin-bottom:34px;}
+.kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-trilha);margin-bottom:12px;}
+h1{font-family:var(--font-title);font-weight:700;font-size:34px;letter-spacing:-0.01em;line-height:1.16;margin-bottom:12px;max-width:900px;}
+.hero .lead{font-size:17px;color:var(--text-muted);max-width:760px;margin-bottom:18px;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:20px;background:var(--bg-card);border:1px solid var(--border-subtle);color:var(--text-muted);}
+.chip.accent{color:var(--accent-trilha);border-color:var(--accent-trilha-border);background:var(--accent-trilha-glow);}
+
+/* ===== Section title ===== */
+.section-eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin:52px 0 10px;display:flex;align-items:center;gap:10px;}
+.section-eyebrow::after{content:'';flex:1;height:1px;background:var(--border-subtle);}
+h2{font-family:var(--font-title);font-weight:600;font-size:24px;margin-bottom:8px;}
+h3{font-family:var(--font-title);font-weight:600;}
+.section-lead{color:var(--text-muted);margin-bottom:22px;max-width:820px;}
+.section-lead a{color:var(--accent-trilha);text-decoration:none;}
+.section-lead .credit{font-size:13px;color:var(--text-dim);font-style:italic;}
+
+/* ===== Contract cards ===== */
+.contract{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+@media(max-width:720px){.contract{grid-template-columns:1fr;}}
+.contract-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:20px 22px;}
+.contract-card .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+.contract-card.ganha .label{color:var(--success);}
+.contract-card.compromete .label{color:var(--warning);}
+.contract-card p{color:var(--text);font-size:15px;}
+.read-time{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:4px;}
+
+/* ===== Flow table ===== */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--radius);}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px;}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--border-subtle);vertical-align:top;}
+thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);background:var(--bg-panel);}
+tbody tr:last-child td{border-bottom:none;}
+td strong{color:var(--text);}
+
+/* ===== Prose ===== */
+.prose p{color:var(--text-muted);margin-bottom:14px;max-width:820px;}
+.prose p strong{color:var(--text);}
+
+/* ===== Canvas toolbar ===== */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius);margin-bottom:16px;}
+.toolbar button{font-family:var(--font-body);font-weight:500;font-size:13px;padding:8px 14px;border-radius:8px;border:1px solid var(--border-subtle);background:transparent;color:var(--text);cursor:pointer;transition:.15s;}
+.toolbar button:hover{border-color:var(--accent-trilha);color:var(--accent-trilha);}
+.toolbar .primary{background:var(--accent-trilha);color:#141826;border-color:var(--accent-trilha);font-weight:600;}
+.toolbar .primary:hover{filter:brightness(1.08);color:#141826;}
+.toolbar .spacer{flex:1;}
+.toolbar .status{font-size:12px;color:var(--text-muted);font-family:var(--font-mono);}
+
+/* ===== Canvas grid ===== */
+.canvas{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(214px,auto);gap:12px;}
+.block{position:relative;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:22px 20px 18px;overflow:hidden;transition:border-color .15s;}
+.block:hover{border-color:var(--accent-trilha-border);}
+.block .num{position:absolute;right:14px;bottom:6px;font-family:var(--font-title);font-weight:800;font-size:88px;line-height:1;color:rgba(255,255,255,.035);pointer-events:none;user-select:none;}
+.block h3{font-size:17px;margin:0 0 4px;color:var(--text);position:relative;}
+.block .sub{font-size:12px;color:var(--text-muted);margin-bottom:12px;line-height:1.42;position:relative;}
+.field{position:relative;width:100%;min-height:82px;background:transparent;border:none;color:var(--text);font-family:var(--font-body);font-size:13.5px;line-height:1.5;resize:vertical;padding:0;outline:none;}
+.field::placeholder{color:rgba(160,168,184,.5);font-style:italic;}
+.block.wide{grid-column:span 2;}
+
+/* Colored top bars per category (fixas por categoria, não por trilha) */
+.block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;background:var(--border-strong);}
+.block[data-cat="problema"]::before{background:var(--danger);}
+.block[data-cat="processo"]::before{background:var(--text-muted);}
+.block[data-cat="ia"]::before{background:var(--accent-purple);}
+.block[data-cat="persona"]::before{background:var(--accent-blue);}
+.block[data-cat="dados"]::before{background:var(--warning);}
+.block[data-cat="tools"]::before{background:var(--success);}
+.block[data-cat="checkpoint"]::before{background:var(--warning);}
+.block[data-cat="sucesso"]::before{background:var(--success);}
+
+/* Modos (bloco 3) */
+.modos{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;position:relative;}
+.modo-chip{font-family:var(--font-mono);font-size:10.5px;padding:5px 9px;border-radius:6px;border:1px solid var(--border-subtle);color:var(--text-muted);background:transparent;cursor:pointer;transition:.15s;}
+.modo-chip.autopiloto.active{border-color:var(--success);color:var(--success);background:rgba(110,231,183,.08);}
+.modo-chip.colaboracao.active{border-color:var(--accent-blue);color:var(--accent-blue);background:rgba(123,158,255,.08);}
+.modo-chip.manual.active{border-color:var(--warning);color:var(--warning);background:rgba(251,191,36,.08);}
+
+/* LGPD flag */
+.lgpd-flag{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.2);border-radius:6px;font-size:11.5px;color:var(--warning);margin-bottom:10px;position:relative;}
+.lgpd-flag input{margin:2px 0 0;flex-shrink:0;}
+.lgpd-flag label{cursor:pointer;line-height:1.35;}
+
+/* Ecossistema tags */
+.eco-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;position:relative;}
+.eco-tag{font-family:var(--font-mono);font-size:10.5px;padding:4px 8px;border-radius:6px;border:1px solid var(--border-subtle);color:var(--text-muted);cursor:pointer;transition:.15s;user-select:none;}
+.eco-tag[data-tool="chat"].on,.eco-tag[data-tool="projects"].on,.eco-tag[data-tool="artifacts"].on,.eco-tag[data-tool="cowork"].on{border-color:var(--accent-purple);color:var(--accent-purple);background:rgba(179,148,255,.08);}
+.eco-tag[data-tool="skill"].on{border-color:var(--skill);color:var(--skill);background:rgba(110,231,183,.08);}
+.eco-tag[data-tool="connector"].on{border-color:var(--connector);color:var(--connector);background:rgba(123,158,255,.08);}
+.eco-tag[data-tool="plugin"].on{border-color:var(--plugin);color:var(--plugin);background:rgba(251,191,36,.08);}
+
+/* Risco badges */
+.risco-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;position:relative;}
+.risco-badge{font-family:var(--font-mono);font-size:10.5px;padding:4px 8px;border-radius:6px;border:1px solid var(--border-subtle);color:var(--text-muted);cursor:pointer;user-select:none;transition:.15s;}
+.risco-badge.on{border-color:var(--danger);color:var(--danger);background:rgba(248,113,113,.08);}
+
+/* Legenda */
+.legenda{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px;font-size:11.5px;color:var(--text-muted);}
+.legenda-item{display:flex;align-items:center;gap:6px;}
+.legenda-item .swatch{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+
+/* ===== Envelope tools ===== */
+.tool{background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);padding:24px;margin-top:4px;}
+.tool-instruction{background:var(--accent-trilha-glow);border:1px solid var(--accent-trilha-border);border-left-width:3px;border-radius:var(--radius-sm);padding:13px 16px;color:var(--text);font-size:14.5px;margin-bottom:20px;}
+.tool-instruction strong{color:var(--accent-trilha);}
+
+/* Forms (pitch + patrocínio) */
+.form-grid{display:grid;gap:14px;margin-bottom:18px;}
+.form-field label{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+.form-field .hint{font-size:11px;color:var(--text-dim);text-transform:none;letter-spacing:0;font-family:var(--font-body);}
+.form-field input,.form-field textarea{width:100%;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);color:var(--text);font-family:var(--font-body);font-size:14px;padding:10px 13px;outline:none;transition:border-color .15s;}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--accent-trilha);}
+.form-field textarea{min-height:64px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+.copy-out{background:var(--bg-dark);border:1px dashed var(--border-strong);border-radius:var(--radius-sm);padding:16px 18px;font-size:15.5px;line-height:1.6;color:var(--text);margin-bottom:14px;min-height:56px;}
+.copy-out .placeholder{color:var(--text-dim);font-style:italic;}
+.copy-out strong{color:var(--accent-trilha);font-weight:600;}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-action{font-family:var(--font-body);font-weight:600;font-size:14px;padding:10px 18px;border-radius:8px;border:1px solid var(--accent-trilha);background:var(--accent-trilha);color:#141826;cursor:pointer;transition:.15s;}
+.btn-action:hover{filter:brightness(1.08);}
+.btn-action.ghost{background:transparent;color:var(--accent-trilha);}
+.btn-action.ghost:hover{background:var(--accent-trilha-glow);filter:none;}
+.tool-note{font-size:13.5px;color:var(--text-muted);margin-top:14px;border-left:2px solid var(--border-strong);padding-left:14px;}
+.tool-note strong{color:var(--text);}
+
+/* Callout M5 */
+.callout-m5{background:linear-gradient(180deg,rgba(179,148,255,.09),rgba(179,148,255,.03));border:1px solid var(--accent-trilha-border);border-left-width:3px;border-radius:var(--radius);padding:20px 24px;margin-top:26px;}
+.callout-m5 .callout-title{font-family:var(--font-title);font-weight:700;font-size:16px;color:var(--accent-trilha);margin-bottom:8px;}
+.callout-m5 p{color:var(--text-muted);font-size:14.5px;max-width:820px;}
+.callout-m5 strong{color:var(--text);}
+
+/* Closing */
+.closing{background:linear-gradient(180deg,rgba(179,148,255,.06),rgba(179,148,255,.02));border:1px solid var(--accent-trilha-border);border-radius:var(--radius);padding:26px 28px;margin-top:8px;}
+.closing h3{font-size:19px;margin-bottom:12px;color:var(--text);}
+.closing p{color:var(--text-muted);margin-bottom:12px;max-width:840px;}
+.closing p:last-child{margin-bottom:0;}
+.closing strong{color:var(--text);}
+.closing a{color:var(--accent-trilha);text-decoration:none;}
+
+/* Module nav */
+.module-nav{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;}
+@media(max-width:640px){.module-nav{grid-template-columns:1fr;}}
+.module-nav a{display:flex;flex-direction:column;gap:4px;padding:18px 20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);text-decoration:none;transition:border-color .15s;}
+.module-nav a:hover{border-color:var(--accent-trilha);}
+.module-nav .nav-next{text-align:right;}
+.module-nav .nav-label{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);letter-spacing:.06em;}
+.module-nav .nav-title{font-family:var(--font-title);font-weight:600;font-size:15px;color:var(--text);}
+
+/* ===== Desktop nav ===== */
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+/* ===== Responsive canvas ===== */
+@media(max-width:980px){.canvas{grid-template-columns:repeat(2,1fr);}.block.wide{grid-column:span 2;}.legenda{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.canvas{grid-template-columns:1fr;}.block.wide{grid-column:span 1;}}
+
+/* ===== Print (A4) ===== */
+@media print{
+  .site-header,.nav-toggle,.module-nav,.toolbar,.legenda{display:none !important;}
+  body{background:#fff;color:#111;}
+  .wrap{max-width:none;padding:0;}
+  .site-footer{margin-top:20px;border-color:#ccc;color:#333;}
+  .kicker{color:#333;}
+  h1{color:#111;font-size:22px;}
+  .hero .lead,.section-lead,.prose p,.contract-card p,td,.closing p,.callout-m5 p{color:#222 !important;}
+  h2,h3{color:#111;}
+  .chip{border-color:#ccc;background:transparent;color:#333;}
+  .contract-card,.tool,.closing,.callout-m5,.tbl-wrap{border-color:#999;background:#fff;break-inside:avoid;}
+  .section-eyebrow{color:#333;}
+  .section-eyebrow::after{background:#ccc;}
+  thead th{background:#eee;color:#111;}
+  th,td{border-color:#999;}
+  .canvas{gap:6px;grid-auto-rows:auto;}
+  .block{background:#fff;border:1px solid #999;color:#111;page-break-inside:avoid;padding:12px;}
+  .block h3{color:#111;font-size:14px;}
+  .block .sub{color:#555;font-size:10.5px;}
+  .block .num{color:rgba(0,0,0,.05);font-size:56px;}
+  .field{color:#111;min-height:54px;font-size:11px;}
+  .field::placeholder{color:#bbb;}
+  .form-field input,.form-field textarea,.copy-out{color:#111;}
+  .copy-out strong{color:#111;}
+  .callout-m5 .callout-title{color:#111;}
+  .modo-chip,.eco-tag,.risco-badge{color:#333 !important;border-color:#999 !important;background:transparent !important;}
+  .modo-chip.active,.eco-tag.on,.risco-badge.on{border-color:#111 !important;font-weight:600;}
+  .lgpd-flag{background:transparent;border-color:#999;color:#111;}
+  .tool-instruction{background:transparent;border-color:#999;color:#111;}
+  .closing,.callout-m5{background:#fff;}
+  .btn-action{display:none !important;}
+  .block,.tool,.closing,.callout-m5{page-break-inside:avoid;}
+}
+</style>
 </head>
 <body>
 
@@ -20,7 +280,7 @@
       </div>
       <div class="site-brand-text">
         <a href="../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
-        <span class="site-meta">PDL 2026 · 15 de julho de 2026</span>
+        <span class="site-meta">PDL 2026 · Módulo 6 de 6</span>
       </div>
     </div>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -35,42 +295,260 @@
 </header>
 
 <main>
-  <div class="container">
+<div class="wrap">
 
-    <section class="hero">
-      <span class="eyebrow">Trilha 2 · Módulo 6 de 6 · em construção</span>
-      <h1>M6 · Canvas Executivo de IA: Entregável Final do Gestor</h1>
-      <div class="page-meta">
-        <span class="badge badge-em-breve">em construção</span>
-      </div>
-      <p class="lead">Fechar o treinamento com um plano concreto de iniciativa de IA para a área de cada gestor.</p>
-    </section>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="kicker">M6 · Trilha 2 · Gestão · Módulo 6 / 6</div>
+    <h1>Canvas Executivo de IA: Entregável Final do Gestor</h1>
+    <p class="lead">Oportunidade, impacto, recursos, indicadores e como apresentar à diretoria — seu piloto escolhido, patrocinado e pronto para 30 dias.</p>
+    <div class="chips">
+      <span class="chip accent">1h15 · individual · piloto de 30 dias</span>
+      <span class="chip">8 blocos</span>
+      <span class="chip">Ferramenta viva · editável · imprimível</span>
+    </div>
+  </header>
 
-    <section class="section">
-      <h2>O que este módulo vai cobrir</h2>
-      <p>Este material está em construção. O conteúdo detalhado será publicado até 15/07/2026. Enquanto isso, os pontos abaixo são exatamente o que a ementa oficial do PDL prevê:</p>
-      <ul>
-        <li>Apresentação do Canvas Executivo de IA: oportunidade / impacto esperado / recursos necessários / próximos passos / indicadores de sucesso</li>
-        <li>Cada gestor preenche o Canvas individualmente para sua área</li>
-        <li>Compartilhamento em rodada rápida (2 minutos por gestor)</li>
-        <li>Critérios para escolher por onde começar: quick wins vs. projetos estruturais</li>
-        <li>Encerramento: consolidação dos planos e próximos passos para a Mallory como organização</li>
-      </ul>
-      <p><strong>Resultado esperado:</strong> Cada gestor sai com um Canvas Executivo de IA preenchido — um projeto piloto real para iniciar nos próximos 30 dias.</p>
-    </section>
-
-    <nav class="module-nav" aria-label="Navegação entre módulos">
-      <a class="nav-prev" href="../m5/">
-        <span class="nav-label">← Anterior</span>
-        <span class="nav-title">M5 · Liderança na Era da IA</span>
-      </a>
-      <a class="nav-next" href="#">
-        <span class="nav-label">Encerramento</span>
-        <span class="nav-title">Fim da trilha</span>
-      </a>
-    </nav>
-
+  <!-- CONTRATO -->
+  <div class="section-eyebrow">O contrato deste módulo</div>
+  <div class="contract">
+    <div class="contract-card ganha">
+      <div class="label">Você ganha</div>
+      <p>o Canvas Executivo da sua área preenchido — oportunidade, impacto, recursos, próximos passos, indicadores — e o roteiro de 3 frases para apresentá-lo à diretoria.</p>
+    </div>
+    <div class="contract-card compromete">
+      <div class="label">Você se compromete a</div>
+      <p>preencher o Canvas individualmente (a área é sua), compartilhar em 2 minutos na rodada e sair com a primeira revisão do piloto marcada no calendário.</p>
+    </div>
   </div>
+  <p class="read-time">Tempo de leitura desta página: 10 min</p>
+
+  <!-- ENTRA / SAI -->
+  <div class="section-eyebrow">Você entra com → O que acontece → Você sai com</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Você entra com</th><th>O que acontece</th><th>Você sai com</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>As oportunidades priorizadas do M3, as diretrizes do M4 e a workstation do M5</td>
+          <td>Você converte a top-1 em piloto de 30 dias: Canvas de 8 blocos, argumentação de 3 frases, rodada de 2 minutos</td>
+          <td>O Canvas Executivo preenchido e o roteiro para apresentar o piloto à diretoria da Mallory</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- POR QUE IMPORTA -->
+  <div class="section-eyebrow">Por que isso importa aqui dentro</div>
+  <div class="prose">
+    <p>"Interessante. Qual o retorno?" — você já ouviu essa pergunta ao propor uma melhoria, e já viu boa ideia morrer por não ter resposta em número. A diretoria da Mallory é exigente por resultado; proposta sem indicador não compete com as outras dez prioridades da mesa. O Canvas existe para a sua proposta chegar com a resposta pronta.</p>
+    <p>Tudo que você construiu hoje converge para cá. O M3 achou e priorizou a oportunidade. O M4 definiu as regras que protegem o piloto. O M5 deixou uma workstation de pé — que pode ser o próprio piloto. O que falta é o formato executivo: transformar isso num plano de 30 dias que a diretoria aprova em 3 minutos.</p>
+    <p>E há o papel que só você pode fazer: <strong>patrocinar</strong>. Piloto delegado para a equipe "tocar quando der" morre em 2 semanas. Os gestores que conseguiram levar IA da ideia ao processo seguem o mesmo padrão: começaram pequeno, mediram desde o primeiro dia, apresentaram com número — e apareceram nas revisões. É esse padrão que o Canvas institucionaliza.</p>
+  </div>
+
+  <!-- ===== CANVAS ===== -->
+  <div class="section-eyebrow">Preencha aqui, sua área é sua</div>
+  <p class="section-lead">
+    Uma folha só. Você pega um problema real da sua área, desenha o fluxo de hoje e decide onde a IA entra e em que modo (Autopiloto · Colaboração · Manual). Tudo salva sozinho neste navegador — dá pra imprimir em A4 no fim e levar pra reunião.
+    <br><span class="credit">Adaptado do AI Canvas (StartSe) pro vocabulário e contexto Mallory.</span>
+  </p>
+
+  <div class="tool-instruction">
+    Escolha a top-1 oportunidade que você priorizou no M3. Preencha os 8 blocos individualmente. A workstation que você configurou no <strong>M5</strong> pode ser esse piloto. Você tem <strong>40 minutos</strong>.
+  </div>
+
+  <div class="toolbar">
+    <button id="btn-exemplo">Carregar exemplo (Relatório PCP)</button>
+    <button id="btn-limpar">Limpar tudo</button>
+    <div class="spacer"></div>
+    <span class="status" id="status">Rascunho salvo automaticamente</span>
+    <button class="primary" onclick="window.print()">Imprimir A4</button>
+  </div>
+
+  <section class="canvas" id="canvas">
+
+    <!-- 1. Problema -->
+    <article class="block" data-cat="problema">
+      <span class="num">1</span>
+      <h3>Problema Mallory</h3>
+      <div class="sub">Qual dor real da sua área? Quem sente, quando, com que frequência. Por que resolver isso importa esse ano.</div>
+      <textarea class="field" data-key="problema" placeholder="Ex.: O relatório mensal de PCP consome 3 dias do coordenador. Ele consolida dado de 4 planilhas, cruza com apontamento da linha e escreve o texto no Word. Atrasa a reunião de fechamento em ~40% dos meses..."></textarea>
+    </article>
+
+    <!-- 2. Como resolvo hoje (sem IA) -->
+    <article class="block" data-cat="processo">
+      <span class="num">2</span>
+      <h3>Como resolvo hoje (sem IA)</h3>
+      <div class="sub">Passo a passo do fluxo atual. Sem invocar IA. Ver o processo cru ajuda a descobrir onde a IA vale.</div>
+      <textarea class="field" data-key="sem-ia" placeholder="1. Extraio 4 planilhas do sistema&#10;2. Concilio com apontamento diário&#10;3. Faço 6 tabelas dinâmicas&#10;4. Escrevo o texto de análise&#10;5. Formato e envio pro diretor"></textarea>
+    </article>
+
+    <!-- 3. Onde a IA entra + em que modo -->
+    <article class="block" data-cat="ia">
+      <span class="num">3</span>
+      <h3>Onde a IA entra + em que modo</h3>
+      <div class="sub">Marque um ou mais modos por passo. A ferramenta você escolhe no bloco 6.</div>
+      <div class="modos">
+        <button class="modo-chip autopiloto" data-modo="autopiloto">◐ Autopiloto</button>
+        <button class="modo-chip colaboracao" data-modo="colaboracao">◑ Colaboração</button>
+        <button class="modo-chip manual" data-modo="manual">◒ Manual</button>
+      </div>
+      <textarea class="field" data-key="com-ia" placeholder="Passo 3 (consolidar) → Autopiloto (IA junta e faz tabela)&#10;Passo 4 (analisar) → Colaboração (IA propõe leitura, eu ajusto com contexto do mês)&#10;Passo 5 (assinar) → Manual (só eu)"></textarea>
+    </article>
+
+    <!-- 4. Para quem -->
+    <article class="block" data-cat="persona">
+      <span class="num">4</span>
+      <h3>Para quem</h3>
+      <div class="sub">Quem usa a solução no dia a dia? Área, nível, com que frequência.</div>
+      <textarea class="field" data-key="persona" placeholder="Ex.: Coordenador de PCP · uso mensal fixo · precisa fechar em <4h pra virar rotina de sexta-feira."></textarea>
+    </article>
+
+    <!-- 5. Dados necessários + LGPD -->
+    <article class="block" data-cat="dados">
+      <span class="num">5</span>
+      <h3>Dados necessários</h3>
+      <div class="sub">Que informações a IA precisa ver? De onde vêm?</div>
+      <div class="lgpd-flag">
+        <input type="checkbox" id="lgpd" data-key="lgpd-check">
+        <label for="lgpd">Contém dado pessoal, financeiro ou estratégico sensível (LGPD/sigilo)</label>
+      </div>
+      <textarea class="field" data-key="dados" placeholder="- Planilha de apontamento (linha, turno, quantidade)&#10;- Meta mensal do PCP&#10;- Histórico de 3 meses anteriores&#10;⚠️ Sem nome/CPF de operador."></textarea>
+    </article>
+
+    <!-- 6. Ecossistema Claude (do M5) -->
+    <article class="block" data-cat="tools">
+      <span class="num">6</span>
+      <h3>Ecossistema Claude</h3>
+      <div class="sub">Ferramentas do M5. Marque as camadas que vai usar.</div>
+      <div class="eco-tags">
+        <span class="eco-tag" data-tool="chat">Chat</span>
+        <span class="eco-tag" data-tool="projects">Projects</span>
+        <span class="eco-tag" data-tool="artifacts">Artifacts</span>
+        <span class="eco-tag" data-tool="cowork">Cowork</span>
+        <span class="eco-tag" data-tool="skill">+ Skill</span>
+        <span class="eco-tag" data-tool="connector">+ Connector</span>
+        <span class="eco-tag" data-tool="plugin">+ Plugin</span>
+      </div>
+      <textarea class="field" data-key="tools-nota" placeholder="Por que essa combinação? Ex.: Project com instrução fixa do meu tom + Skill de análise de variação + Artifact pro texto final."></textarea>
+    </article>
+
+    <!-- 7. Checkpoint humano + risco -->
+    <article class="block" data-cat="checkpoint">
+      <span class="num">7</span>
+      <h3>Checkpoint humano + risco</h3>
+      <div class="sub">Onde eu (humano) assino, decido, valido antes de soltar. Que risco corro se pular esse checkpoint.</div>
+      <div class="risco-badges">
+        <span class="risco-badge" data-risco="alucinacao">alucinação</span>
+        <span class="risco-badge" data-risco="lgpd">LGPD</span>
+        <span class="risco-badge" data-risco="tom">tom / voz</span>
+        <span class="risco-badge" data-risco="decisao">decisão irreversível</span>
+        <span class="risco-badge" data-risco="vies">viés</span>
+      </div>
+      <textarea class="field" data-key="checkpoint" placeholder="Checkpoint 1: eu confiro os números antes de mandar (risco: número errado vai pro diretor).&#10;Checkpoint 2: eu reescrevo a conclusão com contexto do mês (risco: análise genérica)."></textarea>
+    </article>
+
+    <!-- 8. Como sei que deu certo -->
+    <article class="block" data-cat="sucesso">
+      <span class="num">8</span>
+      <h3>Como sei que deu certo</h3>
+      <div class="sub">Indicadores concretos. Antes → depois. Prazo pra medir.</div>
+      <textarea class="field" data-key="sucesso" placeholder="- Tempo do relatório: 3 dias → 4h (medir 3 meses)&#10;- Atraso da reunião: 40% → menos de 10%&#10;- Ganho: tempo pra ler o número, não só consolidar."></textarea>
+    </article>
+
+  </section>
+
+  <div class="legenda">
+    <div class="legenda-item"><span class="swatch" style="background:var(--danger)"></span>Dor / problema</div>
+    <div class="legenda-item"><span class="swatch" style="background:var(--text-muted)"></span>Fluxo atual</div>
+    <div class="legenda-item"><span class="swatch" style="background:var(--accent-purple)"></span>Entrada da IA</div>
+    <div class="legenda-item"><span class="swatch" style="background:var(--accent-blue)"></span>Persona</div>
+    <div class="legenda-item"><span class="swatch" style="background:var(--warning)"></span>Dados + Checkpoint</div>
+    <div class="legenda-item"><span class="swatch" style="background:var(--success)"></span>Ferramentas + Sucesso</div>
+  </div>
+
+  <!-- ===== PEÇA T2 · Gerador de pitch de 3 frases ===== -->
+  <div class="section-eyebrow">Gerador de pitch de 3 frases pra diretoria</div>
+  <p class="section-lead">A argumentação executiva sai do próprio Canvas: problema em número · piloto proposto · retorno com evidência. Sintetize e gere as 3 frases.</p>
+  <div class="tool">
+    <div class="tool-instruction">
+      3 frases, prontas para falar. Preencha os 3 campos com uma frase cada — o gerador monta o pitch que você leva pra mesa.
+    </div>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="pitch-problema">Problema <span class="hint">(1 frase — sintetiza o bloco 1)</span></label>
+        <input id="pitch-problema" data-key="pitch-problema" placeholder="Ex.: Hoje o relatório mensal de PCP consome 3 dias do coordenador e atrasa o fechamento em 40% dos meses.">
+      </div>
+      <div class="form-field">
+        <label for="pitch-piloto">Piloto <span class="hint">(1 frase — sintetiza os blocos 3 + 6)</span></label>
+        <input id="pitch-piloto" data-key="pitch-piloto" placeholder="Ex.: consolidar as 4 planilhas com uma Skill de análise de variação e escrever a leitura em Colaboração">
+      </div>
+      <div class="form-field">
+        <label for="pitch-metrica">Métrica <span class="hint">(1 frase — sintetiza o bloco 8)</span></label>
+        <input id="pitch-metrica" data-key="pitch-metrica" placeholder="Ex.: tempo do relatório de 3 dias para 4h, medido por 3 meses">
+      </div>
+    </div>
+    <div class="copy-out" id="pitch-out"><span class="placeholder">Seu pitch de 3 frases aparece aqui. Preencha os campos e clique em "Gerar pitch".</span></div>
+    <div class="btn-row">
+      <button class="btn-action" id="btn-gerar-pitch">Gerar pitch</button>
+      <button class="btn-action ghost" id="btn-copiar-pitch">Copiar pitch</button>
+    </div>
+    <p class="tool-note">3 minutos na diretoria. Se você levar a folha do Canvas e falar essas 3 frases, você já respondeu <strong>80% do que a mesa vai perguntar</strong>. O restante é a sua confiança.</p>
+  </div>
+
+  <!-- ===== PEÇA T2 · Patrocínio & primeira revisão ===== -->
+  <div class="section-eyebrow">Patrocínio & primeira revisão marcada</div>
+  <p class="section-lead">Patrocinar não é autorizar — é acompanhar, proteger e ajustar. O piloto que a diretoria aprova é o que tem um gestor visível na frente e a revisão marcada antes de começar.</p>
+  <div class="tool">
+    <div class="form-grid">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="patr-data">Data da 1ª revisão do piloto</label>
+          <input type="date" id="patr-data" data-key="patr-data">
+        </div>
+        <div class="form-field">
+          <label for="patr-quem">Quem revisa comigo</label>
+          <input id="patr-quem" data-key="patr-quem" placeholder="Ex.: meu diretor + o coordenador que executa">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="patr-mostro">O que mostro na revisão <span class="hint">(reuso da métrica do bloco 8)</span></label>
+        <input id="patr-mostro" data-key="patr-mostro" placeholder="Ex.: o tempo medido do relatório nos 30 dias vs. os 3 dias de antes">
+      </div>
+    </div>
+    <p class="tool-note">Piloto delegado pra equipe "tocar quando der" morre em 2 semanas. Coloca essa data no seu calendário <strong>agora</strong>. Chama a pessoa. Manda o convite antes de sair da sala hoje.</p>
+  </div>
+
+  <!-- ===== Amarração ao M5 ===== -->
+  <div class="callout-m5">
+    <div class="callout-title">A workstation do M5 pode ser o piloto.</div>
+    <p>Se você configurou <strong>Project + Skill + Connector</strong> no M5, o piloto do bloco 6 do seu Canvas talvez já esteja de pé. Nesse caso os 30 dias são de <strong>calibração + medição</strong>, não de construção do zero. Anota isso no bloco 8.</p>
+  </div>
+
+  <!-- ===== FECHAMENTO ===== -->
+  <div class="section-eyebrow">O que você leva para a Mallory na 2ª feira</div>
+  <div class="closing">
+    <h3>Marco final da Trilha 2</h3>
+    <p>Até sexta-feira, envie o Canvas ao seu diretor (ou ao fórum onde ele decide) com as 3 frases na mensagem — e marque no calendário a revisão de 30 dias do piloto. Como saber que aconteceu: o Canvas foi enviado, e a revisão tem data, hora e participantes no convite.</p>
+    <p>Este marco pode absorver os anteriores — o documento do M2, o teste do M3, a diretriz do M4 e a tarefa da workstation do M5 são evidências que fortalecem o Canvas. Não empilhe 5 compromissos novos: escolha o que converge para o piloto.</p>
+    <p>Depois da rodada de 2 minutos por gestor, o dia fecha com perguntas abertas e os próximos passos: este site continua no ar — módulos, <a href="../banco-de-prompts/">Banco de Prompts</a> e <a href="../artefatos/">Artefatos</a> ficam disponíveis, e a revisão de 30 dias é o próximo encontro do tema.</p>
+  </div>
+
+  <!-- Module nav -->
+  <nav class="module-nav" aria-label="Navegação entre módulos">
+    <a class="nav-prev" href="../m5/">
+      <span class="nav-label">← Anterior</span>
+      <span class="nav-title">M5 · Liderança na Era da IA — o ecossistema Claude</span>
+    </a>
+    <a class="nav-next" href="../banco-de-prompts/">
+      <span class="nav-label">Encerramento →</span>
+      <span class="nav-title">Banco de Prompts</span>
+    </a>
+  </nav>
+
+</div>
 </main>
 
 <footer class="site-footer">
@@ -86,6 +564,147 @@
   </div>
 </footer>
 
-<script src="../assets/script.js" defer></script>
+<script>
+// ===== Nav mobile =====
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+
+// ===== Canvas + peças T2 (autosave localStorage) =====
+(function(){
+  var STORAGE_KEY = 'mallory-m6-canvas-t2-v1';
+  var state = {};
+  try{ var s = localStorage.getItem(STORAGE_KEY); if(s) Object.assign(state, JSON.parse(s)); }catch(e){}
+
+  // Restaura campos
+  document.querySelectorAll('[data-key]').forEach(function(el){
+    var k = el.dataset.key;
+    if(state[k] !== undefined){
+      if(el.type === 'checkbox') el.checked = state[k];
+      else el.value = state[k];
+    }
+  });
+
+  // Restaura seleções (modos/eco/risco)
+  ['modos-sel','eco-sel','risco-sel'].forEach(function(k){ state[k] = state[k] || []; });
+  state['modos-sel'].forEach(function(m){ var e = document.querySelector('.modo-chip[data-modo="'+m+'"]'); if(e) e.classList.add('active'); });
+  state['eco-sel'].forEach(function(t){ var e = document.querySelector('.eco-tag[data-tool="'+t+'"]'); if(e) e.classList.add('on'); });
+  state['risco-sel'].forEach(function(r){ var e = document.querySelector('.risco-badge[data-risco="'+r+'"]'); if(e) e.classList.add('on'); });
+
+  var saveTimer;
+  function save(){
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function(){
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      document.getElementById('status').textContent = 'Salvo · ' + new Date().toLocaleTimeString('pt-BR').slice(0,5);
+    }, 300);
+  }
+
+  // Listeners de campos
+  document.querySelectorAll('[data-key]').forEach(function(el){
+    function upd(){ state[el.dataset.key] = (el.type === 'checkbox') ? el.checked : el.value; save(); }
+    el.addEventListener('input', upd);
+    el.addEventListener('change', upd);
+  });
+
+  // Toggles
+  function bindToggle(sel, cls, dataAttr, stateKey){
+    document.querySelectorAll(sel).forEach(function(el){
+      el.addEventListener('click', function(){
+        var v = el.dataset[dataAttr];
+        el.classList.toggle(cls);
+        var set = new Set(state[stateKey]);
+        el.classList.contains(cls) ? set.add(v) : set.delete(v);
+        state[stateKey] = Array.from(set);
+        save();
+      });
+    });
+  }
+  bindToggle('.modo-chip', 'active', 'modo', 'modos-sel');
+  bindToggle('.eco-tag', 'on', 'tool', 'eco-sel');
+  bindToggle('.risco-badge', 'on', 'risco', 'risco-sel');
+
+  // ===== Gerador de pitch =====
+  var pitchOut = document.getElementById('pitch-out');
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function renderPitch(){
+    var prob = (state['pitch-problema']||'').trim();
+    var pil = (state['pitch-piloto']||'').trim();
+    var met = (state['pitch-metrica']||'').trim();
+    if(!prob && !pil && !met){
+      pitchOut.innerHTML = '<span class="placeholder">Seu pitch de 3 frases aparece aqui. Preencha os campos e clique em "Gerar pitch".</span>';
+      return;
+    }
+    pitchOut.innerHTML = '<strong>' + esc(prob||'[problema]') + '</strong> Meu piloto de 30 dias é <strong>' + esc(pil||'[piloto]') + '</strong>, usando o que construí no M5. Vou medir por <strong>' + esc(met||'[métrica]') + '</strong>.';
+  }
+
+  document.getElementById('btn-gerar-pitch').addEventListener('click', renderPitch);
+
+  document.getElementById('btn-copiar-pitch').addEventListener('click', function(){
+    renderPitch();
+    if(pitchOut.querySelector('.placeholder')) return;
+    var txt = pitchOut.textContent;
+    navigator.clipboard.writeText(txt).then(function(){
+      var b = document.getElementById('btn-copiar-pitch');
+      var orig = b.textContent; b.textContent = 'Copiado ✓';
+      setTimeout(function(){ b.textContent = orig; }, 1600);
+    });
+  });
+
+  // ===== Exemplo (Relatório PCP) =====
+  var EXEMPLO = {
+    'problema':'O relatório mensal de PCP consome 3 dias do coordenador. Ele consolida dado de 4 planilhas, cruza com apontamento da linha e escreve o texto no Word. Atrasa a reunião de fechamento em ~40% dos meses. Isso empurra a decisão de reprogramação da semana seguinte pra segunda de tarde — perdemos meia semana.',
+    'sem-ia':'1. Baixo 4 planilhas do ERP\n2. Concilio com apontamento diário da linha\n3. Monto 6 tabelas dinâmicas no Excel\n4. Escrevo análise de variação vs meta\n5. Formato o PDF e mando pro diretor',
+    'com-ia':'Passo 3 (consolidar) → Autopiloto: Skill de análise de variação junta as planilhas e devolve tabela pronta.\nPasso 4 (analisar) → Colaboração: eu jogo o resumo no Chat + contexto do mês (feriado, quebra da injetora 2) → IA propõe leitura → eu ajusto.\nPasso 5 (assinar) → Manual: revisão final e envio são meus.',
+    'persona':'Coordenador de PCP · uso mensal fixo · precisa fechar em <4h pra virar rotina de sexta.',
+    'dados':'- Planilha de apontamento (linha, turno, quantidade produzida)\n- Meta mensal do PCP\n- Histórico de 3 meses anteriores\n- Ocorrências da manutenção\nSem nome/CPF de operador. Sem dado financeiro sensível.',
+    'lgpd-check':false,
+    'tools-nota':'Project fixo com meu tom e as metas do trimestre + Skill de análise de variação + Artifact pro texto final que eu formato depois no Word.',
+    'checkpoint':'Checkpoint 1 · eu confiro os números antes do envio (risco: número errado vai pro diretor).\nCheckpoint 2 · eu reescrevo a conclusão com contexto que a IA não tem (feriado, quebra) — risco: análise genérica.\nCheckpoint 3 · assinatura e envio são meus.',
+    'sucesso':'- Tempo do relatório: 3 dias → 4h (medir por 3 meses)\n- Atraso da reunião de fechamento: 40% → menos de 10%\n- Ganho qualitativo: tempo pra ler o número, não só consolidar.',
+    'modos-sel':['autopiloto','colaboracao','manual'],
+    'eco-sel':['projects','artifacts','skill'],
+    'risco-sel':['alucinacao','decisao'],
+    // Pitch pré-preenchido
+    'pitch-problema':'Hoje o relatório mensal de PCP consome 3 dias do coordenador e atrasa o fechamento em 40% dos meses.',
+    'pitch-piloto':'consolidar as 4 planilhas com uma Skill de análise de variação e escrever a leitura em Colaboração',
+    'pitch-metrica':'tempo do relatório de 3 dias para 4h, medido por 3 meses',
+    // Patrocínio
+    'patr-quem':'meu diretor + o coordenador que executa',
+    'patr-mostro':'o tempo medido do relatório nos 30 dias vs. os 3 dias de antes'
+  };
+
+  document.getElementById('btn-exemplo').addEventListener('click', function(){
+    if(!confirm('Isso substitui o que está preenchido agora. Continuar?')) return;
+    Object.assign(state, EXEMPLO);
+    document.querySelectorAll('[data-key]').forEach(function(el){
+      var v = state[el.dataset.key];
+      if(v === undefined) return;
+      if(el.type === 'checkbox') el.checked = v;
+      else el.value = v;
+    });
+    document.querySelectorAll('.modo-chip').forEach(function(el){ el.classList.toggle('active', state['modos-sel'].includes(el.dataset.modo)); });
+    document.querySelectorAll('.eco-tag').forEach(function(el){ el.classList.toggle('on', state['eco-sel'].includes(el.dataset.tool)); });
+    document.querySelectorAll('.risco-badge').forEach(function(el){ el.classList.toggle('on', state['risco-sel'].includes(el.dataset.risco)); });
+    renderPitch();
+    save();
+  });
+
+  document.getElementById('btn-limpar').addEventListener('click', function(){
+    if(!confirm('Apagar tudo? Não dá pra desfazer.')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  // Render inicial do pitch (caso já haja estado salvo)
+  renderPitch();
+})();
+</script>
 </body>
 </html>

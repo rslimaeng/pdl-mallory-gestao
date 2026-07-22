@@ -1,8 +1,10 @@
 # M6 · Canvas Executivo de IA: Entregável Final do Gestor
 
-**Trilha 2 · Módulo 6 de 6 · 1h15**
+**Trilha 2 · Módulo 6 de 6 · 1h15 · individual · piloto de 30 dias**
 
 Oportunidade, impacto, recursos, indicadores e como apresentar à diretoria — seu piloto escolhido, patrocinado e pronto para 30 dias.
+
+> Esta página tem uma **ferramenta viva**: o Canvas Mallory (8 blocos editáveis, salva sozinho no navegador, imprime em A4), um gerador de pitch de 3 frases e um bloco de patrocínio com data de revisão. Este `.md` descreve tudo em texto — quem lê só aqui entende o módulo inteiro, perde só a interatividade.
 
 ---
 
@@ -20,7 +22,7 @@ Oportunidade, impacto, recursos, indicadores e como apresentar à diretoria — 
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| As oportunidades priorizadas do M3, as diretrizes do M4 e a workstation do M5 | Você converte a top-1 em piloto de 30 dias: Canvas de 5 campos, argumentação de 3 frases, rodada de 2 minutos | O Canvas Executivo preenchido e o roteiro para apresentar o piloto à diretoria da Mallory |
+| As oportunidades priorizadas do M3, as diretrizes do M4 e a workstation do M5 | Você converte a top-1 em piloto de 30 dias: Canvas de 8 blocos, argumentação de 3 frases, rodada de 2 minutos | O Canvas Executivo preenchido e o roteiro para apresentar o piloto à diretoria da Mallory |
 
 ---
 
@@ -34,44 +36,38 @@ E há o papel que só você pode fazer: patrocinar. Piloto delegado para a equip
 
 ---
 
-## O conceito em 5 pontos
+## Como preencher o Canvas Mallory (8 blocos)
 
-### 1. O Canvas Executivo tem 5 campos — dois a mais que o básico, e são os que importam
+Uma folha só. Você pega um problema real da sua área, desenha o fluxo de hoje e decide onde a IA entra e em que modo. É o mesmo Canvas das duas trilhas — *adaptado do AI Canvas (StartSe) pro vocabulário e contexto Mallory.* Na página, cada bloco é um campo editável que salva sozinho; aqui, o que preencher em cada um:
 
-**Oportunidade** (a rotina, na frase do M3) · **Impacto esperado** (horas/mês × custo/hora, em R$ conservador) · **Recursos necessários** (o que já existe e o que falta — conta, acesso, tempo de quem) · **Próximos passos** (3 ações datadas, a primeira até sexta) · **Indicadores de sucesso** (a métrica que já existe e o alvo em 30 dias). Recursos e indicadores são o que separa plano de gestor de lista de desejos.
+1. **Problema Mallory** — a dor real da sua área: quem sente, quando, com que frequência, e por que resolver isso importa esse ano. *Ex.: "o relatório mensal de PCP consome 3 dias e atrasa o fechamento em 40% dos meses."*
+2. **Como resolvo hoje (sem IA)** — o passo a passo do jeito atual, sem invocar IA. Ver o processo cru é o que revela onde a IA vale — e onde não vale.
+3. **Onde a IA entra + em que modo** — marque, por passo, se é **Autopiloto** (IA executa, você revisa), **Colaboração** (pensam juntos, você traz o contexto do mês) ou **Manual** (você decide, assina). A regra de ouro: quanto maior o impacto/risco, mais manual o modo.
+4. **Para quem** — quem usa no dia a dia: área, nível, com que frequência.
+5. **Dados necessários (+ flag LGPD)** — que informação a IA precisa ver e de onde vem. Marque a flag se houver dado pessoal, financeiro ou estratégico sensível — e desidentifique antes (sem CPF de operador, sem dado financeiro cru).
+6. **Ecossistema Claude** — as camadas do M5 que o piloto usa: Chat · Projects · Artifacts · Cowork · Skill · Connector · Plugin. É aqui que a workstation que você montou no M5 reaparece.
+7. **Checkpoint humano + risco** — onde você (humano) confere, decide e assina antes de soltar; e o risco se pular esse ponto (alucinação · LGPD · tom/voz · decisão irreversível · viés). A IA não substitui julgamento: o número que vai pro diretor você confere; a assinatura é sua.
+8. **Como sei que deu certo** — indicadores concretos, antes → depois, com prazo pra medir. *Ex.: "tempo do relatório: 3 dias → 4h, medir por 3 meses; atraso da reunião: 40% → menos de 10%."*
 
-### 2. Quick win e estrutural pequeno: não escolha entre eles — sequencie
-
-O quick win (4×4×risco baixo, do M3) gera crédito em semanas. O projeto estrutural pequeno — uma workstation de processo, como a do M5 — constrói capacidade que fica. O erro é apostar tudo num só: quick win sozinho vira truque; estrutural sozinho demora e perde patrocínio. O Canvas de hoje formaliza o quick win; o estrutural entra como "próximo passo" do dia 30.
-
-### 3. A argumentação de 3 frases: problema em número · piloto proposto · retorno com evidência
-
-*"Hoje, [processo] consome [X horas/mês] da área."* · *"Proponho um piloto de 30 dias: [o quê], com [recursos], medido por [indicador]."* · *"Retorno esperado: [R$ ou horas], e trago o resultado medido na revisão de [data]."* Três frases, três números, uma data. Se a sua proposta não cabe nesse formato, ela ainda não está pronta para a mesa da diretoria.
-
-### 4. Patrocínio ativo: o piloto tem a sua cara ou não tem chance
-
-Patrocinar não é autorizar — é acompanhar, proteger e ajustar. Na prática: 15 minutos por semana com quem executa, remover o obstáculo da semana, celebrar o primeiro resultado em público, matar sem drama o que não funcionar. O piloto que a diretoria aprova é o que tem um gestor visível na frente — e a revisão marcada antes de começar.
-
-### 5. Um piloto, 30 dias, um indicador, uma data de revisão
-
-A fórmula completa do compromisso. Um piloto — não três; a atenção dividida mata todos. Trinta dias — perto o bastante para dar urgência, longe o bastante para medir. Um indicador — que já existe hoje, com dono e número. Uma data — a revisão marcada no calendário antes de o piloto começar. O que não tem data de revisão não é piloto: é intenção.
+**Exemplo pré-carregável (botão "Carregar exemplo · Relatório PCP"):** o coordenador de PCP usa Skill de análise de variação em Autopiloto para consolidar as 4 planilhas, Colaboração para a leitura do mês (com o contexto que a IA não tem — feriado, quebra da injetora 2) e Manual para revisão e envio.
 
 ---
 
-## Quando aplicar / Quando NÃO aplicar
+## Peça 1 · Gerador de pitch de 3 frases pra diretoria
 
-| 🟢 Entra no Canvas | 🔴 Não entra no Canvas |
-|---|---|
-| A top-1 do M3, testada hoje, com valor estimado em R$ | Oportunidade que ninguém testou — Canvas não é lugar de estreia |
-| Piloto que roda com recursos que você já tem ou consegue em 1 semana | Projeto que depende de comprar sistema ou contratar — isso é proposta de orçamento, outro rito |
-| Indicador que já existe, com número de hoje conhecido | "Métrica" que precisaria ser criada para medir o piloto |
-| O que você mesmo patrocina, com revisão marcada | Piloto para a equipe tocar "quando der" — sem patrocínio visível, não nasce |
+A argumentação executiva sai do próprio Canvas: **problema em número · piloto proposto · retorno com evidência**. Na página, três campos geram o pitch; aqui está o modelo:
 
----
+1. **Problema** (sintetiza o bloco 1) — a rotina, com o número que incomoda.
+2. **Piloto** (sintetiza os blocos 3 + 6) — o quê você vai testar e com quais ferramentas.
+3. **Métrica** (sintetiza o bloco 8) — a medida que já existe e o alvo em 30 dias.
 
-## Prompt-âncora do módulo
+O gerador monta:
 
-A IA como assessora da sua argumentação — o Canvas é seu, as 3 frases saem afiadas:
+> **[Problema.]** Meu piloto de 30 dias é **[piloto]**, usando o que construí no M5. Vou medir por **[métrica].**
+
+Três frases, prontas para falar. Se você levar a folha do Canvas e falar essas 3 frases, já respondeu 80% do que a mesa vai perguntar — o restante é a sua confiança. Se a proposta não cabe nesse formato, ela ainda não está pronta para a mesa.
+
+**A IA como assessora do pitch (o Canvas é seu, as 3 frases saem afiadas):**
 
 ```text
 # PAPEL
@@ -103,35 +99,21 @@ As objeções do cético que você guardou no M1 entram aqui: cole-as no context
 
 ---
 
-## Exercício
+## Peça 2 · Patrocínio & primeira revisão marcada
 
-### Camada 1 — Básico (todos · 15 min · individual)
+Patrocinar não é autorizar — é acompanhar, proteger e ajustar. O piloto que a diretoria aprova é o que tem um gestor visível na frente e a revisão marcada **antes** de começar. Na página, um bloco registra:
 
-**Objetivo:** preencher o Canvas Executivo da sua área.
+- **Data da 1ª revisão do piloto** (entra no calendário agora).
+- **Quem revisa comigo** (chame a pessoa e mande o convite antes de sair da sala).
+- **O que mostro na revisão** (reuso da métrica do bloco 8 — o número medido nos 30 dias vs. o de antes).
 
-**Passo a passo:**
-1. Recupere a top-1 do M3 — com o teste feito e o valor/mês estimado no Desafio.
-2. Preencha os 5 campos no template (final desta página). Impacto com a conta conservadora: horas/mês × custo/hora.
-3. Nos recursos, seja honesto: o que já existe (conta, workstation do M5, diretrizes do M4) e o que falta — com nome de quem aprova o que falta.
-4. Nos próximos passos, a regra: a primeira ação tem data até sexta-feira; a revisão do piloto já entra com data marcada.
+Piloto delegado pra equipe "tocar quando der" morre em 2 semanas. O que não tem data de revisão não é piloto: é intenção.
 
-**Resultado esperado:** Canvas de 5 campos preenchido, com número em todos os campos que pedem número.
+---
 
-**Como avaliar:** teste dos 3 minutos — outro gestor lê o seu Canvas e responde: o que é, quanto vale, o que precisa, quando revisa? Se algum campo obriga explicação de boca, reescreva o campo, não ensaie a explicação.
+## Amarração ao M5
 
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
-
-**Objetivo:** afiar a argumentação e ensaiar a rodada de 2 minutos.
-
-**Passo a passo:**
-1. Rode o prompt-âncora com o seu Canvas. Ajuste as 3 frases até soarem como você — a IA estrutura, a voz é sua.
-2. Confira as respostas às perguntas prováveis contra a realidade: alguma resposta promete o que o Canvas não sustenta? Corte.
-3. Ensaie a fala de 2 minutos: as 3 frases + 1 pedido claro (aprovação, acesso ou tempo de alguém).
-4. Cronometre uma vez. Passou de 2 minutos, corte detalhe — número fica, adjetivo sai.
-
-**Resultado esperado:** as 3 frases prontas e a rodada ensaiada dentro do tempo.
-
-**Como avaliar:** se a primeira frase já contém um número que incomoda (horas ou reais desperdiçados hoje), a abertura funciona. Se começa com "a IA é uma oportunidade", recomece pelo problema.
+**A workstation do M5 pode ser o piloto.** Se você configurou Project + Skill + Connector no M5, o piloto do bloco 6 do seu Canvas talvez já esteja de pé. Nesse caso os 30 dias são de **calibração + medição**, não de construção do zero — anota isso no bloco 8.
 
 ---
 
@@ -145,41 +127,16 @@ As objeções do cético que você guardou no M1 entram aqui: cole-as no context
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
-> Até sexta-feira, envie o Canvas ao seu diretor (ou ao fórum onde ele decide) com as 3 frases na mensagem — e marque no calendário a revisão de 30 dias do piloto.
-> Como saber que aconteceu: o Canvas foi enviado, e a revisão tem data, hora e participantes no convite.
->
-> **Dica de cascata:** este marco pode absorver os anteriores — o documento do M2, o teste do M3, a diretriz do M4 e a tarefa da workstation do M5 são evidências que fortalecem o Canvas. Não empilhe 5 compromissos novos: escolha o que converge para o piloto.
->
-> Depois da rodada de 2 minutos por gestor, o dia fecha com perguntas abertas e os próximos passos: este site continua no ar — módulos, [Banco de Prompts](../banco-de-prompts/) e [Artefatos](../artefatos/) ficam disponíveis, e a revisão de 30 dias é o próximo encontro do tema.
->
-> **Canvas de referência — os 5 casos da trilha, preenchidos como exemplo:**
->
-> | Oportunidade | Impacto esperado | Recursos | Próximos passos | Indicadores |
-> |---|---|---|---|---|
-> | Controladoria: desvios do mês em 1 página para a diretoria | ~6h/mês de gestor (≈ R$ 500/mês, conservador) | Conta Claude, prompt do M2, dados desidentificados | Rodar no fechamento de julho · validar com diretor · padronizar | Tempo de preparação do briefing: de 1 dia para 2h |
-> | Jurídico: triagem de cláusulas de risco em contratos de fornecedor | ~8h/mês; reunião preparada em horas, não dias | Conta Claude, prompt do M4, contratos desidentificados | Testar em 2 contratos · validar com parecer humano · definir fluxo | Contratos triados/mês com dupla checagem |
-> | RH: pesquisa de clima em 3 comunicações sob medida | ~5h/ciclo + mensagem que chega certa em cada público | Conta Claude, prompt do M3, resultados agregados (sem dado individual) | Aplicar no próximo ciclo · colher reação · ajustar tom | Prazo entre resultado e comunicação: de 2 semanas para 3 dias |
-> | Logística/Importação: cruzamento estoque × demanda para prioridade de contêineres | ~10h/mês e decisão antecipada em 1 semana | Workstation Cowork (M5), planilhas de estoque e demanda | Montar pasta curada · rodar 1 ciclo em paralelo ao processo atual · comparar | Aderência da prioridade sugerida vs. decidida |
-> | Planejamento: indicadores do S&OP em briefing com cenários | ~6h/ciclo de preparação de reunião | Conta Claude, prompt de cenários do M2, indicadores agregados | Gerar no próximo S&OP · comparar com briefing manual · adotar | Tempo de preparação e nº de retrabalhos pós-reunião |
->
-> **Template em branco — copie e preencha:**
->
-> | Campo | Seu piloto |
-> |---|---|
-> | Oportunidade (a rotina, em 1 frase) | |
-> | Impacto esperado (horas/mês × custo/hora, em R$) | |
-> | Recursos (o que já tenho · o que falta · quem aprova) | |
-> | Próximos passos (3 ações datadas; a 1ª até sexta) | |
-> | Indicadores (métrica que já existe + alvo em 30 dias) | |
->
-> **Roteiro de 3 frases — modelo:**
-> 1. "Hoje, [processo] consome [X horas/mês] da área — cerca de [R$ Y/mês]."
-> 2. "Proponho um piloto de 30 dias: [o quê], usando [recursos que já temos], medido por [indicador]."
-> 3. "Retorno esperado: [horas ou R$]. Trago o resultado medido na revisão de [data marcada]."
+## O que você leva para a Mallory na 2ª feira
+
+Até sexta-feira, envie o Canvas ao seu diretor (ou ao fórum onde ele decide) com as 3 frases na mensagem — e marque no calendário a revisão de 30 dias do piloto. Como saber que aconteceu: o Canvas foi enviado, e a revisão tem data, hora e participantes no convite.
+
+Este marco pode absorver os anteriores — o documento do M2, o teste do M3, a diretriz do M4 e a tarefa da workstation do M5 são evidências que fortalecem o Canvas. Não empilhe 5 compromissos novos: escolha o que converge para o piloto.
+
+Depois da rodada de 2 minutos por gestor, o dia fecha com perguntas abertas e os próximos passos: este site continua no ar — módulos, [Banco de Prompts](../banco-de-prompts/) e [Artefatos](../artefatos/) ficam disponíveis, e a revisão de 30 dias é o próximo encontro do tema.
 
 ---
 
-[← M5 · Claude Cowork: sua Workstation de IA](../m5/) · [Banco de Prompts →](../banco-de-prompts/)
+[← M5 · Liderança na Era da IA — o ecossistema Claude](../m5/) · [Banco de Prompts →](../banco-de-prompts/)
 
 [Início](../) · [Artefatos](../artefatos/)
