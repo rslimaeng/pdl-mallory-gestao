@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prepare a reunião trimestral · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-3">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Prepare a reunião trimestral</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Prepare a reunião trimestral</h1>
+    <p class="hero-lead">Delegue ao Cowork a leitura de 3 meses de Slack + a planilha de receita e receba um deck coeso de 7 slides + as perguntas difíceis da diretoria — sem ficar em alt-tab bloco por bloco.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · Comercial regional</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Cowork</span>
+        <span class="feat">Connectors</span>
+        <span class="feat">Extended Thinking</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>Você é gestor comercial regional e a reunião trimestral com a diretoria é terça — 45 minutos, 8 pessoas na sala. Precisa chegar com números, leitura do que a equipe vem sinalizando e um deck que aguenta pergunta difícil.</p>
+      <p class="muted">No chat comum você colaria bloco por bloco. No <strong>Cowork</strong> você delega: anexa o material extenso, descreve o que quer e deixa o Claude ler enquanto você toca outra coisa.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Sou <strong>gestor comercial regional</strong> de uma indústria de eletroportáteis (contexto de treinamento). Preciso preparar a <strong>reunião trimestral com a diretoria</strong> — 45 minutos, 8 pessoas na sala, foco em performance do trimestre e o que muda no próximo.
+<br><br>Anexei dois arquivos: <code class="inline">slack-export-mock.md</code> (3 meses do canal #comercial-regional, muito ruído, mas todo o histórico do que a equipe reclamou, celebrou ou levantou como risco) e <code class="inline">receita-tri-mock.xlsx</code> (receita mensal por linha de produto e por região, últimos 4 trimestres).
+<br><br>Entregue, usando <strong>Extended Thinking</strong> pra pensar antes de escrever:
+<br>1. <strong>Análise de receita</strong> — Q vigente vs Q anterior vs mesmo Q do ano anterior; que linhas puxaram pra cima e pra baixo, com números; região que destoa.
+<br>2. <strong>Síntese do Slack por temas</strong> (não me dê lista de mensagens): os 3-5 assuntos mais recorrentes; pra cada um, o que aparece em 1 frase, frequência (alto/médio/baixo), se é reclamação, oportunidade ou alerta, e 1 exemplo parafraseado sem citar nome.
+<br>3. <strong>Cruzamento</strong> — os temas do Slack explicam os números? Se conecta, mostra; se não conecta, diz que não conecta (não force narrativa).
+<br>4. <strong>Deck</strong> de 7 slides no máximo, em outline (título + 3 bullets): abertura, números, comparações que importam, temas do Slack, cruzamento, 3 decisões que a diretoria precisa tomar, próximos passos.
+<br>5. <strong>Perguntas difíceis</strong> — as 3 mais incômodas que a diretoria faria depois desse deck, pra eu me preparar.
+<br><br>Regras: nada de superlativo sem número atrás; marque <code class="inline">[verificar antes da reunião]</code> em dado ambíguo da planilha; os nomes do Slack já vieram anonimizados — se notar algum que passou, avise.</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon">C</div>
+          <div>
+            <div class="mock-project-title">Claude Cowork</div>
+            <div class="mock-project-meta">Processando · Extended Thinking ativo</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:16px;height:16px;border-radius:50%;background:#3f9e6a;color:white;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;">✓</div>
+            <div style="color:#3a3a3a;">Lendo <strong>slack-export-mock.md</strong> · ~90 mensagens</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:16px;height:16px;border-radius:50%;background:#3f9e6a;color:white;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;">✓</div>
+            <div style="color:#3a3a3a;">Analisando <strong>receita-tri-mock.xlsx</strong> · 4 trimestres</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:16px;height:16px;border-radius:50%;background:#e07a5f;color:white;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;">•</div>
+            <div style="color:#1a1a1a;font-weight:600;">Cruzando temas × números</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:16px;height:16px;border-radius:50%;border:1.5px solid #c4c0b6;flex-shrink:0;"></div>
+            <div style="color:#8a8a8a;">Rascunhando deck de 7 slides</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:8px 10px;background:rgba(224,122,95,.1);border-radius:6px;font-size:10.5px;color:#8a5340;">
+          Você não fica olhando. Ele avisa quando termina.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Dê contexto -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Dê contexto ao Claude</h2>
+      <p>O Cowork trabalha melhor quando o material vem junto de uma vez. Você anexa os dois arquivos, liga o raciocínio estendido e deixa ele ler tudo antes de responder.</p>
+
+      <h3>Contexto obrigatório</h3>
+      <p class="muted">Abra o <strong>Claude Cowork</strong> (app desktop), ative <strong>Extended Thinking</strong> e anexe estes dois arquivos (baixáveis na seção 6):</p>
+      <ul class="ctx-list">
+        <li><code>slack-export-mock.md</code> — 3 meses do canal #comercial-regional (~90 mensagens fictícias)</li>
+        <li><code>receita-tri-mock.xlsx</code> — receita mensal por linha e região, 4 trimestres</li>
+      </ul>
+
+      <h3>Por que Cowork, e não o chat comum</h3>
+      <p class="muted">No chat, material desse tamanho vira colagem em pedaços — você perde o fio e o contexto some. No Cowork ele lê o pacote inteiro, mantém tudo na cabeça e você acompanha o progresso sem ficar em alt-tab.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">📎</div>
+          <div>
+            <div class="mock-project-title">Anexos da tarefa</div>
+            <div class="mock-project-meta">2 arquivos · Extended Thinking ligado</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon md">MD</div>
+            <div>
+              <div style="font-weight:600;">slack-export-mock.md</div>
+              <div style="color:#6b6b6b;font-size:10px;">~90 mensagens · 3 meses</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">receita-tri-mock.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">Linha × região · 4 trimestres</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Extended Thinking faz ele raciocinar antes de escrever — melhor pro cruzamento números × temas.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>Um deck de 7 slides em outline, mais a síntese do Slack e o bloco de perguntas difíceis pra você ensaiar. Você copia pro Google Slides ou PowerPoint e ajusta a narrativa.</p>
+      <p class="muted">Números são fictícios do treinamento. Com dados reais, o cruzamento vale ouro: ele diz onde a planilha <em>confirma</em> o que a equipe já sentia — e onde não conecta.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>Deck · Reunião trimestral (7 slides)</h4>
+        <ul>
+          <li><strong>1. Abertura</strong> — Q1/26, trimestre de contrastes: ~91% da meta regional</li>
+          <li><strong>2. Números</strong> — total do trimestre; Δ vs Q4/25; ranking por linha</li>
+          <li><strong>3. Comparações</strong> — Café/Sudeste puxou; ARV/Nordeste caiu por ruptura em jan; Cozinha/Centro-Oeste a 68%</li>
+          <li><strong>4. Temas do Slack</strong> — ruptura de estoque no Nordeste (alto); concorrente X no Centro-Oeste (alto); B2B padarias (médio)</li>
+          <li><strong>5. Cruzamento</strong> — a planilha confirma o que a equipe já sentia</li>
+          <li><strong>6. Decisões</strong> — protocolo de estoque sazonal; política do Centro-Oeste; acelerar linha CAF profissional</li>
+          <li><strong>7. Próximos passos</strong> — Q2 em 4 movimentos, com responsável e prazo</li>
+        </ul>
+
+        <div class="sub-h">3 perguntas difíceis da diretoria</div>
+        <ul>
+          <li>Por que a ruptura de ARV no Nordeste não foi antecipada, se a sazonalidade é previsível?</li>
+          <li>Qual o plano B se o concorrente X entrar em ARV no Nordeste com preço agressivo?</li>
+          <li>O contrato de padarias tem risco de concentração se virar 20-30% da receita de Café?</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>Com o deck na mão, refine sem recomeçar — o Cowork ainda tem todo o material da tarefa carregado.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Enxugar:</strong> "Enxuga o deck pra 5 slides mantendo as decisões e o cruzamento números × temas."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Script de fala:</strong> "Escreve um script de fala de 45 segundos por slide, no tom de quem apresenta pra diretoria."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Antecipar objeções:</strong> "Antecipa as 3 objeções mais prováveis da diretoria e me dá uma resposta ancorada nos dados pra cada uma."</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Padrão de uso</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">Cowork lê o material extenso enquanto você faz outra coisa; ele notifica quando o deck está pronto. Você volta, revisa e pede os refinamentos em cima do que já foi lido.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>Cowork existe justamente pra delegar leitura extensa</h3>
+          <p>No chat comum você colaria bloco por bloco e perderia o fio. Aqui você entrega o pacote inteiro e deixa ele processar — é a diferença entre conversar com a IA e delegar pra ela.</p>
+        </div>
+        <div class="tip">
+          <h3>Slack real passa pelo Checklist M4 antes</h3>
+          <p>Os nomes do mock já vieram anonimizados. Com um export de Slack real, passe pelo Checklist de Anonimização do M4 antes de anexar — nome, matrícula, cliente identificável sai tudo. A IA não faz essa limpeza; você faz.</p>
+        </div>
+        <div class="tip">
+          <h3>Peça a marca [verificar antes da reunião]</h3>
+          <p>Sempre que um dado da planilha estiver ambíguo, mande ele marcar <code class="inline">[verificar antes da reunião]</code>. Você chega na sala sabendo exatamente o que ainda precisa confirmar — em vez de descobrir na frente da diretoria.</p>
+        </div>
+        <div class="tip">
+          <h3>Não force a narrativa</h3>
+          <p>O cruzamento números × temas só vale quando os dados de fato conectam. Se a região caiu mas o Slack não explica, o certo é ele dizer "não conecta". Narrativa bonita sem dado atrás é o que trava você na pergunta difícil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe os quatro arquivos abaixo, abra o Cowork, anexe o Slack e a receita, ligue o Extended Thinking e cole o prompt. Depois compare o output com o gabarito.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/reuniao-trimestral/slack-export-mock.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">slack-export-mock.md</div>
+            <div class="dl-desc">3 meses do canal #comercial-regional · ~90 mensagens fictícias</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/reuniao-trimestral/receita-tri-mock.xlsx" download class="download-btn">
+          <div class="dl-icon xlsx">X</div>
+          <div class="dl-info">
+            <div class="dl-name">receita-tri-mock.xlsx</div>
+            <div class="dl-desc">Receita mensal por linha e região · 4 trimestres</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/reuniao-trimestral/prompt-reuniao-tri.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">prompt-reuniao-tri.md</div>
+            <div class="dl-desc">O prompt completo pra colar no Cowork</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/reuniao-trimestral/gabarito-deck.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">gabarito-deck.md</div>
+            <div class="dl-desc">Referência pra conferir o output — não é resposta única</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo</h3>
+        <ol>
+          <li>Baixe os <strong>quatro arquivos</strong> acima.</li>
+          <li>Abra o <strong>Claude Cowork</strong> (app desktop).</li>
+          <li>Anexe <code>slack-export-mock.md</code> e <code>receita-tri-mock.xlsx</code>.</li>
+          <li>Ative o <strong>Extended Thinking</strong>.</li>
+          <li>Cole o conteúdo de <code>prompt-reuniao-tri.md</code> (mesmo prompt da seção 1).</li>
+          <li>Quando ele terminar, compare o deck com <code>gabarito-deck.md</code>.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../analise-segmento/" class="related-card">
+      <span class="feat">Cowork · Extended Thinking</span>
+      <h3>Análise de segmento bottom-up</h3>
+      <p>Dimensione um mercado com metodologia auditável, não com número redondo.</p>
+    </a>
+    <a href="../lote-fornecedores/" class="related-card">
+      <span class="feat">Cowork · Batch</span>
+      <h3>Lote de fornecedores</h3>
+      <p>Processe muitos documentos parecidos de uma vez, com o mesmo critério.</p>
+    </a>
+    <a href="../comite-sst-projects/" class="related-card">
+      <span class="feat">Projects · Artifacts</span>
+      <h3>Comitê no Projects — SST/Qualidade</h3>
+      <p>Monte um espaço persistente pra preparar pauta, ata e comunicado toda semana.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comitê no Projects — SST/Qualidade · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-1">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Comitê no Projects — SST/Qualidade</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Comitê no Projects — SST/Qualidade</h1>
+    <p class="hero-lead">Monte um espaço persistente no Claude Projects para preparar pauta, redigir ata e comunicar decisões do comitê semanal — sem começar do zero toda semana e sem depender de quem está de plantão.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · SST/Qualidade</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Projects</span>
+        <span class="feat">Artifacts</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>O Claude no Projects mantém o mesmo contexto ativo entre conversas — política interna, atas passadas, papéis do comitê. Cada semana você só descreve o que aconteceu; ele reusa tudo o que já sabe.</p>
+      <p class="muted">Com o Projects você para de re-explicar quem está no comitê, qual foi a última decisão e onde a política mora. Vira uma memória de trabalho compartilhada por todo mundo que tem acesso.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Estou preparando o <strong>comitê SST/Qualidade</strong> desta semana. Aconteceram três coisas desde a última reunião: (1) um quase-acidente no setor de injeção (colaborador escorregou em óleo derramado, sem lesão); (2) reclamação recorrente sobre EPI (luvas com furo relatadas por 4 pessoas em turnos diferentes); (3) auditoria externa marcada pra próximo mês.</p>
+        <p>Com base na <strong>política interna</strong> que está no Project e nas <strong>4 atas anteriores</strong>, prepara pra mim: pauta com 5 tópicos priorizados por criticidade, minuta de ata com espaços pra preencher no dia, e comunicado curto pra chão de fábrica em linguagem direta (sem jargão técnico).</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon">C</div>
+          <div>
+            <div class="mock-project-title">Comitê SST · Qualidade</div>
+            <div class="mock-project-meta">Projeto privado · atualizado hoje</div>
+          </div>
+        </div>
+        <div class="mock-instructions">
+          <strong>Instruções do projeto:</strong><br>
+          Você é assistente do comitê semanal de SST/Qualidade da Mallory. Antes de responder qualquer pergunta, consulte a política interna e as atas anteriores anexadas. Priorize por criticidade (segurança &gt; conformidade &gt; melhoria). Não invente números — se faltar dado, pergunte. Nunca sugira colar nome de participantes sem anonimizar…
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Dê contexto -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Dê contexto ao Claude</h2>
+      <p>O Project ancora o contexto duradouro. Você configura uma vez — instruções + arquivos de referência — e todas as conversas dentro dele já herdam esse conhecimento.</p>
+
+      <h3>Contexto obrigatório</h3>
+      <p class="muted">Ative o <strong>Claude Projects</strong>, crie um projeto chamado "Comitê SST · Qualidade" e anexe estes dois arquivos (baixáveis na seção 6):</p>
+      <ul class="ctx-list">
+        <li><code>politica-sst-mallory-mock.docx</code> — política interna fictícia (11 páginas)</li>
+        <li><code>instrucoes-projeto-comite-sst.md</code> — cole no campo "Instructions" do Project</li>
+      </ul>
+
+      <h3>Contexto opcional</h3>
+      <p class="muted">Se você já tem atas antigas <em>já anonimizadas</em> (Checklist M4), anexe também. Quanto mais atas, mais o Claude aprende o estilo da casa. Sem atas reais, ele improvisa a partir da política — funciona, mas fica genérico.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">📎</div>
+          <div>
+            <div class="mock-project-title">Arquivos do projeto</div>
+            <div class="mock-project-meta">2 anexados · até 100 arquivos</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon docx">W</div>
+            <div>
+              <div style="font-weight:600;">politica-sst-mallory-mock.docx</div>
+              <div style="color:#6b6b6b;font-size:10px;">11 páginas · 84 KB</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon md">MD</div>
+            <div>
+              <div style="font-weight:600;">instrucoes-projeto-comite-sst.md</div>
+              <div style="color:#6b6b6b;font-size:10px;">Instruções · 1,2 KB</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Anexe atas anteriores (anonimizadas) pra ele aprender o tom da casa.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>Um artifact estruturado com três peças que você usa direto: pauta priorizada, minuta de ata pronta pra preencher no dia, e comunicado curto pro chão de fábrica.</p>
+      <p class="muted">Você edita ao vivo dentro do próprio Claude (o artifact é editável) ou copia pro Word/Google Docs. As três peças ficam versionadas no Project, então na semana seguinte você compara com o que virou fato.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>Pauta · Comitê SST 24/07</h4>
+        <ul>
+          <li><strong>1.</strong> Quase-acidente injeção — análise de causa raiz (15 min · crítico)</li>
+          <li><strong>2.</strong> EPI luvas — trocar fornecedor ou reforçar inspeção? (20 min)</li>
+          <li><strong>3.</strong> Preparação auditoria externa — checklist gaps (25 min)</li>
+          <li><strong>4.</strong> Indicadores do mês (10 min)</li>
+          <li><strong>5.</strong> Encaminhamentos e próxima pauta (10 min)</li>
+        </ul>
+
+        <div class="sub-h">Minuta de ata (pré-reunião)</div>
+        <p>Data: __/__/2026 · Presentes: __ · Ausentes justificados: __<br>
+        Decisões: [preencher] · Encaminhamentos: [preencher com responsável e prazo]</p>
+
+        <div class="sub-h">Comunicado (chão de fábrica)</div>
+        <p style="background:white;padding:8px;border-radius:4px;font-size:11px;">"Equipe, essa semana o comitê olhou o escorregão no setor de injeção e a questão das luvas. Ninguém se machucou, mas vamos ajustar duas coisas: (1) rotina de limpeza de piso a cada 2h; (2) inspeção de EPI antes do início do turno. Sua parte: avisar liderança se algo estiver fora."</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>Depois que o Claude entrega a primeira versão, refine sem começar do zero — ele lembra de tudo dentro do Project.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Refinar linguagem:</strong> "Reescreve o comunicado como se fosse pro colaborador do turno da noite, sem termos técnicos. Frases curtas, no máximo 3 linhas."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Consolidar histórico:</strong> "Pega as 4 últimas atas anexadas e faz um relatório trimestral: recorrências, decisões que viraram fato, o que ficou pendente."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Propor indicadores:</strong> "Baseado nos últimos 3 meses de atas, sugere 3 KPIs de SST/Qualidade pro próximo trimestre que sejam mensuráveis com o que a Mallory já coleta."</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Padrão de uso</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">Um único comitê pode gerar 4-5 conversas dentro do mesmo Project ao longo da semana — pré-reunião, dia da reunião, ajuste do comunicado, resposta a dúvida que surgiu. O contexto acumula. Você não perde nada.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>As instruções do Project valem mais que qualquer prompt</h3>
+          <p>Se você quer que o Claude sempre priorize por criticidade e nunca invente números, escreve isso <em>uma vez</em> nas instruções do Project. Todo prompt novo já herda. Prompt na conversa é ajuste fino — a moldura vem das instruções.</p>
+        </div>
+        <div class="tip">
+          <h3>Anonimize antes de anexar ata real</h3>
+          <p>Se for anexar atas anteriores reais (não os mocks deste exemplo), passe pelo Checklist de Anonimização do M4 antes. Nome de colaborador, número de matrícula, número de acidente — sai tudo. A IA nunca faz essa limpeza; você faz.</p>
+        </div>
+        <div class="tip">
+          <h3>Um Project por comitê, não um Project pra tudo</h3>
+          <p>Tentar fazer um "Project Mallory" com todos os assuntos vira ruído. O contexto compete. Crie um Project por rito recorrente (comitê SST, comitê comercial, 1:1 com liderados). Cada um enxuto.</p>
+        </div>
+        <div class="tip">
+          <h3>Reveja as instruções a cada trimestre</h3>
+          <p>O que era prioridade em janeiro pode não ser em abril. Instruções velhas empurram o Claude pra respostas velhas. 5 minutos por trimestre pra revisar economiza semanas de output enviesado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe os dois arquivos abaixo, crie um Project no Claude (menu lateral → <em>Projects</em> → <em>+ New Project</em>), cole as instruções e anexe a política. Cinco minutos.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/comite-sst-projects/politica-sst-mallory-mock.docx" download class="download-btn">
+          <div class="dl-icon docx">W</div>
+          <div class="dl-info">
+            <div class="dl-name">politica-sst-mallory-mock.docx</div>
+            <div class="dl-desc">Política interna fictícia · 11 páginas · anexar no Project</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/comite-sst-projects/instrucoes-projeto-comite-sst.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">instrucoes-projeto-comite-sst.md</div>
+            <div class="dl-desc">Prompt de instruções · colar em Project → Instructions</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo em 5 minutos</h3>
+        <ol>
+          <li>Baixe os dois arquivos acima.</li>
+          <li>Abra o Claude.ai e clique em <strong>Projects → + New Project</strong>. Nomeie "Comitê SST · Qualidade".</li>
+          <li>Copie o conteúdo de <code>instrucoes-projeto-comite-sst.md</code> e cole no campo <strong>Instructions</strong>.</li>
+          <li>Anexe <code>politica-sst-mallory-mock.docx</code> em <strong>Project knowledge</strong>.</li>
+          <li>Abra uma conversa nova dentro do projeto e cole o prompt da seção 1. Veja o Claude usar o contexto sem você repetir nada.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../destrave-oee/" class="related-card">
+      <span class="feat">Extended Thinking · Artifacts</span>
+      <h3>Destrave um tema técnico — OEE</h3>
+      <p>Peça ao Claude pra mapear seu entendimento e construir um workbook a partir das lacunas.</p>
+    </a>
+    <a href="../reuniao-trimestral/" class="related-card">
+      <span class="feat">Cowork · Connectors</span>
+      <h3>Prepare a reunião trimestral</h3>
+      <p>Extraia insights de Slack + planilha e monte um deck coeso — sem alt-tab.</p>
+    </a>
+    <a href="../analise-segmento/" class="related-card">
+      <span class="feat">Cowork · Extended Thinking</span>
+      <h3>Análise de segmento bottom-up</h3>
+      <p>Dimensione um mercado com metodologia auditável, não com número redondo.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Converse com sua planilha · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-5">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Converse com sua planilha</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Converse com sua planilha</h1>
+    <p class="hero-lead">Antes de pedir dashboard bonito, converse com os dados — o Claude faz sanity check, sugere o que a planilha responde bem (e o que não responde) e só renderiza gráfico em artifact quando você pedir.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · Comercial</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Artifacts</span>
+        <span class="feat">Chat</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>Você é gestor comercial e recebeu do PCP uma planilha com produção e venda mensal dos últimos 12 meses de 6 SKUs. Antes de pedir um dashboard bonito pro time de dados, você quer entender o que esses números estão te contando.</p>
+      <p class="muted">Este é o caso mais simples do módulo — roda no <strong>Chat</strong> do Claude.ai, não precisa de Cowork. A ideia é conversar com os dados primeiro: o Claude valida a planilha, mostra o que ela responde bem e onde é cega, e só desenha gráfico quando você pede.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Sou <strong>gestor comercial</strong> numa indústria de eletroportáteis (contexto de treinamento). Recebi uma planilha do PCP com <strong>produção e venda mensal dos últimos 12 meses de 6 SKUs</strong> e quero entender o que ela me conta antes de pedir dashboard. <strong>Antes de qualquer gráfico</strong>, na ordem: (1) <strong>sanity check</strong> — quantas linhas e colunas, alguma célula em branco ou com valor esquisito (negativo, texto onde deveria ser número), os totais mensais batem? Se tiver problema, para aqui e me avisa. (2) <strong>3 perguntas que essa planilha responde bem</strong> — específicas destes dados, não genéricas de negócio (ex.: quais SKUs têm venda maior que produção há 2+ meses seguidos?). (3) <strong>3 perguntas que ela NÃO responde</strong> — onde ela é cega (ex.: não separa canal de venda, então não dá pra saber se a queda foi B2B ou B2C). (4) Depois eu faço perguntas específicas — responde com número direto, fonte (qual coluna, qual linha, pra eu auditar) e declara quando depender de suposição. <strong>Só quando eu pedir</strong>, renderiza gráfico em artifact. Regras: nunca inventa coluna que não existe, nunca arredonda pra ficar bonito, marca hipótese como hipótese, português-BR e sem emoji.</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon">C</div>
+          <div>
+            <div class="mock-project-title">Claude.ai · Chat</div>
+            <div class="mock-project-meta">Sonnet 4.5 · sem Cowork</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">dados-producao-venda-mock.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">6 SKUs × 12 meses · fictício</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Anexou a planilha, colou o prompt. Conversa com os dados antes de pedir qualquer gráfico.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Dê contexto -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Dê contexto ao Claude</h2>
+      <p>Aqui não tem configuração extra. Abra o <strong>Claude.ai</strong> no navegador (Chat comum, sem Cowork), anexe a planilha e cole o prompt. Só isso.</p>
+
+      <h3>Contexto obrigatório</h3>
+      <p class="muted">Anexe o arquivo abaixo (baixável na seção 6) direto na caixa de conversa, pelo clipe de anexo:</p>
+      <ul class="ctx-list">
+        <li><code>dados-producao-venda-mock.xlsx</code> — produção e venda mensal fictícia de 6 SKUs em 12 meses</li>
+      </ul>
+
+      <h3>Sem config extra</h3>
+      <p class="muted">Não precisa de Project, Connector nem Cowork. O Claude lê a planilha anexada na própria conversa. É o exemplo mais leve do módulo — de propósito, pra você sentir o hábito de <em>conversar antes de visualizar</em> sem nenhuma fricção de setup.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">📎</div>
+          <div>
+            <div class="mock-project-title">Anexar à conversa</div>
+            <div class="mock-project-meta">1 arquivo · Chat do Claude.ai</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">dados-producao-venda-mock.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">6 SKUs × 12 meses · fictício</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Sem Project, sem Cowork. Clipe → anexa → cola o prompt.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>Nenhum gráfico ainda — de propósito. Primeiro ele valida a planilha e desenha um mapa: o que esses dados respondem bem e onde são cegos. Você decide o que vale plotar; o gráfico vem depois.</p>
+      <p class="muted">Repare que ele cita a fonte de cada afirmação (qual linha, qual coluna) e sinaliza a única célula que destoou. Ele não conserta nem inventa — mostra e devolve a decisão pra você.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>Sanity check + mapa da planilha</h4>
+        <p><strong>Sanity check:</strong> 12 linhas (uma por mês) × colunas de produção e venda por SKU. Totais mensais batem com a soma dos 6 SKUs. Sinalizei 1 célula: venda do SKU liquidificador em março está em branco — confirme se foi zero real ou dado faltando antes de eu contar esse mês.</p>
+
+        <div class="sub-h">3 perguntas que ela responde bem</div>
+        <ul>
+          <li>Quais SKUs tiveram venda &gt; produção por 2+ meses seguidos? (sinal de ruptura vindo)</li>
+          <li>Qual SKU tem maior variação mês a mês na venda?</li>
+          <li>Em que meses a produção total superou a venda total (estoque acumulando)?</li>
+        </ul>
+
+        <div class="sub-h">3 que ela NÃO responde</div>
+        <ul>
+          <li>Não separa canal — não dá pra saber se a queda foi B2B ou B2C.</li>
+          <li>Não tem preço nem margem — só volume, não receita.</li>
+          <li>Não traz motivo de devolução ou cancelamento.</li>
+        </ul>
+
+        <p style="background:white;padding:8px;border-radius:4px;font-size:11px;margin-top:10px;">Quer que eu responda alguma dessas ou prefere me apontar outra? Gráfico só quando você pedir.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>Agora você conduz. Faça perguntas específicas em texto, e só peça o gráfico quando já souber que ele vale a pena.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Perguntar em texto:</strong> "Quais SKUs tiveram venda maior que produção por 2+ meses seguidos? Lista com os meses."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Pedir o gráfico:</strong> "Agora renderiza um gráfico de linha produção vs venda do SKU de café em artifact."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Puxar leitura pro PCP:</strong> "Qual SKU tem maior volatilidade mês a mês e o que isso sugere pro planejamento do PCP?"</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Padrão de uso</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">Converse antes de visualizar: o Claude ajuda a decidir o que faz sentido plotar, aí sim o Artifacts renderiza. Gráfico bonito de dado que não responde sua pergunta é enfeite — pior, engana.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>Peça sempre a fonte do número</h3>
+          <p>Exija qual coluna e qual linha embasam cada resposta. Sem fonte, você não consegue auditar — e número que não dá pra conferir vale menos que chute honesto.</p>
+        </div>
+        <div class="tip">
+          <h3>Hipótese não é fato</h3>
+          <p>Quando ele explicar um "por que o SKU X caiu", exija que marque como hipótese. A planilha mostra <em>o que</em> aconteceu; o <em>porquê</em> quase sempre é suposição — e precisa vir rotulado como tal.</p>
+        </div>
+        <div class="tip">
+          <h3>Ele não inventa nem embeleza</h3>
+          <p>O Claude nunca cria uma coluna que não existe nem arredonda pra ficar redondinho. O número é o que a planilha tem. Se algo parece bom demais, desconfie e mande ele mostrar a fonte.</p>
+        </div>
+        <div class="tip">
+          <h3>Planilha de venda real? Anonimize antes</h3>
+          <p>Este exemplo usa dados fictícios. Se um dia for colar planilha de venda real, passe pelo Checklist de Anonimização do M4 antes — nome de cliente, CNPJ, valor de contrato saem tudo. A IA nunca faz essa limpeza; você faz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe os dois arquivos abaixo, abra o Claude.ai, anexe a planilha e cole o prompt. Dois minutos — e lembre: só peça gráfico depois de entender o que os dados respondem.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/converse-planilha/dados-producao-venda-mock.xlsx" download class="download-btn">
+          <div class="dl-icon xlsx">X</div>
+          <div class="dl-info">
+            <div class="dl-name">dados-producao-venda-mock.xlsx</div>
+            <div class="dl-desc">Produção × venda de 6 SKUs em 12 meses · fictício · anexar na conversa</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/converse-planilha/prompt-converse-planilha.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">prompt-converse-planilha.md</div>
+            <div class="dl-desc">Prompt completo · colar na conversa do Claude.ai</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo em 2 minutos</h3>
+        <ol>
+          <li>Baixe os dois arquivos acima.</li>
+          <li>Abra o <strong>Claude.ai</strong> e comece uma conversa nova (Chat comum, sem Cowork).</li>
+          <li>Clique no clipe de anexo e anexe <code>dados-producao-venda-mock.xlsx</code>.</li>
+          <li>Cole o conteúdo de <code>prompt-converse-planilha.md</code> e envie.</li>
+          <li>Leia o sanity check e o mapa. <strong>Só peça gráfico depois</strong> de entender o que os dados respondem.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../destrave-oee/" class="related-card">
+      <span class="feat">Extended Thinking · Artifacts</span>
+      <h3>Destrave um tema técnico — OEE</h3>
+      <p>Peça ao Claude pra mapear seu entendimento e construir um workbook a partir das lacunas.</p>
+    </a>
+    <a href="../analise-segmento/" class="related-card">
+      <span class="feat">Cowork · Extended Thinking</span>
+      <h3>Análise de segmento bottom-up</h3>
+      <p>Dimensione um mercado com metodologia auditável, não com número redondo.</p>
+    </a>
+    <a href="../comite-sst-projects/" class="related-card">
+      <span class="feat">Projects · Artifacts</span>
+      <h3>Comitê no Projects — SST/Qualidade</h3>
+      <p>Monte um espaço persistente pra pauta, ata e comunicado do comitê semanal.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>

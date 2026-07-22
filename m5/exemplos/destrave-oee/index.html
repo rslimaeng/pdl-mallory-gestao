@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destrave um tema técnico — OEE · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-2">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Destrave um tema técnico — OEE</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Destrave um tema técnico — OEE</h1>
+    <p class="hero-lead">Descreva o que você já entende de OEE; o Claude usa Extended Thinking pra mapear onde você trava e devolve um workbook que fecha só as lacunas — não uma aula genérica sobre o tema.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · Produção/Lean</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Extended Thinking</span>
+        <span class="feat">Artifacts</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>Você é gestor de produção e quer destravar seu entendimento de OEE antes da reunião de sexta — sem fazer pergunta boba na frente do time. O truque não é pedir uma aula: é descrever o que você já sabe e onde trava, e deixar o Claude pensar antes de responder pra mapear exatamente suas confusões.</p>
+      <p class="muted">Com o Extended Thinking ativado, o Claude raciocina sobre suas travas antes de escrever. Em vez de despejar teoria, ele separa o que é definição, o que é método e onde a indústria diverge — e devolve só o que fecha o seu gap.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Sou <strong>gestor de produção</strong> numa fábrica de eletroportáteis (treinamento). Preciso destravar meu entendimento de <strong>OEE</strong> antes da reunião de sexta. Já sei o básico — mede quanto do potencial da máquina está sendo usado, tem três componentes (disponibilidade × performance × qualidade), a meta world-class gira em torno de 85%. Mas travo em quatro pontos: (1) <strong>disponibilidade vs performance</strong> — onde entra setup entre lotes e micro-parada de 30s que ninguém aponta; (2) <strong>qualidade</strong> — só refugo/rework, ou também peça que virou boa após retrabalho fora de linha; (3) <strong>denominador</strong> — tempo total do turno, tempo planejado ou tempo disponível descontando preventiva agendada; (4) <strong>comparabilidade</strong> — dá pra comparar injetora (ciclo longo) com montagem manual (ciclo curto), ou é maçã com laranja.</p>
+        <p>Antes de responder, <strong>usa extended thinking pra mapear meus mal-entendidos</strong> — separa o que é definição, o que é método e o que é convenção da indústria. Depois, com os dados de <strong>dados-oee-mock.xlsx</strong>, me devolve: um <strong>workbook de 2-3 páginas</strong> (artifact editável) que define os 3 componentes com exemplo da planilha, resolve minhas 4 travas marcando "verdade universal" vs "convenção da casa" e mostra o cálculo do OEE de UMA máquina passo a passo; uma <strong>tabela de decisão</strong> (parada × redução de ritmo × refugo); e <strong>3 perguntas</strong> que eu deveria levar ao PCP pra alinhar convenções antes de sair medindo. Não me dá aula histórica sobre a origem do OEE — vai direto no que destrava.</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">⚙</div>
+          <div>
+            <div class="mock-project-title">Configuração da conversa</div>
+            <div class="mock-project-meta">Extended Thinking · ativado</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">dados-oee-mock.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">3 turnos × 5 dias × 2 máquinas · fictício</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 O Extended Thinking fica no menu de configurações da conversa — ative antes de enviar o prompt.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Dê contexto -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Dê contexto ao Claude</h2>
+      <p>Duas coisas fazem esse caso funcionar: o <strong>Extended Thinking ligado</strong> (dá espaço pro Claude raciocinar sobre suas travas antes de escrever) e a <strong>planilha anexada</strong> (aterra a resposta em números, não em teoria solta).</p>
+
+      <h3>Contexto obrigatório</h3>
+      <ul class="ctx-list">
+        <li>Ative o <code>Extended Thinking</code> no menu de configurações da conversa.</li>
+        <li>Anexe <code>dados-oee-mock.xlsx</code> — dados fictícios de 3 turnos × 5 dias × 2 máquinas (baixável na seção 6).</li>
+      </ul>
+
+      <h3>Contexto opcional</h3>
+      <p class="muted">Se sua casa tem uma definição interna de como calcula OEE — qual denominador usa, o que conta como refugo — cole junto. Isso vira a "convenção da casa" que o Claude vai separar da "verdade universal". Sem essa definição, ele improvisa a partir do padrão da indústria e sinaliza onde você precisa confirmar com o PCP.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">⚙</div>
+          <div>
+            <div class="mock-project-title">Extras da conversa</div>
+            <div class="mock-project-meta">configuração · anexos</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;font-size:11.5px;color:#2a2a2a;">
+          <span style="font-weight:600;">Extended Thinking</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;color:#217346;font-weight:700;">
+            <span style="width:26px;height:15px;border-radius:9px;background:#217346;display:inline-flex;align-items:center;padding:0 2px;justify-content:flex-end;"><span style="width:11px;height:11px;border-radius:50%;background:white;display:block;"></span></span>
+            ON
+          </span>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">dados-oee-mock.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">3 turnos × 5 dias × 2 máquinas · fictício</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Tem definição interna de como a casa calcula OEE? Cole junto — vira "convenção da casa".
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>Um workbook estruturado (artifact editável) que não explica OEE em geral — resolve as SUAS quatro travas, uma por uma, com os números da planilha que você anexou.</p>
+      <p class="muted">Cada resposta vem marcada: "verdade universal" (vale em qualquer fábrica) ou "convenção da casa" (você precisa confirmar com o PCP). Você edita ao vivo dentro do Claude ou copia pro Word. O cálculo passo a passo mostra de onde saiu cada número.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>Workbook OEE (artifact editável)</h4>
+        <p>Antes de responder, mapeei suas 4 travas: 1 e 3 são de <em>convenção</em> (a casa decide), 2 é de <em>definição</em>, 4 é de <em>método</em>. Abaixo, cada uma resolvida com os dados anexados.</p>
+
+        <div class="sub-h">Os 3 componentes (exemplo da planilha)</div>
+        <ul>
+          <li><strong>Disponibilidade</strong> — % do tempo planejado em que a máquina rodou. Injetora L3, turno A: 88%.</li>
+          <li><strong>Performance</strong> — ritmo real ÷ ritmo ideal enquanto rodava. Turno A: 91%.</li>
+          <li><strong>Qualidade</strong> — peças boas ÷ peças produzidas. Turno A: 89%.</li>
+        </ul>
+
+        <div class="sub-h">Suas 4 travas, resolvidas</div>
+        <ul>
+          <li><strong>Setup entre lotes</strong> → perda de disponibilidade. <em>Verdade universal.</em></li>
+          <li><strong>Micro-parada de 30s</strong> → perda de performance se não for apontada. <em>Convenção da casa.</em></li>
+          <li><strong>Retrabalho fora de linha</strong> → conta como perda de qualidade na 1ª passada. <em>Convenção da casa.</em></li>
+          <li><strong>Denominador</strong> → tempo planejado (sem preventiva agendada) é o mais comum. <em>Convenção da casa.</em></li>
+        </ul>
+
+        <div class="sub-h">Cálculo · Injetora L3 · turno A</div>
+        <p style="background:white;padding:8px;border-radius:4px;font-size:11px;">Disp 88% × Perf 91% × Qual 89% ≈ <strong>OEE 71,3%</strong> — abaixo do world-class (85%); o maior gap está na disponibilidade (setup + micro-paradas).</p>
+
+        <div class="sub-h">Tabela de decisão</div>
+        <ul>
+          <li>Máquina parada → <strong>disponibilidade</strong></li>
+          <li>Rodando devagar → <strong>performance</strong></li>
+          <li>Peça fora do padrão → <strong>qualidade</strong></li>
+        </ul>
+
+        <div class="sub-h">3 perguntas pro PCP</div>
+        <ul>
+          <li>Preventiva agendada entra ou sai do denominador?</li>
+          <li>Micro-parada abaixo de quantos segundos a gente ignora?</li>
+          <li>Retrabalho fora de linha conta como refugo na 1ª passada?</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>O workbook é o ponto de partida. Depois que ele fecha suas travas, use a mesma conversa pra puxar o entendimento pra dentro da sua rotina.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Comparar máquinas:</strong> "Refaz o cálculo pra a montagem manual e compara com a injetora — ciclos curtos vs longos mudam a leitura?"</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Virar checklist:</strong> "Transforma a tabela de decisão num checklist de 1 página pra imprimir na linha."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Caçar distorção:</strong> "Lista os 3 erros de apontamento mais comuns que inflam OEE artificialmente."</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Padrão de uso</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">Mapear entendimento → destravar lacunas. Você descreve o que já sabe, o Claude fecha o gap — não te dá aula genérica. Vale pra qualquer tema técnico que você "quase" domina: Takt time, MTBF, capabilidade de processo, custo-hora de máquina.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>Extended Thinking custa alguns segundos a mais</h3>
+          <p>E vale exatamente onde você tem lacuna. Pra tarefa simples, não ligue — é overkill. Pra destravar confusão conceitual, ligue: é a diferença entre uma resposta rasa e uma que separa o que você realmente não entendeu.</p>
+        </div>
+        <div class="tip">
+          <h3>Peça pra ele separar verdade universal de convenção da casa</h3>
+          <p>OEE tem mais de uma escola. Se o Claude não marcar o que é padrão da indústria e o que a sua fábrica decide, você sai medindo com uma convenção que o PCP nunca combinou. Exigir a separação evita briga de número depois.</p>
+        </div>
+        <div class="tip">
+          <h3>Valide as convenções com o PCP antes de sair medindo</h3>
+          <p>O workbook já levanta as perguntas certas — leve-as pra reunião. O objetivo não é você virar o dono do OEE sozinho; é chegar alinhado e checar se todo mundo mede do mesmo jeito.</p>
+        </div>
+        <div class="tip">
+          <h3>Dado real de produção é sensível</h3>
+          <p>Este exemplo usa uma planilha fictícia. Se for anexar apontamento real da linha, passe pelo Checklist de Anonimização do M4 antes — número de lote, matrícula de operador, código de cliente saem. A IA nunca faz essa limpeza; você faz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe os dois arquivos abaixo, abra o Claude.ai, ative o Extended Thinking, anexe a planilha e cole o prompt. Cinco minutos.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/destrave-oee/dados-oee-mock.xlsx" download class="download-btn">
+          <div class="dl-icon xlsx">X</div>
+          <div class="dl-info">
+            <div class="dl-name">dados-oee-mock.xlsx</div>
+            <div class="dl-desc">Dados fictícios · 3 turnos × 5 dias × 2 máquinas · anexar na conversa</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/destrave-oee/prompt-diagnostico-oee.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">prompt-diagnostico-oee.md</div>
+            <div class="dl-desc">Prompt pronto · copiar e colar na conversa</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo em 5 minutos</h3>
+        <ol>
+          <li>Baixe os dois arquivos acima.</li>
+          <li>Abra o <strong>Claude.ai</strong> e comece uma conversa nova.</li>
+          <li>No menu de configurações da conversa, ative o <strong>Extended Thinking</strong>.</li>
+          <li>Anexe <code>dados-oee-mock.xlsx</code>.</li>
+          <li>Copie o conteúdo de <code>prompt-diagnostico-oee.md</code> e cole. Veja o Claude mapear suas travas antes de responder.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../comite-sst-projects/" class="related-card">
+      <span class="feat">Projects · Artifacts</span>
+      <h3>Comitê no Projects — SST/Qualidade</h3>
+      <p>Monte um espaço persistente pra preparar pauta, ata e comunicado do comitê semanal.</p>
+    </a>
+    <a href="../reuniao-trimestral/" class="related-card">
+      <span class="feat">Cowork · Connectors</span>
+      <h3>Prepare a reunião trimestral</h3>
+      <p>Extraia insights de Slack + planilha e monte um deck coeso — sem alt-tab.</p>
+    </a>
+    <a href="../converse-planilha/" class="related-card">
+      <span class="feat">Artifacts · Chat</span>
+      <h3>Converse com sua planilha</h3>
+      <p>Suba um xlsx e faça perguntas em linguagem natural — sem escrever fórmula.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>

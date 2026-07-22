@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise de segmento bottom-up · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-4">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Análise de segmento bottom-up</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Análise de segmento bottom-up</h1>
+    <p class="hero-lead">Dimensione um mercado novo com metodologia auditável — TAM/SAM/SOM construído de baixo pra cima, com toda fonte citada, não um número redondo puxado de relatório de terceiro.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · Portfólio/Estratégia</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Cowork</span>
+        <span class="feat">Extended Thinking</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>Você é gestor de portfólio numa indústria de eletroportáteis. A diretoria pediu o tamanho de um mercado novo pra decidir se vale entrar — e não aceita "achamos que dá R$ X". Precisa de método: cada número construído de baixo pra cima, com a fonte ao lado.</p>
+      <p class="muted">Segmento hipotético em análise: eletroportáteis para cozinha profissional de pequeno porte — cafeterias, padarias artesanais e bistrôs (não hotelaria industrial). Brasil, mercado B2B. Tudo fictício, contexto de treinamento.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Sou <strong>gestor de portfólio</strong> numa indústria de eletroportáteis (contexto de treinamento). A diretoria pediu uma análise de tamanho de mercado pra um <strong>novo segmento hipotético</strong>: eletroportáteis para cozinha profissional de pequeno porte — cafeterias, padarias artesanais e bistrôs (não hotelaria industrial). Brasil, mercado B2B. Precisamos decidir se vale entrar, e não posso levar "achamos que dá R$ X" — precisa ter metodologia.<br><br>Usando <strong>Extended Thinking</strong> pra pensar antes de calcular:<br><br>1. <strong>Framework:</strong> aplique <strong>TAM · SAM · SOM bottom-up</strong> (não top-down). TAM = universo total de compradores no Brasil; SAM = subconjunto que a Mallory endereça dado canal, preço e capacidade; SOM = fatia realista nos primeiros 24 meses.<br><br>2. <strong>Bottom-up de verdade:</strong> quantas cafeterias, padarias artesanais e bistrôs operam no Brasil (estimativas públicas — SEBRAE, ABIC, IBGE), quanto cada uma gasta por ano em eletroportáteis, e multiplica. Todas as fontes citadas; se chutou, marca [estimativa não verificada].<br><br>3. <strong>Preenche a planilha</strong> gabarito-metodologia-tam-sam-som.xlsx (células em branco, headers montados): cada célula com o número + na coluna ao lado a fonte ou a premissa.<br><br>4. <strong>Sensibilidade:</strong> 3 cenários (otimista / base / pessimista) numa tabela comparando o SOM final.<br><br>5. <strong>Sumário executivo</strong> em outline: pergunta, método (2 linhas), resultado principal (SOM base + faixa), 3 premissas mais frágeis, recomendação (entrar / não entrar / pilotar / investigar), 3 dados que ainda faltam.<br><br>Regras: nunca invente número (se não sabe, [estimativa a validar]); só fontes públicas — nada de relatório proprietário; <strong>faixa &gt; ponto</strong> (R$ 40–60M &gt; R$ 50M); dado que só a Mallory tem (capacidade produtiva, ticket médio) marca <strong>[buscar internamente]</strong> — não chuta.</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon">C</div>
+          <div>
+            <div class="mock-project-title">Cowork · Análise de segmento</div>
+            <div class="mock-project-meta">Extended Thinking ativo · pensando…</div>
+          </div>
+        </div>
+        <div class="mock-instructions">
+          <strong>Extended Thinking:</strong><br>
+          Antes de calcular, separo fonte pública de chute. Cafeterias no Brasil: parto do nº de estabelecimentos (SEBRAE). Não tenho o gasto médio anual em eletroportáteis por unidade — marco como [estimativa não verificada] e trabalho com faixa, não ponto. Capacidade produtiva da Mallory eu não tenho — isso vira [buscar internamente], não invento…
+        </div>
+        <div class="mock-files" style="margin-top:12px;">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">gabarito-metodologia-tam-sam-som.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">planilha modelo · anexada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Dê contexto -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Dê contexto ao Claude</h2>
+      <p>O Cowork trabalha em cima dos arquivos que você anexa e usa o Extended Thinking pra raciocinar antes de responder. Você prepara o ambiente uma vez; o Claude preenche a planilha dentro dele.</p>
+
+      <h3>Contexto obrigatório</h3>
+      <p class="muted">Abra o <strong>Claude Cowork</strong> (app desktop), ative o <strong>Extended Thinking</strong> e anexe a planilha modelo (baixável na seção 6):</p>
+      <ul class="ctx-list">
+        <li><code>gabarito-metodologia-tam-sam-som.xlsx</code> — planilha modelo: células em branco, headers já montados (TAM/SAM/SOM, coluna de valor, coluna de fonte/premissa)</li>
+      </ul>
+
+      <h3>Contexto opcional</h3>
+      <p class="muted">Se você já tem dados internos da Mallory <em>já validados</em> (capacidade produtiva atual, ticket médio de eletroportáteis), informe no prompt. Sem eles, o Claude marca cada célula que depende desses números como <code class="inline">[buscar internamente]</code> — não chuta capacidade nem ticket.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">📎</div>
+          <div>
+            <div class="mock-project-title">Anexos do Cowork</div>
+            <div class="mock-project-meta">1 planilha · Extended Thinking ON</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#217346;">X</div>
+            <div>
+              <div style="font-weight:600;">gabarito-metodologia-tam-sam-som.xlsx</div>
+              <div style="color:#6b6b6b;font-size:10px;">células em branco · headers montados</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Sem os dados internos (capacidade, ticket médio), o Claude marca [buscar internamente] — não chuta.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>A planilha preenchida célula a célula — cada número com a fonte ou a premissa ao lado — mais 3 cenários de SOM e um sumário executivo pronto pra levar à diretoria. Onde ele chutou, sinaliza; onde falta dado interno, marca pra você buscar.</p>
+      <p class="muted">Você abre a planilha e audita: toda linha tem uma fonte pública ou uma premissa explicada. Nenhum número redondo apareceu do nada.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>TAM · SAM · SOM preenchido</h4>
+        <ul>
+          <li><strong>TAM</strong> ≈ R$ 620M/ano — nº de estabelecimentos (SEBRAE) × gasto médio anual por unidade <em>[estimativa não verificada]</em></li>
+          <li><strong>SAM</strong> ≈ R$ 185M — ~30% do TAM: faixa de preço Mallory atinge o segmento médio, não o premium importado</li>
+          <li><strong>SOM</strong> ≈ R$ 22M — ~12% do SAM em 24 meses: entrada gradual, 2 canais</li>
+        </ul>
+
+        <div class="sub-h">3 cenários · SOM em 24 meses</div>
+        <table style="width:100%;border-collapse:collapse;font-size:11px;color:#3a3a3a;">
+          <tr style="border-bottom:1px solid rgba(0,0,0,.12);">
+            <td style="padding:4px 6px;font-weight:600;">Otimista</td>
+            <td style="padding:4px 6px;text-align:right;">R$ 34M</td>
+            <td style="padding:4px 6px;color:#6b6b6b;">captura de canal alta</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(0,0,0,.12);">
+            <td style="padding:4px 6px;font-weight:600;">Base</td>
+            <td style="padding:4px 6px;text-align:right;">R$ 22M</td>
+            <td style="padding:4px 6px;color:#6b6b6b;">premissas médias</td>
+          </tr>
+          <tr>
+            <td style="padding:4px 6px;font-weight:600;">Pessimista</td>
+            <td style="padding:4px 6px;text-align:right;">R$ 13M</td>
+            <td style="padding:4px 6px;color:#6b6b6b;">gasto médio menor</td>
+          </tr>
+        </table>
+
+        <div class="sub-h">Sumário executivo</div>
+        <ul>
+          <li><strong>Pergunta:</strong> vale entrar em eletroportáteis pra cozinha profissional de pequeno porte?</li>
+          <li><strong>Método:</strong> TAM/SAM/SOM bottom-up, só fontes públicas</li>
+          <li><strong>Resultado:</strong> SOM base R$ 22M — faixa R$ 13–34M em 24 meses</li>
+          <li><strong>Premissas frágeis:</strong> nº de estabelecimentos ativos · gasto médio anual · taxa de captura de canal</li>
+          <li><strong>Recomendação:</strong> pilotar — validar ticket real antes de investir pesado</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>Com a planilha preenchida, você estressa as premissas sem refazer nada do zero — o Claude recalcula em cima do mesmo modelo.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Muda o canal:</strong> "Refaz o SOM assumindo canal só distribuidor (sem venda direta) — quanto muda?"</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Isola as alavancas:</strong> "Lista as 3 premissas que mais movem o resultado e a faixa de cada uma."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Versão cética:</strong> "Escreve a versão 'não entrar ainda' da recomendação, com os 3 dados que faltam pra decidir."</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Bottom-up de verdade</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">Some de baixo — quantas cafeterias × gasto médio, quantas padarias × gasto médio — e multiplica. Não puxe "o mercado é R$ X bi, assumimos 2%". O 2% é um chute disfarçado de número; a soma de unidades reais é auditável.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>Bottom-up não é top-down disfarçado</h3>
+          <p>Exija a multiplicação a partir de unidades reais, com fonte: nº de cafeterias × gasto médio. Se a resposta começa com "o mercado é R$ X e assumimos Y%", devolva — isso é top-down, não bottom-up.</p>
+        </div>
+        <div class="tip">
+          <h3>Chute marcado e faixa em vez de ponto</h3>
+          <p>Peça <em>[estimativa não verificada]</em> em todo número sem fonte pública, e faixa no lugar de ponto: "R$ 40–60M" carrega a incerteza; "R$ 50M" esconde. A faixa é mais honesta com a diretoria.</p>
+        </div>
+        <div class="tip">
+          <h3>Só fontes públicas que vocês conseguem abrir</h3>
+          <p>SEBRAE, IBGE, ABIC — dá pra checar. Relatório proprietário (Gartner, Frost) que a Mallory não assina não entra: se não dá pra abrir a fonte, o número não é auditável.</p>
+        </div>
+        <div class="tip">
+          <h3>Dado interno vira [buscar internamente]</h3>
+          <p>Capacidade produtiva atual e ticket médio só a Mallory tem. Não deixe o Claude chutar isso — que ele marque <em>[buscar internamente]</em> e você preenche depois com o número real da casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe os dois arquivos abaixo, abra o Cowork, anexe a planilha, ative o Extended Thinking e cole o prompt. No fim, confira se toda célula preenchida tem uma fonte ou premissa ao lado.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/analise-segmento/gabarito-metodologia-tam-sam-som.xlsx" download class="download-btn">
+          <div class="dl-icon xlsx">X</div>
+          <div class="dl-info">
+            <div class="dl-name">gabarito-metodologia-tam-sam-som.xlsx</div>
+            <div class="dl-desc">Planilha modelo · células em branco, headers montados</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/analise-segmento/prompt-analise-segmento.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">prompt-analise-segmento.md</div>
+            <div class="dl-desc">Prompt completo · colar no Cowork com Extended Thinking</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo</h3>
+        <ol>
+          <li>Baixe os dois arquivos acima.</li>
+          <li>Abra o <strong>Claude Cowork</strong> (app desktop) e anexe <code>gabarito-metodologia-tam-sam-som.xlsx</code>.</li>
+          <li>Ative o <strong>Extended Thinking</strong> pra ele raciocinar antes de calcular.</li>
+          <li>Copie o conteúdo de <code>prompt-analise-segmento.md</code> e cole no chat.</li>
+          <li>Ao receber a planilha preenchida, <strong>confira se cada célula tem uma fonte ou premissa ao lado</strong> — e se os chutes estão marcados.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../reuniao-trimestral/" class="related-card">
+      <span class="feat">Cowork · Connectors</span>
+      <h3>Prepare a reunião trimestral</h3>
+      <p>Extraia insights de Slack + planilha e monte um deck coeso — sem alt-tab.</p>
+    </a>
+    <a href="../converse-planilha/" class="related-card">
+      <span class="feat">Artifacts · Chat</span>
+      <h3>Converse com sua planilha</h3>
+      <p>Faça perguntas a uma base de dados em linguagem natural e receba respostas com o cálculo à mostra.</p>
+    </a>
+    <a href="../destrave-oee/" class="related-card">
+      <span class="feat">Extended Thinking · Artifacts</span>
+      <h3>Destrave um tema técnico — OEE</h3>
+      <p>Peça ao Claude pra mapear seu entendimento e construir um workbook a partir das lacunas.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>

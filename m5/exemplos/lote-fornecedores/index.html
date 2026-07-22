@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lote de fornecedores · M5 T2 · Mallory PDL 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg-dark:#262A35;
+  --bg-panel:#2C3040;
+  --bg-panel-2:#31364a;
+  --bg-card:rgba(255,255,255,.045);
+  --bg-code:#1F2330;
+  --border-subtle:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --text:#E8ECF3;
+  --text-muted:#A0A8B8;
+  --text-dim:#6E7688;
+  --accent-purple:#8A3A89;
+  --accent-purple-soft:#B394FF;
+  --accent-purple-glow:rgba(179,148,255,.14);
+  --success:#6EE7B7;
+  --danger:#F87171;
+  --warning:#FBBF24;
+  --radius:12px;
+  --radius-sm:8px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-dark);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* ===== Site chrome (self-contained) ===== */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;}
+.site-brand{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.site-logos{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.site-logos img{height:32px;width:auto;display:block;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.site-brand-text{display:flex;flex-direction:column;gap:2px;}
+.site-brand a{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;color:var(--text);text-decoration:none;}
+.site-brand a:hover{color:var(--accent-purple-soft);}
+.site-brand .site-meta{font-size:12px;color:var(--text-muted);}
+.nav-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border-subtle);border-radius:6px;color:var(--text);font-size:14px;background:none;cursor:pointer;}
+.site-nav{display:none;width:100%;padding:8px 0 12px;}
+.site-nav.is-open{display:block;}
+.site-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px;}
+.site-nav a{display:block;padding:8px 4px;color:var(--text-muted);font-size:14px;font-weight:500;text-decoration:none;}
+.site-nav a:hover{color:var(--accent-purple-soft);}
+.site-footer{border-top:1px solid var(--border-subtle);padding:28px 0;margin-top:0;font-size:14px;color:var(--text-muted);}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.site-footer .site-logos img{height:28px;}
+.site-footer a{color:var(--accent-purple-soft);text-decoration:none;}
+.footer-meta{font-size:13px;}
+@media(min-width:900px){
+  .nav-toggle{display:none;}
+  .site-nav{display:block;width:auto;padding:0;}
+  .site-nav ul{flex-direction:row;gap:24px;}
+}
+
+.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 40px;}
+
+/* Breadcrumb */
+.crumbs{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--text-muted);
+  margin-bottom:32px;letter-spacing:.02em;
+}
+.crumbs a{color:var(--text-muted);text-decoration:none;transition:color .15s;}
+.crumbs a:hover{color:var(--accent-purple-soft);}
+.crumbs .sep{margin:0 8px;color:var(--text-dim);}
+.crumbs .current{color:var(--text);}
+
+/* Hero */
+.hero{
+  display:grid;grid-template-columns:1fr 340px;gap:60px;
+  padding-bottom:44px;border-bottom:1px solid var(--border-subtle);
+  margin-bottom:56px;
+}
+.hero-left h1{
+  font-family:'Archivo',sans-serif;font-weight:700;
+  font-size:42px;line-height:1.15;letter-spacing:-0.015em;
+  margin-bottom:20px;
+}
+.hero-lead{
+  font-size:17px;color:var(--text-muted);line-height:1.65;
+  margin-bottom:28px;max-width:560px;
+}
+.cta-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:8px;
+  background:var(--accent-purple-soft);color:#1a1d28;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .12s, box-shadow .15s;
+}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 24px -6px var(--accent-purple-glow);}
+.cta-primary .arrow{font-size:16px;line-height:1;}
+
+.hero-meta{
+  border-left:1px solid var(--border-subtle);padding-left:32px;
+  display:flex;flex-direction:column;gap:22px;padding-top:4px;
+}
+.meta-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.meta-value{font-size:14px;color:var(--text);}
+.meta-value .feat{
+  display:inline-block;margin-right:6px;margin-bottom:4px;
+  padding:3px 10px;border-radius:20px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(179,148,255,.24);
+}
+
+/* Sections numeradas */
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;
+  left:22px;top:8px;bottom:8px;width:1px;
+  background:var(--border-subtle);
+}
+
+.step{
+  display:grid;grid-template-columns:60px 1fr 440px;gap:32px;
+  padding:36px 0;position:relative;
+}
+.step:not(:last-child){border-bottom:1px solid var(--border-subtle);}
+
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-panel);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;
+  color:var(--text);position:relative;z-index:1;
+}
+.step-num.final{background:var(--accent-purple-soft);color:#1a1d28;border-color:var(--accent-purple-soft);}
+
+.step-body h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:26px;
+  margin-bottom:16px;letter-spacing:-0.01em;
+}
+.step-body p{color:var(--text);margin-bottom:14px;font-size:15px;}
+.step-body p.muted{color:var(--text-muted);}
+.step-body h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin:22px 0 10px;color:var(--text);
+}
+.ctx-list{padding-left:22px;color:var(--text-muted);font-size:14px;margin:8px 0 20px;line-height:1.85;}
+.ctx-list code,.step-body code.inline{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Card de prompt copiável */
+.prompt-card{
+  margin-top:20px;padding:20px 22px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);position:relative;
+}
+.prompt-card p{
+  font-size:14.5px;color:var(--text);line-height:1.7;
+  margin-bottom:12px;
+}
+.prompt-card p:last-of-type{margin-bottom:0;}
+.prompt-card strong{color:var(--accent-purple-soft);font-weight:600;}
+.prompt-actions{
+  display:flex;gap:8px;justify-content:flex-end;margin-top:16px;
+  padding-top:14px;border-top:1px solid var(--border-subtle);
+}
+.icon-btn{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--text-muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;transition:all .15s;
+}
+.icon-btn:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.copied-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent-purple-soft);color:#1a1d28;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:200;}
+.copied-toast.show{opacity:1;}
+
+/* Right column mockups */
+.step-visual{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);padding:24px;
+  align-self:start;position:sticky;top:80px;
+}
+.step-visual.no-sticky{position:static;}
+
+/* Mockup: project workspace */
+.mock-project{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+  font-family:'Inter',sans-serif;font-size:12px;
+}
+.mock-project-head{
+  display:flex;align-items:center;gap:10px;padding-bottom:12px;
+  border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:12px;
+}
+.mock-icon{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#e07a5f,#f4a261);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:12px;
+}
+.mock-project-title{font-weight:600;color:#1a1a1a;font-size:13px;}
+.mock-project-meta{color:#6b6b6b;font-size:11px;margin-top:2px;}
+.mock-instructions{
+  background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+  padding:12px;font-size:11.5px;line-height:1.5;color:#3a3a3a;
+  max-height:180px;overflow:hidden;position:relative;
+}
+.mock-instructions::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:40px;
+  background:linear-gradient(transparent,white);
+}
+.mock-files{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.mock-file{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 10px;background:white;border:1px solid rgba(0,0,0,.08);
+  border-radius:6px;font-size:11.5px;color:#2a2a2a;
+}
+.mock-file-icon{
+  width:20px;height:20px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:9px;font-weight:700;flex-shrink:0;
+}
+.mock-file-icon.docx{background:#2b579a;}
+.mock-file-icon.md{background:#555;}
+
+/* Mockup: output do Claude */
+.mock-output{
+  background:#f6f4ee;border-radius:8px;padding:16px;color:#2a2a2a;
+}
+.mock-output-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  background:rgba(224,122,95,.15);color:#c8552e;
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:12px;font-weight:600;letter-spacing:.04em;
+}
+.mock-output h4{
+  font-family:'Archivo',sans-serif;font-size:14px;color:#1a1a1a;
+  font-weight:700;margin-bottom:8px;
+}
+.mock-output p{font-size:12px;color:#3a3a3a;margin-bottom:8px;line-height:1.55;}
+.mock-output ul{padding-left:16px;font-size:11.5px;color:#3a3a3a;line-height:1.6;margin:0;}
+.mock-output ul li{margin-bottom:4px;}
+.mock-output .sub-h{
+  font-family:'Archivo',sans-serif;font-weight:600;
+  color:#1a1a1a;font-size:12.5px;margin:12px 0 6px;
+}
+
+/* Callouts */
+.tip-list{display:flex;flex-direction:column;gap:12px;margin-top:12px;}
+.tip{
+  padding:14px 16px;border-radius:var(--radius-sm);
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-left:3px solid var(--accent-purple-soft);
+}
+.tip h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;
+  color:var(--text);margin:0 0 4px;
+}
+.tip p{font-size:14px;color:var(--text-muted);margin:0;line-height:1.55;}
+
+/* Ready to try */
+.ready-actions{
+  display:flex;flex-direction:column;gap:10px;margin-top:20px;
+}
+.download-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);color:var(--text);text-decoration:none;
+  transition:all .15s;
+}
+.download-btn:hover{border-color:var(--accent-purple-soft);background:var(--accent-purple-glow);}
+.dl-icon{
+  width:36px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:10px;flex-shrink:0;
+}
+.dl-icon.docx{background:#2b579a;}
+.dl-icon.md{background:#555;}
+.dl-icon.xlsx{background:#217346;}
+.dl-icon.pdf{background:#c0392b;}
+.dl-info{flex:1;}
+.dl-name{font-weight:600;font-size:14px;color:var(--text);}
+.dl-desc{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
+.dl-action{color:var(--accent-purple-soft);font-size:12px;font-family:'JetBrains Mono',monospace;}
+
+.next-steps{
+  margin-top:24px;padding:20px;background:var(--bg-panel);
+  border-radius:var(--radius);border:1px solid var(--border-subtle);
+}
+.next-steps h3{font-size:15px;margin-bottom:14px;font-family:'Archivo',sans-serif;font-weight:600;}
+.next-steps ol{padding-left:20px;color:var(--text-muted);font-size:14px;line-height:1.75;}
+.next-steps ol li{margin-bottom:6px;}
+.next-steps ol li strong{color:var(--text);}
+.next-steps code{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-size:13px;}
+
+/* Related */
+.related{
+  margin-top:60px;padding-top:40px;border-top:1px solid var(--border-subtle);
+}
+.related-eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+  margin-bottom:16px;
+}
+.related h2{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;
+  margin-bottom:24px;
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.related-card{
+  padding:18px;background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .15s;
+  text-decoration:none;color:inherit;display:block;
+}
+.related-card:hover{border-color:var(--accent-purple-soft);transform:translateY(-2px);}
+.related-card .feat{
+  display:inline-block;padding:2px 8px;border-radius:12px;
+  background:var(--accent-purple-glow);color:var(--accent-purple-soft);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:10px;
+}
+.related-card h3{
+  font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;
+  margin-bottom:6px;
+}
+.related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;}
+  .hero-meta{border-left:none;padding-left:0;border-top:1px solid var(--border-subtle);padding-top:24px;}
+  .step{grid-template-columns:44px 1fr;gap:20px;}
+  .step-visual{grid-column:2/-1;position:static;}
+  .related-grid{grid-template-columns:1fr;}
+}
+
+/* Print */
+@media print{
+  .site-header,.nav-toggle,.cta-primary,.related,.prompt-actions{display:none !important;}
+  .timeline::before{display:none;}
+  .step{display:block;padding:20px 0;break-inside:avoid;}
+  .step-num{margin-bottom:10px;}
+  .step-visual{position:static !important;margin-top:16px;break-inside:avoid;}
+  .hero{grid-template-columns:1fr;}
+  body{background:#fff;color:#111;}
+  .mock-instructions{max-height:none;}
+  .mock-instructions::after{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../../../">IA na Prática · Mallory — Trilha 2 · Gestão</a>
+        <span class="site-meta">PDL 2026 · M5 · Exemplos aplicados</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../../../">Início</a></li>
+        <li><a href="../../">Voltar pra M5</a></li>
+        <li><a href="../../../banco-de-prompts/">Banco de Prompts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- Breadcrumb -->
+<nav class="crumbs">
+  <a href="../../">M5 · Liderança na Era da IA</a>
+  <span class="sep">/</span>
+  <a href="../../#caso-6">Exemplos aplicados</a>
+  <span class="sep">/</span>
+  <span class="current">Lote de fornecedores</span>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <h1>Lote de fornecedores</h1>
+    <p class="hero-lead">Delegue ao Cowork a leitura de 5 PDFs de cotação em formatos diferentes e receba uma tabela comparativa apple-to-apple com ranking em 3 critérios — o que no chat comum levaria um dia inteiro de leitura manual.</p>
+    <a href="https://claude.ai/" target="_blank" rel="noopener" class="cta-primary">Abrir no Claude <span class="arrow">↗</span></a>
+  </div>
+
+  <aside class="hero-meta">
+    <div class="meta-item">
+      <div class="meta-label">📝 Autor</div>
+      <div class="meta-value">Mallory PDL 2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">📂 Categoria</div>
+      <div class="meta-value">Gestão · Suprimentos/Compras</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">🧠 Modelo</div>
+      <div class="meta-value">Claude Sonnet 4.5</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">⚡ Features</div>
+      <div class="meta-value">
+        <span class="feat">Cowork</span>
+        <span class="feat">Batch</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Timeline -->
+<div class="timeline">
+
+  <!-- STEP 1 · Descreva a tarefa -->
+  <section class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Descreva a tarefa</h2>
+      <p>Você é gestor de suprimentos e precisa escolher o fornecedor de um componente eletrônico de linha média. Cinco cotações chegaram em PDF — cada uma num formato diferente. Em vez de ler uma por uma, você delega a leitura do lote inteiro e pede a consolidação.</p>
+      <p class="muted">O Cowork extrai os dados de cada anexo, monta a tabela comparativa e ordena os fornecedores em 3 recortes. Você entra pra decidir, não pra transcrever PDF.</p>
+
+      <div class="prompt-card">
+        <p data-copy>Sou <strong>gestor de suprimentos</strong> numa indústria de eletroportáteis (contexto de treinamento). Preciso escolher fornecedor de um <strong>componente eletrônico de linha média</strong>. Cinco fornecedores mandaram cotação em PDF (anexadas), cada uma num formato diferente.<br><br>
+        <strong>1. Leia os 5 PDFs</strong> — extraia dos anexos, não me peça pra colar conteúdo.<br>
+        <strong>2. Monte uma tabela comparativa</strong> com: fornecedor · preço unitário (na moeda de origem, com conversão sinalizada) · volume mínimo · prazo de entrega · condição de pagamento · garantia · certificações (ISO, RoHS, IATF…) · origem. Onde faltar dado, marque "não informado" — não chute.<br>
+        <strong>3. Três observações qualitativas curtas por fornecedor</strong>, baseadas só no que você viu no PDF.<br>
+        <strong>4. Ranking em 3 recortes:</strong> melhor preço (top 3, com % de diferença), melhor prazo (top 3) e melhor condição comercial global (ponderando preço + prazo + garantia — explique a ponderação que usou).<br>
+        <strong>5. Três perguntas</strong> que eu deveria fazer a cada fornecedor antes de fechar, com base nas omissões que você notou.<br><br>
+        <strong>Regras:</strong> você apresenta, quem decide sou eu (nada de "recomendo o fornecedor X"); se dois fornecedores cotarem spec diferente, avise que pode não ser comparação apple-to-apple; se algum PDF estiver ilegível ou parcial, avise qual. Português-BR, comercial direto.</p>
+        <div class="prompt-actions">
+          <button class="icon-btn" title="Copiar prompt" data-copy-btn>⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon">C</div>
+          <div>
+            <div class="mock-project-title">Claude Cowork</div>
+            <div class="mock-project-meta">Processando lote · 5 cotações</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;">
+            <span style="font-size:11px;color:#2a2a2a;">cotacao-fornecedor-A.pdf</span>
+            <span style="font-size:10px;color:#2e8b57;font-weight:600;">✓ lido</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;">
+            <span style="font-size:11px;color:#2a2a2a;">cotacao-fornecedor-B.pdf</span>
+            <span style="font-size:10px;color:#2e8b57;font-weight:600;">✓ lido</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;">
+            <span style="font-size:11px;color:#2a2a2a;">cotacao-fornecedor-C.pdf</span>
+            <span style="font-size:10px;color:#2e8b57;font-weight:600;">✓ lido</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background:white;border:1px solid rgba(224,122,95,.4);border-radius:6px;">
+            <span style="font-size:11px;color:#2a2a2a;">cotacao-fornecedor-D.pdf</span>
+            <span style="font-size:10px;color:#c8552e;font-weight:600;">lendo…</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;background:white;border:1px solid rgba(0,0,0,.08);border-radius:6px;opacity:.6;">
+            <span style="font-size:11px;color:#2a2a2a;">cotacao-fornecedor-E.pdf</span>
+            <span style="font-size:10px;color:#6b6b6b;font-weight:600;">na fila</span>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:9px 10px;background:rgba(46,139,87,.1);border-radius:6px;font-size:10.5px;color:#2e6b4a;">
+          Lote de 5 anexos numa passada — sem colar um por um.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 2 · Abra o Cowork e anexe -->
+  <section class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Abra o Cowork e anexe as cotações</h2>
+      <p>O Cowork é o app de desktop do Claude. Ele lê o lote inteiro numa passada — você anexa os 5 PDFs de uma vez e delega a leitura, sem colar conteúdo nem comparar de cabeça.</p>
+
+      <h3>O que anexar</h3>
+      <p class="muted">Abra o <strong>Claude Cowork</strong> no desktop e anexe as cinco cotações (baixáveis na seção 6):</p>
+      <ul class="ctx-list">
+        <li><code>cotacao-fornecedor-A.pdf</code> até <code>cotacao-fornecedor-E.pdf</code> — 5 cotações fictícias</li>
+      </ul>
+
+      <h3>Por que o lote é interessante</h3>
+      <p class="muted">Os 5 PDFs vêm em formatos propositalmente diferentes — o cenário real de quem compra:</p>
+      <ul class="ctx-list">
+        <li><strong>A</strong> — bem estruturado, mas com prazo longo.</li>
+        <li><strong>B</strong> — informal, o mais barato do lote, sem certificação declarada.</li>
+        <li><strong>C</strong> — prazo curto.</li>
+        <li><strong>D</strong> — importado, preço em USD (Shenzhen), conector ligeiramente diferente.</li>
+        <li><strong>E</strong> — nacional, com certificação IATF (automotiva).</li>
+      </ul>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-project">
+        <div class="mock-project-head">
+          <div class="mock-icon" style="background:linear-gradient(135deg,#7B9EFF,#B394FF);">📎</div>
+          <div>
+            <div class="mock-project-title">Anexos do Cowork</div>
+            <div class="mock-project-meta">5 cotações · PDF</div>
+          </div>
+        </div>
+        <div class="mock-files">
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#c0392b;">PDF</div>
+            <div>
+              <div style="font-weight:600;">cotacao-fornecedor-A.pdf</div>
+              <div style="color:#6b6b6b;font-size:10px;">estruturado · prazo longo</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#c0392b;">PDF</div>
+            <div>
+              <div style="font-weight:600;">cotacao-fornecedor-B.pdf</div>
+              <div style="color:#6b6b6b;font-size:10px;">informal · mais barato · sem certificação</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#c0392b;">PDF</div>
+            <div>
+              <div style="font-weight:600;">cotacao-fornecedor-C.pdf</div>
+              <div style="color:#6b6b6b;font-size:10px;">prazo curto</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#c0392b;">PDF</div>
+            <div>
+              <div style="font-weight:600;">cotacao-fornecedor-D.pdf</div>
+              <div style="color:#6b6b6b;font-size:10px;">importado · USD · Shenzhen</div>
+            </div>
+          </div>
+          <div class="mock-file">
+            <div class="mock-file-icon" style="background:#c0392b;">PDF</div>
+            <div>
+              <div style="font-weight:600;">cotacao-fornecedor-E.pdf</div>
+              <div style="color:#6b6b6b;font-size:10px;">nacional · certificação IATF</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(179,148,255,.1);border-radius:6px;font-size:11px;color:#5a4a80;">
+          💡 Cada PDF num template próprio — é exatamente aí que o lote economiza seu dia.
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 3 · O que o Claude entrega -->
+  <section class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>O que o Claude entrega</h2>
+      <p>Uma tabela comparativa apple-to-apple das 5 cotações, observações qualitativas por fornecedor e ranking em 3 recortes — não um "vencedor absoluto", mas o material pra você bater o martelo.</p>
+      <p class="muted">Campos ausentes aparecem como "não informado" (ele não chuta). Onde a moeda difere, a conversão vem sinalizada. Você compara em 2 minutos o que levaria um dia lendo PDF por PDF.</p>
+    </div>
+
+    <aside class="step-visual">
+      <div class="mock-output">
+        <div class="mock-output-tag">Do Claude</div>
+        <h4>Comparativo · 5 cotações</h4>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:10.5px;color:#3a3a3a;white-space:nowrap;">
+            <thead>
+              <tr style="text-align:left;border-bottom:1px solid rgba(0,0,0,.2);">
+                <th style="padding:5px 7px 5px 0;">Forn.</th>
+                <th style="padding:5px 7px;">Preço un.</th>
+                <th style="padding:5px 7px;">Prazo</th>
+                <th style="padding:5px 7px;">Pagamento</th>
+                <th style="padding:5px 7px;">Certificação</th>
+                <th style="padding:5px 0 5px 7px;">Origem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(0,0,0,.08);">
+                <td style="padding:6px 7px 6px 0;font-weight:600;">A</td>
+                <td style="padding:6px 7px;">R$ 4,20</td>
+                <td style="padding:6px 7px;">45 dias</td>
+                <td style="padding:6px 7px;">28/56 ddl</td>
+                <td style="padding:6px 7px;">ISO 9001</td>
+                <td style="padding:6px 0 6px 7px;">Brasil (SP)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(0,0,0,.08);">
+                <td style="padding:6px 7px 6px 0;font-weight:600;">B</td>
+                <td style="padding:6px 7px;">R$ 3,65</td>
+                <td style="padding:6px 7px;">30 dias</td>
+                <td style="padding:6px 7px;">à vista</td>
+                <td style="padding:6px 7px;font-style:italic;color:#8a6d2a;">não informado</td>
+                <td style="padding:6px 0 6px 7px;">Brasil (SC)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(0,0,0,.08);">
+                <td style="padding:6px 7px 6px 0;font-weight:600;">C</td>
+                <td style="padding:6px 7px;">R$ 4,05</td>
+                <td style="padding:6px 7px;">18 dias</td>
+                <td style="padding:6px 7px;">30 ddl</td>
+                <td style="padding:6px 7px;">ISO 9001 · RoHS</td>
+                <td style="padding:6px 0 6px 7px;">Brasil (SP)</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(0,0,0,.08);">
+                <td style="padding:6px 7px 6px 0;font-weight:600;">D</td>
+                <td style="padding:6px 7px;">US$ 0,72 <span style="color:#c8552e;">≈ R$ 3,90*</span></td>
+                <td style="padding:6px 7px;">60 dias</td>
+                <td style="padding:6px 7px;">50% antecip.</td>
+                <td style="padding:6px 7px;">RoHS</td>
+                <td style="padding:6px 0 6px 7px;">Import. (Shenzhen)</td>
+              </tr>
+              <tr>
+                <td style="padding:6px 7px 6px 0;font-weight:600;">E</td>
+                <td style="padding:6px 7px;">R$ 4,48</td>
+                <td style="padding:6px 7px;">40 dias</td>
+                <td style="padding:6px 7px;">28/56/84</td>
+                <td style="padding:6px 7px;">ISO 9001 · IATF 16949</td>
+                <td style="padding:6px 0 6px 7px;">Brasil (RS)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:10px;color:#6b6b6b;margin-top:6px;">* conversão sinalizada · câmbio de referência US$ 1 = R$ 5,42</p>
+
+        <div class="sub-h">Observações</div>
+        <ul>
+          <li><strong>B</strong> — preço mais baixo do lote, mas sem certificação declarada. Vale confirmar antes.</li>
+          <li><strong>D</strong> — competitivo em USD, porém conector com pinagem ligeiramente diferente: pode não ser apple-to-apple.</li>
+        </ul>
+
+        <div class="sub-h">Ranking</div>
+        <p><strong>Melhor preço:</strong> 1º B (R$ 3,65) · 2º D (≈ R$ 3,90, +6,8%) · 3º C (R$ 4,05, +11%)</p>
+        <p><strong>Melhor prazo:</strong> 1º C (18d) · 2º B (30d) · 3º E (40d)</p>
+        <p><strong>Condição global:</strong> 1º C · 2º E · 3º B — ponderação: preço 40% · prazo 35% · garantia+certificação 25%. C junta prazo curto, preço ok e certificação; B lidera no preço mas perde pela certificação ausente.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 4 · Continue a conversa -->
+  <section class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h2>Continue a conversa</h2>
+      <p>Com o lote já lido, você refina o resultado sem reprocessar nada — muda a ponderação, gera saídas prontas ou testa cenários.</p>
+
+      <div class="prompt-card" style="margin-top:14px;">
+        <p><strong>Repriorizar por prazo:</strong> "Reponderando pra priorizar prazo curto (risco de linha parada), o que muda no ranking global?"</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Gerar e-mails:</strong> "Monta um e-mail curto pra cada fornecedor com as perguntas de esclarecimento que você levantou."</p>
+      </div>
+      <div class="prompt-card">
+        <p><strong>Simular câmbio:</strong> "Simula câmbio +10% no fornecedor D e refaz só o ranking de preço."</p>
+      </div>
+    </div>
+
+    <aside class="step-visual no-sticky" style="background:transparent;border:none;padding:0;">
+      <div style="padding:20px;background:var(--bg-panel);border:1px solid var(--border-subtle);border-radius:var(--radius);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">💡 Processamento em lote</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin:0;">No chat comum você anexaria um PDF por vez e compararia de cabeça. O Cowork faz numa passada — e refina o ranking sem reler tudo.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- STEP 5 · Truques, dicas e ciladas -->
+  <section class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <h2>Truques, dicas e ciladas</h2>
+
+      <div class="tip-list">
+        <div class="tip">
+          <h3>O lote vai numa passada</h3>
+          <p>O Cowork lê os 5 PDFs de uma vez e consolida. O chat comum te obrigaria a colar um por um e comparar de cabeça — é onde some o seu dia.</p>
+        </div>
+        <div class="tip">
+          <h3>"Não informado" é melhor que chute</h3>
+          <p>Exija que ele marque os campos ausentes em vez de preencher com estimativa. Uma tabela honesta com buracos vale mais que uma tabela cheia de números inventados.</p>
+        </div>
+        <div class="tip">
+          <h3>Apple-to-apple não é automático</h3>
+          <p>Peça que ele avise quando dois fornecedores cotam spec diferente. Neste lote, o fornecedor D tem conector ligeiramente diferente — comparar preço puro seria enganoso.</p>
+        </div>
+        <div class="tip">
+          <h3>Preço é dado sensível</h3>
+          <p>Cotação real com preço que não pode vazar? Passe pelo Checklist de Anonimização do M4 antes de colar. A IA nunca faz essa limpeza; você faz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 6 · Pronto pra testar -->
+  <section class="step">
+    <div class="step-num final">✓</div>
+    <div class="step-body">
+      <h2>Pronto pra testar?</h2>
+      <p>Baixe as 5 cotações e o prompt, abra o Claude Cowork, anexe os PDFs e cole o prompt. O Claude lê o lote e devolve a tabela com o ranking.</p>
+
+      <div class="ready-actions">
+        <a href="../../../assets/exemplos/lote-fornecedores/cotacao-fornecedor-A.pdf" download class="download-btn">
+          <div class="dl-icon pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dl-name">cotacao-fornecedor-A.pdf</div>
+            <div class="dl-desc">Cotação fictícia · estruturado · prazo longo</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/lote-fornecedores/cotacao-fornecedor-B.pdf" download class="download-btn">
+          <div class="dl-icon pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dl-name">cotacao-fornecedor-B.pdf</div>
+            <div class="dl-desc">Cotação fictícia · informal · mais barato · sem certificação</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/lote-fornecedores/cotacao-fornecedor-C.pdf" download class="download-btn">
+          <div class="dl-icon pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dl-name">cotacao-fornecedor-C.pdf</div>
+            <div class="dl-desc">Cotação fictícia · prazo curto</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/lote-fornecedores/cotacao-fornecedor-D.pdf" download class="download-btn">
+          <div class="dl-icon pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dl-name">cotacao-fornecedor-D.pdf</div>
+            <div class="dl-desc">Cotação fictícia · importado · USD · Shenzhen</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/lote-fornecedores/cotacao-fornecedor-E.pdf" download class="download-btn">
+          <div class="dl-icon pdf">PDF</div>
+          <div class="dl-info">
+            <div class="dl-name">cotacao-fornecedor-E.pdf</div>
+            <div class="dl-desc">Cotação fictícia · nacional · certificação IATF</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+        <a href="../../../assets/exemplos/lote-fornecedores/prompt-lote-fornecedores.md" download class="download-btn">
+          <div class="dl-icon md">MD</div>
+          <div class="dl-info">
+            <div class="dl-name">prompt-lote-fornecedores.md</div>
+            <div class="dl-desc">Prompt-âncora · colar no Cowork</div>
+          </div>
+          <div class="dl-action">baixar ↓</div>
+        </a>
+      </div>
+
+      <div class="next-steps">
+        <h3>Passo a passo</h3>
+        <ol>
+          <li>Baixe os <strong>6 arquivos</strong> acima (5 cotações + o prompt).</li>
+          <li>Abra o <strong>Claude Cowork</strong> (app de desktop).</li>
+          <li>Anexe as 5 cotações (<code>cotacao-fornecedor-A.pdf</code> até <code>E.pdf</code>).</li>
+          <li>Cole o conteúdo de <code>prompt-lote-fornecedores.md</code> (ou o prompt da seção 1).</li>
+          <li>Confira a <strong>tabela comparativa</strong> e o <strong>ranking</strong> nos 3 recortes.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Related -->
+<section class="related">
+  <div class="related-eyebrow">▸ Continue explorando</div>
+  <h2>Outros casos do módulo</h2>
+  <div class="related-grid">
+    <a href="../reuniao-trimestral/" class="related-card">
+      <span class="feat">Cowork · Connectors</span>
+      <h3>Prepare a reunião trimestral</h3>
+      <p>Extraia insights de Slack + planilha e monte um deck coeso — sem alt-tab.</p>
+    </a>
+    <a href="../analise-segmento/" class="related-card">
+      <span class="feat">Cowork · Extended Thinking</span>
+      <h3>Análise de segmento bottom-up</h3>
+      <p>Dimensione um mercado com metodologia auditável, não com número redondo.</p>
+    </a>
+    <a href="../comite-sst-projects/" class="related-card">
+      <span class="feat">Projects · Artifacts</span>
+      <h3>Comitê no Projects — SST/Qualidade</h3>
+      <p>Monte um espaço persistente pra preparar pauta, ata e comunicado do comitê.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../../../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../../../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">Rafael Lima (@iacomrafael)</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copied-toast" id="copied-toast">copiado ✓</div>
+
+<script>
+// Copiar prompt
+document.querySelectorAll('[data-copy-btn]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.prompt-card');
+    var el = card.querySelector('[data-copy]') || card.querySelector('p');
+    var texto = el ? el.innerText : '';
+    var toast = document.getElementById('copied-toast');
+    function done(){ if(toast){toast.classList.add('show');setTimeout(function(){toast.classList.remove('show');},1400);} }
+    if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(texto).then(done,done); }
+    else { done(); }
+  });
+});
+
+// Nav mobile
+(function(){
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  if(!t || !n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('is-open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+})();
+</script>
+</body>
+</html>
