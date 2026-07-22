@@ -74,9 +74,53 @@ Três camadas complementares:
 
 **Mental model:** Skill é a receita. Connector é o cano até o ingrediente. Plugin é a cesta pronta com receita + ingredientes de uma função inteira.
 
-- **Use Skill quando:** repete a mesma instrução em várias conversas; tem "jeito da casa" pra padronizar; quer distribuir procedimento pro time.
-- **Use Connector quando:** o trabalho depende de dado que mora em outro app; quer que o Claude poste/leia direto ali; automação recorrente atravessa ferramentas.
-- **Armadilha:** criar Skill antes de rodar o fluxo pelo menos uma vez na mão. Rode manual, veja o valor, depois empacote.
+#### Skill — por dentro
+- **Divulgação progressiva:** o Claude lê a `description` de cada skill instalada e só puxa as que batem com a tarefa. Contexto enxuto, desempenho não degrada mesmo com dezenas de skills.
+- **Anatomia mínima:** uma pasta com `SKILL.md` (frontmatter `name` + `description` + corpo com instruções em português comum). Scripts em subpastas quando envolve arquivo (Excel, PDF).
+- **4 origens:** (1) Anthropic nativas (Excel, Word, PPT, PDF, já instaladas); (2) personalizadas (você/seu time escreve); (3) provisionadas pela organização (Team/Enterprise); (4) de parceiros (Notion, Figma, Atlassian).
+- **Padrão aberto:** `agentskills.io` — uma skill escrita hoje pro Claude roda em outros agentes que adotem o padrão. Sem lock-in.
+
+#### Connector — por dentro
+- **Herança de permissões (a regra central):** o Claude só enxerga o que *você* enxerga no sistema conectado. Nenhum privilégio é elevado; a ação fica no seu nome, auditoria funciona igual.
+- **Duas formas de criar:** Diretório (OAuth, 2 cliques — Google, Microsoft, Slack, Notion) ou MCP remoto (servidor próprio da empresa, URL + client ID/secret).
+- **Controles pouco conhecidos:** Modo Sob Demanda (só ativa o connector quando a tarefa exige — recomendado com 10+ instalados); Restrição por ação (leitura sim, escrita não — Team/Enterprise); selo "Interativo" (renderiza UI ao vivo no chat).
+
+#### Plugin — por dentro
+- **Dois sabores:** Cowork/Claude.ai (biblioteca por área — Design, PM, Finance, Productivity, Sales, Legal, Marketing, RH, Engineering, Operations; um clique instala) e Claude Code/Agent SDK (skills + agents + hooks + MCP + LSP, via git marketplace).
+- **Namespace como pista visual:** em `finance:variance-analysis`, o antes-dos-dois-pontos é o plugin, o depois é a skill dele.
+- **Instalar peça, não pacote:** dá pra pegar só a skill que interessa; plugin inteiro atualiza junto (menos manutenção manual).
+- **Onde achar os oficiais:** `github.com/anthropics/knowledge-work-plugins` (gratuito, mantido pela Anthropic).
+
+#### Comparar e escolher
+
+| Aspecto | Skill | Connector | Plugin |
+|---|---|---|---|
+| Resolve | Procedimento reusável | Acesso a sistema externo | Função inteira pronta |
+| Auth externa | Não precisa | Sim (OAuth ou MCP) | Pode ter (via connectors internos) |
+| Unidade | Pasta com `SKILL.md` | Integração configurada | Pacote (skills + connectors + agents) |
+| Onde funciona | Claude.ai + Cowork | Claude.ai + Cowork | Ambos (Cowork ou Claude Code) |
+| Quem cria | Você, empresa, ou Anthropic | Você, empresa, ou Anthropic | Você, empresa, ou Anthropic |
+| Editável | Sim — edita a pasta | Sim — reconfigura | Sim — pelas skills internas |
+
+Guia rápido:
+- *"Sempre que eu pedir X, quero resposta no formato Y."* → **Skill**
+- *"Preciso que o Claude leia ou faça algo num sistema real da empresa."* → **Connector**
+- *"Quero uma função inteira pronta pra rodar amanhã, sem configurar."* → **Plugin**
+
+#### Plugins prontos da Anthropic
+
+Coleção oficial pública, gratuita, mantida pelo time. Se você já usou Claude for Finance ou Claude for Design, já usou plugin oficial — o namespace na assinatura (`finance:`, `design:`) é a pista.
+
+- `product-management:write-spec` — transforma ideia solta em spec estruturada de produto
+- `finance:variance-analysis` — decompõe variação orçamentária em drivers com narrativa
+- `design:user-research` — planeja, conduz e sintetiza pesquisa com usuário
+- `productivity:task-management` — gerencia tarefas num `TASKS.md` compartilhado
+
+Coleção: `github.com/anthropics/knowledge-work-plugins`
+
+**Armadilhas:**
+- **Acumular skills e plugins não vira produtividade sem mudar o rito.** Instalar 20 plugins não te faz mais produtivo se você continua trabalhando do mesmo jeito. A pergunta certa: *qual rotina da minha semana muda depois de instalar isso?* Se nenhuma, não instala.
+- **Plugin pronto dá esqueleto, não julgamento.** Um plugin de "análise de variação" te dá a estrutura, não a leitura do seu contexto (por que aquela linha caiu, o que a diretoria vai perguntar). Ferramenta boa acelera; não substitui a decisão do líder.
 
 > *"Skills são muito mais compartilháveis e mantêm o contexto enxuto — o que melhora bastante o desempenho com o tempo."* — Jan · 9x Claude Cowork Workshop
 

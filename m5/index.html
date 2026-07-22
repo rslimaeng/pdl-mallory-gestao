@@ -23,6 +23,12 @@
   --success:#6EE7B7;
   --danger:#F87171;
   --warning:#FBBF24;
+  --bg-card-hover:rgba(255,255,255,.075);
+  --bg-code:#1F2330;
+  --text-dim:#6E7688;
+  --skill:#6EE7B7;
+  --connector:#7B9EFF;
+  --plugin:#FBBF24;
   --radius:12px;
   --radius-sm:8px;
 }
@@ -36,6 +42,7 @@ body{
   line-height:1.6;
   min-height:100vh;
 }
+body.modal-open{overflow:hidden;}
 
 /* ===== Site chrome (self-contained — não linka o style.css compartilhado) ===== */
 .site-header{position:sticky;top:0;z-index:100;background:rgba(38,42,53,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle);}
@@ -486,6 +493,188 @@ h2{
   .panel:not(:last-of-type){border-bottom:1px solid #ccc;margin-bottom:24px;}
   body{background:#fff;color:#111;}
   .case-card,.body-block,.tech-list,.use-card,.quote,.pers-card,.closing{break-inside:avoid;}
+}
+
+/* ===== ONDA 25 · Tab 5 Personalização — trio clicável + modal + comparar ===== */
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:12px;}
+@media (max-width:720px){ .trio{grid-template-columns:1fr;} }
+.card-camada{
+  background:var(--bg-panel);border:1px solid var(--border-subtle);
+  border-radius:var(--radius);cursor:pointer;transition:all .18s;
+  overflow:hidden;text-align:left;display:flex;flex-direction:column;
+}
+.card-camada:hover{
+  border-color:var(--accent-purple-soft);background:var(--bg-panel-2);
+  transform:translateY(-2px);box-shadow:0 8px 24px -8px var(--accent-purple-glow);
+}
+.card-camada:focus-visible{outline:2px solid var(--accent-purple-soft);outline-offset:2px;}
+.card-face{padding:18px 20px;flex:1;}
+.card-tag{
+  display:inline-block;padding:3px 10px;border-radius:12px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;margin-bottom:12px;
+}
+.card-tag.skill{background:rgba(110,231,183,.14);color:var(--skill);border:1px solid rgba(110,231,183,.3);}
+.card-tag.connector{background:rgba(123,158,255,.14);color:var(--connector);border:1px solid rgba(123,158,255,.3);}
+.card-tag.plugin{background:rgba(251,191,36,.14);color:var(--plugin);border:1px solid rgba(251,191,36,.3);}
+.card-title{font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:var(--text);margin-bottom:6px;}
+.card-desc{font-size:13.5px;color:var(--text-muted);line-height:1.55;}
+.card-code{font-family:'JetBrains Mono',monospace;background:var(--bg-code);color:var(--accent-purple-soft);padding:2px 6px;border-radius:4px;font-size:12px;}
+.card-cta{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 20px 12px;border-top:1px solid var(--border-subtle);
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--accent-purple-soft);letter-spacing:.06em;text-transform:uppercase;
+}
+.card-cta-arrow{font-size:14px;transition:transform .2s;}
+.card-camada:hover .card-cta-arrow{transform:translateX(3px);}
+
+/* Blocos aprofundados (fonte do modal + print) — escondidos na tela */
+.camada-deep{display:none;}
+.modal-section{margin-bottom:24px;}
+.modal-section:last-child{margin-bottom:0;}
+.modal-h{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--accent-purple-soft);letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:10px;font-weight:600;
+}
+.modal-p{font-size:14.5px;color:var(--text);line-height:1.7;margin-bottom:8px;}
+.modal-p:last-child{margin-bottom:0;}
+.modal-p strong{color:var(--accent-purple-soft);font-weight:600;}
+.modal-p .code, .code{
+  font-family:'JetBrains Mono',monospace;background:var(--bg-code);
+  color:var(--accent-purple-soft);padding:1px 6px;border-radius:4px;font-size:12.5px;
+}
+.tipos-list{display:flex;flex-direction:column;gap:8px;margin-top:6px;}
+.tipo-item{
+  display:flex;gap:12px;padding:12px 14px;background:var(--bg-card);
+  border-radius:8px;font-size:13.5px;border:1px solid var(--border-subtle);
+}
+.tipo-num{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-weight:600;flex-shrink:0;}
+.tipo-item strong{color:var(--text);}
+.analogia-modal{
+  padding:14px 18px;background:var(--accent-purple-glow);border-radius:10px;
+  font-style:italic;font-size:14px;color:var(--text);line-height:1.6;
+  border-left:3px solid var(--accent-purple-soft);
+}
+
+/* Modal */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(15,17,24,.72);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:60px 20px 40px;overflow-y:auto;z-index:1000;
+  opacity:0;pointer-events:none;transition:opacity .22s;
+}
+.modal-overlay.open{opacity:1;pointer-events:auto;}
+.modal{
+  width:100%;max-width:760px;background:var(--bg-panel);
+  border:1px solid var(--border-strong);border-radius:16px;overflow:hidden;
+  transform:translateY(24px) scale(.98);
+  transition:transform .28s cubic-bezier(.2,.9,.3,1);
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.6);
+}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+@media(prefers-reduced-motion:reduce){.modal-overlay,.modal{transition:none;}}
+.modal-head{padding:26px 30px 22px;border-bottom:1px solid var(--border-subtle);background:var(--bg-panel-2);position:relative;}
+.modal-head::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;}
+.modal[data-camada="skill"] .modal-head::before{background:var(--skill);}
+.modal[data-camada="connector"] .modal-head::before{background:var(--connector);}
+.modal[data-camada="plugin"] .modal-head::before{background:var(--plugin);}
+.modal-tag{
+  display:inline-block;padding:4px 12px;border-radius:14px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:600;margin-bottom:12px;
+}
+.modal[data-camada="skill"] .modal-tag{background:rgba(110,231,183,.14);color:var(--skill);border:1px solid rgba(110,231,183,.3);}
+.modal[data-camada="connector"] .modal-tag{background:rgba(123,158,255,.14);color:var(--connector);border:1px solid rgba(123,158,255,.3);}
+.modal[data-camada="plugin"] .modal-tag{background:rgba(251,191,36,.14);color:var(--plugin);border:1px solid rgba(251,191,36,.3);}
+.modal-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:26px;letter-spacing:-0.01em;line-height:1.2;margin-bottom:6px;padding-right:36px;}
+.modal-subtitle{font-size:15px;color:var(--text-muted);line-height:1.55;padding-right:36px;}
+.modal-close{
+  position:absolute;top:22px;right:22px;width:34px;height:34px;border-radius:8px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);color:var(--text-muted);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .15s;
+}
+.modal-close:hover{background:var(--bg-card-hover);color:var(--text);border-color:var(--border-strong);}
+.modal-body{padding:26px 30px;}
+.modal-foot{
+  padding:18px 30px;border-top:1px solid var(--border-subtle);background:var(--bg-panel-2);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.modal-nav{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 14px;
+  background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;
+  color:var(--text-muted);cursor:pointer;font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;letter-spacing:.04em;transition:all .15s;
+}
+.modal-nav:hover{background:var(--accent-purple-glow);color:var(--accent-purple-soft);border-color:rgba(179,148,255,.3);}
+.modal-nav.hidden{visibility:hidden;}
+
+/* Comparar e escolher */
+.comparar{
+  margin-top:36px;padding:28px 26px;
+  background:linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
+  border:1px solid var(--border-strong);border-radius:var(--radius);
+}
+.comparar-title{font-family:'Archivo',sans-serif;font-weight:600;font-size:20px;margin-bottom:6px;}
+.comparar-lead{font-size:14px;color:var(--text-muted);margin-bottom:22px;}
+.tabela-wrap{overflow-x:auto;margin-bottom:24px;}
+.tabela{width:100%;border-collapse:collapse;font-size:13px;min-width:640px;}
+.tabela th, .tabela td{padding:12px 14px;border:1px solid var(--border-subtle);vertical-align:top;text-align:left;}
+.tabela th{background:var(--bg-code);font-family:'Archivo',sans-serif;font-weight:600;font-size:12px;letter-spacing:.02em;}
+.tabela th.h-aspecto{color:var(--text-muted);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-family:'JetBrains Mono',monospace;font-size:10px;}
+.tabela th.h-skill{color:var(--skill);}
+.tabela th.h-connector{color:var(--connector);}
+.tabela th.h-plugin{color:var(--plugin);}
+.tabela td{color:var(--text);line-height:1.5;}
+.tabela td:first-child{font-family:'JetBrains Mono',monospace;color:var(--text-muted);font-size:11.5px;letter-spacing:.02em;text-transform:uppercase;background:rgba(255,255,255,.02);}
+.decision-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;}
+@media (max-width:720px){ .decision-grid{grid-template-columns:1fr;} }
+.decision-card{padding:16px 18px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);border-top:3px solid;}
+.decision-card.skill{border-top-color:var(--skill);}
+.decision-card.connector{border-top-color:var(--connector);}
+.decision-card.plugin{border-top-color:var(--plugin);}
+.decision-quote{font-style:italic;font-size:13.5px;color:var(--text-muted);margin-bottom:10px;line-height:1.55;}
+.decision-arrow{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);margin-bottom:4px;}
+.decision-answer{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;}
+.decision-answer.skill{color:var(--skill);}
+.decision-answer.connector{color:var(--connector);}
+.decision-answer.plugin{color:var(--plugin);}
+.plugins-prontos{padding:20px 22px;background:var(--bg-code);border:1px solid var(--border-subtle);border-radius:var(--radius-sm);}
+.plugins-prontos-h{font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;margin-bottom:6px;color:var(--text);}
+.plugins-prontos-lead{font-size:13.5px;color:var(--text-muted);margin-bottom:16px;line-height:1.55;}
+.plugins-prontos-insight{padding:10px 14px;background:var(--accent-purple-glow);border-radius:6px;font-size:13px;line-height:1.55;color:var(--text);border-left:2px solid var(--accent-purple-soft);margin-bottom:16px;}
+.plugins-prontos-insight strong{color:var(--accent-purple-soft);}
+.plugins-lista{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+@media (max-width:640px){ .plugins-lista{grid-template-columns:1fr;} }
+.plugin-item{padding:10px 12px;background:var(--bg-card);border-radius:6px;border:1px solid var(--border-subtle);font-size:12.5px;}
+.plugin-ns{font-family:'JetBrains Mono',monospace;color:var(--accent-purple-soft);font-weight:500;font-size:12px;margin-bottom:4px;display:block;}
+.plugin-desc{color:var(--text-muted);line-height:1.5;}
+.plugins-link{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent-purple-soft);text-decoration:none;margin-top:4px;}
+.plugins-link:hover{text-decoration:underline;}
+
+/* Armadilhas (tab 5) */
+.armadilhas{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
+.armadilha{padding:16px 18px;background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.2);border-left:3px solid var(--warning);border-radius:var(--radius-sm);}
+.armadilha-h{font-family:'Archivo',sans-serif;font-weight:600;font-size:14.5px;color:var(--warning);margin-bottom:4px;}
+.armadilha-p{font-size:13.5px;color:var(--text-muted);line-height:1.55;}
+.armadilha-p strong{color:var(--text);}
+
+/* Print · tab 5: revela os blocos aprofundados legíveis, esconde o modal */
+@media print{
+  .modal-overlay{display:none !important;}
+  .card-cta{display:none !important;}
+  .card-camada{break-inside:avoid;}
+  .camada-deep{display:block;background:#fff;color:#111;border:1px solid #bbb;border-radius:8px;padding:14px 16px;margin:12px 0;break-inside:avoid;}
+  .camada-deep-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px;color:#111 !important;}
+  .camada-deep *{color:#111 !important;background:transparent !important;border-color:#ccc !important;}
+  .camada-deep .code{background:#eee !important;color:#333 !important;}
+  .comparar,.plugins-prontos,.plugins-prontos-insight,.armadilha,.decision-card,.plugin-item,.tipo-item{background:#fff !important;}
+  .comparar *,.armadilha *,.decision-card *,.plugin-item *{color:#222 !important;}
+  .tabela th,.tabela td{color:#111 !important;border-color:#ccc !important;}
+  .tabela th{background:#eee !important;}
+  .comparar,.armadilhas,.trio{break-inside:avoid;}
 }
 </style>
 </head>
@@ -964,87 +1153,201 @@ h2{
       </div>
     </div>
 
-    <div class="subhead">As 3 camadas em resumo</div>
-    <div class="pers-trio">
-      <div class="pers-card">
-        <div class="pers-card-head">
-          <span class="pers-tag skill">SKILL</span>
+    <div class="section-eyebrow">As 3 camadas — clique pra aprofundar</div>
+    <div class="trio">
+      <button type="button" class="card-camada" data-open="skill">
+        <div class="card-face">
+          <span class="card-tag skill">Skill</span>
+          <div class="card-title">Procedimento reusável</div>
+          <p class="card-desc">Pasta com <span class="card-code">SKILL.md</span> (instrução + scripts opcionais). Carregada só quando a descrição bate com a tarefa. Sem auth externa.</p>
         </div>
-        <h4>Procedimento reusável</h4>
-        <p>Pasta com <code>SKILL.md</code> (instrução + scripts opcionais). Carregada só quando a descrição bate com a tarefa. Sem auth externa.</p>
+        <div class="card-cta"><span>Aprofundar</span><span class="card-cta-arrow">→</span></div>
+      </button>
+      <button type="button" class="card-camada" data-open="connector">
+        <div class="card-face">
+          <span class="card-tag connector">Connector</span>
+          <div class="card-title">Acesso a sistema</div>
+          <p class="card-desc">Ligação OAuth ou MCP com Gmail, Drive, Slack, CRM ou servidor próprio. Herda <em>suas</em> permissões. Leitura ampla e escrita sob confirmação.</p>
+        </div>
+        <div class="card-cta"><span>Aprofundar</span><span class="card-cta-arrow">→</span></div>
+      </button>
+      <button type="button" class="card-camada" data-open="plugin">
+        <div class="card-face">
+          <span class="card-tag plugin">Plugin</span>
+          <div class="card-title">Função inteira empacotada</div>
+          <p class="card-desc">Agrupa N Skills + N Connectors + sub-agentes de uma função (Finance, Product, RH, Design). Namespaces tipo <span class="card-code">finance:close-month</span>.</p>
+        </div>
+        <div class="card-cta"><span>Aprofundar</span><span class="card-cta-arrow">→</span></div>
+      </button>
+    </div>
+
+    <!-- Conteúdo aprofundado de cada camada: fonte do modal (tela) + visível no print -->
+    <div class="camada-deep-blocks">
+      <div class="camada-deep" id="deep-skill" data-camada="skill">
+        <div class="camada-deep-title">Skill — procedimento reusável</div>
+        <div class="camada-deep-body">
+          <div class="modal-section">
+            <div class="modal-h">▸ Divulgação progressiva</div>
+            <p class="modal-p">O Claude não carrega todas as skills que você tem instaladas. Ele lê a <span class="code">description</span> de cada uma e só puxa aquelas que batem com a tarefa. Sua janela de contexto fica enxuta, o desempenho não degrada com o tempo mesmo com dezenas de skills.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Anatomia mínima</div>
+            <p class="modal-p">Uma pasta contendo <span class="code">SKILL.md</span>. Frontmatter obrigatório: <span class="code">name</span> + <span class="code">description</span>. Corpo com instruções em português comum ("quando você for redigir uma ata, siga estes 5 passos..."). Scripts em subpastas quando o procedimento envolve arquivo (Excel, PDF).</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ 4 origens possíveis</div>
+            <div class="tipos-list">
+              <div class="tipo-item"><span class="tipo-num">1.</span><span><strong>Anthropic nativas</strong> — Excel, Word, PowerPoint, PDF. Já vêm instaladas em Claude.ai e Cowork.</span></div>
+              <div class="tipo-item"><span class="tipo-num">2.</span><span><strong>Personalizadas</strong> — você (ou seu time) escreve pra sua rotina.</span></div>
+              <div class="tipo-item"><span class="tipo-num">3.</span><span><strong>Provisionadas pela organização</strong> — plano Team/Enterprise distribui pra todos.</span></div>
+              <div class="tipo-item"><span class="tipo-num">4.</span><span><strong>De parceiros</strong> — Notion, Figma, Atlassian publicam skills oficiais.</span></div>
+            </div>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Padrão aberto</div>
+            <p class="modal-p"><span class="code">agentskills.io</span> é o padrão. Uma skill escrita hoje pro Claude não fica presa a ele — pode rodar em outros agentes que adotem o padrão. Investimento não vira lock-in.</p>
+          </div>
+          <div class="analogia-modal">"Skill é a <strong>receita</strong>. O Claude aprende a fazer daquele jeito, sempre que você pede algo que bate com aquela receita."</div>
+        </div>
       </div>
-      <div class="pers-card">
-        <div class="pers-card-head">
-          <span class="pers-tag conn">CONNECTOR</span>
+
+      <div class="camada-deep" id="deep-connector" data-camada="connector">
+        <div class="camada-deep-title">Connector — acesso a sistema real</div>
+        <div class="camada-deep-body">
+          <div class="modal-section">
+            <div class="modal-h">▸ Herança de permissões (a regra central)</div>
+            <p class="modal-p">O Claude só enxerga o que <strong>você</strong> enxerga no sistema conectado. Se você não tem acesso àquela pasta do Drive, o Claude também não tem. Nenhum privilégio é elevado. Auditoria funciona igual — a ação fica no seu nome.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Duas formas de criar</div>
+            <p class="modal-p">▸ <strong>Diretório (OAuth)</strong> — apps conhecidos, autenticação em 2 cliques. Google, Microsoft, Slack, Notion.</p>
+            <p class="modal-p">▸ <strong>MCP remoto</strong> — servidor próprio da sua empresa. URL + client ID/secret. Precisa de internet pública; opcional whitelist de IPs Anthropic.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Controles que quase ninguém sabe que existem</div>
+            <p class="modal-p">▸ <strong>Modo Sob Demanda</strong> — recomendado quando você tem 10+ connectors instalados. Só ativa o connector quando a tarefa exige. Sem isso, você tem uma parede de contexto tentando participar de tudo.</p>
+            <p class="modal-p">▸ <strong>Restrição por ação</strong> (Team/Enterprise) — leitura sim, escrita não. Ou o inverso. Granularidade fina, evita acidente.</p>
+            <p class="modal-p">▸ <strong>Selo "Interativo"</strong> — indica que o connector renderiza UI ao vivo dentro do chat (não é só chamada de API silenciosa).</p>
+          </div>
+          <div class="analogia-modal">"Connector é o <strong>cano</strong> até o ingrediente. Sozinho não cozinha nada — precisa da receita (skill) usando o que o cano trouxe."</div>
         </div>
-        <h4>Acesso a sistema</h4>
-        <p>Ligação OAuth/MCP com Gmail, Drive, Slack, CRM ou seu servidor. Herda <em>suas</em> permissões. Leitura ampla e escrita sob confirmação.</p>
       </div>
-      <div class="pers-card">
-        <div class="pers-card-head">
-          <span class="pers-tag plugin">PLUGIN</span>
+
+      <div class="camada-deep" id="deep-plugin" data-camada="plugin">
+        <div class="camada-deep-title">Plugin — função inteira empacotada</div>
+        <div class="camada-deep-body">
+          <div class="modal-section">
+            <div class="modal-h">▸ Dois sabores diferentes</div>
+            <p class="modal-p">▸ <strong>Cowork / Claude.ai</strong> — biblioteca por área de trabalho: Design, PM, Finance, Productivity, Sales, Legal, Marketing, RH, Engineering, Operations. Um clique instala; passa a rodar dentro do chat e do desktop app.</p>
+            <p class="modal-p">▸ <strong>Claude Code / Agent SDK</strong> — sabor pra desenvolvimento. Empacota skills + agents + hooks + MCP + LSP. Distribuído via git marketplace.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Namespace como pista visual</div>
+            <p class="modal-p">Quando você vê nome tipo <span class="code">finance:variance-analysis</span> ou <span class="code">product-management:write-spec</span>: o antes-dos-dois-pontos é o <strong>plugin</strong>, o depois é a <strong>skill dele</strong>. Pista visual clara de onde a peça mora, quem mantém.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Instalar peça, não pacote</div>
+            <p class="modal-p">Você não é obrigado a instalar o plugin inteiro pra usar uma skill dele. Pode pegar só a peça que interessa. Mas plugin instalado inteiro atualiza junto — menos manutenção manual.</p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-h">▸ Onde achar os oficiais</div>
+            <p class="modal-p">Coleção pública da Anthropic: <span class="code">github.com/anthropics/knowledge-work-plugins</span>. Gratuito, mantido pelo time, atualizado. Alguns exemplos:</p>
+            <div class="tipos-list">
+              <div class="tipo-item"><span class="tipo-num">•</span><span><span class="code">product-management</span> — spec, roadmap, sprint planning, competitive brief</span></div>
+              <div class="tipo-item"><span class="tipo-num">•</span><span><span class="code">finance</span> — close management, variance analysis, journal entries, reconciliation, SOX</span></div>
+              <div class="tipo-item"><span class="tipo-num">•</span><span><span class="code">design</span> — user research, design critique, accessibility review, handoff</span></div>
+              <div class="tipo-item"><span class="tipo-num">•</span><span><span class="code">productivity</span> — task management, memory management, updates</span></div>
+            </div>
+          </div>
+          <div class="analogia-modal">"Plugin é a <strong>cesta pronta</strong>: receita + ingredientes de uma função inteira, embalados por quem já rodou aquilo mil vezes. Você abre e usa."</div>
         </div>
-        <h4>Pacote de função</h4>
-        <p>Agrupa N Skills + N Connectors + sub-agentes de uma função (Finance, Product, RH). Namespaces tipo <code>finance:close-month</code>.</p>
       </div>
     </div>
 
-    <div class="subhead">Quando reconhecer cada uma</div>
-    <div class="use-grid">
-      <div class="use-card">
-        <div class="use-card-title yes">✓ Use Skill quando</div>
-        <ul>
-          <li>Repete a mesma instrução em várias conversas</li>
-          <li>Tem "jeito da casa" que quer padronizar (formato de ata, checklist)</li>
-          <li>Quer distribuir procedimento pro time</li>
-        </ul>
+    <!-- Comparar e escolher (sempre visível) -->
+    <div class="comparar">
+      <h3 class="comparar-title">Comparar e escolher</h3>
+      <p class="comparar-lead">Uma matriz e três guias rápidos pra decidir na hora.</p>
+
+      <div class="tabela-wrap">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th class="h-aspecto">Aspecto</th>
+              <th class="h-skill">Skill</th>
+              <th class="h-connector">Connector</th>
+              <th class="h-plugin">Plugin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Resolve</td><td>Procedimento reusável</td><td>Acesso a sistema externo</td><td>Função inteira pronta</td></tr>
+            <tr><td>Auth externa</td><td>Não precisa</td><td>Sim (OAuth ou MCP)</td><td>Pode ter (via connectors internos)</td></tr>
+            <tr><td>Unidade</td><td>Pasta com <span class="card-code">SKILL.md</span></td><td>Integração configurada</td><td>Pacote (skills + connectors + agents)</td></tr>
+            <tr><td>Onde funciona</td><td>Claude.ai + Cowork</td><td>Claude.ai + Cowork</td><td>Ambos (Cowork ou Claude Code, formatos diferentes)</td></tr>
+            <tr><td>Quem cria</td><td>Você, sua empresa, ou Anthropic</td><td>Você, sua empresa, ou Anthropic</td><td>Você, sua empresa, ou Anthropic</td></tr>
+            <tr><td>Editável</td><td>Sim — edita a pasta</td><td>Sim — reconfigura</td><td>Sim — pelas skills internas</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="use-card">
-        <div class="use-card-title yes">✓ Use Connector quando</div>
-        <ul>
-          <li>Trabalho depende de dado que mora em outro app</li>
-          <li>Quer que o Claude poste/leia direto ali</li>
-          <li>Automação recorrente atravessa ferramentas</li>
-        </ul>
+
+      <div class="decision-grid">
+        <div class="decision-card skill">
+          <p class="decision-quote">"Sempre que eu pedir X, quero que Claude responda no formato Y."</p>
+          <div class="decision-arrow">→ você quer</div>
+          <div class="decision-answer skill">Skill</div>
+        </div>
+        <div class="decision-card connector">
+          <p class="decision-quote">"Preciso que Claude leia ou faça algo num sistema real da empresa."</p>
+          <div class="decision-arrow">→ você quer</div>
+          <div class="decision-answer connector">Connector</div>
+        </div>
+        <div class="decision-card plugin">
+          <p class="decision-quote">"Quero uma função inteira pronta pra rodar amanhã, sem configurar."</p>
+          <div class="decision-arrow">→ você quer</div>
+          <div class="decision-answer plugin">Plugin</div>
+        </div>
+      </div>
+
+      <div class="plugins-prontos">
+        <h4 class="plugins-prontos-h">Plugins prontos da Anthropic</h4>
+        <p class="plugins-prontos-lead">Coleção oficial pública, gratuita, mantida pelo time da Anthropic. Pode instalar hoje.</p>
+
+        <div class="plugins-prontos-insight">
+          <strong>Insight:</strong> se você usou Claude for Finance ou Claude for Design, já usou plugin oficial sem perceber. O namespace na assinatura (<span class="card-code">finance:</span>, <span class="card-code">design:</span>) é a pista.
+        </div>
+
+        <div class="plugins-lista">
+          <div class="plugin-item">
+            <span class="plugin-ns">product-management:write-spec</span>
+            <span class="plugin-desc">Transforma ideia solta em spec estruturada de produto.</span>
+          </div>
+          <div class="plugin-item">
+            <span class="plugin-ns">finance:variance-analysis</span>
+            <span class="plugin-desc">Decompõe variação orçamentária em drivers com narrativa.</span>
+          </div>
+          <div class="plugin-item">
+            <span class="plugin-ns">design:user-research</span>
+            <span class="plugin-desc">Planeja, conduz e sintetiza pesquisa com usuário.</span>
+          </div>
+          <div class="plugin-item">
+            <span class="plugin-ns">productivity:task-management</span>
+            <span class="plugin-desc">Gerencia tarefas num arquivo compartilhado <span class="card-code">TASKS.md</span>.</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener" class="plugins-link">▸ github.com/anthropics/knowledge-work-plugins</a>
       </div>
     </div>
 
-    <div class="subhead">3 exemplos aplicados na rotina de gestor</div>
-    <div class="examples-list">
-      <div class="example-card">
-        <div class="example-num">1</div>
-        <div class="example-content">
-          <div class="ex-task">"Sempre que eu pedir ata de reunião, use as seções Contexto/Deliberações/Riscos/Plano de Ação, em PT-BR."</div>
-          <div class="ex-row"><span class="ex-label">Camada</span><span class="ex-text">Skill sozinha, sem sistema externo</span></div>
-          <div class="ex-row"><span class="ex-label">Por que Skill</span><span class="ex-text why">Só carrega quando a tarefa pede ata, não polui outras conversas. Project inflaria o contexto à toa.</span></div>
-        </div>
+    <div class="armadilhas">
+      <div class="armadilha">
+        <div class="armadilha-h">▸ Acumular skills e plugins não vira produtividade sem mudar o rito</div>
+        <p class="armadilha-p">Instalar 20 plugins não faz de você mais produtivo se você continuar trabalhando do mesmo jeito. A pergunta certa é: <strong>qual rotina da minha semana muda depois de instalar isso?</strong> Se nenhuma, não instala.</p>
       </div>
-      <div class="example-card">
-        <div class="example-num">2</div>
-        <div class="example-content">
-          <div class="ex-task">"Puxa as respostas do formulário de diagnóstico dos supervisores no Google Forms e me devolve os temas mais citados."</div>
-          <div class="ex-row"><span class="ex-label">Camada</span><span class="ex-text">Connector Google Drive + Skill de análise</span></div>
-          <div class="ex-row"><span class="ex-label">Por que combo</span><span class="ex-text why">Connector traz o dado bruto; Skill aplica o framework de leitura. Nenhum sozinho resolve.</span></div>
-        </div>
+      <div class="armadilha">
+        <div class="armadilha-h">▸ Plugin pronto pode dar sensação de método pronto — mas o método é seu</div>
+        <p class="armadilha-p">Um plugin de "análise de variação" te dá o esqueleto. Não te dá a <strong>leitura do seu contexto</strong>: por que aquela linha caiu, o que o mercado fez, o que a diretoria vai perguntar. Ferramenta boa acelera; ela não substitui julgamento.</p>
       </div>
-      <div class="example-card">
-        <div class="example-num">3</div>
-        <div class="example-content">
-          <div class="ex-task">Gestor de Produto quer padronizar spec, roadmap, brief competitivo e review de métricas pro time inteiro.</div>
-          <div class="ex-row"><span class="ex-label">Camada</span><span class="ex-text">Plugin Product Management (biblioteca Anthropic)</span></div>
-          <div class="ex-row"><span class="ex-label">Por que Plugin</span><span class="ex-text why">Instala uma vez, time inteiro herda o mesmo conjunto de Skills + Connectors configurado. Skill sozinha não distribui tanto.</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subhead">Armadilhas comuns</div>
-    <div class="pitfall">
-      <span class="pitfall-label">Atenção</span>
-      <span>Criar Skill antes de rodar o fluxo pelo menos <strong>uma vez na mão</strong>. Skill prematura = manutenção de coisa que nunca dispara. Regra: rode manual, veja o valor, depois empacote.</span>
-    </div>
-    <div class="pitfall">
-      <span class="pitfall-label">Atenção</span>
-      <span>Ligar Connector com escrita/delete em "always allow" porque é mais rápido. Se algo der errado, é como outro usuário editando à toa. Comece pelo menor escopo (uma base, não todas).</span>
     </div>
 
     <div class="subhead">Citação canônica</div>
@@ -1053,7 +1356,7 @@ h2{
       <p class="quote-source">Jan · 9x Claude Cowork Workshop</p>
     </div>
 
-    <div class="no-case-note">Personalização não tem caso próprio no grid — Rafael demonstra ao vivo com Skills dele. Fica como referência conceitual: a estação onde o Claude vira ferramenta sua, não genérica.</div>
+    <div class="no-case-note">Nesta estação, Rafael demonstra ao vivo skills próprias que ele usa na rotina — não há caso baixável no grid abaixo. A estação onde o Claude vira ferramenta sua, não genérica.</div>
   </div>
 
   <div class="section-footer">
@@ -1223,6 +1526,23 @@ h2{
   </div>
 </footer>
 
+<!-- Modal · Personalização (Skills · Connectors · Plugins) -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal" id="modal" data-camada="">
+    <div class="modal-head">
+      <span class="modal-tag" id="modal-tag"></span>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-subtitle" id="modal-subtitle"></p>
+      <button type="button" class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot">
+      <button type="button" class="modal-nav" id="modal-prev">← anterior</button>
+      <button type="button" class="modal-nav" id="modal-next">próxima →</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // Tabs do bloco educativo
 document.querySelectorAll('.tab-btn').forEach(function(btn){
@@ -1246,6 +1566,73 @@ document.querySelectorAll('.tab-btn').forEach(function(btn){
   t.addEventListener('click', function(){
     var open = n.classList.toggle('is-open');
     t.setAttribute('aria-expanded', String(open));
+  });
+})();
+
+// Modal Personalização (tab 5) — o corpo vem dos blocos .camada-deep-body (fonte única: modal na tela + print)
+(function(){
+  var CAMADAS = {
+    skill:     { tag:'Skill',     title:'Skill — procedimento reusável',      subtitle:'Pasta com instruções que o Claude carrega só quando precisa. Sem autenticação externa.' },
+    connector: { tag:'Connector', title:'Connector — acesso a sistema real',  subtitle:'Ligação com Gmail, Drive, Slack, CRM ou o servidor da sua empresa. Herda suas permissões.' },
+    plugin:    { tag:'Plugin',    title:'Plugin — função inteira empacotada', subtitle:'Skills + Connectors + sub-agentes de uma função (Finance, Product, RH, Design), prontos pra rodar.' }
+  };
+  var ORDEM = ['skill','connector','plugin'];
+  var overlay = document.getElementById('modal-overlay');
+  var modal = document.getElementById('modal');
+  var elTag = document.getElementById('modal-tag');
+  var elTitle = document.getElementById('modal-title');
+  var elSubtitle = document.getElementById('modal-subtitle');
+  var elBody = document.getElementById('modal-body');
+  var elClose = document.getElementById('modal-close');
+  var elPrev = document.getElementById('modal-prev');
+  var elNext = document.getElementById('modal-next');
+  if(!overlay || !modal) return;
+  var atual = null, lastFocus = null;
+
+  function abrir(camada, triggerEl){
+    var c = CAMADAS[camada];
+    if(!c) return;
+    var fonte = document.querySelector('#deep-' + camada + ' .camada-deep-body');
+    if(!fonte) return;
+    atual = camada;
+    if(triggerEl) lastFocus = triggerEl;
+    else if(!lastFocus) lastFocus = document.activeElement;
+    modal.setAttribute('data-camada', camada);
+    elTag.textContent = c.tag;
+    elTitle.textContent = c.title;
+    elSubtitle.textContent = c.subtitle;
+    elBody.innerHTML = fonte.innerHTML;
+    var idx = ORDEM.indexOf(camada);
+    elPrev.classList.toggle('hidden', idx === 0);
+    elNext.classList.toggle('hidden', idx === ORDEM.length - 1);
+    overlay.classList.add('open');
+    document.body.classList.add('modal-open');
+    elClose.focus();
+  }
+  function fechar(){
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    atual = null;
+    if(lastFocus){ lastFocus.focus(); lastFocus = null; }
+  }
+  function navegar(delta){
+    if(!atual) return;
+    var idx = ORDEM.indexOf(atual) + delta;
+    if(idx < 0 || idx >= ORDEM.length) return;
+    abrir(ORDEM[idx]);
+  }
+  document.querySelectorAll('.card-camada').forEach(function(btn){
+    btn.addEventListener('click', function(){ abrir(btn.dataset.open, btn); });
+  });
+  elClose.addEventListener('click', fechar);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) fechar(); });
+  elPrev.addEventListener('click', function(){ navegar(-1); });
+  elNext.addEventListener('click', function(){ navegar(1); });
+  document.addEventListener('keydown', function(e){
+    if(!atual) return;
+    if(e.key === 'Escape') fechar();
+    if(e.key === 'ArrowRight') navegar(1);
+    if(e.key === 'ArrowLeft') navegar(-1);
   });
 })();
 </script>
